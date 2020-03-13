@@ -79,6 +79,9 @@ corewar_EXTERNAL_OBJECTS =
 
 corewar: CMakeFiles/corewar.dir/main.c.o
 corewar: CMakeFiles/corewar.dir/build.make
+corewar: lib/libft/liblibft.a
+corewar: lib/ft_printf/liblibftprintf.a
+corewar: lib/libft/liblibft.a
 corewar: CMakeFiles/corewar.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xel/projects/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable corewar"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/corewar.dir/link.txt --verbose=$(VERBOSE)

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libftprintf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\libft\;CMake Files\lib\ft_printf\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libftprintf">
+				<Option output="/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xel/projects/corewar/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/../libft"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-9/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libftprintf/fast">
+				<Option output="/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xel/projects/corewar/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/../libft"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-9/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/includes/ft_printf.h">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/apply_flags.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/data.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/e_double.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/e_double_tool.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/f_double.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/ft_printf.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/int_funcions.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/parse.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/parse_tool.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/print_tool.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/string_tool.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/src/tools.c">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/libft/includes/libft.h">
+			<Option target="libftprintf"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/libft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\libft\"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ft_printf\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

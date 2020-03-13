@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/champs/championships/2018/arobion" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/champs/championships/2018/bcozic" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/champs/championships/2018/chaydont" vcs="Git" />

@@ -123,6 +123,32 @@ corewar/fast:
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/build
 .PHONY : corewar/fast
 
+#=============================================================================
+# Target rules for targets named libft
+
+# Build rule for target.
+libft: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libft
+.PHONY : libft
+
+# fast build rule for target.
+libft/fast:
+	$(MAKE) -f lib/libft/CMakeFiles/libft.dir/build.make lib/libft/CMakeFiles/libft.dir/build
+.PHONY : libft/fast
+
+#=============================================================================
+# Target rules for targets named libftprintf
+
+# Build rule for target.
+libftprintf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libftprintf
+.PHONY : libftprintf
+
+# fast build rule for target.
+libftprintf/fast:
+	$(MAKE) -f lib/ft_printf/CMakeFiles/libftprintf.dir/build.make lib/ft_printf/CMakeFiles/libftprintf.dir/build
+.PHONY : libftprintf/fast
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +185,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... corewar"
 	@echo "... edit_cache"
+	@echo "... libft"
+	@echo "... libftprintf"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

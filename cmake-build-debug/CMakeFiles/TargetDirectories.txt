@@ -1,3 +1,9 @@
 /home/xel/projects/corewar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/xel/projects/corewar/cmake-build-debug/CMakeFiles/corewar.dir
 /home/xel/projects/corewar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/libft/CMakeFiles/rebuild_cache.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/libft/CMakeFiles/libft.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/libft/CMakeFiles/edit_cache.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/CMakeFiles/rebuild_cache.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir
+/home/xel/projects/corewar/cmake-build-debug/lib/ft_printf/CMakeFiles/edit_cache.dir
