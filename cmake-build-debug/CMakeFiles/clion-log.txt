@@ -1,4 +1,0 @@
-/opt/clion-2019.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang -G "CodeBlocks - Unix Makefiles" /home/xel/projects/corewar
--- Configuring done
--- Generating done
--- Build files have been written to: /home/xel/projects/corewar/cmake-build-debug
