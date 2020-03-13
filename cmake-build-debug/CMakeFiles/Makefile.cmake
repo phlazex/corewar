@@ -55,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/corewar.dir/DependInfo.cmake"
+  "CMakeFiles/asm.dir/DependInfo.cmake"
   "lib/libft/CMakeFiles/libft.dir/DependInfo.cmake"
   "lib/ft_printf/CMakeFiles/libftprintf.dir/DependInfo.cmake"
   )

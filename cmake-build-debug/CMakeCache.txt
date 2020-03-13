@@ -222,6 +222,12 @@ corewar_BINARY_DIR:STATIC=/home/xel/projects/corewar/cmake-build-debug
 corewar_SOURCE_DIR:STATIC=/home/xel/projects/corewar
 
 //Value Computed by CMake
+demo/corewar_BINARY_DIR:STATIC=/home/xel/projects/corewar/cmake-build-debug
+
+//Value Computed by CMake
+demo/corewar_SOURCE_DIR:STATIC=/home/xel/projects/corewar
+
+//Value Computed by CMake
 libft_BINARY_DIR:STATIC=/home/xel/projects/corewar/cmake-build-debug/lib/libft
 
 //Value Computed by CMake

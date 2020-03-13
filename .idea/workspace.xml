@@ -5,6 +5,7 @@
       <config projectName="corewar" targetName="corewar" />
       <config projectName="corewar" targetName="libft" />
       <config projectName="corewar" targetName="libftprintf" />
+      <config projectName="corewar" targetName="asm" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -14,28 +15,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11beb805-6b41-4cc0-8dae-f9dfd27e3442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/asm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/corewar.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/ft_printf/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libft/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/asm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/corewar/corewar.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/._asm" beforeDir="false" afterPath="$PROJECT_DIR$/demo/._asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/._champs" beforeDir="false" afterPath="$PROJECT_DIR$/demo/._champs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/._corewar" beforeDir="false" afterPath="$PROJECT_DIR$/demo/._corewar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asm" beforeDir="false" afterPath="$PROJECT_DIR$/demo/asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/main.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/corewar" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corewar" beforeDir="false" afterPath="$PROJECT_DIR$/demo/corewar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corewar.en.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/info/corewar.en.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ft_printf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ft_printf/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ft_printf/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ft_printf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ft_printf/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/.idea/lib.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/.idea/misc.xml" beforeDir="false" />
@@ -46,7 +63,11 @@
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/libft/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/libft/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ft_printf/lib/libft/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/op.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/op.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/op.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/op.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources_corewar.en.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/info/resources_corewar.en.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vm_champs.tar" beforeDir="false" afterPath="$PROJECT_DIR$/demo/vm_champs.tar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +86,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/lib/ft_printf" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/lib/libft" />
   </component>
   <component name="ProjectId" id="1Z5857EeKSvcD3JOsmlzEHQj6J6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -77,28 +98,35 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/libft" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="CMake Application.corewar">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/ft_printf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/includes" />
+      <recent name="$PROJECT_DIR$/info" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/demo" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.asm">
+    <configuration name="asm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="asm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="corewar" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="corewar" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="corewar">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="libft" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="libftprintf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="libftprintf" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="CMake Application.asm" />
       <item itemvalue="CMake Application.corewar" />
-      <item itemvalue="CMake Application.libftprintf" />
-      <item itemvalue="CMake Application.libft" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -111,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584117408627</updated>
-      <workItem from="1584117415224" duration="1795000" />
+      <workItem from="1584117415224" duration="4814000" />
     </task>
     <servers />
   </component>
@@ -124,6 +152,50 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="142" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584121061857">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="142" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.732@0.0.1366.732" timestamp="1584121061857" />
+    <state x="385" y="88" key="#libftprintf" timestamp="1584121038907">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="385" y="88" key="#libftprintf/0.0.1366.732@0.0.1366.732" timestamp="1584121038907" />
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1584122460999">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584122460999" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1584122460993">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1584122460993" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1584122460990">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1584122460990" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1584122460996">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1584122460996" />
+    <state width="1320" height="172" key="GridCell.Tab.1.bottom" timestamp="1584122461011">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.1.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584122461011" />
+    <state width="1320" height="172" key="GridCell.Tab.1.center" timestamp="1584122461005">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.1.center/0.0.1366.732@0.0.1366.732" timestamp="1584122461005" />
+    <state width="1320" height="172" key="GridCell.Tab.1.left" timestamp="1584122461002">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.1.left/0.0.1366.732@0.0.1366.732" timestamp="1584122461002" />
+    <state width="1320" height="172" key="GridCell.Tab.1.right" timestamp="1584122461008">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.1.right/0.0.1366.732@0.0.1366.732" timestamp="1584122461008" />
+    <state x="519" y="77" key="RollbackChangesDialog" timestamp="1584121619761">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="519" y="77" key="RollbackChangesDialog/0.0.1366.732@0.0.1366.732" timestamp="1584121619761" />
     <state x="180" y="0" key="SettingsEditor" timestamp="1584117634114">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

@@ -1,1 +1,1 @@
-/usr/bin/clang -g   CMakeFiles/corewar.dir/main.c.o  -o corewar lib/libft/liblibft.a lib/ft_printf/liblibftprintf.a lib/libft/liblibft.a 
+/usr/bin/clang -g   CMakeFiles/corewar.dir/src/corewar/corewar.c.o  -o corewar lib/libft/liblibft.a lib/ft_printf/liblibftprintf.a lib/libft/liblibft.a 

@@ -17,6 +17,16 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug"/>
 				<Option type="4"/>
@@ -75,11 +85,49 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="asm">
+				<Option output="/home/xel/projects/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xel/projects/corewar/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-9/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm/fast">
+				<Option output="/home/xel/projects/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xel/projects/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/xel/projects/corewar/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/xel/projects/corewar/lib/libft"/>
+					<Add directory="/home/xel/projects/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-9/lib/clang/9.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/xel/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -182,6 +230,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/xel/projects/corewar/includes/asm.h">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/includes/corewar.h">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/home/xel/projects/corewar/lib/ft_printf/includes/ft_printf.h">
 			<Option target="libftprintf"/>
 		</Unit>
@@ -495,7 +549,10 @@
 		<Unit filename="/home/xel/projects/corewar/lib/libft/src/get_next_line.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/home/xel/projects/corewar/main.c">
+		<Unit filename="/home/xel/projects/corewar/src/asm/asm.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/home/xel/projects/corewar/src/corewar/corewar.c">
 			<Option target="corewar"/>
 		</Unit>
 		<Unit filename="/home/xel/projects/corewar/CMakeLists.txt">

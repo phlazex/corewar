@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/xel/projects/corewar/main.c" "/home/xel/projects/corewar/cmake-build-debug/CMakeFiles/corewar.dir/main.c.o"
+  "/home/xel/projects/corewar/src/corewar/corewar.c" "/home/xel/projects/corewar/cmake-build-debug/CMakeFiles/corewar.dir/src/corewar/corewar.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 

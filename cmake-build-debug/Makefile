@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/xel/projects/corewar/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2019.3.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion-2019.3.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -124,6 +124,19 @@ corewar/fast:
 .PHONY : corewar/fast
 
 #=============================================================================
+# Target rules for targets named asm
+
+# Build rule for target.
+asm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 asm
+.PHONY : asm
+
+# fast build rule for target.
+asm/fast:
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/build
+.PHONY : asm/fast
+
+#=============================================================================
 # Target rules for targets named libft
 
 # Build rule for target.
@@ -149,32 +162,59 @@ libftprintf/fast:
 	$(MAKE) -f lib/ft_printf/CMakeFiles/libftprintf.dir/build.make lib/ft_printf/CMakeFiles/libftprintf.dir/build
 .PHONY : libftprintf/fast
 
-main.o: main.c.o
+src/asm/asm.o: src/asm/asm.c.o
 
-.PHONY : main.o
+.PHONY : src/asm/asm.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/main.c.o
-.PHONY : main.c.o
+src/asm/asm.c.o:
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/asm.c.o
+.PHONY : src/asm/asm.c.o
 
-main.i: main.c.i
+src/asm/asm.i: src/asm/asm.c.i
 
-.PHONY : main.i
+.PHONY : src/asm/asm.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/main.c.i
-.PHONY : main.c.i
+src/asm/asm.c.i:
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/asm.c.i
+.PHONY : src/asm/asm.c.i
 
-main.s: main.c.s
+src/asm/asm.s: src/asm/asm.c.s
 
-.PHONY : main.s
+.PHONY : src/asm/asm.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/main.c.s
-.PHONY : main.c.s
+src/asm/asm.c.s:
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/asm.c.s
+.PHONY : src/asm/asm.c.s
+
+src/corewar/corewar.o: src/corewar/corewar.c.o
+
+.PHONY : src/corewar/corewar.o
+
+# target to build an object file
+src/corewar/corewar.c.o:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/corewar.c.o
+.PHONY : src/corewar/corewar.c.o
+
+src/corewar/corewar.i: src/corewar/corewar.c.i
+
+.PHONY : src/corewar/corewar.i
+
+# target to preprocess a source file
+src/corewar/corewar.c.i:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/corewar.c.i
+.PHONY : src/corewar/corewar.c.i
+
+src/corewar/corewar.s: src/corewar/corewar.c.s
+
+.PHONY : src/corewar/corewar.s
+
+# target to generate assembly for a file
+src/corewar/corewar.c.s:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/corewar.c.s
+.PHONY : src/corewar/corewar.c.s
 
 # Help Target
 help:
@@ -182,14 +222,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... corewar"
-	@echo "... edit_cache"
+	@echo "... asm"
 	@echo "... libft"
 	@echo "... libftprintf"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/asm/asm.o"
+	@echo "... src/asm/asm.i"
+	@echo "... src/asm/asm.s"
+	@echo "... src/corewar/corewar.o"
+	@echo "... src/corewar/corewar.i"
+	@echo "... src/corewar/corewar.s"
 .PHONY : help
 
 

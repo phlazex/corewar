@@ -57,27 +57,27 @@ include CMakeFiles/corewar.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/corewar.dir/flags.make
 
-CMakeFiles/corewar.dir/main.c.o: CMakeFiles/corewar.dir/flags.make
-CMakeFiles/corewar.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xel/projects/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/corewar.dir/main.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar.dir/main.c.o   -c /home/xel/projects/corewar/main.c
+CMakeFiles/corewar.dir/src/corewar/corewar.c.o: CMakeFiles/corewar.dir/flags.make
+CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../src/corewar/corewar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xel/projects/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/corewar.dir/src/corewar/corewar.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar.dir/src/corewar/corewar.c.o   -c /home/xel/projects/corewar/src/corewar/corewar.c
 
-CMakeFiles/corewar.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/corewar.dir/main.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xel/projects/corewar/main.c > CMakeFiles/corewar.dir/main.c.i
+CMakeFiles/corewar.dir/src/corewar/corewar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/corewar.dir/src/corewar/corewar.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xel/projects/corewar/src/corewar/corewar.c > CMakeFiles/corewar.dir/src/corewar/corewar.c.i
 
-CMakeFiles/corewar.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/corewar.dir/main.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xel/projects/corewar/main.c -o CMakeFiles/corewar.dir/main.c.s
+CMakeFiles/corewar.dir/src/corewar/corewar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/corewar.dir/src/corewar/corewar.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xel/projects/corewar/src/corewar/corewar.c -o CMakeFiles/corewar.dir/src/corewar/corewar.c.s
 
 # Object files for target corewar
 corewar_OBJECTS = \
-"CMakeFiles/corewar.dir/main.c.o"
+"CMakeFiles/corewar.dir/src/corewar/corewar.c.o"
 
 # External object files for target corewar
 corewar_EXTERNAL_OBJECTS =
 
-corewar: CMakeFiles/corewar.dir/main.c.o
+corewar: CMakeFiles/corewar.dir/src/corewar/corewar.c.o
 corewar: CMakeFiles/corewar.dir/build.make
 corewar: lib/libft/liblibft.a
 corewar: lib/ft_printf/liblibftprintf.a
