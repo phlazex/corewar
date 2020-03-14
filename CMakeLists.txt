@@ -4,7 +4,7 @@ project(corewar C)
 set(CMAKE_C_STANDARD 99)
 set(COREWAR_SRC
         src/corewar/corewar.c
-        )
+        src/corewar/ft_usage.c src/corewar/ft_print_error.c)
 set(ASM_SRC
         src/asm/asm.c
         )
