@@ -2,6 +2,7 @@
 #include <corewar.h>
 #include <ft_printf.h>
 #include <zconf.h>
+#include <fcntl.h>
 #include "libft.h"
 
 static int ft_is_option(char *string)
@@ -16,7 +17,22 @@ static int ft_is_hero(char *string)
 
 static t_err ft_get_hero(t_hero hero)
 {
-	return (success);
+	t_mem *mem;
+	t_err err;
+	int fd;
+
+	err = success;
+	if ((fd = open(hero.file_name, O_RDONLY)) <= 0)
+		return (no_file);
+	if (!(mem = ft_init_memory()))
+		return (no_memory);
+	if (fast_read_in_memory(fd, mem) == -1)
+		err = w_file_read;
+	if (!err)
+		err = ft_add_hero(hero, mem);
+	ft_memdel((void**)&mem->head);
+	ft_memdel((void**)mem);
+	return (err);
 }
 
 static t_err ft_get_heroes(t_data *data)
@@ -32,11 +48,6 @@ static t_err ft_get_heroes(t_data *data)
 				return (err);
 		++i;
 	}
-	return (success);
-}
-
-static t_err ft_add_hero(t_data *data, char *file_name)
-{
 	return (success);
 }
 

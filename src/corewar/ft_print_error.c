@@ -24,6 +24,7 @@ void ft_print_error(t_err err)
 		ft_printf_fd(fd, "Duplicate player id\n");
 	else if (err == no_file)
 		ft_printf_fd(fd, "File not found\n");
-
+	else if (err == w_file_read)
+		ft_printf_fd(fd, "Can't read file\n");
 	ft_printf(RESET);
 }

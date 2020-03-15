@@ -27,7 +27,8 @@ typedef enum e_err
 	w_player_number,
 	w_format,
 	dup_id,
-	no_file
+	no_file,
+	w_file_read
 
 }			t_err;
 
@@ -94,7 +95,7 @@ void ft_print_arena(void *arena);
 void ft_print_error(t_err err);
 void ft_print_regs(t_game *game);
 t_err ft_analyse_input(int argc, char **argv, t_data **data);
-void ft_check_hero();
+t_err ft_add_hero(t_hero hero, t_mem *mem);
 void ft_past_heroes();
 void ft_init_cursors();
 void ft_battle();

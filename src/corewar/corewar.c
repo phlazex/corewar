@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	{
 		if ((err = ft_analyse_input(argc, argv, &data)))
 			ft_print_error(err);
-//		ft_check_hero();
+//		ft_add_hero();
 //		if (!(game = ft_init_game()))
 //			return (0); //memory allocated error
 
