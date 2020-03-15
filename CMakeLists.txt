@@ -4,7 +4,7 @@ project(corewar C)
 set(CMAKE_C_STANDARD 99)
 set(COREWAR_SRC
         src/corewar/corewar.c
-        src/corewar/ft_usage.c src/corewar/ft_print_error.c src/corewar/ft_init_game.c src/corewar/ft_game_orver.c src/corewar/ft_print_arena.c src/corewar/ft_analyse_input.c src/corewar/ft_check_hero.c src/corewar/ft_past_heroes.c src/corewar/ft_init_cursors.c src/corewar/ft_battle.c src/corewar/ft_print_resualt.c)
+        src/corewar/ft_usage.c src/corewar/ft_print_error.c src/corewar/ft_init_game.c src/corewar/ft_game_orver.c src/corewar/ft_print_arena.c src/corewar/ft_parse_input.c src/corewar/ft_parse_hero.c src/corewar/ft_past_heroes.c src/corewar/ft_init_cursors.c src/corewar/ft_battle.c src/corewar/ft_print_resualt.c)
 set(ASM_SRC
         src/asm/asm.c
         )

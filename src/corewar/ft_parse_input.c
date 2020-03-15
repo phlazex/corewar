@@ -15,23 +15,23 @@ static int ft_is_hero(char *string)
 	return 0;
 }
 
-static t_err ft_get_hero(t_hero hero)
+static t_err ft_get_hero(t_hero *hero)
 {
 	t_mem *mem;
 	t_err err;
 	int fd;
 
 	err = success;
-	if ((fd = open(hero.file_name, O_RDONLY)) <= 0)
+	if ((fd = open(hero->file_name, O_RDONLY)) <= 0)
 		return (no_file);
 	if (!(mem = ft_init_memory()))
 		return (no_memory);
 	if (fast_read_in_memory(fd, mem) == -1)
 		err = w_file_read;
 	if (!err)
-		err = ft_add_hero(hero, mem);
+		err = ft_parse_hero(hero, mem);
 	ft_memdel((void**)&mem->head);
-	ft_memdel((void**)mem);
+	ft_memdel((void**)&mem);
 	return (err);
 }
 
@@ -44,7 +44,7 @@ static t_err ft_get_heroes(t_data *data)
 	while (i < MAX_PLAYERS)
 	{
 		if (data->hero_id[i])
-			if ((err = ft_get_hero(data->hero_list[i])))
+			if ((err = ft_get_hero(data->hero_list + i)))
 				return (err);
 		++i;
 	}
@@ -146,7 +146,7 @@ static t_err ft_check_format(int argc, char **argv)
 }
 
 
-t_err ft_analyse_input(int argc, char **argv, t_data **data)
+t_err ft_parse_input(int argc, char **argv, t_data **data)
 {
 	t_err err;
 	if ((err = ft_check_format(argc, argv)))

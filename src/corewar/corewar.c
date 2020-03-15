@@ -15,9 +15,9 @@ int main(int argc, char **argv)
 //	ft_print_arena(game->arena);
 	if (argc > 1 && argc < MAX_ARGS_NUMBER + MAX_PLAYERS + 2)
 	{
-		if ((err = ft_analyse_input(argc, argv, &data)))
+		if ((err = ft_parse_input(argc, argv, &data)))
 			ft_print_error(err);
-//		ft_add_hero();
+//		ft_parse_hero();
 //		if (!(game = ft_init_game()))
 //			return (0); //memory allocated error
 

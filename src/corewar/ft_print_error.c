@@ -26,5 +26,9 @@ void ft_print_error(t_err err)
 		ft_printf_fd(fd, "File not found\n");
 	else if (err == w_file_read)
 		ft_printf_fd(fd, "Can't read file\n");
+	else if (err == w_file_size)
+		ft_printf_fd(fd, "Incorrect file size\n");
+	else if (err == except_magic)
+		ft_printf_fd(fd, "Missing magic head\n");
 	ft_printf(RESET);
 }
