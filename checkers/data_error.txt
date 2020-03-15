@@ -1,1 +1,12 @@
 Invalid file format;test.car
+Invalid file format;""
+Invalid file format;-n test.cor
+Invalid file format;-n "" a/test.cor
+Invalid file format;-n "" a/test.or
+Invalid file format;- n 123 test.cor
+Invalid file format;"-n 123 test.cor"
+Invalid file format;- n 123 test.car
+Invalid file format;test.cor -n ""
+Invalid file format;test.cor -n 0
+Duplicate id;-n 3 test.cor -n 3 test.cor
+Wrong player number; test.cor test.cor test.cor test.cor test.cor

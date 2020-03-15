@@ -1,6 +1,8 @@
 
 #include <corewar.h>
 #include <ft_printf.h>
+#include <zconf.h>
+#include "libft.h"
 
 static int ft_is_option(char *string)
 {
@@ -12,35 +14,32 @@ static int ft_is_hero(char *string)
 	return 0;
 }
 
-static t_hero *ft_get_hero(char *string)
+static t_err ft_get_hero(t_hero hero)
 {
-	return (NULL);
+	return (success);
 }
+
+static t_err ft_get_heroes(t_data *data)
+{
+	int i;
+	int err;
+
+	i = 0;
+	while (i < MAX_PLAYERS)
+	{
+		if (data->hero_id[i])
+			if ((err = ft_get_hero(data->hero_list[i])))
+				return (err);
+		++i;
+	}
+	return (success);
+}
+
 static t_err ft_add_hero(t_data *data, char *file_name)
 {
 	return (success);
 }
 
-static t_err ft_validate_input(int argc, char **argv, t_data *data)
-{
-	t_err err;
-	int i;
-
-	i = 0;
-	while(++i < argc)
-	{
-		if (!(err = ft_is_option(argv[i])))
-			data->flags = 1;
-		else if (!(err = ft_is_hero(argv[i])))
-		{
-			if (!(err = ft_add_hero(data, argv[i])))
-				return (err);
-		}
-		else
-			return (err); //wrong input TODO add clear mem
-	}
-	return (success);
-}
 static t_err ft_check_file_name(char *file_name)
 {
 	size_t len;
@@ -48,13 +47,51 @@ static t_err ft_check_file_name(char *file_name)
 	len = ft_strlen(file_name);
 	if (len < 3)
 		return (w_file_name);
-	if (*(int32_t*)(file_name + len - 4) != 0x726f632e)
+	if (*(int32_t*)(file_name + len - 4) == 0x726f632e)
+		return (success);
+	return (w_format);
+}
+
+static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
+{
+	t_err err;
+	int i;
+	int j;
+	int index;
+	i = 0;
+	while(++i < argc)
 	{
-		ft_printf("%x\n", *(int32_t*)(file_name + len - 4));
-		return (w_file_name);
+		if (!ft_strcmp(argv[i], "-n"))
+		{
+			index = ft_atoi(argv[++i]);
+			if (data->hero_id[index - 1])
+				return (dup_id);
+			data->hero_id[index - 1] = index;
+			data->hero_list[index - 1].file_name = argv[++i];
+		}
+	}
+	i = 0;
+	while(++i < argc)
+	{
+		if (!ft_strcmp(argv[i], "-n"))
+			i += 2;
+		else if (!ft_check_file_name(argv[i]))
+		{
+			j = -1;
+			while (++j < MAX_PLAYERS)
+				if (data->hero_id[j] == 0)
+				{
+					data->hero_id[j] = j + 1;
+					data->hero_list[j].file_name = argv[i];
+					break;
+				}
+			if (j == MAX_PLAYERS)
+				return (w_player_number);
+		}
 	}
 	return (success);
 }
+
 
 t_err ft_is_correct_number(const char *number)
 {
@@ -64,6 +101,7 @@ t_err ft_is_correct_number(const char *number)
 		return (success);
 	return (w_player_number);
 }
+
 static t_err ft_check_format(int argc, char **argv)
 {
 	t_err err;
@@ -78,17 +116,17 @@ static t_err ft_check_format(int argc, char **argv)
 			return (w_format);
 		if (!ft_strcmp(argv[i], "-n"))
 		{
-			if (++i < argc && (err = ft_is_correct_number(argv[i])))
+			if (++i < argc && !(err = ft_is_correct_number(argv[i])))
 			{
-				if (++i < argc && (err = ft_check_file_name(argv[i])))
+				if (++i >= argc || (err = ft_check_file_name(argv[i])))
 					return (err);
 			} else
 				return (err);
 		}
 		if (!ft_strcmp(argv[i], "-dump"))
-			if (!(++i < argc && ft_atoi(argv[i]) >0))
+			if (!(++i < argc && ft_atoi(argv[i]) <= 0))
 				return (w_format);
-		if (i >= argc)
+		if (i > argc)
 			return (w_format);
 		if ((err = ft_check_file_name(argv[i])))
 			return (w_file_name);
@@ -102,10 +140,14 @@ t_err ft_analyse_input(int argc, char **argv, t_data **data)
 	t_err err;
 	if ((err = ft_check_format(argc, argv)))
 		return (err);
-//	if (!(*data = (t_data*)malloc(sizeof(**data))))
-//		return (no_memory);
-//	if (!(err = ft_validate_input(argc, argv, *data)))
-//		return (err); //incorrect data
+	if (!(*data = (t_data*)malloc(sizeof(**data))))
+		return (no_memory);
+	ft_memset(*data, 0, sizeof(**data));
+	if ((err = ft_get_heroes_files(argc, argv, *data)))
+		return (err);
+	if ((err = ft_get_heroes(*data)))
+		return (err);
+
 
 
 }

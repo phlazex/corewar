@@ -33,7 +33,7 @@ run_test()
 	local input=`echo $@ | cut -d';' -f2`
 
 	printf "%-50s" "$name"
-  ${COREWAR_EXEC} "${input}" > /dev/null 2> ${TEST_TMP}
+  ${COREWAR_EXEC} ${input} > /dev/null 2> ${TEST_TMP}
   local output=`cat -e ${TEST_TMP}`
   if [ "${output:0:5}" = "Error" ]; then
     print_ok "Good!"

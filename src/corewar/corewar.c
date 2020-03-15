@@ -6,6 +6,7 @@ int main(int argc, char **argv)
 {
 	t_game *game;
 	t_err err;
+	t_data *data;
 	ft_printf(CLR);
 //	if (!(game = ft_init_game()))
 //		return (0); //memory allocated error
@@ -14,7 +15,7 @@ int main(int argc, char **argv)
 //	ft_print_arena(game->arena);
 	if (argc > 1 && argc < MAX_ARGS_NUMBER + MAX_PLAYERS + 2)
 	{
-		if ((err = ft_analyse_input(argc, argv, NULL)))
+		if ((err = ft_analyse_input(argc, argv, &data)))
 			ft_print_error(err);
 //		ft_check_hero();
 //		if (!(game = ft_init_game()))
@@ -30,7 +31,7 @@ int main(int argc, char **argv)
 //		ft_past_heroes();
 //		ft_init_cursors();
 //		ft_battle();
-//		ft_print_resualt();
+//		ft_print_result();
 //		ft_print_arena(game->arena);
 //		ft_game_over(&game);
 	}

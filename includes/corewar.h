@@ -25,7 +25,9 @@ typedef enum e_err
 	w_flag,
 	w_file_name,
 	w_player_number,
-	w_format
+	w_format,
+	dup_id,
+	no_file
 
 }			t_err;
 
@@ -44,6 +46,7 @@ typedef struct s_hero
 	int32_t 	id;
 	header_t	*header;
 	void 		*prog;
+	char 		*file_name;
 }				t_hero;
 
 typedef struct	s_cursor
@@ -95,5 +98,5 @@ void ft_check_hero();
 void ft_past_heroes();
 void ft_init_cursors();
 void ft_battle();
-void ft_print_resualt();
+void ft_print_result();
 #endif

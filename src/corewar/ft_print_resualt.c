@@ -1,4 +1,4 @@
-void ft_print_resualt()
+void ft_print_result()
 {
 
 }
