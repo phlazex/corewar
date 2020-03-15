@@ -1,7 +1,7 @@
 
 #include <corewar.h>
 #include <ft_printf.h>
-#include <zconf.h>
+
 #include <fcntl.h>
 #include "libft.h"
 

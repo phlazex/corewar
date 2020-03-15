@@ -1,7 +1,8 @@
-#include <corewar.h>
-#include <zconf.h>
-#include <ft_printf.h>
+#include "corewar.h"
+
+#include "ft_printf.h"
 #include <stdio.h>
+#include <unistd.h>
 
 t_err ft_parse_hero(t_hero *hero, t_mem *mem)
 {
