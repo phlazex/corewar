@@ -2,6 +2,6 @@
         path = lib/libft
         url = https://github.com/Xel4ek/libft.git
 
-[submodule "libft"]
+[submodule "ft_printf"]
         path = lib/ft_printf
         url = https://github.com/Xel4ek/ft_printf.git
