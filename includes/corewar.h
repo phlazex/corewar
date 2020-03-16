@@ -48,7 +48,7 @@ typedef enum e_op
 typedef struct s_hero
 {
 	int32_t 	id;
-	header_t	*header;
+	header_t	header;
 	void 		*prog;
 	char 		*file_name;
 }				t_hero;
@@ -99,6 +99,7 @@ void ft_print_error(t_err err);
 void ft_print_regs(t_game *game);
 t_err ft_parse_input(int argc, char **argv, t_data **data);
 t_err ft_parse_hero(t_hero *hero, t_mem *mem);
+u_int64_t ft_atoin(void *data, size_t size);
 void ft_past_heroes();
 void ft_init_cursors();
 void ft_battle();
