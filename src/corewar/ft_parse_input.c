@@ -43,7 +43,7 @@ static t_err ft_get_heroes(t_data *data)
 	i = 0;
 	while (i < MAX_PLAYERS)
 	{
-		if (data->hero_id[i])
+		if (data->hero_list[i].id)
 			if ((err = ft_get_hero(data->hero_list + i)))
 				return (err);
 		++i;
@@ -75,9 +75,9 @@ static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
 		if (!ft_strcmp(argv[i], "-n"))
 		{
 			index = ft_atoi(argv[++i]);
-			if (data->hero_id[index - 1])
+			if (data->hero_list[index - 1].id)
 				return (dup_id);
-			data->hero_id[index - 1] = index;
+			data->hero_list[index - 1].id = index;
 			data->hero_list[index - 1].file_name = argv[++i];
 		}
 	}
@@ -90,9 +90,9 @@ static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
 		{
 			j = -1;
 			while (++j < MAX_PLAYERS)
-				if (data->hero_id[j] == 0)
+				if (data->hero_list[j].id == 0)
 				{
-					data->hero_id[j] = j + 1;
+					data->hero_list[j].id = j + 1;
 					data->hero_list[j].file_name = argv[i];
 					break;
 				}
@@ -153,7 +153,7 @@ t_err ft_parse_input(int argc, char **argv, t_data **data)
 		return (err);
 	if (!(*data = (t_data*)malloc(sizeof(**data))))
 		return (no_memory);
-	ft_memset(*data, 0, sizeof(**data));
+	ft_bzero(*data, sizeof(**data));
 	if ((err = ft_get_heroes_files(argc, argv, *data)))
 		return (err);
 	if ((err = ft_get_heroes(*data)))

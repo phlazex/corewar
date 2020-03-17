@@ -30,5 +30,9 @@ void ft_print_error(t_err err)
 		ft_printf_fd(fd, "Incorrect file size\n");
 	else if (err == except_magic)
 		ft_printf_fd(fd, "Missing magic head\n");
+	else if (err == exceed_size)
+		ft_printf_fd(fd, "Program size exceeds maximum, Max size: %d b\n", CHAMP_MAX_SIZE);
+	else if (err == wrong_psize)
+		ft_printf_fd(fd, "The actual program size does not match the specified\n", CHAMP_MAX_SIZE);
 	ft_printf(RESET);
 }

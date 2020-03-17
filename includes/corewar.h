@@ -31,6 +31,8 @@ typedef enum e_err
 	w_file_read,
 	w_file_size,
 	except_magic,
+	exceed_size,
+	wrong_psize
 
 
 }			t_err;
@@ -47,11 +49,11 @@ typedef enum e_op
 
 typedef struct s_hero
 {
-	int32_t 	id;
-	header_t	header;
-	void 		*prog;
-	char 		*file_name;
-}				t_hero;
+	unsigned char	program[CHAMP_MAX_SIZE];
+	int32_t 		id;
+	header_t		header;
+	char 			*file_name;
+}					t_hero;
 
 typedef struct	s_cursor
 {
@@ -83,7 +85,7 @@ typedef struct	s_data
 {
 	int			flags;
 	t_hero		hero_list[MAX_PLAYERS];
-	int			hero_id[MAX_PLAYERS];
+//	int			hero_id[MAX_PLAYERS];
 }				t_data;
 
 
@@ -104,4 +106,5 @@ void ft_past_heroes();
 void ft_init_cursors();
 void ft_battle();
 void ft_print_result();
+void ft_print_memory(void *start, void *end, void *mark, void *tail);
 #endif
