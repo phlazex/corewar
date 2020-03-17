@@ -42,6 +42,7 @@ typedef enum e_bool
 	false,
 	true
 }			t_bool;
+
 typedef enum e_op
 {
 	add
