@@ -27,14 +27,17 @@ int main(int argc, char **argv)
 //		*(char*)(game->arena+2) = 'o';
 //		*(char*)(game->arena+3) = 'r';
 
-
-		ft_past_heroes(game, data);
-		if ((err = ft_init_cursors(game)))
-			ft_print_error(err);
-		ft_battle(game);
+		if (err == success)
+		{
+			ft_past_heroes(game, data);
+			if ((err = ft_init_cursors(game)))
+				ft_print_error(err);
+			ft_battle(game);
 //		ft_print_result();
-		ft_print_arena(game);
-		ft_game_over(&game);
+			ft_print_arena(game);
+
+			ft_game_over(&game);
+		}
 	}
 	else if (argc == 1)
 		ft_usage();
