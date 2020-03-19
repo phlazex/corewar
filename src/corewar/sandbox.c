@@ -3,8 +3,13 @@
 #include "ft_printf.h"
 #include "stdio.h"
 
+#include "ft_battle.c"
 int main()
 {
-	unsigned char str[] = {13, 255 ,15, 15, 0, 255, 12, 00};
-	ft_printf("%#.16lx\n", ft_atoin(str, 8));
+	char op = 0x04;
+	unsigned char type = 0xb6;
+	int next = 0;
+	ft_printf("\"%s\" (%d): %08b\n", op_tab[op - 1].name, op, type);
+	ft_printf("%d\n",ft_check_types(&type, op , &next));
+	ft_printf("%d\n", next);
 }

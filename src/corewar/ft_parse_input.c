@@ -58,7 +58,7 @@ static t_err ft_check_file_name(char *file_name)
 	len = ft_strlen(file_name);
 	if (len < 3)
 		return (w_file_name);
-	if (*(int32_t*)(file_name + len - 4) == 0x726f632e)
+	if (*(int32_t*)(file_name + len - 4) == 0x726f632e) // 0x726f632e == "./cor"
 		return (success);
 	return (w_format);
 }
@@ -149,6 +149,8 @@ static t_err ft_check_format(int argc, char **argv)
 t_err ft_parse_input(int argc, char **argv, t_data **data)
 {
 	t_err err;
+
+	*data = NULL;
 	if ((err = ft_check_format(argc, argv)))
 		return (err);
 	if (!(*data = (t_data*)malloc(sizeof(**data))))
@@ -158,7 +160,5 @@ t_err ft_parse_input(int argc, char **argv, t_data **data)
 		return (err);
 	if ((err = ft_get_heroes(*data)))
 		return (err);
-
-
-
+	return (success);
 }

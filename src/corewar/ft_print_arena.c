@@ -2,20 +2,59 @@
 #include "ft_printf.h"
 #include "corewar.h"
 
-void ft_print_arena(void *arena)
+int ft_set_color(t_color color)
 {
-	size_t size;
+	ft_printf(RESET);
+	if (color == white)
+		return ft_printf(RESET);
+	if (color == grey)
+		return ft_printf(GRAY);
+	if (color == green)
+		return ft_printf(GREEN);
+	if (color == red)
+		return ft_printf(RED);
+	if (color == blue)
+		return ft_printf(BLUE);
+	if (color == purple)
+		return ft_printf(MAGENTA);
+	if (color == i_green)
+		return ft_printf(IGREEN);
+	if (color == i_red)
+		return ft_printf(IRED);
+	if (color == i_blue)
+		return ft_printf(IBLUE);
+	if (color == i_purple)
+		return ft_printf(IMAGENTA);
 
-	size = MEM_SIZE;
-	while (size--)
+	return (0);
+}
+
+void ft_print_arena(t_game *game)
+{
+	size_t i;
+	void *temp;
+	t_color old_color;
+
+	temp = game->arena;
+	i = 0;
+	old_color = game->color[0];
+	ft_set_color(old_color);
+	while (i < MEM_SIZE)
 	{
-		ft_printf("%02x ", *(unsigned char*)arena);
-		++arena;
-		if ((size % 4) == 0)
-			ft_printf("  ");
-		if (!(size % 64))
+		if (game->color[i] != old_color)
+		{
+			ft_set_color(game->color[i]);
+			old_color = game->color[i];
+		}
+		ft_printf("%02x", *(unsigned char*)temp);
+		++temp;
+		i++;
+		if ((i % 2) == 0)
+			ft_printf(" ");
+		if (!(i % 64))
 			ft_printf("\n");
 	}
+	ft_printf(RESET);
 }
 
 void ft_print_regs(t_game *game)

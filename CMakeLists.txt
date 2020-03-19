@@ -15,13 +15,13 @@ set(COREWAR_SRC
         src/corewar/ft_init_cursors.c
         src/corewar/ft_battle.c
         src/corewar/ft_print_resualt.c
-        src/corewar/ft_atoin.c)
+        src/corewar/ft_atoin.c src/corewar/ft_new_cursor.c src/corewar/ft_get_op.c src/corewar/op/op_live.c src/corewar/op/ft_pass.c)
 
 set(ASM_SRC
         src/asm/asm.c
         )
 
-add_executable(corewar ${COREWAR_SRC} includes/corewar.h)
+add_executable(corewar ${COREWAR_SRC} includes/corewar.h includes/op.h)
 add_executable(asm ${ASM_SRC} includes/asm.h)
 add_executable(sandbox src/corewar/ft_atoin.c  includes/corewar.h src/corewar/sandbox.c)
 
