@@ -64,7 +64,7 @@ void ft_print_regs(t_game *game)
 	i = 0;
 	while (i < REG_NUMBER)
 	{
-//		ft_printf("r%d: %x ",i + 1, game->regs[i]);
+//		ft_printf("r%d: %x ",i + 1, fd_game->regs[i]);
 		i++;
 	}
 	ft_printf("\n\n");

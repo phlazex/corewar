@@ -3,6 +3,7 @@
 #include <ft_printf.h>
 
 #include <fcntl.h>
+#include <zconf.h>
 #include "libft.h"
 
 static int ft_is_option(char *string)
@@ -32,6 +33,7 @@ static t_err ft_get_hero(t_hero *hero)
 		err = ft_parse_hero(hero, mem);
 	ft_memdel((void**)&mem->head);
 	ft_memdel((void**)&mem);
+	close(fd);
 	return (err);
 }
 
