@@ -28,12 +28,12 @@ int main(int argc, char **argv)
 			if ((err = ft_init_cursors(game)))
 				ft_print_error(err);
 			ft_log(game->log,"Warrior gutted");
-			ft_print_arena(game);
+//			ft_print_arena(game);
 			ft_printf("\n");
 			ft_battle(game);
 			ft_log(game->log,"Battle finished");
-//		ft_print_result();
-			ft_print_arena(game);
+//			ft_print_arena(game);
+			ft_print_result(game);
 
 			ft_game_over(&game);
 		}

@@ -214,7 +214,7 @@ t_err ft_init_cursors(t_game *game);
 t_cursor *ft_new_cursor();
 t_err ft_clone_cursor(t_game *game, size_t address);
 void ft_battle(t_game *game);
-void ft_print_result();
+void ft_print_result(t_game *game);
 void ft_print_memory(void *start, void *end, void *mark, void *tail);
 int ft_set_color(t_color color);
 //int32_t ft_atoi_vm(void* head, size_t *address, size_t size);

@@ -8,7 +8,7 @@ size_t op_and(t_game* game)
 	int arg2;
 	int arg3;
 	cursor = game->cursor;
-	cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
+	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;
 	arg1 = ft_get_arg(game, type.arg1, true);
 	arg2 = ft_get_arg(game, type.arg2, true);

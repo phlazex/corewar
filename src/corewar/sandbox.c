@@ -3,24 +3,37 @@
 #include "ft_printf.h"
 #include "stdio.h"
 
+typedef struct s_test
+{
+	int key;
+	int value;
+}			t_test;
+
 int main()
 {
-	char op = 0x04;
-	unsigned char type = 0xb6;
-	int next =0x0100;
-	uint32_t test = 0x456711ff;
-	t_vm nbr;
-	nbr.value = 0x78fffe;
-//	ft_printf("\"%s\" (%d): %08b\n", op_tab[op - 1].name, op, type);
-//	ft_printf("%d\n",ft_check_types(&type, op , &next));
-	ft_printf("1:%d\n", -1123 % IDX_MOD);
-	test = test >> 8u;
-	ft_printf("2:%d\n", IDX_MOD);
-	test = test >> 8u;
-	ft_printf("3:%d\n", IDX_MOD - 99 );
-	test = test >> 8u;
-	ft_printf("4:%d\n", ft_mod(-1123, IDX_MOD));
-	ft_printf("4:%d\n", (-1123 + 3*IDX_MOD) % IDX_MOD);
+
+	int test;
+	int key;
+	int value;
+	t_heap *heap;
+
+	t_test a1= {0,12};
+	t_test a2={0,1};
+	t_test a3={1,12};
+	t_test a4={12, 0};
+	t_test ptr;
+	heap = NULL;
+
+	heap = ft_heap_add(heap, ft_wrap_heap(a1.key, &a1));
+	heap = ft_heap_add(heap, ft_wrap_heap(a2.key, &a2));
+	heap = ft_heap_add(heap, ft_wrap_heap(a3.key, &a3));
+	heap = ft_heap_add(heap, ft_wrap_heap(a4.key, &a4));
+	int i = 1;
+	while (heap)
+	{
+		value =( (t_test *) ft_pop_min_heap(&heap, &key))->value;
+		ft_printf("%d key: %d value: %d\n", i++, key, value);
+	}
 
 
 

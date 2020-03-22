@@ -5,7 +5,7 @@ size_t op_live(t_game *game)
 	t_cursor *cursor;
 	int arg;
 	cursor = game->cursor;
-	cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
+	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	arg = ft_get_data(game, DIR_CODE);
 	game->check_live++;
 	cursor->alive = true;

@@ -204,7 +204,7 @@ static int main_loop(t_game *game)
 		{
 			temp = cursor->current;
 			ft_execute(game);
-			ft_log_cursor(game, temp);
+//			ft_log_cursor(game, temp);
 		}
 		game->cursor = game->cursor->next;
 	}
@@ -274,6 +274,7 @@ void ft_battle(t_game *game)
 	{
 		game->cycle++;
 		game->total_cycles++;
+		main_loop(game);
 		if (game->cycle >= game->cycles_to_die)
 		{
 
@@ -282,6 +283,6 @@ void ft_battle(t_game *game)
 			game->check_live = 0;
 			game->cycle = 0;
 		}
-		main_loop(game);
+
 	}
 }
