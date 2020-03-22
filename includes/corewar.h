@@ -91,7 +91,7 @@ typedef struct s_op
 	t_bool		arg_type;
 	t_bool 		carry;
 	int 		dir_size;
-	size_t		(*func)();
+	t_err		(*func)();
 }				t_op;
 
 
@@ -108,7 +108,7 @@ typedef struct	s_cursor
 	size_t 		step_to_next;
 	t_color 	color;
 	t_bool 		alive;
-	int			ready;
+	int			occupy;
 	struct s_cursor *next;
 
 }				t_cursor;
@@ -151,23 +151,24 @@ union u_types
 	unsigned char value;
 };
 
-size_t op_live(t_game *game);
-size_t ft_pass(t_game *game);
-size_t op_ld(t_game *game);
-size_t op_st(t_game *game);
-size_t op_zjmp(t_game *game);
-size_t op_sti(t_game *game);
-size_t op_fork(t_game *game);
-size_t op_add(t_game* game);
-size_t op_sub(t_game* game);
-size_t op_and(t_game* game);
-size_t op_or(t_game* game);
-size_t op_xor(t_game* game);
-size_t op_ldi(t_game* game);
-size_t op_lld(t_game *game);
-size_t op_lldi(t_game* game);
-size_t op_lfork(t_game *game);
-size_t op_aff(t_game* game);
+t_err op_live(t_game *game);
+t_err ft_pass(t_game *game);
+t_err op_ld(t_game *game);
+t_err op_st(t_game *game);
+t_err op_zjmp(t_game *game);
+t_err op_sti(t_game *game);
+t_err op_fork(t_game *game);
+t_err op_add(t_game* game);
+t_err op_sub(t_game* game);
+t_err op_and(t_game* game);
+t_err op_or(t_game* game);
+t_err op_xor(t_game* game);
+t_err op_ldi(t_game* game);
+t_err op_lld(t_game *game);
+t_err op_lldi(t_game* game);
+t_err op_lfork(t_game *game);
+t_err op_aff(t_game* game);
+
 static t_op	op_tab[17] =
 	{
 		{"live", 1, {T_DIR}, 1, 10, "alive", 0, 0, 4, &op_live},

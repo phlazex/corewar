@@ -42,6 +42,7 @@ t_vm ft_atoi_vm(void* head, size_t *address, size_t size)
 		value = value << 8u;
 		value += *(unsigned char*)(head + ft_mod((*address)++, MEM_SIZE));
 	}
+	*address = ft_mod(*address, MEM_SIZE);
 	nbr.value = value;
 	return nbr;
 }

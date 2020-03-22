@@ -91,7 +91,7 @@ void ft_log_cursor(t_game *game, size_t prev)
 		while (len--)
 			ft_printf_fd(game->log->fd_cursor, "%d ", cursor->regs[len]);
 		ft_printf_fd(game->log->fd_cursor, "]\t");
-		if (prev < cursor->current)
+		if (prev < cursor->current &&  cursor->current - prev < 10)
 			ft_print_memory_fd(game->log->fd_cursor, game->arena + prev, game->arena + cursor->current,game->arena + prev, game->arena + cursor->current);
 		else
 			ft_print_memory_fd(game->log->fd_cursor, game->arena + prev, game->arena + prev + 3,game->arena + prev, game->arena + cursor->current);

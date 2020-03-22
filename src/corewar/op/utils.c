@@ -62,8 +62,6 @@ t_err ft_clone_cursor(t_game *game, size_t address)
 	new_cursor->next = game->head;
 	game->head = new_cursor;
 	game->cursors_count++;
-
-//	ft_lstd_push_front(&game->head, ft_lstd_wrap(new_cursor, sizeof(*new_cursor)));
 	return (success);
 }
 

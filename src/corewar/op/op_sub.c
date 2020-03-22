@@ -1,12 +1,12 @@
 #include "corewar.h"
 
-size_t op_sub(t_game* game)
+t_err op_sub(t_game* game)
 {
 	union u_types type;
 	t_cursor *cursor;
-	int arg1;
-	int arg2;
-	int arg3;
+	int32_t arg1;
+	int32_t arg2;
+	int32_t arg3;
 	cursor = game->cursor;
 	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;
@@ -15,5 +15,5 @@ size_t op_sub(t_game* game)
 	arg3 = ft_get_data(game, type.arg3);
 	cursor->regs[arg3 - 1] = cursor->regs[arg1 - 1] - cursor->regs[arg2 - 1];
 	cursor->carry = cursor->regs[arg3 - 1] ? false : true;
-	return 0;
+	return (success);
 }

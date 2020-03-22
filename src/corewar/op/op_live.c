@@ -1,9 +1,10 @@
 #include "corewar.h"
 
-size_t op_live(t_game *game)
+t_err op_live(t_game *game)
 {
 	t_cursor *cursor;
-	int arg;
+	int32_t arg;
+
 	cursor = game->cursor;
 	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	arg = ft_get_data(game, DIR_CODE);
@@ -15,5 +16,5 @@ size_t op_live(t_game *game)
 		game->hero_list[-arg - 1].live++;
 		game->winner = game->hero_list - arg - 1;
 	}
-	return 0;
+	return (success);
 }

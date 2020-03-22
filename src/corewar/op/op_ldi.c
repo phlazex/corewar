@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-size_t op_ldi(t_game* game)
+t_err op_ldi(t_game* game)
 {
 	union u_types type;
 	t_cursor *cursor;
@@ -17,5 +17,5 @@ size_t op_ldi(t_game* game)
 	address = cursor->op_adr + (arg2 + arg1) % IDX_MOD;
 	cursor->regs[arg3 - 1] = ft_atoi_vm(game->arena, &address, REG_SIZE).v_4;
 	cursor->carry = cursor->regs[arg3 - 1]  ? false : true;
-	return 0;
+	return (success);
 }

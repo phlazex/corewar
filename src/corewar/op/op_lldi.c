@@ -1,13 +1,14 @@
 #include "corewar.h"
 
-size_t op_lldi(t_game* game)
+t_err op_lldi(t_game* game)
 {
 	union u_types type;
 	t_cursor *cursor;
-	int arg1;
-	int arg2;
-	int arg3;
+	int32_t arg1;
+	int32_t arg2;
+	int32_t arg3;
 	size_t address;
+
 	cursor = game->cursor;
 	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;
@@ -17,5 +18,5 @@ size_t op_lldi(t_game* game)
 	address = cursor->op_adr + (arg2 + arg1);
 	cursor->regs[arg3 - 1] = ft_atoi_vm(game->arena, &address, REG_SIZE).v_4;
 	cursor->carry = cursor->regs[arg3 - 1]  ? false : true;
-	return 0;
+	return (success);
 }

@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-size_t op_and(t_game* game)
+t_err op_and(t_game* game)
 {
 	union u_types type;
 	t_cursor *cursor;
@@ -15,5 +15,5 @@ size_t op_and(t_game* game)
 	arg3 = ft_get_data(game, type.arg3);
 	cursor->regs[arg3 - 1] = arg1 & arg2;
 	cursor->carry = cursor->regs[arg3 - 1] ? false : true;
-	return 0;
+	return (success);
 }

@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			ft_printf("\n");
 			ft_battle(game);
 			ft_log(game->log,"Battle finished");
-//			ft_print_arena(game);
+			ft_print_arena(game);
 			ft_print_result(game);
 
 			ft_game_over(&game);
