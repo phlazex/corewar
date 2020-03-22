@@ -15,7 +15,7 @@ set(COREWAR_SRC
         src/corewar/ft_init_cursors.c
         src/corewar/ft_battle.c
         src/corewar/ft_print_resualt.c
-        src/corewar/ft_atoin.c src/corewar/ft_new_cursor.c src/corewar/ft_get_op.c src/corewar/op/op_live.c src/corewar/op/ft_pass.c src/corewar/op/op_add.c src/corewar/op/op_ld.c src/corewar/op/utils.c src/corewar/op/op_st.c src/corewar/op/op_zjmp.c src/corewar/op/ft_sti.c src/corewar/op/op_fork.c src/corewar/op/op_sub.c src/corewar/op/ft_and.c src/corewar/op/op_or.c src/corewar/op/op_xor.c src/corewar/op/op_ldi.c src/corewar/op/op_lld.c src/corewar/op/op_lldi.c src/corewar/op/op_lfork.c src/corewar/op/op_aff.c)
+        src/corewar/ft_atoin.c src/corewar/ft_new_cursor.c src/corewar/ft_get_op.c src/corewar/op/op_live.c src/corewar/op/ft_pass.c src/corewar/op/op_add.c src/corewar/op/op_ld.c src/corewar/op/utils.c src/corewar/op/op_st.c src/corewar/op/op_zjmp.c src/corewar/op/op_sti.c src/corewar/op/op_fork.c src/corewar/op/op_sub.c src/corewar/op/op_and.c src/corewar/op/op_or.c src/corewar/op/op_xor.c src/corewar/op/op_ldi.c src/corewar/op/op_lld.c src/corewar/op/op_lldi.c src/corewar/op/op_lfork.c src/corewar/op/op_aff.c)
 
 set(LOGER_SRC
         src/logger/logger.c)

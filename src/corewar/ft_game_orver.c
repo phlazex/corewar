@@ -7,8 +7,12 @@ void *ft_game_over(t_game **game)
 		return (NULL);
 	if ((*game)->arena)
 		ft_memdel((void**)&(*game)->arena);
-	while((*game)->cursor)
-		ft_lstd_pop_front(&(*game)->cursor);
+	while((*game)->head)
+	{
+		(*game)->cursor = (*game)->head->next;
+		ft_memdel((void**)&(*game)->head);
+		(*game)->head = (*game)->cursor;
+	}
 	ft_memdel((void**)game);
 	return (NULL);
 }

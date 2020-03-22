@@ -4,6 +4,7 @@
 static void ft_start_game(t_game *game)
 {
 	game->arena = NULL;
+	game->head = NULL;
 	game->cursor = NULL;
 	game->winner = NULL;
 	game->total_cycles = 0;

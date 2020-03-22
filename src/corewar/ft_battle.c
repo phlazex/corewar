@@ -1,3 +1,4 @@
+#include "ft_printf.h"
 #include "corewar.h"
 
 static t_bool ft_check_types(void *data, int op, int *next)
@@ -78,7 +79,7 @@ static t_bool ft_check_types2(t_game *game)
 	union u_types type;
 	int op;
 	t_cursor *cursor;
-	cursor = (t_cursor*)game->cursor->content;
+	cursor = game->cursor;
 	t_bool ok;
 	ok = true;
 	int size;
@@ -156,14 +157,15 @@ static t_bool ft_check_types2(t_game *game)
 static void ft_apply_op(t_game *game)
 {
 //	ft_log_cursor(fd_game);
-	op_tab[((t_cursor*)game->cursor->content)->op - 1].func(game);
+	game->cursor->op_adr = game->cursor->current;
+	op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
 }
 
 static int ft_execute(t_game *game)
 {
 	t_cursor *cursor;
 
-	cursor = (t_cursor*)game->cursor->content;
+	cursor = game->cursor;
 	if (cursor->op > 0x00 && cursor->op < 0x11)
 	{
 		if (op_tab[cursor->op - 1].arg_type)
@@ -183,14 +185,12 @@ static int ft_execute(t_game *game)
 
 static int main_loop(t_game *game)
 {
-	int len;
 	t_cursor *cursor;
-
-	len = game->cursors_count;
-	while (len--)
+	game->cursor = game->head;
+	size_t temp;
+	while (game->cursor)
 	{
-		cursor = (t_cursor*)game->cursor->content;
-
+		cursor = game->cursor;
 		if (cursor->ready == 0)
 		{
 			cursor->op = *(char*)(game->arena + cursor->current);
@@ -202,55 +202,86 @@ static int main_loop(t_game *game)
 			cursor->ready--;
 		if (cursor->ready == 0)
 		{
+			temp = cursor->current;
 			ft_execute(game);
-			ft_log_cursor(game);
+			ft_log_cursor(game, temp);
 		}
 		game->cursor = game->cursor->next;
 	}
 	return 1;
 }
+static void ft_pop_cursor(t_game *game, t_cursor *prev)
+{
 
+	if (prev)
+	{
+		prev->next = game->cursor->next;
+		ft_memdel((void **)&game->cursor);
+		game->cursor = prev->next;
+	}
+	else
+	{
+		if(game->head == game->cursor)
+		{
+			game->head = game->head->next;
+			ft_memdel((void **) &game->cursor);
+			game->cursor = game->head;
+		} else
+			ft_printf(RED"\n\nALARM!!!!! ALARM!!!\n\n"RESET);
+	}
+
+}
 static int ft_doomsday(t_game *game)
 {
-	int len;
+
 	t_cursor *cursor;
 
-	len = game->cursors_count;
-	while (len--)
+	(game->checks_done)++;
+	game->cursor = game->head;
+	t_cursor *prev; //temp
+	prev = NULL;
+	while (game->cursor)
 	{
-		cursor = (t_cursor*)game->cursor->content;
-		if (cursor->live_cycle > game->cycles_to_die ||
-				game->cycles_to_die <= 0)
+
+		cursor = game->cursor;
+
+		if (cursor->alive && game->cycles_to_die > 0)
 		{
-			ft_lstd_pop_front(&game->cursor);
-			(game->cursors_count)--;
+			cursor->alive = false;
+			prev = game->cursor;
+			game->cursor = game->cursor->next;
 		}
 		else
-			game->cursor = game->cursor->next;
+		{
+			ft_pop_cursor(game, prev);
+			(game->cursors_count)--;
+		}
+
 	}
-	if(game->check_live >= NBR_LIVE || game->checks_done > MAX_CHECKS)
+	if(game->check_live >= NBR_LIVE || game->checks_done >= MAX_CHECKS)
 	{
 		game->cycles_to_die -= CYCLE_DELTA;
 		game->checks_done = 0;
 	}
-	(game->checks_done)++;
 	return 0;
 }
 
 
 void ft_battle(t_game *game)
 {
-	while (game->cursor)
+	ft_log_game(game);
+	while (game->head)
 	{
 		game->cycle++;
 		game->total_cycles++;
-		main_loop(game);
-
 		if (game->cycle >= game->cycles_to_die)
 		{
-			ft_log_game(game);
+
 			ft_doomsday(game);
+			ft_log_game(game);
+			game->check_live = 0;
 			game->cycle = 0;
 		}
+		main_loop(game);
 	}
 }

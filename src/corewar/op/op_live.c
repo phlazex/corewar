@@ -3,16 +3,17 @@
 size_t op_live(t_game *game)
 {
 	t_cursor *cursor;
-	int arg1;
-	cursor = (t_cursor*)game->cursor->content;
+	int arg;
+	cursor = game->cursor;
 	cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
-	arg1 = ft_get_arg(game, DIR_CODE, false);
+	arg = ft_get_data(game, DIR_CODE);
 	game->check_live++;
-	cursor->live_cycle = game->cycle;
-	if (-arg1 > 0 && -arg1 <= game->player_count)
+	cursor->alive = true;
+	cursor->live_cycle = game->total_cycles;
+	if (-arg > 0 && -arg <= game->player_count)
 	{
-		game->hero_list[-arg1 - 1].live++;
-		game->winner = game->hero_list - arg1 - 1;
+		game->hero_list[-arg - 1].live++;
+		game->winner = game->hero_list - arg - 1;
 	}
 	return 0;
 }

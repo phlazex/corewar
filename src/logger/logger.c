@@ -66,7 +66,7 @@ void ft_log(t_log *log, char *string)
 	}
 }
 
-void ft_log_cursor(t_game *game)
+void ft_log_cursor(t_game *game, size_t prev)
 {
 	t_cursor * cursor;
 	int len;
@@ -74,36 +74,41 @@ void ft_log_cursor(t_game *game)
 	len = REG_NUMBER;
 	if (game->cursor)
 	{
-		cursor = (t_cursor *) game->cursor->content;
+		cursor = game->cursor;
 		ft_printf_fd(game->log->fd_cursor,
-					 "%4d: id : %4d | carry: %s | op: %3d (%5s) | live_cycle: %4d | "
-					 "current: %4d | ready: %3d [ ",
+					 "%4d: id:%3d | %s | op:%3d (%5s) | lc: %s | "
+					 "(%4d->%-4d):%-3d [ ",
 					 game->total_cycles,
 					 cursor->id,
 					 cursor->carry ? " true" : "false",
 					 cursor->op,
 					 (cursor->op > 0 && cursor->op < 17) ? op_tab[cursor->op - 1].name : " err ",
-					 cursor->live_cycle,
+					 cursor->alive ? " true" : "false",
+					 prev,
 					 cursor->current,
-					 cursor->ready);
+					 (cursor->op > 0 && cursor->op < 17) ? op_tab[cursor->op - 1].cycles : 1);
 
 		while (len--)
-			ft_printf_fd(game->log->fd_cursor, "%3d ", cursor->regs[len]);
-		ft_printf_fd(game->log->fd_cursor, "]\n");
+			ft_printf_fd(game->log->fd_cursor, "%d ", cursor->regs[len]);
+		ft_printf_fd(game->log->fd_cursor, "]\t");
+		if (prev < cursor->current)
+			ft_print_memory_fd(game->log->fd_cursor, game->arena + prev, game->arena + cursor->current,game->arena + prev, game->arena + cursor->current);
+		else
+			ft_print_memory_fd(game->log->fd_cursor, game->arena + prev, game->arena + prev + 3,game->arena + prev, game->arena + cursor->current);
+
 	}
 }
 
 void ft_log_game(t_game *game)
 {
-	ft_printf_fd(game->log->fd_game, "%5d: cycle: %4d cursors: %4d checks: %4d check live: %4d winner: %1d(%s) (live:%3d): live call: %d cycles to die: %d\n",
+	ft_printf_fd(game->log->fd_game, "%5d: cycle: %4d cursors: %4d checks: %4d check live: %4d winner: %1d(%s) (live:%3d) cycles to die: %d\n",
 				 game->total_cycles,
 				 game->cycle,
 			game->cursors_count,
-			game->checks_done,
+			game->checks_done + 1,
 			game->check_live,
 			game->winner ? game->winner->id : 0,
 			game->winner ? game->winner->header.prog_name : "",
 			game->winner ? game->winner->live : 0,
-				 game->check_live,
 				 game->cycles_to_die);
 }

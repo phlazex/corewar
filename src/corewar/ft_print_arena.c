@@ -128,7 +128,7 @@ void ft_print_memory(void *start, void *end, void *mark, void *tail)
 
 	while (start <= end)
 	{
-		ft_printf(BLUE"%04x0: "RESET,i);
+//		ft_printf(BLUE"%04x0: "RESET,i);
 		if (start < mark)
 			ft_printf(GREEN);
 		if (start > tail)
@@ -143,4 +143,79 @@ void ft_print_memory(void *start, void *end, void *mark, void *tail)
 		i++;
 	}
 	ft_printf("\n");
+}
+
+static void ft_print_str_fd(int fd, void *data, void *end, void *mark, void *tail)
+{
+	int i;
+
+	i = 16;
+	ft_printf("%4s", " ");
+	while (i--)
+	{
+		if (data < end)
+		{
+			if (ft_isprint(*(unsigned char *) data))
+				ft_printf_fd(fd, "%c", *(unsigned char *) data);
+			else
+				ft_printf_fd(fd, ".");
+			data++;
+//			if (data == mark)
+//				ft_printf(RESET);
+//			if (data == tail)
+//				ft_printf(GRAY);
+		}
+		else
+			ft_printf_fd(fd, " ");
+
+	}
+	ft_printf("\n");
+}
+
+static void ft_print_hex_fd(int fd, void *data, void *end, void *mark, void *tail)
+{
+	int i;
+
+	i = 16;
+	while (i--)
+	{
+		if (data < end )
+			ft_printf_fd(fd, "%02x", *(unsigned char *) data);
+		else
+			ft_printf_fd(fd,"  ");
+		data ++;
+//		if (data == mark)
+//			ft_printf(RESET);
+//		if (data == tail)
+//			ft_printf(GRAY);
+
+		if (i % 2 == 0)
+			ft_printf_fd(fd," ");
+	}
+//	ft_printf(RESET);
+}
+
+void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail)
+{
+	int i;
+
+	i = 0;
+
+	while (start < end)
+	{
+//		ft_printf(BLUE"%04x0: "RESET,i);
+//		if (start < mark)
+//			ft_printf(GREEN);
+//		if (start > tail)
+//			ft_printf(GRAY);
+		ft_print_hex_fd(fd, start, end, mark, tail);
+//		if (start < mark)
+//			ft_printf(GREEN);
+//		if (start > tail)
+//			ft_printf(GRAY);
+//		ft_print_str(start, end, mark, tail);
+		start += 16;
+		i++;
+	}
+	ft_printf_fd(fd, "\n");
 }

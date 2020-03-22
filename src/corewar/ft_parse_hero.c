@@ -24,7 +24,7 @@ t_err ft_parse_hero(t_hero *hero, t_mem *mem)
 	mem->current += COMMENT_LENGTH + 4;
 	ft_memcpy(hero->program, mem->current, hero->header.prog_size);
 //	ft_print_memory(hero->program, hero->program + CHAMP_MAX_SIZE, hero->program, hero->program + CHAMP_MAX_SIZE);
-//	ft_print_memory(mem->head, mem->end, mem->current, mem->end);
+//	ft_print_memory(mem->head, mem->end, mem->cursor, mem->end);
 	return (success);
 
 //COREWAR_EXEC_MAGIC

@@ -2,16 +2,11 @@
 
 size_t op_lfork(t_game *game)
 {
-
 	t_cursor *cursor;
-	size_t address;
-	int arg1;
-
-	cursor = (t_cursor*)game->cursor->content;
-	address = cursor->current;
+	int32_t arg;
+	cursor = game->cursor;
 	cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
-
-	arg1 = ft_get_arg(game, DIR_CODE, false);
-	ft_clone_cursor(game, (address + arg1) % MEM_SIZE);
+	arg = ft_get_data(game, DIR_CODE);
+	ft_clone_cursor(game, cursor->op_adr + arg);
 	return 0;
 }

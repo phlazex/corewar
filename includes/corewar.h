@@ -104,16 +104,21 @@ typedef struct	s_cursor
 	int32_t 	live_cycle;
 	int32_t 	cycles_to_die;
 	size_t 		current;
+	size_t 		op_adr;
 	size_t 		step_to_next;
 	t_color 	color;
+	t_bool 		alive;
 	int			ready;
+	struct s_cursor *next;
 
 }				t_cursor;
 
+
 typedef struct s_game
 {
-	void 		*arena;
-	t_list		*cursor;
+	void		*arena;
+	t_cursor 	*head;
+	t_cursor 	*cursor;
 	t_hero		*winner;
 	int64_t 	total_cycles;
 	int32_t 	check_live;
@@ -151,7 +156,7 @@ size_t ft_pass(t_game *game);
 size_t op_ld(t_game *game);
 size_t op_st(t_game *game);
 size_t op_zjmp(t_game *game);
-size_t ft_sti(t_game *game);
+size_t op_sti(t_game *game);
 size_t op_fork(t_game *game);
 size_t op_add(t_game* game);
 size_t op_sub(t_game* game);
@@ -180,7 +185,7 @@ static t_op	op_tab[17] =
 		{"ldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 25,
 		"load index", 1, 1, 2,&op_ldi},
 		{"sti", 3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 25,
-		"store index", 1, 1, 2, &ft_sti},
+		"store index", 1, 1, 2, &op_sti},
 		{"fork", 1, {T_DIR}, 12, 800, "fork", 0, 1, 2,&op_fork},
 		{"lld", 2, {T_DIR | T_IND, T_REG}, 13, 10, "long load", 1, 0, 4,&op_lld},
 		{"lldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 14, 50,
@@ -213,7 +218,7 @@ void ft_print_result();
 void ft_print_memory(void *start, void *end, void *mark, void *tail);
 int ft_set_color(t_color color);
 //int32_t ft_atoi_vm(void* head, size_t *address, size_t size);
-int ft_get_arg(t_game *game, int arg_type, t_bool idx);
+int32_t ft_get_data(t_game *game, int arg_type);
 /*
  * Logger
  */
@@ -221,5 +226,8 @@ t_vm ft_atoi_vm(void* head, size_t *address, size_t size);
 void ft_log_game(t_game *game);
 t_log *ft_logger_init(char *name);
 void ft_log(t_log *log, char *string);
-void ft_log_cursor(t_game *game);
+void ft_log_cursor(t_game *game, size_t prev);
+void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail);
+size_t ft_convert_arg(size_t arg, t_game *game, int arg_type, t_bool idx);
+int ft_get_arg(t_game *game, int arg_type, t_bool idx);
 #endif

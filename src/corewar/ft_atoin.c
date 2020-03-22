@@ -36,13 +36,11 @@ t_vm ft_atoi_vm(void* head, size_t *address, size_t size)
 {
 	t_vm	nbr;
 	u_int32_t value;
-
 	value = 0;
 	while (size--)
 	{
 		value = value << 8u;
-		value += *(unsigned char*)(head + *address);
-		*address = (*address + 1) % MEM_SIZE;
+		value += *(unsigned char*)(head + ft_mod((*address)++, MEM_SIZE));
 	}
 	nbr.value = value;
 	return nbr;
@@ -51,15 +49,12 @@ t_vm ft_atoi_vm(void* head, size_t *address, size_t size)
 void ft_itoa_vm(void *head, int32_t address, int32_t value)
 {
 	int size;
+
 	size = DIR_SIZE;
-	address = (address + size - 1) % MEM_SIZE;
 	while (size--)
 	{
-		*(unsigned char*)(head + address) = (unsigned char)value;
+		*(unsigned char*)(head + ft_mod(address + size, MEM_SIZE)) = (unsigned char)value;
 		value = value >> 8u;
-		if (address == 0)
-			address = MEM_SIZE;
-		address = (address - 1) % MEM_SIZE;
 	}
 
 }
