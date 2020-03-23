@@ -9,7 +9,8 @@ t_err ft_parse_hero(t_hero *hero, t_mem *mem)
 	if (mem->end - mem->head < PROG_NAME_LENGTH + COMMENT_LENGTH + 4 + 8)
 		return (w_file_size);
 	mem->current = mem->head;
-	if (COREWAR_EXEC_MAGIC != ft_atoin(mem->current, 4))
+	hero->header.magic = ft_atoin(mem->current, 4);
+	if (COREWAR_EXEC_MAGIC != hero->header.magic)
 		return (except_magic);
 	mem->current += 4;
 	ft_memcpy(hero->header.prog_name, mem->current, PROG_NAME_LENGTH);
@@ -26,6 +27,4 @@ t_err ft_parse_hero(t_hero *hero, t_mem *mem)
 //	ft_print_memory(hero->program, hero->program + CHAMP_MAX_SIZE, hero->program, hero->program + CHAMP_MAX_SIZE);
 //	ft_print_memory(mem->head, mem->end, mem->cursor, mem->end);
 	return (success);
-
-//COREWAR_EXEC_MAGIC
 }

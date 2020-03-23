@@ -11,6 +11,7 @@
 # define OP_LEN 1
 # define TYPE_LEN 1
 # define REG_LEN 1
+# define MAX_OP 16
 
 typedef struct s_log
 {
@@ -135,7 +136,8 @@ typedef struct s_game
 
 typedef struct	s_data
 {
-	int			flags;
+	int32_t		dump;
+	t_bool		enable_aff;
 	t_hero		hero_list[MAX_PLAYERS];
 }				t_data;
 

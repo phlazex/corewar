@@ -6,16 +6,6 @@
 #include <zconf.h>
 #include "libft.h"
 
-static int ft_is_option(char *string)
-{
-	return 0;
-}
-
-static int ft_is_hero(char *string)
-{
-	return 0;
-}
-
 static t_err ft_get_hero(t_hero *hero)
 {
 	t_mem *mem;
@@ -67,7 +57,6 @@ static t_err ft_check_file_name(char *file_name)
 
 static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
 {
-	t_err err;
 	int i;
 	int j;
 	int index;
