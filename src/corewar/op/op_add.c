@@ -4,9 +4,9 @@ t_err op_add(t_game* game)
 {
 	union u_types type;
 	t_cursor *cursor;
-	int arg1;
-	int arg2;
-	int arg3;
+	int32_t arg1;
+	int32_t arg2;
+	int32_t arg3;
 	cursor = game->cursor;
 	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;

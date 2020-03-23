@@ -25,7 +25,7 @@ int32_t ft_get_data(t_game *game, int arg_type)
 	return arg;
 }
 
-size_t ft_convert_arg(size_t arg, t_game *game, int arg_type, t_bool idx)
+int32_t ft_convert_arg(int32_t arg, t_game *game, int32_t arg_type, t_bool idx)
 {
 	size_t address;
 	t_cursor *cursor;
@@ -65,7 +65,7 @@ t_err ft_clone_cursor(t_game *game, size_t address)
 	return (success);
 }
 
-int ft_get_arg(t_game *game, int arg_type, t_bool idx)
+int32_t ft_get_arg(t_game *game, int32_t arg_type, t_bool idx)
 {
 	size_t arg;
 	arg = ft_get_data(game, arg_type);

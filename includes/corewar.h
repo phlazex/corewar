@@ -108,7 +108,7 @@ typedef struct	s_cursor
 	size_t 		step_to_next;
 	t_color 	color;
 	t_bool 		alive;
-	int			occupy;
+	int32_t 	occupy;
 	struct s_cursor *next;
 
 }				t_cursor;
@@ -203,13 +203,13 @@ void ft_usage();
 void ft_logo();
 void *ft_game_over(t_game **game);
 
-void ft_itoa_vm(void *head, int32_t address, int32_t value);
+void ft_itoa_vm(void *head, size_t address, u_int32_t value);
 void ft_print_arena(t_game *game);
 void ft_print_error(t_err err);
 void ft_print_regs(t_game *game);
 t_err ft_parse_input(int argc, char **argv, t_data **data);
 t_err ft_parse_hero(t_hero *hero, t_mem *mem);
-u_int64_t ft_atoin(void *data, size_t size);
+u_int32_t ft_atoin(void *data, size_t size);
 void ft_past_heroes(t_game * game, t_data *data);
 t_err ft_init_cursors(t_game *game);
 t_cursor *ft_new_cursor();
@@ -219,7 +219,7 @@ void ft_print_result(t_game *game);
 void ft_print_memory(void *start, void *end, void *mark, void *tail);
 int ft_set_color(t_color color);
 //int32_t ft_atoi_vm(void* head, size_t *address, size_t size);
-int32_t ft_get_data(t_game *game, int arg_type);
+int32_t ft_get_data(t_game *game, int32_t arg_type);
 /*
  * Logger
  */
@@ -229,6 +229,6 @@ t_log *ft_logger_init(char *name);
 void ft_log(t_log *log, char *string);
 void ft_log_cursor(t_game *game, size_t prev);
 void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail);
-size_t ft_convert_arg(size_t arg, t_game *game, int arg_type, t_bool idx);
-int ft_get_arg(t_game *game, int arg_type, t_bool idx);
+int32_t ft_convert_arg(int32_t arg, t_game *game, int32_t arg_type, t_bool idx);
+int32_t ft_get_arg(t_game *game, int32_t arg_type, t_bool idx);
 #endif

@@ -1,7 +1,7 @@
 #include "libft.h"
 #include "corewar.h"
 
-u_int64_t ft_atoin(void* data, size_t size)
+u_int32_t ft_atoin(void* data, size_t size)
 {
 	u_int64_t value;
 
@@ -47,7 +47,7 @@ t_vm ft_atoi_vm(void* head, size_t *address, size_t size)
 	return nbr;
 }
 
-void ft_itoa_vm(void *head, int32_t address, int32_t value)
+void ft_itoa_vm(void *head, size_t address, u_int32_t value)
 {
 	int size;
 
