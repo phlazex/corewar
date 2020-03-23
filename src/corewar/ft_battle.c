@@ -56,12 +56,13 @@ static t_bool ft_check_types(t_game *game)
 
 static t_err ft_apply_op(t_game *game)
 {
-
-//	size_t temp;
-//	temp = game->cursor->current;
+	t_err err;
+	size_t temp;
+	temp = game->cursor->current;
 	game->cursor->op_adr = game->cursor->current;
-	return op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
-//	ft_log_cursor(game, temp);
+	err = op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
+	ft_log_cursor(game, temp);
+	return (err);
 }
 
 static t_err ft_execute(t_game *game)
