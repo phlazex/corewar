@@ -51,4 +51,6 @@ static t_op	g_op_tab[MAX_OP] =
 				{"lfork", 1, {T_DIR}, 15, 1000, "long fork", 0, 1, 2, &op_lfork},
 				{"aff", 1, {T_REG}, 16, 2, "aff", 1, 0, 4, &op_aff},
 		};
+
+
 #endif /* COREWAR_OP_H */

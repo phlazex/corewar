@@ -7,7 +7,7 @@ void ft_print_error(t_err err)
 	int fd;
 
 	fd = STDERR_FILENO;
-	ft_logo();
+//	ft_logo();
 	ft_printf(E"196m");
 	ft_printf_fd(fd, "Error: ");
 	if (err == no_memory)

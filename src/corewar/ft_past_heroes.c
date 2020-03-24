@@ -53,5 +53,5 @@ void ft_past_heroes(t_game * game, t_data *data)
 				game->color[count * step + temp] = white + i + 1;
 		}
 	}
-	game->hero_list = data->hero_list;
+	game->input = data;
 }

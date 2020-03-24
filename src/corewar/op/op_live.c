@@ -11,16 +11,17 @@ t_err op_live(t_game *game)
 	arg = ft_get_data(game, DIR_CODE);
 	game->check_live++;
 	cursor->alive = true;
-	if (-arg > 0 && -arg <= MAX_PLAYERS)
+	if ((-arg > 0 && -arg <= MAX_PLAYERS) &&
+		game->input->hero_list[-arg - 1].id == -arg)
 	{
-		if(game->hero_list[-arg - 1].id == -arg)
-		{
-			ft_set_color(white - arg);
-			ft_printf(
-					"A process shows that player %d (\"%s\") is alive"RESET"\n",
-					-arg, (game->hero_list - arg - 1)->header.prog_name);
-			game->winner = game->hero_list - arg - 1;
-		}
+		game->winner = game->input->hero_list - arg - 1;
+		ft_set_color(white - arg);
+		if (!game->input->quiet)
+			ft_printf("A process shows that player %d (\"%s\") is alive"
+			RESET"\n",
+			-arg, (game->winner)->header.prog_name);
+
+
 	}
 	return (success);
 }

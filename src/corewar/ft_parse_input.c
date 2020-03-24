@@ -41,7 +41,7 @@ static t_err ft_get_heroes(t_data *data)
 	return (success);
 }
 
-static t_err ft_check_file_name(char *file_name)
+t_err ft_check_file_name(char *file_name)
 {
 	size_t len;
 
@@ -134,16 +134,49 @@ static t_err ft_check_format(int argc, char **argv)
 	return (success);
 }
 
+static t_err ft_check_opt(int32_t argc, char **argv, t_data *data)
+{
+
+	t_err err;
+	int i;
+	int j;
+
+	i = 0;
+	err = success;
+	if (!argv)
+		return (w_format);
+	while(++i < argc)
+	{
+		if (!argv[i] || !argv[i][0])
+			return (w_format);
+		j = MAX_OPT;
+		while (j--)
+		{
+			if (!ft_strcmp(argv[i], opt_tab[j].name))
+			{
+				if ((err = opt_tab[j].f(argc, &i, argv, data)))
+					return (err);
+				break ;
+			}
+		}
+
+		if (i < argc)
+			if ((err = ft_check_file_name(argv[i])))
+				return (w_file_name);
+	}
+	return (err);
+}
 
 t_err ft_parse_input(int argc, char **argv, t_data **data)
 {
 	t_err err;
 
-	*data = NULL;
 	if ((err = ft_check_format(argc, argv)))
 		return (err);
 	if (!(*data = (t_data*)malloc(sizeof(**data))))
 		return (no_memory);
+//	if ((err = ft_check_opt(argc, argv, *data)))
+//		return (err);
 	ft_bzero(*data, sizeof(**data));
 	if ((err = ft_get_heroes_files(argc, argv, *data)))
 		return (err);

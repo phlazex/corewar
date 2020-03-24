@@ -12,6 +12,7 @@
 # define TYPE_LEN 1
 # define REG_LEN 1
 # define MAX_OP 16
+# define MAX_OPT 3
 
 typedef struct s_log
 {
@@ -114,6 +115,15 @@ typedef struct	s_cursor
 }				t_cursor;
 
 
+
+typedef struct	s_data
+{
+	int32_t		dump;
+	t_bool		quiet;
+	t_bool		enable_aff;
+	t_hero		hero_list[MAX_PLAYERS];
+}				t_data;
+
 typedef struct s_game
 {
 	void		*arena;
@@ -127,18 +137,10 @@ typedef struct s_game
 	int32_t 	checks_done;
 	int32_t		player_count;
 	int32_t		cursors_count;
-	t_hero		*hero_list;
+	t_data		*input;
 	t_color		color[MEM_SIZE];
 	t_log		*log;
 }				t_game;
-
-typedef struct	s_data
-{
-	int32_t		dump;
-	t_bool		quiet;
-	t_bool		enable_aff;
-	t_hero		hero_list[MAX_PLAYERS];
-}				t_data;
 
 union u_types
 {
@@ -152,6 +154,26 @@ union u_types
 	unsigned char value;
 };
 
+typedef struct s_opt{
+	uint8_t	id;
+	char 	name[10];
+	t_err	(*f)();
+	unsigned int opt_arg;
+	char 	arg_format[64];
+	char	comment[512];
+}				t_opt;
+
+t_err ft_flag_q(int32_t argc, int32_t *current, char **argv, t_data *data);
+t_err ft_flag_n(int32_t argc, int32_t *current, char **argv, t_data *data);
+t_err ft_flag_dump(int32_t argc, int32_t *current, char **argv, t_data *data);
+
+static t_opt opt_tab[10] =
+{
+	{1,"-n", &ft_flag_n, 3,"[number]","Sets the number of the next player. If non-existent, the\n                    player will have the next available number in the order of\n                    the parameters. The last player will have the first process\n                    in the order of execution."},
+	{2,"-q", &ft_flag_q, 0, "","Disable the display of each actual execution of the \"live\"\n                    instruction"},
+	{3,"-dump", &ft_flag_dump, 2, "[nbr_cycles]","At the end of <nbr_cycles> of executions, dump the memory\n                    on the standard output and quit the game. The memory dumped\n                    in the hexadecimal format with 32 octets"
+  "per line."}
+};
 
 t_game *ft_init_game();
 void ft_usage();
@@ -184,4 +206,6 @@ void ft_log_cursor(t_game *game, size_t prev);
 void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail);
 int32_t ft_convert_arg(int32_t arg, t_game *game, int32_t arg_type, t_bool idx);
 int32_t ft_get_arg(t_game *game, int32_t arg_type, t_bool idx);
+t_err ft_is_correct_number(const char *number);
+t_err ft_check_file_name(char *file_name);
 #endif /* COREWAR_H */

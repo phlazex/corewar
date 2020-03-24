@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 
 //	ft_print_regs(fd_game);
 //	ft_print_arena(fd_game->arena);
-	if (argc > 1 && argc < MAX_ARGS_NUMBER + MAX_PLAYERS + 2)
+	if (argc > 1)
 	{
 		if ((err = ft_parse_input(argc, argv, &data)))
 			ft_print_error(err);
@@ -38,10 +38,8 @@ int main(int argc, char **argv)
 			ft_game_over(&game);
 		}
 	}
-	else if (argc == 1)
-		ft_usage();
 	else
-		;
+		ft_usage();
 
 	return 0;
 }
