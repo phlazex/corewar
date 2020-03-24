@@ -1,12 +1,21 @@
 Invalid file format;test.car
-Invalid file format;""
-Invalid file format;-n test.cor
-Invalid file format;-n "" a/test.cor
-Invalid file format;-n "" a/test.or
-Invalid file format;- n 123 test.cor
-Invalid file format;"-n 123 test.cor"
-Invalid file format;- n 123 test.car
-Invalid file format;test.cor -n ""
-Invalid file format;test.cor -n 0
+Directory instead file;checkers/
+Empty line instead file's name;""
+Wrong link to file;checkers/champs/jumper.cor
+Flag -n declaration without number;-n checkers/valid_champs/jumper.cor
+Flag -n declaration with empty arg instead number;-n "" checkers/valid_champs/jumper.cor
+Invalid flag and file's format;-n "" a/test.or
+Invalid flag and file's format;- n 123 test.car
+Space in flag;- n 123 checkers/valid_champs/jumper.cor
+Args in "";"-n 123 checkers/valid_champs/jumper.cor"
+Empty flag with file's name;- 123 test.car
+Empty file's name with flag;-n 3 ""
+Empty flag;-
+Wrong flag declaration;test.cor -n ""
+Invalid number of flag -n;checkers/valid_champs/jumper.cor -n 0
+Invalid number of flag -n;checkers/valid_champs/jumper.cor -n 123
+Invalid number of flag -n;-n 0 checkers/valid_champs/jumper.cor
+Invalid number of flag -n;-n 123 checkers/valid_champs/jumper.cor
+Wrong flag;-w 1 checkers/valid_champs/jumper.cor
 Duplicate id;-n 3 test.cor -n 3 test.cor
 Wrong player number; test.cor test.cor test.cor test.cor test.cor
