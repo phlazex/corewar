@@ -1,7 +1,5 @@
 
-#include <corewar.h>
-#include <ft_printf.h>
-
+#include "corewar.h"
 #include <fcntl.h>
 #include <zconf.h>
 #include "libft.h"

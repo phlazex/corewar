@@ -1,30 +1,31 @@
 #include "ft_printf.h"
 #include "corewar.h"
+#include "corewar_op.h"
 
-static t_bool ft_check_arg(void *head, unsigned char type, t_cursor *cursor, char index)
+static t_bool ft_check_arg(t_game *game, unsigned char type, char index)
 {
 	int32_t value;
 	int32_t op;
 
-	op = cursor->op - 1;
+	op = game->cursor->op - 1;
 	if (type == REG_CODE)
 	{
-		value = ft_atoi_vm(head, &cursor->current, TYPE_LEN).v_1;
-		if ((op_tab[op].types[index] & 1) && value > 0 && value < 0x11)
+		value = ft_atoi_vm(game->arena, &game->cursor->current, TYPE_LEN).v_1;
+		if ((g_op_tab[op].types[index] & 1) && value > 0 && value < 0x11)
 		 	return true;
 	}
 	if (type == DIR_CODE)
 	{
-		cursor->current += op_tab[op].dir_size;
-		cursor->current = ft_mod(cursor->current, MEM_SIZE);
-		if (op_tab[op].types[index] & 2)
+		game->cursor->current += g_op_tab[op].dir_size;
+		game->cursor->current = ft_mod(game->cursor->current, MEM_SIZE);
+		if (g_op_tab[op].types[index] & 2)
 			return (true);
 	}
 	if (type == IND_CODE )
 	{
-		cursor->current += IND_SIZE;
-		cursor->current = ft_mod(cursor->current, MEM_SIZE);
-		if (op_tab[op].types[index] & 4)
+		game->cursor->current += IND_SIZE;
+		game->cursor->current = ft_mod(game->cursor->current, MEM_SIZE);
+		if (g_op_tab[op].types[index] & 4)
 			return (true);
 	}
 	return (false);
@@ -38,29 +39,30 @@ static t_bool ft_check_types(t_game *game)
 
 	t_cursor *cursor;
 	cursor = game->cursor;
-	cursor->op_adr = cursor->current;
-	cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
+	cursor->current = (cursor->pc + OP_LEN) % MEM_SIZE;
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;
 	op = cursor->op - 1;
-	ok = ft_check_arg(game->arena,type.arg1,cursor, 0);
-	if (op_tab[op].arg_count > 1)
-		ok = ft_check_arg(game->arena, type.arg2, cursor, 1) && ok;
-	if (op_tab[op].arg_count > 2)
-		ok = ft_check_arg(game->arena, type.arg3, cursor, 2) && ok;
+	ok = ft_check_arg(game, type.arg1, 0);
+	if (g_op_tab[op].arg_count > 1)
+		ok = ft_check_arg(game, type.arg2, 1) && ok;
+	if (g_op_tab[op].arg_count > 2)
+		ok = ft_check_arg(game, type.arg3, 2) && ok;
 	if (type.arg4)
 		ok = false;
-	if (ok)
-		cursor->current = cursor->op_adr;
+	if (!ok)
+		cursor->pc = cursor->current;
 	return (ok);
+
 }
 
 static t_err ft_apply_op(t_game *game)
 {
 	t_err err;
 	size_t temp;
-	temp = game->cursor->current;
-	game->cursor->op_adr = game->cursor->current;
-	err = op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
+
+	temp = game->cursor->pc;
+	err = g_op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
+	game->cursor->pc = game->cursor->current;
 	ft_log_cursor(game, temp);
 	return (err);
 }
@@ -74,7 +76,7 @@ static t_err ft_execute(t_game *game)
 	cursor = game->cursor;
 	if (cursor->op > 0x00 && cursor->op < 0x11)
 	{
-		if (op_tab[cursor->op - 1].arg_type)
+		if (g_op_tab[cursor->op - 1].arg_type)
 		{
 			if (ft_check_types(game))
 				err = ft_apply_op(game);
@@ -83,7 +85,7 @@ static t_err ft_execute(t_game *game)
 			err = ft_apply_op(game);
 	}
 	else
-		cursor->current = (cursor->current + OP_LEN) % MEM_SIZE;
+		cursor->pc = (cursor->pc + OP_LEN) % MEM_SIZE;
 	return (err);
 }
 
@@ -99,9 +101,9 @@ static t_err main_loop(t_game *game)
 		cursor = game->cursor;
 		if (!cursor->occupy)
 		{
-			cursor->op = *(char*)(game->arena + cursor->current);
+			cursor->op = *(char*)(game->arena + cursor->pc);
 			if (cursor->op > 0x00 && cursor->op < 0x11)
-				cursor->occupy = op_tab[cursor->op - 1].cycles;
+				cursor->occupy = g_op_tab[cursor->op - 1].cycles;
 		}
 		if (cursor->occupy)
 			cursor->occupy--;

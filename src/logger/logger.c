@@ -1,6 +1,7 @@
 #include "corewar.h"
 #include "libft.h"
 #include "ft_printf.h"
+#include "corewar_op.h"
 #include <time.h>
 #include <fcntl.h>
 
@@ -82,11 +83,11 @@ void ft_log_cursor(t_game *game, size_t prev)
 					 cursor->id,
 					 cursor->carry ? " true" : "false",
 					 cursor->op,
-					 (cursor->op > 0 && cursor->op < 17) ? op_tab[cursor->op - 1].name : " err ",
+					 (cursor->op > 0 && cursor->op < 17) ? g_op_tab[cursor->op - 1].name : " err ",
 					 cursor->alive ? " true" : "false",
 					 prev,
 					 cursor->current,
-					 (cursor->op > 0 && cursor->op < 17) ? op_tab[cursor->op - 1].cycles : 1);
+					 (cursor->op > 0 && cursor->op < 17) ? g_op_tab[cursor->op - 1].cycles : 1);
 
 		while (len--)
 			ft_printf_fd(game->log->fd_cursor, "%d ", cursor->regs[len]);
@@ -101,7 +102,7 @@ void ft_log_cursor(t_game *game, size_t prev)
 
 void ft_log_game(t_game *game)
 {
-	ft_printf_fd(game->log->fd_game, "%5d: cycle: %4d cursors: %4d checks: %4d check live: %4d winner: %1d(%s) (live:%3d) cycles to die: %d\n",
+	ft_printf_fd(game->log->fd_game, "%5d: cycle: %4d cursors: %4d checks: %4d check live: %4d winner: %1d(%s) cycles to die: %d\n",
 				 game->total_cycles,
 				 game->cycle,
 			game->cursors_count,
@@ -109,6 +110,6 @@ void ft_log_game(t_game *game)
 			game->check_live,
 			game->winner ? game->winner->id : 0,
 			game->winner ? game->winner->header.prog_name : "",
-			game->winner ? game->winner->live : 0,
+//			game->winner ? game->winner->live : 0,
 				 game->cycles_to_die);
 }

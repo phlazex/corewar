@@ -76,8 +76,8 @@ typedef struct s_hero
 	unsigned char	program[CHAMP_MAX_SIZE];
 	int32_t 		id;
 	header_t		header;
-	int32_t 		live;
-	int32_t 		last_live;
+//	int32_t 		live;
+//	int32_t 		last_live;
 	char 			*file_name;
 }					t_hero;
 
@@ -98,18 +98,17 @@ typedef struct s_op
 
 typedef struct	s_cursor
 {
+	size_t 		pc;
+	size_t 		current;
+	int32_t		op;
 	int32_t 	id;
+	int32_t 	occupy;
 	t_bool		carry;
 	int32_t 	regs[REG_NUMBER];
-	char 		op;
-	int32_t 	live_cycle;
-	int32_t 	cycles_to_die;
-	size_t 		current;
-	size_t 		op_adr;
-	size_t 		step_to_next;
-	t_color 	color;
 	t_bool 		alive;
-	int32_t 	occupy;
+	size_t		live_cycle;
+	t_color 	color;
+
 	struct s_cursor *next;
 
 }				t_cursor;
@@ -121,7 +120,7 @@ typedef struct s_game
 	t_cursor 	*head;
 	t_cursor 	*cursor;
 	t_hero		*winner;
-	int64_t 	total_cycles;
+	size_t 	total_cycles;
 	int32_t 	check_live;
 	int32_t 	cycle;
 	int32_t 	cycles_to_die;
@@ -131,12 +130,12 @@ typedef struct s_game
 	t_hero		*hero_list;
 	t_color		color[MEM_SIZE];
 	t_log		*log;
-
 }				t_game;
 
 typedef struct	s_data
 {
 	int32_t		dump;
+	t_bool		quiet;
 	t_bool		enable_aff;
 	t_hero		hero_list[MAX_PLAYERS];
 }				t_data;
@@ -153,58 +152,11 @@ union u_types
 	unsigned char value;
 };
 
-t_err op_live(t_game *game);
-t_err ft_pass(t_game *game);
-t_err op_ld(t_game *game);
-t_err op_st(t_game *game);
-t_err op_zjmp(t_game *game);
-t_err op_sti(t_game *game);
-t_err op_fork(t_game *game);
-t_err op_add(t_game* game);
-t_err op_sub(t_game* game);
-t_err op_and(t_game* game);
-t_err op_or(t_game* game);
-t_err op_xor(t_game* game);
-t_err op_ldi(t_game* game);
-t_err op_lld(t_game *game);
-t_err op_lldi(t_game* game);
-t_err op_lfork(t_game *game);
-t_err op_aff(t_game* game);
-
-static t_op	op_tab[17] =
-	{
-		{"live", 1, {T_DIR}, 1, 10, "alive", 0, 0, 4, &op_live},
-		{"ld", 2, {T_DIR | T_IND, T_REG}, 2, 5, "load", 1, 0, 4, &op_ld},
-		{"st", 2, {T_REG, T_IND | T_REG}, 3, 5, "store", 1, 0, 4, &op_st},
-		{"add", 3, {T_REG, T_REG, T_REG}, 4, 10, "addition", 1, 0, 4, &op_add},
-		{"sub", 3, {T_REG, T_REG, T_REG}, 5, 10, "soustraction", 1, 0, 4, &op_sub},
-		{"and", 3, {T_REG | T_DIR | T_IND, T_REG | T_IND | T_DIR, T_REG}, 6, 6,
-		"et (and  r1, r2, r3   r1&r2 -> r3", 1, 0, 4, &op_and},
-		{"or", 3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 7, 6,
-		"ou  (or   r1, r2, r3   r1 | r2 -> r3", 1, 0, 4, &op_or},
-		{"xor", 3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 8, 6,
-		"ou (xor  r1, r2, r3   r1^r2 -> r3", 1, 0, 4,&op_xor},
-		{"zjmp", 1, {T_DIR}, 9, 20, "jump if zero", 0, 1, 2, &op_zjmp},
-		{"ldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 25,
-		"load index", 1, 1, 2,&op_ldi},
-		{"sti", 3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 25,
-		"store index", 1, 1, 2, &op_sti},
-		{"fork", 1, {T_DIR}, 12, 800, "fork", 0, 1, 2,&op_fork},
-		{"lld", 2, {T_DIR | T_IND, T_REG}, 13, 10, "long load", 1, 0, 4,&op_lld},
-		{"lldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 14, 50,
-		"long load index", 1, 1, 2,&op_lldi},
-		{"lfork", 1, {T_DIR}, 15, 1000, "long fork", 0, 1, 2,&op_lfork},
-		{"aff", 1, {T_REG}, 16, 2, "aff", 1, 0, 4,&op_aff},
-		{"0", 0, {0}, 0, 0, "0", 0, 0, 0,&ft_pass}
-	};
-
 
 t_game *ft_init_game();
 void ft_usage();
-
 void ft_logo();
 void *ft_game_over(t_game **game);
-
 void ft_itoa_vm(void *head, size_t address, u_int32_t value);
 void ft_print_arena(t_game *game);
 void ft_print_error(t_err err);
@@ -220,7 +172,6 @@ void ft_battle(t_game *game);
 void ft_print_result(t_game *game);
 void ft_print_memory(void *start, void *end, void *mark, void *tail);
 int ft_set_color(t_color color);
-//int32_t ft_atoi_vm(void* head, size_t *address, size_t size);
 int32_t ft_get_data(t_game *game, int32_t arg_type);
 /*
  * Logger
@@ -233,4 +184,4 @@ void ft_log_cursor(t_game *game, size_t prev);
 void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail);
 int32_t ft_convert_arg(int32_t arg, t_game *game, int32_t arg_type, t_bool idx);
 int32_t ft_get_arg(t_game *game, int32_t arg_type, t_bool idx);
-#endif
+#endif /* COREWAR_H */

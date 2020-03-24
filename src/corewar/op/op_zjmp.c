@@ -9,6 +9,6 @@ t_err op_zjmp(t_game *game)
 	cursor->current = ft_mod(cursor->current + OP_LEN, MEM_SIZE);
 	arg = ft_get_data(game, DIR_CODE);
 	if(cursor->carry)
-		cursor->current = ft_mod(cursor->op_adr + arg % IDX_MOD, MEM_SIZE);
+		cursor->current = ft_mod(cursor->pc + arg % IDX_MOD, MEM_SIZE);
 	return (success);
 }

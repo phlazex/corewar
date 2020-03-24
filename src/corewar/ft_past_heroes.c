@@ -23,7 +23,7 @@ static int ft_welcome_heroes(t_data *data)
 		}
 		++i;
 	}
-	ft_printf("\n");
+	ft_printf(RESET"\n");
 	return (count);
 }
 
@@ -46,8 +46,8 @@ void ft_past_heroes(t_game * game, t_data *data)
 			ft_memcpy(game->arena + count * step,
 					data->hero_list[i].program,
 					data->hero_list[i].header.prog_size);
-			data->hero_list[i].live = NBR_LIVE;
-			data->hero_list[i].last_live = 0;
+//			data->hero_list[i].live = NBR_LIVE;
+//			data->hero_list[i].last_live = 0;
 			temp = data->hero_list[i].header.prog_size;
 			while (temp--)
 				game->color[count * step + temp] = white + i + 1;

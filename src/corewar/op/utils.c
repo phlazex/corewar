@@ -1,5 +1,5 @@
-#include <ft_printf.h>
 #include "corewar.h"
+#include "corewar_op.h"
 
 int32_t ft_get_data(t_game *game, int arg_type)
 {
@@ -11,12 +11,12 @@ int32_t ft_get_data(t_game *game, int arg_type)
 	op = cursor->op - 1;
 	if (arg_type == DIR_CODE)
 	{
-		if (op_tab[op].dir_size == 2)
+		if (g_op_tab[op].dir_size == 2)
 			arg = ft_atoi_vm(game->arena, &cursor->current,
-							 op_tab[op].dir_size).v_2;
+							 g_op_tab[op].dir_size).v_2;
 		else
 			arg = ft_atoi_vm(game->arena, &cursor->current,
-							 op_tab[op].dir_size).v_4;
+							 g_op_tab[op].dir_size).v_4;
 	}
 	if(arg_type== IND_CODE)
 		arg = ft_atoi_vm(game->arena, &cursor->current, IND_SIZE).v_2;
@@ -37,7 +37,7 @@ int32_t ft_convert_arg(int32_t arg, t_game *game, int32_t arg_type, t_bool idx)
 	{
 		if (idx)
 			arg %= IDX_MOD;
-		address = (cursor->op_adr + arg);
+		address = (cursor->pc + arg);
 		return ft_atoi_vm(game->arena, &address, REG_SIZE).v_4;
 	}
 	if (arg_type == REG_CODE)
@@ -57,8 +57,8 @@ t_err ft_clone_cursor(t_game *game, size_t address)
 		return (no_memory);
 	ft_memcpy(new_cursor, cursor, sizeof(*cursor));
 	new_cursor->id = game->head->id + 1;
-	new_cursor->current = address;
-	new_cursor->op_adr = address;
+	new_cursor->current = 0;
+	new_cursor->pc = address;
 	new_cursor->next = game->head;
 	game->head = new_cursor;
 	game->cursors_count++;
