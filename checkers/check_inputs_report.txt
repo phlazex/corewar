@@ -1,1 +1,31 @@
 
+checkers/valid_champs/Survivor.cor
+\n
+0a1
+> ./check_input.sh: line 38: ./checkers/demo_corewar: cannot execute binary file: Exec format error
+\n
+----------------------\n
+checkers/valid_champs/null_comment.cor
+\n
+0a1
+> ./check_input.sh: line 38: ./checkers/demo_corewar: cannot execute binary file: Exec format error
+\n
+----------------------\n
+checkers/valid_champs/null_name.cor
+\n
+0a1
+> ./check_input.sh: line 38: ./checkers/demo_corewar: cannot execute binary file: Exec format error
+\n
+----------------------\n
+checkers/valid_champs/null_in_code.cor
+\n
+0a1
+> ./check_input.sh: line 38: ./checkers/demo_corewar: cannot execute binary file: Exec format error
+\n
+----------------------\n
+checkers/valid_champs/null_in_name.cor
+\n
+0a1
+> ./check_input.sh: line 38: ./checkers/demo_corewar: cannot execute binary file: Exec format error
+\n
+----------------------\n
