@@ -1,0 +1,5 @@
+./demo_corewar -v valid_champs/Survivor.cor valid_champs/jumper.cor 
+
+Introducing contestants...
+* Player 1, weighing 320 bytes, "Jumper !" ("en fait C forker !") !
+Contestant 1, "Jumper !", has won !
