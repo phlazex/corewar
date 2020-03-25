@@ -6,12 +6,13 @@ YELLOW="\x1b[33m"
 RESET="\x1b[0m"
 
 COREWAR_EXEC=$1
-DEMO_COREWAR_EXEC=./checkers/demo_corewar
+#DEMO_COREWAR_EXEC=./checkers/demo_corewar
 
 CHAMPS_DIR=checkers/valid_champs
+DIFF_DIR=checkers/diff_files/
 
 TEST_TMP=test_temp_my
-DEMO_OUTPUT=test_temp_demo
+#DEMO_OUTPUT=test_temp_demo
 
 ERRORS_REPORT=checkers/check_inputs_report.txt
 
@@ -34,9 +35,11 @@ run_all_tests()
 {
   for file in `find ${CHAMPS_DIR} -type f -name "*.cor"`
   do
-    ${COREWAR_EXEC} ${file} > /dev/null 2> ${TEST_TMP}
-    ${DEMO_COREWAR_EXEC} ${file} > /dev/null 2> ${DEMO_OUTPUT}
-    local output=`diff -ibB ${TEST_TMP} ${DEMO_OUTPUT}`
+    local name=`echo ${file%%.*} | cut -d'/' -f3`
+    ${COREWAR_EXEC} ${file} > ${TEST_TMP}
+   # ${DEMO_COREWAR_EXEC} ${file} > /dev/null 2> ${DEMO_OUTPUT}
+   # ${DEMO_COREWAR_EXEC} ${file} > checkers/diff_files/${name}.txt
+    local output=`diff -ibB ${TEST_TMP} ${DIFF_DIR}${name}.txt`
     printf "%-65s" "$file"
     printf ": "
     if [ "$output" = "" ]; then
@@ -75,4 +78,4 @@ echo "" > ${ERRORS_REPORT}
 run_all_tests
 
 rm $TEST_TMP
-rm $DEMO_OUTPUT
+#rm $DEMO_OUTPUT

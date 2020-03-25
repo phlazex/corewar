@@ -1,0 +1,3 @@
+Introducing contestants...
+* Player 1, weighing 320 bytes, "" ("en fait C forker !") !
+Contestant 1, "", has won !

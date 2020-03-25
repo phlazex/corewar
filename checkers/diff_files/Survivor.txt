@@ -1,0 +1,3 @@
+Introducing contestants...
+* Player 1, weighing 39 bytes, "Survivor" ("Invincible") !
+Contestant 1, "Survivor", has won !
