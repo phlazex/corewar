@@ -58,6 +58,7 @@ static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
 	int i;
 	int j;
 	int index;
+
 	i = 0;
 	while(++i < argc)
 	{
@@ -92,7 +93,6 @@ static t_err ft_get_heroes_files(int argc, char **argv, t_data *data)
 	return (success);
 }
 
-
 t_err ft_is_correct_number(const char *number)
 {
 	if (number == NULL || *number == 0 || *(number + 1))
@@ -120,7 +120,8 @@ static t_err ft_check_format(int argc, char **argv)
 			{
 				if (++i >= argc || (err = ft_check_file_name(argv[i])))
 					return (err);
-			} else
+			}
+			else
 				return (err);
 		}
 		if (!ft_strcmp(argv[i], "-dump"))
@@ -136,7 +137,6 @@ static t_err ft_check_format(int argc, char **argv)
 
 static t_err ft_check_opt(int32_t argc, char **argv, t_data *data)
 {
-
 	t_err err;
 	int i;
 	int j;
@@ -150,34 +150,38 @@ static t_err ft_check_opt(int32_t argc, char **argv, t_data *data)
 		if (!argv[i] || !argv[i][0])
 			return (w_format);
 		j = MAX_OPT;
-		while (j--)
-		{
-			if (!ft_strcmp(argv[i], opt_tab[j].name))
+		if (argv[i][0] == '-')
+			while (j--)
 			{
-				if ((err = opt_tab[j].f(argc, &i, argv, data)))
-					return (err);
-				break ;
+				if (!ft_strcmp(argv[i], opt_tab[j].name))
+				{
+					if ((err = opt_tab[j].f(argc, &i, argv, data)))
+						return (err);
+					break ;
+				}
 			}
-		}
-
-		if (i < argc)
-			if ((err = ft_check_file_name(argv[i])))
-				return (w_file_name);
+		else
+			if (i < argc)
+				if ((err = ft_check_file_name(argv[i])))
+					return (w_file_name);
 	}
 	return (err);
+}
+static void ft_init_data(t_data *data)
+{
+	ft_bzero(data, sizeof(*data));
+	data->dump = -1;
 }
 
 t_err ft_parse_input(int argc, char **argv, t_data **data)
 {
 	t_err err;
 
-	if ((err = ft_check_format(argc, argv)))
-		return (err);
 	if (!(*data = (t_data*)malloc(sizeof(**data))))
 		return (no_memory);
-//	if ((err = ft_check_opt(argc, argv, *data)))
-//		return (err);
-	ft_bzero(*data, sizeof(**data));
+	ft_init_data(*data);
+	if ((err = ft_check_opt(argc, argv, *data)))
+		return (err);
 	if ((err = ft_get_heroes_files(argc, argv, *data)))
 		return (err);
 	if ((err = ft_get_heroes(*data)))

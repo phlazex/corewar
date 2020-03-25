@@ -14,16 +14,19 @@ t_err ft_flag_n(int32_t argc, int32_t *current, char **argv, t_data *data)
 
 t_err ft_flag_dump(int32_t argc, int32_t *current, char **argv, t_data *data)
 {
-	if (!(++(*current) < argc && (data->dump = ft_atoi(argv[*current])) < 0))
-		return (w_format);
-	++(*current);
-	return success;
+	if (++(*current) < argc && (data->dump = ft_atoi(argv[*current])) >= 0)
+		return success;
+	return (w_format);
 }
 
 t_err ft_flag_q(int32_t argc, int32_t *current, char **argv, t_data *data)
 {
 	data->quiet = true;
-	++(*current);
+	return success;
+}
+t_err ft_flag_a(int32_t argc, int32_t *current, char **argv, t_data *data)
+{
+	data->enable_aff = true;
 	return success;
 }
 

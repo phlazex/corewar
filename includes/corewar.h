@@ -166,13 +166,15 @@ typedef struct s_opt{
 t_err ft_flag_q(int32_t argc, int32_t *current, char **argv, t_data *data);
 t_err ft_flag_n(int32_t argc, int32_t *current, char **argv, t_data *data);
 t_err ft_flag_dump(int32_t argc, int32_t *current, char **argv, t_data *data);
+t_err ft_flag_a(int32_t argc, int32_t *current, char **argv, t_data *data);
 
 static t_opt opt_tab[10] =
 {
 	{1,"-n", &ft_flag_n, 3,"[number]","Sets the number of the next player. If non-existent, the\n                    player will have the next available number in the order of\n                    the parameters. The last player will have the first process\n                    in the order of execution."},
 	{2,"-q", &ft_flag_q, 0, "","Disable the display of each actual execution of the \"live\"\n                    instruction"},
 	{3,"-dump", &ft_flag_dump, 2, "[nbr_cycles]","At the end of <nbr_cycles> of executions, dump the memory\n                    on the standard output and quit the game. The memory dumped\n                    in the hexadecimal format with 32 octets"
-  "per line."}
+  "per line."},
+	{4,"-a", &ft_flag_a, 0,"", "Enable aff function"}
 };
 
 t_game *ft_init_game();
@@ -190,7 +192,7 @@ void ft_past_heroes(t_game * game, t_data *data);
 t_err ft_init_cursors(t_game *game);
 t_cursor *ft_new_cursor();
 t_err ft_clone_cursor(t_game *game, size_t address);
-void ft_battle(t_game *game);
+t_bool ft_battle(t_game *game);
 void ft_print_result(t_game *game);
 void ft_print_memory(void *start, void *end, void *mark, void *tail);
 int ft_set_color(t_color color);

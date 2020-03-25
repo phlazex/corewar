@@ -157,7 +157,7 @@ static void ft_doomsday(t_game *game)
 }
 
 
-void ft_battle(t_game *game)
+t_bool ft_battle(t_game *game)
 {
 	ft_log_game(game);
 	while (game->head)
@@ -177,5 +177,10 @@ void ft_battle(t_game *game)
 			game->check_live = 0;
 			game->cycle = 0;
 		}
+		if (game->total_cycles == game->input->dump)
+			return true;
 	}
+	if (game->input->dump == 0)
+		return true;
+	return false;
 }
