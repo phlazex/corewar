@@ -15,7 +15,7 @@ static int ft_log_add(char *name)
 			ft_printf("Can't create file!\n");
 	}
 	else
-		if ((fd = open("../func.log", O_CREAT | O_TRUNC | O_RDWR)) <= 0)
+		if ((fd = open("func.log", O_CREAT | O_TRUNC | O_RDWR)) <= 0)
 			ft_printf("Can't create file!\n");
 	return fd;
 }
@@ -31,7 +31,7 @@ t_log *ft_logger_init(char *name)
 	if (!(log = (t_log*)malloc(sizeof(*log))))
 		return (NULL);
 	log->fd_cursor = ft_log_add(NULL);
-	log->fd_game = ft_log_add("../game.log");
+	log->fd_game = ft_log_add("game.log");
 
 	if(log && log->fd_cursor > 0)
 	{

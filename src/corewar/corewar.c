@@ -6,6 +6,7 @@ int main(int argc, char **argv)
 	t_game *game;
 	t_err err;
 	t_data *data;
+
 	ft_printf(CLR);
 	if (argc > 1)
 	{

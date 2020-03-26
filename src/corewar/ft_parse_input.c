@@ -48,7 +48,7 @@ t_err ft_check_file_name(char *file_name)
 	len = ft_strlen(file_name);
 	if (len < 3)
 		return (w_file_name);
-	if (*(int32_t*)(file_name + len - 4) == 0x726f632e) // 0x726f632e == "./cor"
+	if (*(int32_t*)(file_name + len - 4) == 0x726f632e) /* 0x726f632e == "./cor" */
 		return (success);
 	return (w_format);
 }
@@ -143,30 +143,32 @@ static t_err ft_check_opt(int32_t argc, char **argv, t_data *data)
 
 	i = 0;
 	err = success;
-	if (!argv)
-		return (w_format);
 	while(++i < argc)
 	{
 		if (!argv[i] || !argv[i][0])
 			return (w_format);
 		j = MAX_OPT;
-		if (argv[i][0] == '-')
+		if (argv[i][0] == '-' && argv[i][1])
 			while (j--)
 			{
 				if (!ft_strcmp(argv[i], opt_tab[j].name))
 				{
 					if ((err = opt_tab[j].f(argc, &i, argv, data)))
 						return (err);
-					break ;
+					break;
 				}
 			}
+		else if (i < argc)
+		{
+			if ((err = ft_check_file_name(argv[i])))
+				return (w_file_name);
+		}
 		else
-			if (i < argc)
-				if ((err = ft_check_file_name(argv[i])))
-					return (w_file_name);
+			err = w_format;
 	}
 	return (err);
 }
+
 static void ft_init_data(t_data *data)
 {
 	ft_bzero(data, sizeof(*data));

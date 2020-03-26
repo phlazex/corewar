@@ -39,9 +39,9 @@ static t_bool ft_check_types(t_game *game)
 
 	t_cursor *cursor;
 	cursor = game->cursor;
+	op = cursor->op - 1;
 	cursor->current = (cursor->pc + OP_LEN) % MEM_SIZE;
 	type.value = ft_atoi_vm(game->arena, &cursor->current, TYPE_LEN).v_1;
-	op = cursor->op - 1;
 	ok = ft_check_arg(game, type.arg1, 0);
 	if (g_op_tab[op].arg_count > 1)
 		ok = ft_check_arg(game, type.arg2, 1) && ok;
@@ -60,10 +60,12 @@ static t_err ft_apply_op(t_game *game)
 	t_err err;
 	size_t temp;
 
-	temp = game->cursor->pc;
+	if(game->input->log)
+		temp = game->cursor->pc;
 	err = g_op_tab[((t_cursor*)game->cursor)->op - 1].func(game);
 	game->cursor->pc = game->cursor->current;
-	ft_log_cursor(game, temp);
+	if(game->input->log)
+		ft_log_cursor(game, temp);
 	return (err);
 }
 
@@ -159,7 +161,8 @@ static void ft_doomsday(t_game *game)
 
 t_bool ft_battle(t_game *game)
 {
-	ft_log_game(game);
+	if(game->input->log)
+		ft_log_game(game);
 	while (game->head)
 	{
 		game->cycle++;
@@ -173,7 +176,8 @@ t_bool ft_battle(t_game *game)
 				game->cycles_to_die -= CYCLE_DELTA;
 				game->checks_done = 0;
 			}
-			ft_log_game(game);
+			if(game->input->log)
+				ft_log_game(game);
 			game->check_live = 0;
 			game->cycle = 0;
 		}

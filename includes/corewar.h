@@ -12,7 +12,7 @@
 # define TYPE_LEN 1
 # define REG_LEN 1
 # define MAX_OP 16
-# define MAX_OPT 3
+# define MAX_OPT 5
 
 typedef struct s_log
 {
@@ -77,8 +77,6 @@ typedef struct s_hero
 	unsigned char	program[CHAMP_MAX_SIZE];
 	int32_t 		id;
 	header_t		header;
-//	int32_t 		live;
-//	int32_t 		last_live;
 	char 			*file_name;
 }					t_hero;
 
@@ -121,6 +119,7 @@ typedef struct	s_data
 	int32_t		dump;
 	t_bool		quiet;
 	t_bool		enable_aff;
+	t_bool		log;
 	t_hero		hero_list[MAX_PLAYERS];
 }				t_data;
 
@@ -167,6 +166,7 @@ t_err ft_flag_q(int32_t argc, int32_t *current, char **argv, t_data *data);
 t_err ft_flag_n(int32_t argc, int32_t *current, char **argv, t_data *data);
 t_err ft_flag_dump(int32_t argc, int32_t *current, char **argv, t_data *data);
 t_err ft_flag_a(int32_t argc, int32_t *current, char **argv, t_data *data);
+t_err ft_flag_log(int32_t argc, int32_t *current, char **argv, t_data *data);
 
 static t_opt opt_tab[10] =
 {
@@ -174,7 +174,8 @@ static t_opt opt_tab[10] =
 	{2,"-q", &ft_flag_q, 0, "","Disable the display of each actual execution of the \"live\"\n                    instruction"},
 	{3,"-dump", &ft_flag_dump, 2, "[nbr_cycles]","At the end of <nbr_cycles> of executions, dump the memory\n                    on the standard output and quit the game. The memory dumped\n                    in the hexadecimal format with 32 octets"
   "per line."},
-	{4,"-a", &ft_flag_a, 0,"", "Enable aff function"}
+	{4,"-a", &ft_flag_a, 0,"", "Enable aff function"},
+	{5,"-log", &ft_flag_log, 0,"", "Enable logger \"fuck.log\" and \"game.log\""}
 };
 
 t_game *ft_init_game();

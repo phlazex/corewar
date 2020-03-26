@@ -22,7 +22,7 @@ void ft_logo()
 	E"57m═══╝ "E"12m╚═╝  "E"27m╚═╝"E"33m╚"E"39m═"E"45m═══"E"50m══"E"49m╝ "
 	E"48m╚"E"47m══╝"E"46m╚══"E"82m╝ ╚"E"118m═╝ "E"190m ╚"E"11m═╝"E"220m╚═╝"
 	E"214m  ╚"E"208m═╝\n\t"
-			"%38s"E"118mVIRTUAL MACHINE v1.4\n\n"RESET,"");
+			"%33s"E"118mVIRTUAL MACHINE v1.4\n\n"RESET,"");
 }
 
 void ft_usage()

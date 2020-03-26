@@ -24,18 +24,17 @@ t_err ft_flag_q(int32_t argc, int32_t *current, char **argv, t_data *data)
 	data->quiet = true;
 	return success;
 }
+
 t_err ft_flag_a(int32_t argc, int32_t *current, char **argv, t_data *data)
 {
 	data->enable_aff = true;
 	return success;
 }
 
-//t_err ft_flag_dump()
-//{
-//	return success;
-//}t_err ft_flag_dump()
-//{
-//	return success;
-//}
+t_err ft_flag_log(int32_t argc, int32_t *current, char **argv, t_data *data)
+{
+	data->log = true;
+	return success;
+}
 
 
