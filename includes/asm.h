@@ -7,11 +7,6 @@
 
 #include "libft.h"
 
-//typedef struct s_data
-//{
-//	char		*file_name;
-//
-//}				t_data;
 
 typedef struct s_project
 {
@@ -20,11 +15,12 @@ typedef struct s_project
 	char 		*prog_size;
 	char 		*comment;
 	char		*program;
+	char		*current;
 	char		*end;
 }				t_project;
 
 int ft_project_init(char *file_name, t_project **project);
 void ft_usage();
-char  *ft_disassemble(char *program);
+int ft_disassemble(t_project *project);
 
 #endif

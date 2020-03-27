@@ -23,38 +23,50 @@ int32_t ft_get_code(char *head, size_t *address, int op, int arg_type)
 	return arg;
 }
 
+//static int ft_printf_arg(t_project *project, int32_t type_arg, int32_t op)
+//{
+//		type_arg == REG_CODE ? ft_printf("r") : ft_printf("%%");
+//		ft_printf("%d", ft_get_code(project->program, &project->current, op, type_arg));
+//}
 
-char  *ft_disassemble(char *program)
+int ft_disassemble(t_project *project)
 {
 	int op;
 	union u_types type;
 	size_t current;
 	int32_t arg;
 
-	op = *program - 1;
-	ft_printf("%s ", g_op_tab[op].name);
+	op = *project->current - 1;
+	if (op >= 0 && op < 16)
+	{
+		ft_printf("%s ", g_op_tab[op].name);
+
 	current = OP_LEN;
 	if (g_op_tab[op].arg_type)
 	{
-		type.value = ft_atoi_vm(program, &current, TYPE_LEN).v_1;
+		type.value = ft_atoi_vm(project->current, &current, TYPE_LEN).v_1;
 		type.arg1 == REG_CODE ? ft_printf("r") : ft_printf("%%");
-		ft_printf("%d", ft_get_code(program, &current, op, type.arg1));
+		ft_printf("%d", ft_get_code(project->current, &current, op, type.arg1));
 		if (g_op_tab[op].arg_count > 1)
 		{
 			type.arg2 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf("%d", ft_get_code(program, &current, op, type.arg2));
+			ft_printf("%d", ft_get_code(project->current, &current, op, type.arg2));
 		}
 		if (g_op_tab[op].arg_count > 2)
 		{
 			type.arg3 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf(", %d", ft_get_code(program, &current, op, type.arg3));
+			ft_printf(", %d", ft_get_code(project->current, &current, op, type.arg3));
 		}
 		ft_printf("\n");
-	}
-	else
+	} else
 	{
-		arg = ft_get_code(program, &current, op, DIR_CODE);
+		arg = ft_get_code(project->current, &current, op, DIR_CODE);
 		ft_printf("%%%d\n", arg);
 	}
-	return program + current;
+		project->current += current;
+		return 1;
+	}
+	ft_printf("err\n");
+	project->current++;
+	return 0;
 }
