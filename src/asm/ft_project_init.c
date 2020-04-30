@@ -7,6 +7,52 @@
 #include <ft_printf.h>
 //#include <stdio.h>
 
+static char	*ft_get_str(t_project *project, char *str)
+{
+	char *ptr;
+
+	if ((ptr = ft_strstr(project->data->current, str)) && ptr < project->data->endl)
+	{
+//		ft_printf("STR|");
+		return (ptr);
+	}
+//	ft_printf("NOSTR|");
+	return (NULL);
+}
+
+static char	*ft_get_chr(t_project *project, int chr)
+{
+	char *ptr;
+
+	if ((ptr = ft_strchr(project->data->current, chr)) && ptr < project->data->endl)
+	{
+//		ft_printf("CHAR|");
+		return (ptr);
+	}
+//	ft_printf("NOCHAR|");
+	return (NULL);
+}
+
+static void	ft_parse_current(t_project *project)
+{
+	if ((project->current = ft_get_chr(project, COMMENT_CHAR)) || (project->current = ft_get_chr(project, ALT_COMMENT_CHAR)))
+	{
+		ft_printf("%zi|", project->current);
+//		if (project->current != project->data->current)
+//		{
+//
+//		}
+	}
+	if ((project->current = ft_get_str(project, NAME_CMD_STRING)))
+	{
+		ft_printf("%zi|", project->current);
+	}
+	if ((project->current = ft_get_str(project, COMMENT_CMD_STRING)))
+	{
+		ft_printf("%zi|", project->current);
+	}
+}
+
 static char *ft_get_data_cmd(char *str)
 {
 	char	*start;
@@ -33,56 +79,33 @@ static int	ft_get_name_comment(t_project *project)
 	return (0);
 }
 
-static char	*ft_get_comment(t_project *project)
-{
-	char *ptr;
-
-	if (((ptr = ft_strchr(project->data->current, COMMENT_CHAR)) && ptr < project->data->endl) || ((ptr = ft_strchr(project->data->current, ALT_COMMENT_CHAR)) && ptr < project->data->endl))
-	{
-//		ft_printf("COMMENT_CHAR|");
-		return (ptr);
-	}
-//	ft_printf("NO|");
-	return (NULL);
-}
-
-static void	ft_parse_current(t_project *project)
-{
-	char	*comment;
-
-	if ((comment = ft_get_comment(project)))
-	{
-		ft_printf("%zi|", comment);
-	}
-}
-
 static int	ft_parse_file(t_mem *mem, t_project *project)
 {
 	project->data = mem;
 	project->end = mem->end;
-	if ((mem->endl = ft_strchr(mem->head, '\n')))
-	{
-		mem->current = mem->head;
-		while (mem->current < mem->end)
-		{
-			if ((mem->endl = ft_strchr(mem->current, '\n')))
-			{
-				ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
-				ft_parse_current(project);
-				mem->current = mem->endl + 1;
-			}
-			else if ((mem->endl = ft_strchr(mem->current, '\0')))
-			{
-				ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
-				ft_parse_current(project);
-				mem->current = mem->end;
-			}
-		}
-//		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
-	}
 	if (ft_get_name_comment(project))
 	{
 		ft_printf("%s|%s|%s", project->data->head, project->name, project->comment);
+		if ((mem->endl = ft_strchr(mem->head, '\n')))
+		{
+			mem->current = mem->head;
+			while (mem->current < mem->end)
+			{
+				if ((mem->endl = ft_strchr(mem->current, '\n')))
+				{
+					ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
+					ft_parse_current(project);
+					mem->current = mem->endl + 1;
+				}
+				else if ((mem->endl = ft_strchr(mem->current, '\0')))
+				{
+					ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
+					ft_parse_current(project);
+					mem->current = mem->end;
+				}
+			}
+//		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
+		}
 	}
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
 //	project->program = project->comment + COMMENT_LENGTH + 4;
