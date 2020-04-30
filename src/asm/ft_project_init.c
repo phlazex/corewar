@@ -18,17 +18,39 @@
 //	}
 //	return (newstr);
 //}
-
-static void	ft_parse_current(t_project *project)
+static char	*ft_get_comment(t_project *project)
 {
-	if (project->data->current == project->data->head)
+	char *ptr;
+
+	if ((ptr = ft_strchr(project->data->current, COMMENT_CHAR)) || (ptr = ft_strchr(project->data->current, ALT_COMMENT_CHAR)))
 	{
-		ft_printf("START");
+		if (ptr < project->data->endl)
+		{
+//			ft_printf("INLINE|");
+		}
+		else
+		{
+//			ft_printf("NOINLINE|");
+		}
 	}
 	else
 	{
-		ft_printf("NEXT");
+		ft_printf("NO|");
 	}
+	return 0;
+}
+
+static void	ft_parse_current(t_project *project)
+{
+	ft_get_comment(project);
+//	if (project->data->current == project->data->head)
+//	{
+//		ft_printf("START");
+//	}
+//	else
+//	{
+//		ft_printf("NEXT");
+//	}
 }
 
 static int	ft_parse_file(t_mem *mem, t_project *project)
@@ -46,6 +68,11 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 		if ((mem->endl = ft_strchr(mem->current, '\n')))
 		{
 			mem->current = mem->endl + 1;
+		}
+		else if ((mem->endl = ft_strchr(mem->current, '\0')))
+		{
+			mem->current = mem->end;
+			ft_printf("%zi|%zi", mem->endl, mem->end);
 		}
 	}
 //	if ((project->name = ft_strstr(mem->head, NAME_CMD_STRING)) && (project->comment = ft_strstr(mem->head, COMMENT_CMD_STRING)))
