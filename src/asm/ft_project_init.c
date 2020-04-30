@@ -5,93 +5,87 @@
 #include "libft.h"
 #include "corewar.h"
 #include <ft_printf.h>
+//#include <stdio.h>
 
-//static char *ft_name_comment(char *str)
-//{
-//	char	*start;
-//	char	*end;
-//	char	*newstr;
-//
-//	if ((start = ft_strchr(str, '"')) && (end = ft_strchr(start + 1, '"')))
-//	{
-//		newstr = ft_strsub(start, 1, end - start - 1);
-//	}
-//	return (newstr);
-//}
+static char *ft_get_data_cmd(char *str)
+{
+	char	*start;
+	char	*end;
+	char	*newstr;
+
+	if ((start = ft_strchr(str, '"')) && (end = ft_strchr(start + 1, '"')))
+	{
+		newstr = ft_strsub(start, 1, end - start - 1);
+		return (newstr);
+	}
+	return (NULL);
+}
+
+static int	ft_get_name_comment(t_project *project)
+{
+	char *name;
+	char *comment;
+
+	if ((name = ft_strstr(project->data->head, NAME_CMD_STRING)) && (comment = ft_strstr(project->data->head, COMMENT_CMD_STRING)) && (!ft_strstr(name + 1, NAME_CMD_STRING) && !ft_strstr(comment + 1, COMMENT_CMD_STRING)) && ((project->name = ft_get_data_cmd(name)) && (project->comment = ft_get_data_cmd(comment))))
+	{
+		return (1);
+	}
+	return (0);
+}
+
 static char	*ft_get_comment(t_project *project)
 {
 	char *ptr;
 
-	if ((ptr = ft_strchr(project->data->current, COMMENT_CHAR)) || (ptr = ft_strchr(project->data->current, ALT_COMMENT_CHAR)))
+	if (((ptr = ft_strchr(project->data->current, COMMENT_CHAR)) && ptr < project->data->endl) || ((ptr = ft_strchr(project->data->current, ALT_COMMENT_CHAR)) && ptr < project->data->endl))
 	{
-		if (ptr < project->data->endl)
-		{
-//			ft_printf("INLINE|");
-		}
-		else
-		{
-//			ft_printf("NOINLINE|");
-		}
+//		ft_printf("COMMENT_CHAR|");
+		return (ptr);
 	}
-	else
-	{
-		ft_printf("NO|");
-	}
-	return 0;
+//	ft_printf("NO|");
+	return (NULL);
 }
 
 static void	ft_parse_current(t_project *project)
 {
-	ft_get_comment(project);
-//	if (project->data->current == project->data->head)
-//	{
-//		ft_printf("START");
-//	}
-//	else
-//	{
-//		ft_printf("NEXT");
-//	}
+	char	*comment;
+
+	if ((comment = ft_get_comment(project)))
+	{
+		ft_printf("%zi|", comment);
+	}
 }
 
 static int	ft_parse_file(t_mem *mem, t_project *project)
 {
 	project->data = mem;
+	project->end = mem->end;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
-//		ft_printf("%s|%zi", mem->end, mem->end);
+		while (mem->current < mem->end)
+		{
+			if ((mem->endl = ft_strchr(mem->current, '\n')))
+			{
+				ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
+				ft_parse_current(project);
+				mem->current = mem->endl + 1;
+			}
+			else if ((mem->endl = ft_strchr(mem->current, '\0')))
+			{
+				ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
+				ft_parse_current(project);
+				mem->current = mem->end;
+			}
+		}
+//		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
 	}
-	while (mem->current < mem->end)
+	if (ft_get_name_comment(project))
 	{
-		ft_parse_current(project);
-//		ft_printf("%s|", project->name);
-		if ((mem->endl = ft_strchr(mem->current, '\n')))
-		{
-			mem->current = mem->endl + 1;
-		}
-		else if ((mem->endl = ft_strchr(mem->current, '\0')))
-		{
-			mem->current = mem->end;
-			ft_printf("%zi|%zi", mem->endl, mem->end);
-		}
+		ft_printf("%s|%s|%s", project->data->head, project->name, project->comment);
 	}
-//	if ((project->name = ft_strstr(mem->head, NAME_CMD_STRING)) && (project->comment = ft_strstr(mem->head, COMMENT_CMD_STRING)))
-//	{
-//		if (mem->head == project->name || mem->head == project->comment)
-//		{
-//			if (!ft_strstr(project->name + 1, NAME_CMD_STRING) && !ft_strstr(project->comment + 1, COMMENT_CMD_STRING))
-//			{
-//				project->name = ft_name_comment(project->name);
-//				project->comment = ft_name_comment(project->comment);
-//				ft_printf("%s|%s|%s", mem->head, project->name, project->comment);
-//			}
-//		}
-//	}
-//	project->name = mem->head + 4;
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
-//	project->comment = project->prog_size + 4;
 //	project->program = project->comment + COMMENT_LENGTH + 4;
-//	project->end = mem->end;
 	return 0;
 }
 
