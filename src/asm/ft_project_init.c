@@ -35,21 +35,25 @@ static char	*ft_get_chr(t_project *project, int chr)
 
 static void	ft_parse_current(t_project *project)
 {
-	if ((project->current = ft_get_chr(project, COMMENT_CHAR)) || (project->current = ft_get_chr(project, ALT_COMMENT_CHAR)))
+	char	*comment;
+	char	*name_cmd;
+	char	*comment_cmd;
+
+	if (!project->name || !project->data)
 	{
-		ft_printf("%zi|", project->current);
-//		if (project->current != project->data->current)
-//		{
-//
-//		}
-	}
-	if ((project->current = ft_get_str(project, NAME_CMD_STRING)))
-	{
-		ft_printf("%zi|", project->current);
-	}
-	if ((project->current = ft_get_str(project, COMMENT_CMD_STRING)))
-	{
-		ft_printf("%zi|", project->current);
+//		ft_printf("NONAME|");
+		if (((comment = ft_get_chr(project, COMMENT_CHAR)) || (comment = ft_get_chr(project, ALT_COMMENT_CHAR))) && comment > project->data->current)
+		{
+			ft_printf("%zi{COMMENT}|", comment);
+		}
+		if ((name_cmd = ft_get_str(project, NAME_CMD_STRING)) && (!comment || name_cmd < comment))
+		{
+			ft_printf("%zi{NAME_CMD}|", name_cmd);
+		}
+		else if ((comment_cmd = ft_get_str(project, COMMENT_CMD_STRING)) && (!comment || comment_cmd < comment))
+		{
+			ft_printf("%zi{COMMENT_CMD}|", comment_cmd);
+		}
 	}
 }
 
@@ -83,9 +87,9 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 {
 	project->data = mem;
 	project->end = mem->end;
-	if (ft_get_name_comment(project))
-	{
-		ft_printf("%s|%s|%s", project->data->head, project->name, project->comment);
+//	if (ft_get_name_comment(project))
+//	{
+//		ft_printf("%s|%s|%s", project->data->head, project->name, project->comment);
 		if ((mem->endl = ft_strchr(mem->head, '\n')))
 		{
 			mem->current = mem->head;
@@ -106,10 +110,10 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 			}
 //		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
 		}
-	}
+//	}
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
 //	project->program = project->comment + COMMENT_LENGTH + 4;
-	return 0;
+	return (0);
 }
 
 int ft_project_init(char *file_name, t_project **project)
@@ -124,5 +128,5 @@ int ft_project_init(char *file_name, t_project **project)
 	fast_read_in_memory(fd, data);
 	close(fd);
 	ft_parse_file(data, *project);
-	return 0;
+	return (0);
 }
