@@ -66,6 +66,66 @@ static int	ft_get_name_comment(t_project *project, char *data_cmd, char *comment
 	return (0);
 }
 
+static int	ft_is_zero_line(t_project *project, char *comment)
+{
+	while (project->current < project->data->endl && ft_isspace(*(project->current)))
+	{
+		(project->current)++;
+	}
+	ft_printf("%zi|", project->current);
+	if ((!comment && project->current == project->data->endl) || (comment && comment == project->current))
+	{
+		ft_printf("END|");
+		return (1);
+	}
+	return (0);
+}
+
+static int	ft_is_valid_chr(int chr)
+{
+	size_t	i;
+	char	*arr;
+
+	if (chr == LABEL_CHAR || chr == DIRECT_CHAR || chr == SEPARATOR_CHAR || ft_isspace(chr))
+	{
+		ft_printf("%c|", chr);
+		return (1);
+	}
+	else
+	{
+		i = 0;
+		arr = LABEL_CHARS;
+		while (arr[i] != '\0')
+		{
+			if (arr[i] == chr)
+			{
+				ft_printf("%c|", arr[i]);
+				return (1);
+			}
+			i++;
+		}
+	}
+	return (0);
+}
+
+static int	ft_is_valid_line(t_project *project, char *comment)
+{
+	char	*end_line;
+
+	end_line = comment ? comment : project->data->endl;
+//	ft_printf("%s|", project->current);
+	while (project->current < end_line && ft_is_valid_chr(*(project->current)))
+	{
+//		ft_printf("%c", *(project->current));
+		(project->current)++;
+	}
+	if (project->current == end_line)
+	{
+		return (1);
+	}
+	return (0);
+}
+
 static void	ft_parse_current(t_project *project)
 {
 	char	*comment;
@@ -89,6 +149,26 @@ static void	ft_parse_current(t_project *project)
 			{
 				ft_get_name_comment(project, data_cmd, comment, COMMENT_CMD_STRING);
 				ft_printf("%zi{COMMENT_CMD}|", data_cmd);
+			}
+			else
+			{
+				project->current = project->data->current;
+				if (!ft_is_zero_line(project, comment))
+				{
+					ft_printf("ERROR|");
+				}
+			}
+		}
+		else
+		{
+			ft_printf("HERE|");
+			project->current = project->data->current;
+			if (!ft_is_zero_line(project, comment))
+			{
+				if (!ft_is_valid_line(project, comment))
+				{
+					ft_printf("ERROR|");
+				}
 			}
 		}
 	}
