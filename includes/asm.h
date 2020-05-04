@@ -10,7 +10,6 @@
 typedef struct	s_prog_list
 {
 	char 					*line_ptr;
-	char 					*comment_ptr;
 	char 					*endl_ptr;
 	char					*new_line;
 	char					*label;

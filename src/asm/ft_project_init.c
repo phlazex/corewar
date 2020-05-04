@@ -124,6 +124,71 @@ static int	ft_is_valid_line(t_project *project, char *comment)
 	return (0);
 }
 
+static size_t		ft_get_strlen(t_prog_list *prog_list)
+{
+	char *ptr;
+	size_t	i;
+	size_t	j;
+
+	ptr = prog_list->line_ptr;
+	i = 0;
+	j = 0;
+	while (ptr < prog_list->endl_ptr)
+	{
+		j++;
+		while (ptr < prog_list->endl_ptr && ft_isspace(*(ptr)))
+		{
+			ptr++;
+		}
+		while (ptr < prog_list->endl_ptr && !ft_isspace(*(ptr)))
+		{
+			ptr++;
+			i++;
+		}
+		while (ptr < prog_list->endl_ptr && ft_isspace(*(ptr)))
+		{
+			ptr++;
+		}
+	}
+//	ft_printf("%zi|%zi|%zi|", i, j, i + j);
+	return (i + j);
+}
+
+static void 		ft_get_new_line(t_prog_list *prog_list)
+{
+	char	*ptr;
+	size_t	i;
+
+//	ft_printf("%zi|", ft_get_strlen(prog_list));
+	if (!(prog_list->new_line = ft_strnew(ft_get_strlen(prog_list))))
+	{
+		ft_printf("ERROR|");
+	}
+	ptr = prog_list->line_ptr;
+	i = 0;
+	while (ptr < prog_list->endl_ptr)
+	{
+		while (ptr < prog_list->endl_ptr && ft_isspace(*(ptr)))
+		{
+			ptr++;
+		}
+		while (ptr < prog_list->endl_ptr && !ft_isspace(*(ptr)))
+		{
+			(prog_list->new_line)[i++] = *ptr;
+			ptr++;
+		}
+		while (ptr < prog_list->endl_ptr && ft_isspace(*(ptr)))
+		{
+			ptr++;
+		}
+		if (ptr < prog_list->endl_ptr)
+		{
+			(prog_list->new_line)[i++] = ' ';
+		}
+	}
+	(prog_list->new_line)[i] = '\0';
+}
+
 static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 {
 	t_prog_list	*prog_list;
@@ -131,9 +196,8 @@ static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 	ft_printf("YES|");
 	prog_list = (t_prog_list*)malloc(sizeof(t_prog_list));
 	prog_list->line_ptr = project->data->current;
-	prog_list->comment_ptr = comment ? comment : (NULL);
-	prog_list->endl_ptr = project->data->endl;
-	prog_list->new_line = NULL;
+	prog_list->endl_ptr = comment ? comment : project->data->endl;
+	ft_get_new_line(prog_list);
 	prog_list->label = NULL;
 	prog_list->command = NULL;
 	prog_list->arg1 = NULL;
@@ -240,9 +304,18 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 	}
 //	ft_printf("\n|%s|%s|%s|", project->name, project->comment, project->program);
 	t_prog_list	*ptr = project->prog_list;
+	char *tmp;
 	while (ptr)
 	{
-		ft_printf("\n%zi|%zi|%zi|%zi|", ptr, ptr->prev_list, ptr->next_list,ptr->line_ptr);
+//		ft_printf("\n%zi|%zi|%zi|%zi|%zi|", ptr, ptr->prev_list, ptr->next_list, ptr->line_ptr, ptr->endl_ptr);
+		ft_printf("\n|");
+		tmp = ptr->line_ptr;
+		while (tmp < ptr->endl_ptr)
+		{
+			ft_printf("%c", *tmp);
+			tmp++;
+		}
+		ft_printf("|%s|", ptr->new_line);
 		ptr = ptr->next_list;
 	}
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
