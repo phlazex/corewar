@@ -84,9 +84,8 @@ static int	ft_is_zero_line(t_project *project, char *comment)
 static int	ft_is_valid_chr(int chr)
 {
 	size_t	i;
-	char	*arr;
 
-	if (chr == LABEL_CHAR || chr == DIRECT_CHAR || chr == SEPARATOR_CHAR || ft_isspace(chr))
+	if (chr == '-' || chr == LABEL_CHAR || chr == DIRECT_CHAR || chr == SEPARATOR_CHAR || ft_isspace(chr))
 	{
 		ft_printf("%c|", chr);
 		return (1);
@@ -94,12 +93,11 @@ static int	ft_is_valid_chr(int chr)
 	else
 	{
 		i = 0;
-		arr = LABEL_CHARS;
-		while (arr[i] != '\0')
+		while (LABEL_CHARS[i] != '\0')
 		{
-			if (arr[i] == chr)
+			if (LABEL_CHARS[i] == chr)
 			{
-				ft_printf("%c|", arr[i]);
+				ft_printf("%c|", LABEL_CHARS[i]);
 				return (1);
 			}
 			i++;
@@ -124,6 +122,27 @@ static int	ft_is_valid_line(t_project *project, char *comment)
 		return (1);
 	}
 	return (0);
+}
+
+static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
+{
+	t_prog_list	*prog_list;
+
+	ft_printf("YES|");
+	prog_list = (t_prog_list*)malloc(sizeof(t_prog_list));
+	prog_list->line_ptr = project->data->current;
+	prog_list->comment_ptr = comment ? comment : (NULL);
+	prog_list->endl_ptr = project->data->endl;
+	prog_list->new_line = NULL;
+	prog_list->label = NULL;
+	prog_list->command = NULL;
+	prog_list->arg1 = NULL;
+	prog_list->arg2 = NULL;
+	prog_list->arg3 = NULL;
+	prog_list->prev_list = project->current_list;
+	prog_list->next_list = NULL;
+	ft_printf("\n\t%zi|%zi|%zi|", prog_list, project->data->current, project->current_list);
+	return (prog_list);
 }
 
 static void	ft_parse_current(t_project *project)
@@ -162,12 +181,32 @@ static void	ft_parse_current(t_project *project)
 		else
 		{
 			ft_printf("HERE|");
+			if (!project->program)
+			{
+				project->program = project->data->current;
+			}
 			project->current = project->data->current;
 			if (!ft_is_zero_line(project, comment))
 			{
 				if (!ft_is_valid_line(project, comment))
 				{
 					ft_printf("ERROR|");
+				}
+				else if (!project->prog_list)
+				{
+					if (!(project->prog_list = ft_init_prog_list(project, comment)))
+					{
+						ft_printf("ERROR|");
+					}
+					project->current_list = project->prog_list;
+				}
+				else if (project->prog_list)
+				{
+					if (!(project->current_list->next_list = ft_init_prog_list(project, comment)))
+					{
+						ft_printf("ERROR|");
+					}
+					project->current_list = project->current_list->next_list;
 				}
 			}
 		}
@@ -199,7 +238,13 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 		}
 //		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
 	}
-	ft_printf("%s|%s|", project->name, project->comment);
+//	ft_printf("\n|%s|%s|%s|", project->name, project->comment, project->program);
+	t_prog_list	*ptr = project->prog_list;
+	while (ptr)
+	{
+		ft_printf("\n%zi|%zi|%zi|%zi|", ptr, ptr->prev_list, ptr->next_list,ptr->line_ptr);
+		ptr = ptr->next_list;
+	}
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
 //	project->program = project->comment + COMMENT_LENGTH + 4;
 	return (0);
@@ -211,7 +256,7 @@ int ft_project_init(char *file_name, t_project **project)
 	t_mem *data;
 
 	fd = open(file_name, O_RDONLY);
-	if(!(*project = (t_project*)malloc(sizeof(**project))))
+	if (!(*project = (t_project*)malloc(sizeof(**project))))
 		return (1);
 	data = ft_init_memory();
 	fast_read_in_memory(fd, data);
