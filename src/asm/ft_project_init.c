@@ -5,6 +5,7 @@
 #include "libft.h"
 #include "corewar.h"
 #include <ft_printf.h>
+#include <stdio.h>
 
 static char *ft_get_data_cmd(char *start, char *end)
 {
@@ -81,29 +82,33 @@ static int	ft_is_zero_line(t_project *project, char *comment)
 	return (0);
 }
 
-static int	ft_is_valid_chr(int chr)
+static int	ft_is_labels_char(int chr, size_t length)
 {
 	size_t	i;
 
+	i = 0;
+	length = length ? length : ft_strlen(LABEL_CHARS);
+//	ft_printf("|%zi|", length);
+	while (LABEL_CHARS[i] != '\0' && i < length)
+	{
+		if (LABEL_CHARS[i] == chr)
+		{
+			ft_printf("%c|", LABEL_CHARS[i]);
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
+static int	ft_is_valid_chr(int chr)
+{
 	if (chr == '-' || chr == LABEL_CHAR || chr == DIRECT_CHAR || chr == SEPARATOR_CHAR || ft_isspace(chr))
 	{
 		ft_printf("%c|", chr);
 		return (1);
 	}
-	else
-	{
-		i = 0;
-		while (LABEL_CHARS[i] != '\0')
-		{
-			if (LABEL_CHARS[i] == chr)
-			{
-				ft_printf("%c|", LABEL_CHARS[i]);
-				return (1);
-			}
-			i++;
-		}
-	}
-	return (0);
+	return (ft_is_labels_char(chr, 0));
 }
 
 static int	ft_is_valid_line(t_project *project, char *comment)
@@ -189,6 +194,133 @@ static void 		ft_get_new_line(t_prog_list *prog_list)
 	(prog_list->new_line)[i] = '\0';
 }
 
+static int 			ft_is_label_command(char *str, size_t length)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!ft_is_labels_char(str[i], length))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+
+static char			*ft_validation_label_name(t_prog_list *prog_list, size_t i, size_t j)
+{
+	char 	*str;
+
+	if ((prog_list->new_line)[i - 1] == LABEL_CHAR)
+	{
+//		ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j - 1));
+		str = ft_strsub(prog_list->new_line, i - j, j - 1);
+		if (ft_is_label_command(str, 0))
+		{
+			return (str);
+		}
+	}
+	else if (ft_isalpha((prog_list->new_line)[i - 1]))
+	{
+//		ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j));
+		str = ft_strsub(prog_list->new_line, i - j, j);
+		if (ft_is_label_command(str, 26))
+		{
+			return (str);
+		}
+	}
+	return (NULL);
+}
+
+static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
+{
+	char	*word;
+
+	ft_printf("\n|%s|%zi|%zi|", prog_list->new_line + i - 1, i, j);
+	if (!prog_list->command)
+	{
+		if (!(word = ft_validation_label_name(prog_list, i, j)))
+		{
+			ft_printf("ERROR|");
+		}
+		if ((prog_list->new_line)[i - 1] == LABEL_CHAR && !prog_list->label && word)
+		{
+			prog_list->label = word;
+		}
+		else if (!prog_list->command && word)
+		{
+			prog_list->command = word;
+		}
+		else
+		{
+			ft_printf("ERROR|");
+		}
+	}
+	else
+	{
+		if ((prog_list->new_line)[i - 1] == SEPARATOR_CHAR && (word = ft_strsub(prog_list->new_line, i - j, j - 1)))
+		{
+//			ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j - 1));
+		}
+		else if ((word = ft_strsub(prog_list->new_line, i - j, j)))
+		{
+//			ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j));
+		}
+		if (!prog_list->arg1)
+		{
+			prog_list->arg1 = word;
+		}
+		else if (!prog_list->arg2)
+		{
+			prog_list->arg2 = word;
+		}
+		else if (!prog_list->arg3)
+		{
+			prog_list->arg3 = word;
+		}
+		else
+		{
+			ft_printf("|ERROR|");
+		}
+	}
+}
+
+static void			ft_parse_new_line(t_prog_list *prog_list)
+{
+	size_t	i;
+	size_t	j;
+
+	prog_list->label = NULL;
+	prog_list->command = NULL;
+	prog_list->arg1 = NULL;
+	prog_list->arg2 = NULL;
+	prog_list->arg3 = NULL;
+	i = 0;
+	while ((prog_list->new_line)[i] != '\0')
+	{
+//		ft_printf("|HELLO|");
+		j = 0;
+		while ((prog_list->new_line)[i] != '\0' && !ft_isspace((prog_list->new_line)[i]))
+		{
+			j++;
+			i++;
+			if (prog_list->command && (prog_list->new_line)[i - 1] == SEPARATOR_CHAR && !ft_isspace((prog_list->new_line)[i]))
+			{
+				break ;
+			}
+		}
+		ft_get_new_word(prog_list, i, j);
+		while ((prog_list->new_line)[i] != '\0' && ft_isspace((prog_list->new_line)[i]))
+		{
+			i++;
+		}
+	}
+	ft_printf("\n|%s|", prog_list->new_line);
+}
+
 static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 {
 	t_prog_list	*prog_list;
@@ -198,11 +330,7 @@ static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 	prog_list->line_ptr = project->data->current;
 	prog_list->endl_ptr = comment ? comment : project->data->endl;
 	ft_get_new_line(prog_list);
-	prog_list->label = NULL;
-	prog_list->command = NULL;
-	prog_list->arg1 = NULL;
-	prog_list->arg2 = NULL;
-	prog_list->arg3 = NULL;
+	ft_parse_new_line(prog_list);
 	prog_list->prev_list = project->current_list;
 	prog_list->next_list = NULL;
 	ft_printf("\n\t%zi|%zi|%zi|", prog_list, project->data->current, project->current_list);
@@ -308,14 +436,15 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 	while (ptr)
 	{
 //		ft_printf("\n%zi|%zi|%zi|%zi|%zi|", ptr, ptr->prev_list, ptr->next_list, ptr->line_ptr, ptr->endl_ptr);
-		ft_printf("\n|");
-		tmp = ptr->line_ptr;
-		while (tmp < ptr->endl_ptr)
-		{
-			ft_printf("%c", *tmp);
-			tmp++;
-		}
-		ft_printf("|%s|", ptr->new_line);
+		printf("\n%s|\n\t%s|%s|%s|%s|%s|", ptr->new_line, ptr->label, ptr->command, ptr->arg1, ptr->arg2, ptr->arg3);
+//		ft_printf("\n|");
+//		tmp = ptr->line_ptr;
+//		while (tmp < ptr->endl_ptr)
+//		{
+//			ft_printf("%c", *tmp);
+//			tmp++;
+//		}
+//		ft_printf("|%s|", ptr->new_line);
 		ptr = ptr->next_list;
 	}
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
