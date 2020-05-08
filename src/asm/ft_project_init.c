@@ -296,12 +296,16 @@ static void			ft_parse_new_line(t_prog_list *prog_list)
 
 	prog_list->label = NULL;
 	prog_list->command = NULL;
-//	prog_list->arg1 = NULL;
-//	prog_list->arg2 = NULL;
-//	prog_list->arg3 = NULL;
 	prog_list->args[0] = NULL;
 	prog_list->args[1] = NULL;
 	prog_list->args[2] = NULL;
+	prog_list->command_size = 0;
+	prog_list->arg_label_list_ptr[0] = NULL;
+	prog_list->arg_label_list_ptr[1] = NULL;
+	prog_list->arg_label_list_ptr[2] = NULL;
+	prog_list->args_code[0] = 0;
+	prog_list->args_code[1] = 0;
+	prog_list->args_code[2] = 0;
 	i = 0;
 	while ((prog_list->new_line)[i] != '\0')
 	{
@@ -451,6 +455,34 @@ static int 	ft_check_count_args(t_project *project)
 	return (0);
 }
 
+static int 	ft_is_valid_label(t_project *project, char *label, size_t arg_num)
+{
+	t_prog_list	*prog_list;
+
+	prog_list = project->prog_list;
+	while (prog_list)
+	{
+		if (prog_list->label)
+		{
+			if (!ft_strcmp(prog_list->label, label) && !project->current_list->arg_label_list_ptr[arg_num])
+			{
+				project->current_list->arg_label_list_ptr[arg_num] = prog_list;
+				ft_printf("\n\t\t%s|%s|\n\t\t\t", prog_list->label, label);
+			}
+			else if (!ft_strcmp(prog_list->label, label) && project->current_list->arg_label_list_ptr[arg_num])
+			{
+				return (0);
+			}
+		}
+		prog_list = prog_list->next_list;
+	}
+	if (!project->current_list->arg_label_list_ptr[arg_num])
+	{
+		return (0);
+	}
+	return (1);
+}
+
 static int	ft_is_reg(t_project *project, size_t arg_num)
 {
 	size_t	i;
@@ -470,6 +502,8 @@ static int	ft_is_reg(t_project *project, size_t arg_num)
 		if (ft_atoi(project->current_list->args[arg_num] + 1) > 0)
 		{
 			ft_printf("T_REG|");
+			project->current_list->command_size += 1;
+			project->current_list->args_code[arg_num] = REG_CODE;
 			return (1);
 		}
 	}
@@ -486,9 +520,11 @@ static int	ft_is_dir(t_project *project, size_t arg_num)
 	{
 		if (project->current_list->args[arg_num][i++] == LABEL_CHAR)
 		{
-			if (ft_is_label_command(project->current_list->args[arg_num] + i, 0))
+			if (ft_is_label_command(project->current_list->args[arg_num] + i, 0) && ft_is_valid_label(project, project->current_list->args[arg_num] + i, arg_num))
 			{
 				ft_printf("T_DIR|");
+				project->current_list->command_size += g_op_tab[project->current_list->command_num].dir_size;
+				project->current_list->args_code[arg_num] = DIR_CODE;
 				return (1);
 			}
 		}
@@ -509,6 +545,8 @@ static int	ft_is_dir(t_project *project, size_t arg_num)
 				}
 			}
 			ft_printf("T_DIR|");
+			project->current_list->command_size += g_op_tab[project->current_list->command_num].dir_size;
+			project->current_list->args_code[arg_num] = DIR_CODE;
 			return (1);
 		}
 	}
@@ -521,11 +559,14 @@ static int	ft_is_ind(t_project *project, size_t arg_num)
 	size_t	len;
 
 	i = 0;
+//	ft_printf("HERE|");
 	if (project->current_list->args[arg_num][i++] == LABEL_CHAR)
 	{
-		if (ft_is_label_command(project->current_list->args[arg_num] + i, 0))
+		if (ft_is_label_command(project->current_list->args[arg_num] + i, 0) && ft_is_valid_label(project, project->current_list->args[arg_num] + i, arg_num))
 		{
 			ft_printf("T_IND|");
+			project->current_list->command_size += IND_SIZE;
+			project->current_list->args_code[arg_num] = IND_CODE;
 			return (1);
 		}
 	}
@@ -546,6 +587,8 @@ static int	ft_is_ind(t_project *project, size_t arg_num)
 			}
 		}
 		ft_printf("T_IND|");
+		project->current_list->command_size += IND_SIZE;
+		project->current_list->args_code[arg_num] = IND_CODE;
 		return (1);
 	}
 	return (0);
@@ -591,7 +634,7 @@ static int 	ft_check_arg(t_project *project, size_t arg_num)
 	}
 	else if (size_type == 6)
 	{
-		if ((!ft_is_dir(project, arg_num) || ft_is_ind(project, arg_num)))
+		if (!(ft_is_dir(project, arg_num) || ft_is_ind(project, arg_num)))
 		{
 			return (0);
 		}
@@ -605,6 +648,7 @@ static int 	ft_check_arg(t_project *project, size_t arg_num)
 		}
 //		ft_printf("T_REG/T_DIR/T_IND|");
 	}
+	ft_printf("%zi", project->current_list->command_size);
 	return (1);
 }
 
@@ -635,6 +679,7 @@ static int 	ft_check_prog_list_line(t_project *project)
 			return (0);
 		}
 		project->current_list->command_num = --cmd_num;
+		project->current_list->command_size = 1 + g_op_tab[project->current_list->command_num].arg_type;
 		ft_printf("%zi|", project->current_list->command_num);
 		if (!(ft_check_count_args(project) && ft_check_args(project)))
 		{

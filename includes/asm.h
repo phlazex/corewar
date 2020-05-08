@@ -14,13 +14,13 @@ typedef struct	s_prog_list
 	char					*new_line;
 	char					*label;
 	char					*command;
-//	char					*arg1;
-//	char					*arg2;
-//	char					*arg3;
 	char 					*args[3];
 	struct s_prog_list		*prev_list;
 	struct s_prog_list		*next_list;
 	size_t					command_num;
+	size_t					command_size;
+	struct s_prog_list		*arg_label_list_ptr[3];
+	size_t					args_code[3];
 }				t_prog_list;
 
 typedef struct s_project
