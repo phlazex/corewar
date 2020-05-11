@@ -21,6 +21,7 @@ typedef struct	s_prog_list
 	size_t					command_size;
 	struct s_prog_list		*arg_label_list_ptr[3];
 	size_t					args_code[3];
+	char					*code_line;
 }				t_prog_list;
 
 typedef struct s_project

@@ -422,7 +422,7 @@ static size_t	ft_check_command_name(t_project *project)
 	{
 		if (!ft_strcmp(project->current_list->command, g_op_tab[i].name))
 		{
-			ft_printf("\n|%s|%s|%zi|", g_op_tab[i].name, project->current_list->command, i);
+//			ft_printf("\n|%s|%s|%zi|", g_op_tab[i].name, project->current_list->command, i);
 			return (i + 1);
 		}
 		i++;
@@ -467,7 +467,7 @@ static int 	ft_is_valid_label(t_project *project, char *label, size_t arg_num)
 			if (!ft_strcmp(prog_list->label, label) && !project->current_list->arg_label_list_ptr[arg_num])
 			{
 				project->current_list->arg_label_list_ptr[arg_num] = prog_list;
-				ft_printf("\n\t\t%s|%s|\n\t\t\t", prog_list->label, label);
+//				ft_printf("\n\t\t%s|%s|\n\t\t\t", prog_list->label, label);
 			}
 			else if (!ft_strcmp(prog_list->label, label) && project->current_list->arg_label_list_ptr[arg_num])
 			{
@@ -501,7 +501,7 @@ static int	ft_is_reg(t_project *project, size_t arg_num)
 		}
 		if (ft_atoi(project->current_list->args[arg_num] + 1) > 0)
 		{
-			ft_printf("T_REG|");
+//			ft_printf("T_REG|");
 			project->current_list->command_size += 1;
 			project->current_list->args_code[arg_num] = REG_CODE;
 			return (1);
@@ -522,7 +522,7 @@ static int	ft_is_dir(t_project *project, size_t arg_num)
 		{
 			if (ft_is_label_command(project->current_list->args[arg_num] + i, 0) && ft_is_valid_label(project, project->current_list->args[arg_num] + i, arg_num))
 			{
-				ft_printf("T_DIR|");
+//				ft_printf("T_DIR|");
 				project->current_list->command_size += g_op_tab[project->current_list->command_num].dir_size;
 				project->current_list->args_code[arg_num] = DIR_CODE;
 				return (1);
@@ -544,7 +544,7 @@ static int	ft_is_dir(t_project *project, size_t arg_num)
 //				ft_printf("|%c|", project->current_list->args[arg_num][i++]);
 				}
 			}
-			ft_printf("T_DIR|");
+//			ft_printf("T_DIR|");
 			project->current_list->command_size += g_op_tab[project->current_list->command_num].dir_size;
 			project->current_list->args_code[arg_num] = DIR_CODE;
 			return (1);
@@ -564,7 +564,7 @@ static int	ft_is_ind(t_project *project, size_t arg_num)
 	{
 		if (ft_is_label_command(project->current_list->args[arg_num] + i, 0) && ft_is_valid_label(project, project->current_list->args[arg_num] + i, arg_num))
 		{
-			ft_printf("T_IND|");
+//			ft_printf("T_IND|");
 			project->current_list->command_size += IND_SIZE;
 			project->current_list->args_code[arg_num] = IND_CODE;
 			return (1);
@@ -586,7 +586,7 @@ static int	ft_is_ind(t_project *project, size_t arg_num)
 //				ft_printf("|%c|", project->current_list->args[arg_num][i++]);
 			}
 		}
-		ft_printf("T_IND|");
+//		ft_printf("T_IND|");
 		project->current_list->command_size += IND_SIZE;
 		project->current_list->args_code[arg_num] = IND_CODE;
 		return (1);
@@ -599,7 +599,7 @@ static int 	ft_check_arg(t_project *project, size_t arg_num)
 	size_t	size_type;
 
 //	ft_printf("HERE|");
-	ft_printf("%zi|", g_op_tab[project->current_list->command_num].types[arg_num]);
+//	ft_printf("%zi|", g_op_tab[project->current_list->command_num].types[arg_num]);
 	if ((size_type = g_op_tab[project->current_list->command_num].types[arg_num]) == 1)
 	{
 		if (!ft_is_reg(project, arg_num))
@@ -648,7 +648,7 @@ static int 	ft_check_arg(t_project *project, size_t arg_num)
 		}
 //		ft_printf("T_REG/T_DIR/T_IND|");
 	}
-	ft_printf("%zi", project->current_list->command_size);
+//	ft_printf("%zi|%zi|", project->current_list->command_size, project->current_list->args_code[arg_num]);
 	return (1);
 }
 
@@ -680,12 +680,186 @@ static int 	ft_check_prog_list_line(t_project *project)
 		}
 		project->current_list->command_num = --cmd_num;
 		project->current_list->command_size = 1 + g_op_tab[project->current_list->command_num].arg_type;
-		ft_printf("%zi|", project->current_list->command_num);
+//		ft_printf("%zi|", project->current_list->command_num);
 		if (!(ft_check_count_args(project) && ft_check_args(project)))
 		{
 			return (0);
 		}
 	}
+	return (1);
+}
+
+static void ft_get_four_bytes(t_project *project, size_t *i, int num)
+{
+//	ft_printf("%x|", ((num >> 24) & 0xff));
+//	ft_printf("%x|", ((num >> 16) & 0xff));
+//	ft_printf("%x|", ((num >> 8) & 0xff));
+//	ft_printf("%x|", ((num) & 0xff));
+	project->current_list->code_line[(*i)++] = (num >> 24) & 0xff;
+	project->current_list->code_line[(*i)++] = (num >> 16) & 0xff;
+	project->current_list->code_line[(*i)++] = (num >> 8) & 0xff;
+	project->current_list->code_line[(*i)++] = num & 0xff;
+}
+
+static void ft_get_two_bytes(t_project *project, size_t *i, int num)
+{
+//	ft_printf("%x|", ((num >> 8) & 0xff));
+//	ft_printf("%x|", ((num) & 0xff));
+//	ft_printf("HERE");
+	project->current_list->code_line[(*i)++] = (num >> 8) & 0xff;
+	project->current_list->code_line[(*i)++] = num & 0xff;
+	ft_printf("%zi|%zi|", project->current_list->code_line[(*i) - 2], project->current_list->code_line[(*i) - 1]);
+}
+
+static int ft_get_next_num_label(t_project *project, size_t arg_num)
+{
+	t_prog_list	*next_prog_list;
+	int	num;
+
+	num = 0;
+	next_prog_list = project->current_list;
+	while (next_prog_list)
+	{
+		if (next_prog_list == project->current_list->arg_label_list_ptr[arg_num])
+		{
+			break ;
+		}
+		num += next_prog_list->command_size;
+		next_prog_list = next_prog_list->next_list;
+	}
+	return (num);
+}
+
+static int ft_get_prev_num_label(t_project *project, size_t arg_num)
+{
+	t_prog_list	*prev_prog_list;
+	int	num;
+
+	num = 0;
+	prev_prog_list = project->current_list->prev_list;
+	while (prev_prog_list)
+	{
+		num += prev_prog_list->command_size;
+		if (prev_prog_list == project->current_list->arg_label_list_ptr[arg_num])
+		{
+			break ;
+		}
+		prev_prog_list = prev_prog_list->prev_list;
+	}
+	return (num);
+}
+
+static int ft_get_num_label(t_project *project, size_t arg_num)
+{
+	int	num;
+
+	num = 0;
+	if (project->current_list->arg_label_list_ptr[arg_num] < project->current_list)
+	{
+		num = ~(ft_get_prev_num_label(project, arg_num)) + 1;
+	}
+	else
+	{
+		num = ft_get_next_num_label(project, arg_num);
+	}
+	return (num);
+}
+
+static void ft_get_arg_dir(t_project *project, size_t *i, size_t arg_num)
+{
+	int		num;
+
+	if (project->current_list->arg_label_list_ptr[arg_num])
+	{
+//		ft_printf("LABEL|");
+		num = ft_get_num_label(project, arg_num);
+	}
+	else
+	{
+//		ft_printf("NOLABEL|");
+		num = ft_atoi(project->current_list->args[arg_num] + 1);
+	}
+	if (g_op_tab[project->current_list->command_num].dir_size == DIR_SIZE)
+	{
+		ft_get_four_bytes(project, i, num);
+	}
+	else if (g_op_tab[project->current_list->command_num].dir_size == IND_SIZE)
+	{
+		ft_get_two_bytes(project, i, num);
+	}
+}
+
+static void ft_get_arg_ind(t_project *project, size_t *i, size_t arg_num)
+{
+	int		num;
+
+	if (project->current_list->arg_label_list_ptr[arg_num])
+	{
+//		ft_printf("LABEL|");
+		num = ft_get_num_label(project, arg_num);
+	}
+	else
+	{
+//		ft_printf("NOLABEL|");
+		num = ft_atoi(project->current_list->args[arg_num]);
+	}
+	ft_get_two_bytes(project, i, num);
+}
+
+static void ft_get_args(t_project *project, size_t *i)
+{
+	size_t	j;
+
+	j = 0;
+	while (j < g_op_tab[project->current_list->command_num].arg_count)
+	{
+//		ft_printf("%zi|", project->current_list->args_code[j]);
+		if (project->current_list->args_code[j] == REG_CODE)
+		{
+			project->current_list->code_line[(*i)++] = ft_atoi(project->current_list->args[j] + 1);
+//			ft_printf("atoi=%zi|", ft_atoi(project->current_list->args[j] + 1));
+		}
+		else if (project->current_list->args_code[j] == DIR_CODE)
+		{
+			ft_get_arg_dir(project, i, j);
+		}
+		else if (project->current_list->args_code[j] == IND_CODE)
+		{
+			ft_get_arg_ind(project, i, j);
+		}
+		j++;
+//		i++;
+	}
+//	ft_printf("%zi|", *i);
+}
+
+static int ft_get_code_line(t_project *project)
+{
+	size_t	i;
+
+	if (!(project->current_list->code_line = ft_strnew(project->current_list->command_size + 1)))
+	{
+		return (0);
+	}
+	i = 0;
+	project->current_list->code_line[i++] = g_op_tab[project->current_list->command_num].id;
+//	ft_printf("%x|", project->current_list->code_line[0]);
+	if (g_op_tab[project->current_list->command_num].arg_type)
+	{
+		project->current_list->code_line[i++] = (project->current_list->args_code[0] << 6) + (project->current_list->args_code[1] << 4) + (project->current_list->args_code[2] << 2);
+//		ft_printf("%x|", project->current_list->code_line[i - 1]);
+	}
+//	ft_printf("i=%zi|", i);
+	ft_get_args(project, &i);
+//	ft_printf("i=%zi|", i);
+//	ft_printf("%x|", project->current_list->code_line[i - 1]);
+	project->current_list->code_line[i] = 0;
+	size_t k = 0;
+	while (k < project->current_list->command_size)
+	{
+		ft_printf("%02x ", project->current_list->code_line[k++]);
+	}
+	ft_printf("\n");
 	return (1);
 }
 
@@ -695,7 +869,7 @@ static int 	ft_check_prog_list(t_project *project)
 	while (project->current_list)
 	{
 //		ft_printf("\n%zi|%zi|%zi|%zi|%zi|", ptr, ptr->prev_list, ptr->next_list, ptr->line_ptr, ptr->endl_ptr);
-		ft_printf("\n%s|\n\t%s|%s|%s|%s|%s|", project->current_list->new_line ? project->current_list->new_line : "(null)", project->current_list->label ? project->current_list->label : "(null)", project->current_list->command ? project->current_list->command : "(null)", project->current_list->args[0] ? project->current_list->args[0] : "(null)", project->current_list->args[1] ? project->current_list->args[1] : "(null)", project->current_list->args[2] ? project->current_list->args[2] : "(null)");
+//		ft_printf("\n%s|\n\t%s|%s|%s|%s|%s|", project->current_list->new_line ? project->current_list->new_line : "(null)", project->current_list->label ? project->current_list->label : "(null)", project->current_list->command ? project->current_list->command : "(null)", project->current_list->args[0] ? project->current_list->args[0] : "(null)", project->current_list->args[1] ? project->current_list->args[1] : "(null)", project->current_list->args[2] ? project->current_list->args[2] : "(null)");
 //		ft_printf("\n|");
 //		tmp = ptr->line_ptr;
 //		while (tmp < ptr->endl_ptr)
@@ -705,6 +879,11 @@ static int 	ft_check_prog_list(t_project *project)
 //		}
 //		ft_printf("|%s|", ptr->new_line);
 		if (!ft_check_prog_list_line(project))
+		{
+			return (0);
+		}
+		project->prog_size += project->current_list->command_size;
+		if (!ft_get_code_line(project))
 		{
 			return (0);
 		}
@@ -718,6 +897,7 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 	project->data = mem;
 	project->current = mem->head;
 	project->end = mem->end;
+	project->prog_size = 0;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
@@ -738,13 +918,76 @@ static int	ft_parse_file(t_mem *mem, t_project *project)
 		}
 //		ft_printf("\n%zi|%zi|%zi|%zi|", mem->head, mem->current, mem->endl, mem->end);
 	}
+	if ((!project->name || ft_strlen(project->name) > PROG_NAME_LENGTH) && (project->comment && ft_strlen(project->comment) > COMMENT_LENGTH))
+	{
+		ft_printf("ERROR|");
+	}
+	else
+	{
+//		size_t	x;
+//		size_t	i;
+//		size_t	j;
+//		size_t	length;
+//
+//		x = COREWAR_EXEC_MAGIC;
+//		length = sizeof(COREWAR_EXEC_MAGIC);
+//		i = length;
+//		project->program = ft_strnew((size_t)(i + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4 + project->prog_size));
+//		while (x != 0)
+//		{
+////			ft_printf("%x", x & 0xff);
+//			project->program[--length] = x & 0xff;
+//			ft_printf("\n%c|%zi|", project->program[length], length);
+//			x >>= 8;
+//		}
+//		j = 0;
+//		length = ft_strlen(project->name);
+//		while (j < PROG_NAME_LENGTH + 8)
+//		{
+//			if (j < length)
+//			{
+//				project->program[i++] = project->name[j++];
+//			}
+//			else
+//			{
+//				project->program[i++] = 0;
+//			}
+//		}
+//		j = 0;
+//		length = ft_strlen(project->comment);
+//		while (j < (size_t)(COMMENT_LENGTH + 4 + project->prog_size))
+//		{
+//			if (j < length)
+//			{
+//				project->program[i++] = project->comment[j++];
+//			}
+//			else
+//			{
+//				project->program[i++] = 0;
+//			}
+//		}
+//		project->program[i] = 0;
+	}
+//	ft_printf("%zi|", sizeof(COREWAR_EXEC_MAGIC));
+//	ft_printf("%x|", ((COREWAR_EXEC_MAGIC >> 16) & 0xff));
+//	ft_printf("%x|", ((COREWAR_EXEC_MAGIC >> 8) & 0xff));
+//	ft_printf("%x|", ((COREWAR_EXEC_MAGIC) & 0xff));
 	if (!ft_check_prog_list(project))
 	{
-		ft_printf("|ERROR|");
+		ft_printf("ERROR|");
 	}
+	ft_printf("%zi|%zi|", sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + 1, project->prog_size);
 //	ft_printf("\n|%s|%s|%s|", project->name, project->comment, project->program);
 //	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
 //	project->program = project->comment + COMMENT_LENGTH + 4;
+//	ft_printf("\n%c|", project->program[3]);
+//	ft_printf("%zi|", project->program);
+//	size_t i = 0;
+//	while (i < (size_t)(4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4 + project->prog_size))
+//	{
+//		ft_printf("%c", project->program[i]);
+//		i++;
+//	}
 	return (0);
 }
 
