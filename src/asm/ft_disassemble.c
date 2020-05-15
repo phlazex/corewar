@@ -55,7 +55,7 @@ int ft_disassemble(t_project *project)
 		if (g_op_tab[op].arg_count > 2)
 		{
 			type.arg3 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf(", %d", ft_get_code(project->current, &current, op, type.arg3));
+			ft_printf("%d", ft_get_code(project->current, &current, op, type.arg3));
 		}
 		ft_printf("\n");
 	} else

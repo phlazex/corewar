@@ -30,8 +30,8 @@ void ft_usage()
 	ft_logo();
 	ft_printf(E"99mUsage:");
 	ft_printf(" $>./asm [OPTIONS]... [FILE]...\n\n");
-	ft_printf("[FILE] extension must match <file name>.cor\n");
+	ft_printf("[FILE] extension must match <file name>.s or <file name>.cor\n");
 	ft_printf("[OPTIONS] mandatory arguments\n\n");
-	ft_printf("-dis");
-
+	ft_printf("-asm - from assembler to bytecode\n");
+	ft_printf("-dis - from bytecode to assembler\n");
 }
