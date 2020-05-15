@@ -37,11 +37,11 @@ typedef struct s_project
 	char					*end;
 }				t_project;
 
-int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *));
+int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *));
 void ft_usage();
 int ft_disassemble(t_project *project);
-int ft_parse_file_dis(t_mem *mem, t_project *project);
-int	ft_parse_file(t_mem *mem, t_project *project);
+int ft_parse_file_dis(t_mem *mem, t_project *project, char *file);
+int	ft_parse_file(t_mem *mem, t_project *project, char *file);
 
 
 #endif

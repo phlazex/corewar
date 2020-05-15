@@ -9,6 +9,7 @@
 static int	ft_check_file(char *opt, char *file)
 {
 	char	*ptr;
+
 	if (!ft_strcmp(opt, "-dis") && (ptr = ft_strstr(file, ".cor")))
 	{
 		if (*(ptr + 4) == 0)

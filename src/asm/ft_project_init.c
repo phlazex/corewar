@@ -833,17 +833,55 @@ static int 	ft_get_program_line(t_project *project)
 		i += project->current_list->command_size;
 		project->current_list = project->current_list->next_list;
 	}
-	size_t	z = 0;
-	while (z < length)
-	{
-		ft_printf("%c", project->program[z++]);
+//	size_t	z = 0;
+//	while (z < length)
+//	{
+//		ft_printf("%c", project->program[z++]);
 //		ft_printf("%zi ", project->program[z++]);
 //		ft_printf("%x ", project->program[z++]);
-	}
+//	}
 	return (1);
 }
 
-int	ft_parse_file(t_mem *mem, t_project *project)
+static char	*ft_get_file_name(char *file)
+{
+	char	*ptr;
+	char 	*new_file;
+
+	if ((ptr = ft_strstr(file, ".s")))
+	{
+		new_file = ft_strsub(file, 0, ptr - file);
+		new_file = ft_strjoin_free_first(&new_file, ".cor_new");
+		return (new_file);
+	}
+	return (NULL);
+}
+
+static int	ft_write_to_file(t_project *project, char *file)
+{
+	int fd;
+	size_t	i;
+	size_t	length;
+	char 	*new_file;
+
+	if (!(new_file = ft_get_file_name(file)) && (fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT , 0666)) < 0)
+	{
+		return (0);
+	}
+	i = 0;
+	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->prog_size);
+	while (i < length)
+	{
+		ft_putchar_fd(project->program[i++], fd);
+	}
+	close(fd);
+//	ft_printf(CLR);
+	ft_printf("\nWriting output program to %s\n", new_file);
+	ft_strdel(&new_file);
+	return (1);
+}
+
+int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 {
 	project->data = mem;
 	project->current = mem->head;
@@ -878,10 +916,11 @@ int	ft_parse_file(t_mem *mem, t_project *project)
 		}
 		ft_get_program_line(project);
 	}
+	ft_write_to_file(project, file);
 	return (0);
 }
 
-int ft_parse_file_dis(t_mem *mem, t_project *project)
+int ft_parse_file_dis(t_mem *mem, t_project *project, char *file)
 {
 	project->data = mem;
 	project->name = mem->head + 4;
@@ -892,7 +931,7 @@ int ft_parse_file_dis(t_mem *mem, t_project *project)
 	return (0);
 }
 
-int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *))
+int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *))
 {
 	int fd;
 	t_mem *data;
@@ -903,6 +942,6 @@ int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem 
 	data = ft_init_memory();
 	fast_read_in_memory(fd, data);
 	close(fd);
-	(*ft_parse)(data, *project);
+	(*ft_parse)(data, *project, file_name);
 	return (0);
 }
