@@ -1,6 +1,6 @@
 
 #include <fcntl.h>
-#include <zconf.h>
+#include <unistd.h>
 #include "asm.h"
 #include "libft.h"
 #include "corewar.h"
@@ -799,7 +799,7 @@ static int 	ft_check_prog_list(t_project *project)
 		{
 			return (0);
 		}
-		project->prog_size += project->current_list->command_size;
+		project->size_program += project->current_list->command_size;
 		project->current_list = project->current_list->next_list;
 	}
 	return (1);
@@ -810,7 +810,7 @@ static int 	ft_get_program_line(t_project *project)
 	size_t	i;
 	size_t	length;
 
-	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->prog_size);
+	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->size_program);
 	project->program = ft_strnew(length + 1);
 	project->program = ft_memset(project->program, 0, length + 1);
 	i = 0;
@@ -818,7 +818,7 @@ static int 	ft_get_program_line(t_project *project)
 	ft_strncpy(project->program + i, project->name, PROG_NAME_LENGTH);
 	i += PROG_NAME_LENGTH;
 	ft_get_four_bytes(project->program, &i, 0);
-	ft_get_four_bytes(project->program, &i, (int)(project->prog_size));
+	ft_get_four_bytes(project->program, &i, project->size_program);
 	ft_strncpy(project->program + i, project->comment, COMMENT_LENGTH);
 	i += COMMENT_LENGTH;
 	ft_get_four_bytes(project->program, &i, 0);
@@ -869,7 +869,7 @@ static int	ft_write_to_file(t_project *project, char *file)
 		return (0);
 	}
 	i = 0;
-	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->prog_size);
+	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->size_program);
 	while (i < length)
 	{
 		ft_putchar_fd(project->program[i++], fd);
@@ -886,7 +886,7 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	project->data = mem;
 	project->current = mem->head;
 	project->end = mem->end;
-	project->prog_size = 0;
+	project->size_program = 0;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;

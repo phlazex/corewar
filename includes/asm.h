@@ -30,6 +30,7 @@ typedef struct s_project
 	t_prog_list				*prog_list;
 	t_prog_list				*current_list;
 	char 					*name;
+	int						size_program;
 	char 					*prog_size;
 	char 					*comment;
 	char					*program;

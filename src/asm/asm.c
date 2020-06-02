@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	if (argc == 3)
 	{
 		opt = 0;
-		if ((opt = ft_check_file(argv[1], argv[2])) > 0 )
+		if ((opt = ft_check_file(argv[1], argv[2])) > 0)
 		{
 			ft_project_init(argv[2], &project, ft_parse_file);
 		}
@@ -52,6 +52,18 @@ int main(int argc, char **argv)
 			project->current = project->program;
 			while (project->current < project->end)
 				ft_disassemble(project);
+		}
+		else
+		{
+			ft_usage();
+		}
+	}
+	else if (argc == 2)
+	{
+		opt = 0;
+		if ((opt = ft_check_file("-asm", argv[1])) > 0)
+		{
+			ft_project_init(argv[1], &project, ft_parse_file);
 		}
 		else
 		{
