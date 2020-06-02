@@ -859,12 +859,20 @@ static char	*ft_get_file_name(char *file)
 
 static int	ft_write_to_file(t_project *project, char *file)
 {
-	int fd;
+	int		fd;
 	size_t	i;
 	size_t	length;
-	char 	*new_file;
+	char	*new_file;
 
-	if (!(new_file = ft_get_file_name(file)) && (fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT , 0666)) < 0)
+	new_file = 0;
+	if ((new_file = ft_get_file_name(file)))
+	{
+		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT , 0666)) <= 0)
+		{
+			return (0);
+		}
+	}
+	else
 	{
 		return (0);
 	}
@@ -887,6 +895,9 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	project->current = mem->head;
 	project->end = mem->end;
 	project->size_program = 0;
+	project->name = NULL;
+	project->comment = NULL;
+	project->program = NULL;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
