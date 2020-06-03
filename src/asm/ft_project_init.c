@@ -864,7 +864,7 @@ static int	ft_write_to_file(t_project *project, char *file)
 	size_t	length;
 	char	*new_file;
 
-	new_file = 0;
+	new_file = NULL;
 	if ((new_file = ft_get_file_name(file)))
 	{
 		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT , 0666)) <= 0)
@@ -883,8 +883,7 @@ static int	ft_write_to_file(t_project *project, char *file)
 		ft_putchar_fd(project->program[i++], fd);
 	}
 	close(fd);
-//	ft_printf(CLR);
-	ft_printf("\nWriting output program to %s\n", new_file);
+	ft_printf("Writing output program to %s\n", new_file);
 	ft_strdel(&new_file);
 	return (1);
 }
