@@ -6,7 +6,42 @@
 #include "corewar.h"
 #include "corewar_op.h"
 #include <ft_printf.h>
-#include <stdio.h>
+
+static void	ft_free_mem(t_project *project)
+{
+	project->data->current = NULL;
+	project->data->end = NULL;
+	project->data->endl = NULL;
+	ft_strdel(&(project->data->head));
+	ft_memdel((void **)&(project->data));
+}
+
+static void	ft_free_prog_list()
+{
+
+}
+
+static void	ft_free_project()
+{
+
+}
+
+static void	ft_free(t_project *project)
+{
+	ft_free_mem(project);
+	ft_free_prog_list();
+	ft_free_project();
+}
+
+static void	ft_exit(t_project *project, int exit_code, char *message)
+{
+	ft_free(project);
+	if (exit_code)
+	{
+		ft_printf("%s\n", message);
+	}
+	exit(exit_code);
+}
 
 static char *ft_get_data_cmd(char *start, char *end)
 {
@@ -120,6 +155,7 @@ static int	ft_is_valid_line(t_project *project, char *comment)
 	{
 		return (1);
 	}
+	ft_printf("%s|", project->current);
 	return (0);
 }
 
@@ -159,7 +195,7 @@ static void 		ft_get_new_line(t_prog_list *prog_list)
 
 	if (!(prog_list->new_line = ft_strnew(ft_get_strlen(prog_list))))
 	{
-		ft_printf("ERROR|");
+		ft_printf("ERROR1|");
 	}
 	ptr = prog_list->line_ptr;
 	i = 0;
@@ -233,7 +269,7 @@ static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 	{
 		if (!(word = ft_validation_label_name(prog_list, i, j)))
 		{
-			ft_printf("ERROR|");
+			ft_printf("ERROR2|");
 		}
 		if ((prog_list->new_line)[i - 1] == LABEL_CHAR && !prog_list->label && word)
 		{
@@ -245,7 +281,7 @@ static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 		}
 		else
 		{
-			ft_printf("ERROR|");
+			ft_printf("ERROR3|");
 		}
 	}
 	else
@@ -272,7 +308,7 @@ static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 		}
 		else if (prog_list->args[0] && prog_list->args[1] && prog_list->args[2])
 		{
-			ft_printf("ERROR|");
+			ft_printf("ERROR4|");
 		}
 	}
 }
@@ -356,7 +392,7 @@ static void	ft_parse_current(t_project *project)
 				project->current = project->data->current;
 				if (!ft_is_zero_line(project, comment))
 				{
-					ft_printf("ERROR|");
+					ft_printf("ERROR5|");
 				}
 			}
 		}
@@ -367,13 +403,14 @@ static void	ft_parse_current(t_project *project)
 			{
 				if (!ft_is_valid_line(project, comment))
 				{
-					ft_printf("ERROR|");
+					ft_printf("ERROR6|");
+					ft_exit(project, 6, "ERROR6");
 				}
 				else if (!project->prog_list)
 				{
 					if (!(project->prog_list = ft_init_prog_list(project, comment)))
 					{
-						ft_printf("ERROR|");
+						ft_printf("ERROR7|");
 					}
 					project->current_list = project->prog_list;
 				}
@@ -381,7 +418,7 @@ static void	ft_parse_current(t_project *project)
 				{
 					if (!(project->current_list->next_list = ft_init_prog_list(project, comment)))
 					{
-						ft_printf("ERROR|");
+						ft_printf("ERROR8|");
 					}
 					project->current_list = project->current_list->next_list;
 				}
@@ -561,6 +598,7 @@ static int 	ft_check_arg(t_project *project, size_t arg_num)
 {
 	size_t	size_type;
 
+	size_type = 0;
 	if ((size_type = g_op_tab[project->current_list->command_num].types[arg_num]) == 1)
 	{
 		if (!ft_is_reg(project, arg_num))
@@ -860,7 +898,6 @@ static char	*ft_get_file_name(char *file)
 static int	ft_write_to_file(t_project *project, char *file)
 {
 	int		fd;
-	size_t	i;
 	size_t	length;
 	char	*new_file;
 
@@ -876,12 +913,8 @@ static int	ft_write_to_file(t_project *project, char *file)
 	{
 		return (0);
 	}
-	i = 0;
 	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->size_program);
-	while (i < length)
-	{
-		ft_putchar_fd(project->program[i++], fd);
-	}
+	write(fd, project->program, length);
 	close(fd);
 	ft_printf("Writing output program to %s\n", new_file);
 	ft_strdel(&new_file);
@@ -916,13 +949,13 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	}
 	if ((!project->name || ft_strlen(project->name) > PROG_NAME_LENGTH) && (project->comment && ft_strlen(project->comment) > COMMENT_LENGTH))
 	{
-		ft_printf("ERROR|");
+		ft_printf("ERROR9|");
 	}
 	else
 	{
 		if (!ft_check_prog_list(project))
 		{
-			ft_printf("ERROR|");
+			ft_printf("ERROR10|");
 		}
 		ft_get_program_line(project);
 	}
