@@ -404,7 +404,7 @@ static void	ft_parse_current(t_project *project)
 				if (!ft_is_valid_line(project, comment))
 				{
 					ft_printf("ERROR6|");
-					ft_exit(project, 6, "ERROR6");
+//					ft_exit(project, 6, "ERROR6");
 				}
 				else if (!project->prog_list)
 				{
@@ -906,19 +906,19 @@ static int	ft_write_to_file(t_project *project, char *file)
 	{
 		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT , 0666)) <= 0)
 		{
-			return (0);
+			return (1);
 		}
 	}
 	else
 	{
-		return (0);
+		return (1);
 	}
 	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH + PROG_NAME_LENGTH + project->size_program);
 	write(fd, project->program, length);
 	close(fd);
 	ft_printf("Writing output program to %s\n", new_file);
 	ft_strdel(&new_file);
-	return (1);
+	return (0);
 }
 
 int	ft_parse_file(t_mem *mem, t_project *project, char *file)
