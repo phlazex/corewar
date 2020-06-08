@@ -38,7 +38,7 @@ static void	ft_exit(t_project *project, int exit_code, char *message)
 	ft_free(project);
 	if (exit_code)
 	{
-		ft_printf("%s\n", message);
+//		ft_printf("%s\n", message);
 	}
 	exit(exit_code);
 }
@@ -155,7 +155,7 @@ static int	ft_is_valid_line(t_project *project, char *comment)
 	{
 		return (1);
 	}
-	ft_printf("%s|", project->current);
+//	ft_printf("%s|", project->current);
 	return (0);
 }
 
@@ -188,14 +188,15 @@ static size_t		ft_get_strlen(t_prog_list *prog_list)
 	return (i + j);
 }
 
-static void 		ft_get_new_line(t_prog_list *prog_list)
+static int 		ft_get_new_line(t_prog_list *prog_list)
 {
 	char	*ptr;
 	size_t	i;
 
 	if (!(prog_list->new_line = ft_strnew(ft_get_strlen(prog_list))))
 	{
-		ft_printf("ERROR1|");
+		ft_printf("ERROR1|"); //Ошибка памяти
+		return (1);
 	}
 	ptr = prog_list->line_ptr;
 	i = 0;
@@ -220,6 +221,7 @@ static void 		ft_get_new_line(t_prog_list *prog_list)
 		}
 	}
 	(prog_list->new_line)[i] = '\0';
+	return (0);
 }
 
 static int 			ft_is_label_command(char *str, size_t length)
@@ -261,15 +263,66 @@ static char			*ft_validation_label_name(t_prog_list *prog_list, size_t i, size_t
 	return (NULL);
 }
 
-static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
+static char		*ft_new_word_without_space(char *word, size_t length)
+{
+	size_t	i;
+	size_t	j;
+	char	*new_word;
+
+	if (!(new_word = ft_strnew(length + 1)))
+	{
+		return (NULL);
+	}
+	i = 0;
+	j = 0;
+	while (word[i] != '\0')
+	{
+		if (!ft_isspace(word[i]))
+		{
+			new_word[j++] = word[i];
+		}
+		i++;
+	}
+	new_word[j] = '\0';
+	ft_strdel(&word);
+//	ft_printf("i!=j|i=%zi|j=%zi|w=%s|", i, j, new_word);
+	return (new_word);
+}
+
+static char 	*ft_word_without_space(char *word)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (word[i] != '\0')
+	{
+		if (!ft_isspace(word[i++]))
+		{
+			j++;
+		}
+	}
+//	ft_printf("w=%s|", word);
+	if (i == j)
+	{
+//		ft_printf("i==j|i=%zi|w=%s|", i, word);
+		return (word);
+	}
+	return (ft_new_word_without_space(word, j));
+}
+
+static int 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 {
 	char	*word;
 
+	word = NULL;
 	if (!prog_list->command)
 	{
 		if (!(word = ft_validation_label_name(prog_list, i, j)))
 		{
-			ft_printf("ERROR2|");
+			ft_printf("ERROR2|"); //Не корректная строка
+			return (1);
 		}
 		if ((prog_list->new_line)[i - 1] == LABEL_CHAR && !prog_list->label && word)
 		{
@@ -278,42 +331,43 @@ static void 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 		else if (!prog_list->command && word)
 		{
 			prog_list->command = word;
+//			ft_printf("%s|%zi|%zi|\n", prog_list->new_line, i, j);
 		}
 		else
 		{
-			ft_printf("ERROR3|");
+			ft_printf("ERROR3|"); //Не корректная строка
+			return (1);
 		}
 	}
 	else
 	{
-		if ((prog_list->new_line)[i - 1] == SEPARATOR_CHAR && (word = ft_strsub(prog_list->new_line, i - j, j - 1)))
-		{
-//			ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j - 1));
-		}
-		else if ((word = ft_strsub(prog_list->new_line, i - j, j)))
+//		ft_printf("%s", prog_list->new_line + i);
+		if ((word = ft_strsub(prog_list->new_line, i - j, j)))
 		{
 //			ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j));
 		}
 		if (!prog_list->args[0])
 		{
-			prog_list->args[0] = word;
+			prog_list->args[0] = ft_word_without_space(word);
 		}
 		else if (!prog_list->args[1])
 		{
-			prog_list->args[1] = word;
+			prog_list->args[1] = ft_word_without_space(word);
 		}
 		else if (!prog_list->args[2])
 		{
-			prog_list->args[2] = word;
+			prog_list->args[2] = ft_word_without_space(word);
 		}
 		else if (prog_list->args[0] && prog_list->args[1] && prog_list->args[2])
 		{
-			ft_printf("ERROR4|");
+			ft_printf("ERROR4|"); //Не верное количество аргуметов команды
+			return (1);
 		}
 	}
+	return (0);
 }
 
-static void			ft_parse_new_line(t_prog_list *prog_list)
+static int			ft_parse_new_line(t_prog_list *prog_list)
 {
 	size_t	i;
 	size_t	j;
@@ -332,35 +386,63 @@ static void			ft_parse_new_line(t_prog_list *prog_list)
 	prog_list->args_code[1] = 0;
 	prog_list->args_code[2] = 0;
 	i = 0;
+//	ft_printf("%s|", prog_list->new_line);
 	while ((prog_list->new_line)[i] != '\0')
 	{
-		j = 0;
-		while ((prog_list->new_line)[i] != '\0' && !ft_isspace((prog_list->new_line)[i]))
+		if (!prog_list->command)
 		{
-			j++;
-			i++;
-			if (prog_list->command && (prog_list->new_line)[i - 1] == SEPARATOR_CHAR && !ft_isspace((prog_list->new_line)[i]))
+			j = 0;
+			while ((prog_list->new_line)[i] != '\0' && !ft_isspace((prog_list->new_line)[i]))
 			{
-				break ;
+//				ft_printf("\n%c|%zi|%zi|", (prog_list->new_line)[i], i, j);
+				j++;
+				i++;
+			}
+			if (ft_get_new_word(prog_list, i, j))
+			{
+				return (1);
+			}
+			while ((prog_list->new_line)[i] != '\0' && ft_isspace((prog_list->new_line)[i]))
+			{
+				i++;
 			}
 		}
-		ft_get_new_word(prog_list, i, j);
-		while ((prog_list->new_line)[i] != '\0' && ft_isspace((prog_list->new_line)[i]))
+		else
 		{
-			i++;
+			j = 0;
+			while ((prog_list->new_line)[i] != '\0' && (prog_list->new_line)[i] != SEPARATOR_CHAR)
+			{
+//				ft_printf("\n%c|%zi|%zi|", (prog_list->new_line)[i], i, j);
+				j++;
+				i++;
+			}
+			if (ft_get_new_word(prog_list, i, j))
+			{
+				return (1);
+			}
+			if ((prog_list->new_line)[i] == SEPARATOR_CHAR)
+			{
+				i++;
+			}
 		}
 	}
+	return (0);
 }
 
 static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 {
 	t_prog_list	*prog_list;
 
-	prog_list = (t_prog_list*)malloc(sizeof(t_prog_list));
+	if (!(prog_list = (t_prog_list*)malloc(sizeof(t_prog_list))))
+	{
+		return (NULL);
+	}
 	prog_list->line_ptr = project->data->current;
 	prog_list->endl_ptr = comment ? comment : project->data->endl;
-	ft_get_new_line(prog_list);
-	ft_parse_new_line(prog_list);
+	if (ft_get_new_line(prog_list) || ft_parse_new_line(prog_list))
+	{
+		return (NULL);
+	}
 	prog_list->prev_list = project->current_list;
 	prog_list->next_list = NULL;
 	return (prog_list);
@@ -371,6 +453,8 @@ static void	ft_parse_current(t_project *project)
 	char	*comment;
 	char	*data_cmd;
 
+	comment = NULL;
+	data_cmd = NULL;
 	if (project->current <= project->data->current)
 	{
 		if (((comment = ft_get_chr(project, COMMENT_CHAR)) || (comment = ft_get_chr(project, ALT_COMMENT_CHAR))) && comment > project->data->current)
@@ -381,18 +465,24 @@ static void	ft_parse_current(t_project *project)
 		{
 			if ((data_cmd = ft_get_str(project, NAME_CMD_STRING)) && (!comment || data_cmd < comment))
 			{
-				ft_get_name_comment(project, data_cmd, comment, NAME_CMD_STRING);
+				if (!ft_get_name_comment(project, data_cmd, comment, NAME_CMD_STRING))
+				{
+					ft_printf("ERROR11|"); //Не конец проверяемой строки
+				}
 			}
 			else if ((data_cmd = ft_get_str(project, COMMENT_CMD_STRING)) && (!comment || data_cmd < comment))
 			{
-				ft_get_name_comment(project, data_cmd, comment, COMMENT_CMD_STRING);
+				if (!ft_get_name_comment(project, data_cmd, comment, COMMENT_CMD_STRING))
+				{
+					ft_printf("ERROR12|"); //Не конец проверяемой строки
+				}
 			}
 			else
 			{
 				project->current = project->data->current;
 				if (!ft_is_zero_line(project, comment))
 				{
-					ft_printf("ERROR5|");
+					ft_printf("ERROR5|"); //Не конец проверяемой строки
 				}
 			}
 		}
@@ -403,14 +493,14 @@ static void	ft_parse_current(t_project *project)
 			{
 				if (!ft_is_valid_line(project, comment))
 				{
-					ft_printf("ERROR6|");
+					ft_printf("ERROR6|"); //Не конец проверяемой строки
 //					ft_exit(project, 6, "ERROR6");
 				}
 				else if (!project->prog_list)
 				{
 					if (!(project->prog_list = ft_init_prog_list(project, comment)))
 					{
-						ft_printf("ERROR7|");
+						ft_printf("ERROR7|"); //Ошибка памяти
 					}
 					project->current_list = project->prog_list;
 				}
@@ -930,6 +1020,7 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	project->name = NULL;
 	project->comment = NULL;
 	project->program = NULL;
+	project->prog_list = NULL;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
