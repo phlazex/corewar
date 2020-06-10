@@ -92,12 +92,30 @@ static int	ft_get_name_comment(t_project *project, char *data_cmd, char *comment
 		if (project->current == data_start)
 		{
 			if ((!ft_strcmp(cmd_name, NAME_CMD_STRING) && (project->name = ft_get_data_cmd(data_start, data_end))) || (!ft_strcmp(cmd_name, COMMENT_CMD_STRING) && (project->comment = ft_get_data_cmd(data_start, data_end))))
+			{
 				project->current = data_end + 1;
-			data_end = comment ? comment : project->data->endl;
-			while (project->current < data_end && ft_isspace(*(project->current)))
-				(project->current)++;
-			if (project->current == data_end)
-				return (1);
+			}
+//		ft_printf("%zi|%zi|", data_start, data_end);
+			if (data_end < project->data->endl)
+			{
+				data_end = comment ? comment : project->data->endl;
+				while (project->current < data_end && ft_isspace(*(project->current)))
+					(project->current)++;
+//				ft_printf("%s|%s|", project->data->current, project->current);
+				if (project->current == data_end)
+					return (1);
+			}
+			else
+			{
+				while (ft_isspace(*(project->current)) && *(project->current) != '\n' && *(project->current) != '\0' && *(project->current) != COMMENT_CHAR && *(project->current) != ALT_COMMENT_CHAR)
+					(project->current)++;
+//				ft_printf("%s|%s|", project->data->current, project->current);
+				if (*(project->current) == '\n' || *(project->current) == '\0' || *(project->current) == COMMENT_CHAR || *(project->current) == ALT_COMMENT_CHAR)
+					return (1);
+			}
+//				ft_printf("%s|%s|", data_cmd, comment ? comment : "(null)");
+//				ft_printf("%s|%s|\n", project->comment ? project->comment : "(null)", project->name ? project->name : "(null)");
+//		ft_printf("%zi|%zi|\n", data_start, data_end);
 		}
 	}
 	return (0);
@@ -105,10 +123,12 @@ static int	ft_get_name_comment(t_project *project, char *data_cmd, char *comment
 
 static int	ft_is_zero_line(t_project *project, char *comment)
 {
+//	ft_printf("%zi|%zi|", project->current, comment);
 	while (project->current < project->data->endl && ft_isspace(*(project->current)))
 	{
 		(project->current)++;
 	}
+//	ft_printf("%zi|\n", project->current);
 	if ((!comment && project->current == project->data->endl) || (comment && comment == project->current))
 	{
 		return (1);
@@ -451,16 +471,28 @@ static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 static void	ft_parse_current(t_project *project)
 {
 	char	*comment;
+	char	*alt_comment;
 	char	*data_cmd;
 
-	comment = NULL;
 	data_cmd = NULL;
 	if (project->current <= project->data->current)
 	{
-		if (((comment = ft_get_chr(project, COMMENT_CHAR)) || (comment = ft_get_chr(project, ALT_COMMENT_CHAR))) && comment > project->data->current)
+//		ft_printf("%zi|%zi|", project->data->current, project->current);
+		comment = ft_get_chr(project, COMMENT_CHAR);
+		alt_comment = ft_get_chr(project, ALT_COMMENT_CHAR);
+//		ft_printf("%zi{COMMENT}|%zi{ALT_COMMENT}|", comment, alt_comment);
+		if (comment && alt_comment)
 		{
-//			ft_printf("%zi{COMMENT}|", comment);
+			comment = comment < alt_comment ? comment : alt_comment;
 		}
+		else if (!comment && alt_comment)
+		{
+			comment = alt_comment;
+		}
+//		if (((comment = ft_get_chr(project, COMMENT_CHAR)) || (comment = ft_get_chr(project, ALT_COMMENT_CHAR))) && comment > project->data->current)
+//		{
+//			ft_printf("%zi{COMMENT}|", comment);
+//		}
 		if (!project->name || !project->comment)
 		{
 			if ((data_cmd = ft_get_str(project, NAME_CMD_STRING)) && (!comment || data_cmd < comment))
@@ -474,6 +506,7 @@ static void	ft_parse_current(t_project *project)
 			{
 				if (!ft_get_name_comment(project, data_cmd, comment, COMMENT_CMD_STRING))
 				{
+//	ft_printf("%s|", project->current);
 					ft_printf("ERROR12|"); //Не конец проверяемой строки
 				}
 			}
@@ -1026,6 +1059,7 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 		mem->current = mem->head;
 		while (mem->current < mem->end)
 		{
+			ft_printf("%s|", mem->current);
 			if ((mem->endl = ft_strchr(mem->current, '\n')))
 			{
 				ft_parse_current(project);
