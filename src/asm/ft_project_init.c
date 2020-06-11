@@ -264,6 +264,7 @@ static char			*ft_validation_label_name(t_prog_list *prog_list, size_t i, size_t
 {
 	char 	*str;
 
+//	ft_printf("%s|\n", prog_list->new_line + i);
 	if ((prog_list->new_line)[i - 1] == LABEL_CHAR)
 	{
 		str = ft_strsub(prog_list->new_line, i - j, j - 1);
@@ -341,6 +342,7 @@ static int 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 	{
 		if (!(word = ft_validation_label_name(prog_list, i, j)))
 		{
+//			ft_printf("%s|", word ? word : "(null)");
 			ft_printf("ERROR2|"); //Не корректная строка
 			return (1);
 		}
@@ -406,15 +408,20 @@ static int			ft_parse_new_line(t_prog_list *prog_list)
 	prog_list->args_code[1] = 0;
 	prog_list->args_code[2] = 0;
 	i = 0;
-//	ft_printf("%s|", prog_list->new_line);
+//	ft_printf("%s|\n", prog_list->new_line);
 	while ((prog_list->new_line)[i] != '\0')
 	{
 		if (!prog_list->command)
 		{
 			j = 0;
-			while ((prog_list->new_line)[i] != '\0' && !ft_isspace((prog_list->new_line)[i]))
+			while ((prog_list->new_line)[i] != '\0' && ft_is_labels_char((prog_list->new_line)[i], 0))
 			{
 //				ft_printf("\n%c|%zi|%zi|", (prog_list->new_line)[i], i, j);
+				j++;
+				i++;
+			}
+			if ((prog_list->new_line)[i] == LABEL_CHAR && !prog_list->label && !prog_list->command)
+			{
 				j++;
 				i++;
 			}
@@ -1059,7 +1066,7 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 		mem->current = mem->head;
 		while (mem->current < mem->end)
 		{
-			ft_printf("%s|", mem->current);
+//			ft_printf("%s|", mem->current);
 			if ((mem->endl = ft_strchr(mem->current, '\n')))
 			{
 				ft_parse_current(project);
