@@ -22,6 +22,7 @@ typedef struct	s_prog_list
 	struct s_prog_list		*arg_label_list_ptr[3];
 	size_t					args_code[3];
 	char					*code_line;
+	size_t 					num_line;
 }				t_prog_list;
 
 typedef struct s_project
@@ -36,6 +37,7 @@ typedef struct s_project
 	char					*program;
 	char					*current;
 	char					*end;
+	size_t 					num_current_line;
 }				t_project;
 
 int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *));

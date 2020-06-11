@@ -9,28 +9,81 @@
 
 static void	ft_free_mem(t_project *project)
 {
-	project->data->current = NULL;
-	project->data->end = NULL;
-	project->data->endl = NULL;
-	ft_strdel(&(project->data->head));
-	ft_memdel((void **)&(project->data));
+	if (project->data)
+	{
+		project->data->current = NULL;
+		project->data->end = NULL;
+		project->data->endl = NULL;
+		if (project->data->head)
+			ft_strdel(&(project->data->head));
+		ft_memdel((void **)&(project->data));
+	}
 }
 
-static void	ft_free_prog_list()
+static void	ft_free_prog_list(t_project *project)
 {
-
+	project->current_list->line_ptr = NULL;
+	project->current_list->endl_ptr = NULL;
+	if (project->current_list->new_line)
+		ft_strdel(&(project->current_list->new_line));
+	if (project->current_list->label)
+		ft_strdel(&(project->current_list->label));
+	if (project->current_list->command)
+		ft_strdel(&(project->current_list->command));
+	if (project->current_list->args[0])
+		ft_strdel(&(project->current_list->args[0]));
+	if (project->current_list->args[1])
+		ft_strdel(&(project->current_list->args[1]));
+	if (project->current_list->args[2])
+		ft_strdel(&(project->current_list->args[2]));
+	if (project->current_list->code_line)
+		ft_strdel(&(project->current_list->code_line));
+	project->current_list->arg_label_list_ptr[0] = NULL;
+	project->current_list->arg_label_list_ptr[1] = NULL;
+	project->current_list->arg_label_list_ptr[2] = NULL;
 }
 
-static void	ft_free_project()
+static void	ft_free_prog_lists(t_project *project)
 {
+	if (project->prog_list)
+	{
+		project->current_list = project->prog_list;
+		while (project->current_list)
+		{
+			ft_free_prog_list(project);
+			project->prog_list = project->current_list;
+			project->current_list = project->current_list->next_list;
+			if (project->prog_list)
+			{
+				project->prog_list->prev_list = NULL;
+				project->prog_list->next_list = NULL;
+				ft_memdel((void **)&(project->prog_list));
+			}
+		}
+	}
+}
 
+static void	ft_free_project(t_project *project)
+{
+	if (project->name)
+		ft_strdel(&(project->name));
+	if (project->comment)
+		ft_strdel(&(project->comment));
+	project->prog_size = NULL;
+	if (project->program)
+		ft_strdel(&(project->program));
+	project->current = NULL;
+	project->end = NULL;
 }
 
 static void	ft_free(t_project *project)
 {
-	ft_free_mem(project);
-	ft_free_prog_list();
-	ft_free_project();
+	if (project)
+	{
+		ft_free_mem(project);
+		ft_free_prog_lists(project);
+		ft_free_project(project);
+	}
 }
 
 static void	ft_exit(t_project *project, int exit_code, char *message)
@@ -464,6 +517,8 @@ static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 	{
 		return (NULL);
 	}
+	prog_list->num_line = project->num_current_line;
+	ft_printf("\n%zi|", project->num_current_line);
 	prog_list->line_ptr = project->data->current;
 	prog_list->endl_ptr = comment ? comment : project->data->endl;
 	if (ft_get_new_line(prog_list) || ft_parse_new_line(prog_list))
@@ -522,7 +577,8 @@ static void	ft_parse_current(t_project *project)
 				project->current = project->data->current;
 				if (!ft_is_zero_line(project, comment))
 				{
-					ft_printf("ERROR5|"); //Не конец проверяемой строки
+					ft_printf("\nERROR5|%zi|", project->num_current_line); //Не конец проверяемой строки
+//					ft_exit(project, 5, "ERROR5");
 				}
 			}
 		}
@@ -533,7 +589,7 @@ static void	ft_parse_current(t_project *project)
 			{
 				if (!ft_is_valid_line(project, comment))
 				{
-					ft_printf("ERROR6|"); //Не конец проверяемой строки
+					ft_printf("\nERROR6|%zi|", project->num_current_line); //Не конец проверяемой строки
 //					ft_exit(project, 6, "ERROR6");
 				}
 				else if (!project->prog_list)
@@ -963,6 +1019,7 @@ static int 	ft_check_prog_list(t_project *project)
 	project->current_list = project->prog_list;
 	while (project->current_list)
 	{
+//		ft_printf("\n%zi", project->current_list->num_line);
 		if (!ft_check_prog_list_line(project))
 		{
 			return (0);
@@ -1061,11 +1118,14 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	project->comment = NULL;
 	project->program = NULL;
 	project->prog_list = NULL;
+	project->num_current_line = 0;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
 		while (mem->current < mem->end)
 		{
+			project->num_current_line++;
+//			ft_printf("\n%zi|", project->num_current_line);
 //			ft_printf("%s|", mem->current);
 			if ((mem->endl = ft_strchr(mem->current, '\n')))
 			{
@@ -1087,7 +1147,7 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	{
 		if (!ft_check_prog_list(project))
 		{
-			ft_printf("ERROR10|");
+			ft_printf("\nERROR10|%zi|", project->current_list->num_line);
 		}
 		ft_get_program_line(project);
 	}
