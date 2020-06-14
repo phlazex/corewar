@@ -38,13 +38,15 @@ typedef struct s_project
 	char					*current;
 	char					*end;
 	size_t 					num_current_line;
+	size_t					num_error;
+	size_t					num_error_line;
 }				t_project;
 
-int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *));
-void ft_usage();
-int ft_disassemble(t_project *project);
-int ft_parse_file_dis(t_mem *mem, t_project *project, char *file);
-int	ft_parse_file(t_mem *mem, t_project *project, char *file);
-
+int		ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *));
+void	ft_usage();
+int		ft_disassemble(t_project *project);
+int		ft_parse_file_dis(t_mem *mem, t_project *project, char *file);
+int		ft_parse_file(t_mem *mem, t_project *project, char *file);
+void	ft_exit(t_project *project, int exit_code, char *error_message);
 
 #endif

@@ -7,16 +7,16 @@
 #include "corewar_op.h"
 #include <ft_printf.h>
 
-static void	ft_free_mem(t_project *project)
+static void	ft_free_mem(t_mem *data)
 {
-	if (project->data)
+	if (data)
 	{
-		project->data->current = NULL;
-		project->data->end = NULL;
-		project->data->endl = NULL;
-		if (project->data->head)
-			ft_strdel(&(project->data->head));
-		ft_memdel((void **)&(project->data));
+		data->current = NULL;
+		data->end = NULL;
+		data->endl = NULL;
+		if (data->head)
+			ft_strdel(&(data->head));
+		ft_memdel((void **)&(data));
 	}
 }
 
@@ -80,19 +80,90 @@ static void	ft_free(t_project *project)
 {
 	if (project)
 	{
-		ft_free_mem(project);
+		ft_free_mem(project->data);
 		ft_free_prog_lists(project);
 		ft_free_project(project);
 	}
 }
 
-static void	ft_exit(t_project *project, int exit_code, char *message)
+static void		ft_print_current_error_line(t_project *project)
 {
-	ft_free(project);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (i < 50)
+	{
+		ft_printf("-");
+		i++;
+	}
+	i = 0;
+	j = 0;
+	while ((project->data->head)[i] != '\0')
+	{
+		if (j + 2 >= project->num_error_line - 1 && j < project->num_error_line + 2)
+		{
+			ft_printf("\n%03zi\t", j + 1);
+			while ((project->data->head)[i] != '\0' && (project->data->head)[i] != '\n')
+			{
+				ft_printf("%c", (project->data->head)[i++]);
+			}
+		}
+		if ((project->data->head)[i] == '\n')
+			j++;
+		i++;
+	}
+	ft_printf("\n");
+	i = 0;
+	while (i < 25)
+	{
+		ft_printf("__");
+		i++;
+	}
+	ft_printf("\n");
+}
+
+static void		ft_get_error_message(t_project *project, int exit_code, char *error_message)
+{
+	if (exit_code == 1)
+	{
+		ft_printf("Ошибка открытия файла\n");
+	}
+	else if (exit_code == 2)
+	{
+		ft_printf("Ошибка памяти\n");
+	}
+	else if (exit_code == 3)
+	{
+		ft_printf("Не определенная ошибка\n");
+	}
+	else if (exit_code == 4)
+	{
+		ft_printf("Отсутствует ожидаемый токен \"%s\" в строке %zi:\n", error_message, project->num_error_line);
+		ft_print_current_error_line(project);
+	}
+	else if (exit_code == 5)
+	{
+		ft_printf("Не допустимая длина токена \"%s\"\n", error_message);
+	}
+	else if (exit_code == 6)
+	{
+		ft_printf("Отсутствуют ожидаемые токены \"%s\" и \"%s\"\n", NAME_CMD_STRING, COMMENT_CMD_STRING);
+	}
+	else if (exit_code == 7)
+	{
+		ft_printf("Лексическая ошибка в строке %zi:\n", project->num_error_line);
+		ft_print_current_error_line(project);
+	}
+}
+
+void	ft_exit(t_project *project, int exit_code, char *error_message)
+{
 	if (exit_code)
 	{
-//		ft_printf("%s\n", message);
+		ft_get_error_message(project, exit_code, error_message);
 	}
+	ft_free(project);
 	exit(exit_code);
 }
 
@@ -268,8 +339,9 @@ static int 		ft_get_new_line(t_prog_list *prog_list)
 
 	if (!(prog_list->new_line = ft_strnew(ft_get_strlen(prog_list))))
 	{
-		ft_printf("ERROR1|"); //Ошибка памяти
-		return (1);
+		ft_exit(NULL, 2, NULL);
+//		ft_printf("ERROR1|"); //Ошибка памяти
+//		return (1);
 	}
 	ptr = prog_list->line_ptr;
 	i = 0;
@@ -396,7 +468,7 @@ static int 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 		if (!(word = ft_validation_label_name(prog_list, i, j)))
 		{
 //			ft_printf("%s|", word ? word : "(null)");
-			ft_printf("ERROR2|"); //Не корректная строка
+//			ft_printf("ERROR2|"); //Не корректная строка
 			return (1);
 		}
 		if ((prog_list->new_line)[i - 1] == LABEL_CHAR && !prog_list->label && word)
@@ -410,7 +482,7 @@ static int 		ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j)
 		}
 		else
 		{
-			ft_printf("ERROR3|"); //Не корректная строка
+//			ft_printf("ERROR3|"); //Не корректная строка
 			return (1);
 		}
 	}
@@ -518,7 +590,7 @@ static t_prog_list	*ft_init_prog_list(t_project *project, char *comment)
 		return (NULL);
 	}
 	prog_list->num_line = project->num_current_line;
-	ft_printf("\n%zi|", project->num_current_line);
+//	ft_printf("\n%zi|", project->num_current_line);
 	prog_list->line_ptr = project->data->current;
 	prog_list->endl_ptr = comment ? comment : project->data->endl;
 	if (ft_get_new_line(prog_list) || ft_parse_new_line(prog_list))
@@ -577,8 +649,16 @@ static void	ft_parse_current(t_project *project)
 				project->current = project->data->current;
 				if (!ft_is_zero_line(project, comment))
 				{
-					ft_printf("\nERROR5|%zi|", project->num_current_line); //Не конец проверяемой строки
-//					ft_exit(project, 5, "ERROR5");
+//					ft_printf("\nERROR5|%zi|", project->num_current_line); //Не конец проверяемой строки
+					project->num_error_line = project->num_current_line;
+					if (!project->name && !project->comment)
+						ft_exit(project, 6, NULL);
+					else if (!project->name)
+						ft_exit(project, 4, NAME_CMD_STRING);
+					else if (!project->comment)
+						ft_exit(project, 4, COMMENT_CMD_STRING);
+					else
+						ft_exit(project, 3, NULL);
 				}
 			}
 		}
@@ -589,8 +669,9 @@ static void	ft_parse_current(t_project *project)
 			{
 				if (!ft_is_valid_line(project, comment))
 				{
-					ft_printf("\nERROR6|%zi|", project->num_current_line); //Не конец проверяемой строки
-//					ft_exit(project, 6, "ERROR6");
+					project->num_error_line = project->num_current_line;
+					ft_exit(project, 7, NULL);
+//					ft_printf("\nERROR6|%zi|", project->num_current_line); //Не конец проверяемой строки
 				}
 				else if (!project->prog_list)
 				{
@@ -1119,6 +1200,8 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 	project->program = NULL;
 	project->prog_list = NULL;
 	project->num_current_line = 0;
+	project->num_error = 0;
+	project->num_error_line = 0;
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
 		mem->current = mem->head;
@@ -1139,15 +1222,25 @@ int	ft_parse_file(t_mem *mem, t_project *project, char *file)
 			}
 		}
 	}
-	if ((!project->name || ft_strlen(project->name) > PROG_NAME_LENGTH) && (project->comment && ft_strlen(project->comment) > COMMENT_LENGTH))
+	if ((!project->name || ft_strlen(project->name) > PROG_NAME_LENGTH) || (!project->comment || ft_strlen(project->comment) > COMMENT_LENGTH))
 	{
-		ft_printf("ERROR9|");
+		if (!project->name && !project->comment)
+			ft_exit(project, 6, NULL);
+		else if (ft_strlen(project->name) > PROG_NAME_LENGTH)
+			ft_exit(project, 5, NAME_CMD_STRING);
+		else if (ft_strlen(project->comment) > COMMENT_LENGTH)
+			ft_exit(project, 5, COMMENT_CMD_STRING);
+		else
+			ft_exit(project, 3, NULL);
+//		ft_printf("ERROR9|");
 	}
 	else
 	{
 		if (!ft_check_prog_list(project))
 		{
-			ft_printf("\nERROR10|%zi|", project->current_list->num_line);
+			project->num_error_line = project->current_list->num_line;
+			ft_exit(project, 7, NULL);
+//			ft_printf("\nERROR10|%zi|", project->current_list->num_line);
 		}
 		ft_get_program_line(project);
 	}
@@ -1173,10 +1266,13 @@ int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem 
 
 	fd = open(file_name, O_RDONLY);
 	if (!(*project = (t_project*)malloc(sizeof(**project))))
-		return (1);
+		ft_exit(NULL, 2, NULL);
 	data = ft_init_memory();
-	fast_read_in_memory(fd, data);
+	if (fast_read_in_memory(fd, data))
+	{
+		ft_free_mem(data);
+		ft_exit(NULL, 1, NULL);
+	}
 	close(fd);
-	(*ft_parse)(data, *project, file_name);
-	return (0);
+	return (((*ft_parse)(data, *project, file_name)));
 }

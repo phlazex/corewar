@@ -29,10 +29,14 @@ static void	ft_dis_asm_route(t_project *project, char *arg1, char *arg2)
 
 	opt = ft_check_file_name_asm(arg1, arg2);
 	if (opt > 0)
-		ft_project_init(arg2, &project, ft_parse_file);
+	{
+		if (ft_project_init(arg2, &project, ft_parse_file))
+			ft_exit(project, 3, NULL);
+	}
 	else if (opt < 0)
 	{
-		ft_project_init(arg2, &project, ft_parse_file_dis);
+		if (ft_project_init(arg2, &project, ft_parse_file_dis))
+			ft_exit(project, 3, NULL);
 		ft_print_memory(
 				project->name, project->end, project->comment, project->program
 				);
