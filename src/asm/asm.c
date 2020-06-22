@@ -1,6 +1,14 @@
-//
-// Created by xel on 13.03.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   asm.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfahey <mfahey@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/22 19:17:32 by mfahey            #+#    #+#             */
+/*   Updated: 2020/06/22 19:17:39 by mfahey           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <ft_printf.h>
 #include "asm.h"
@@ -38,8 +46,8 @@ static void	ft_dis_asm_route(t_project *project, char *arg1, char *arg2)
 		if (ft_project_init(arg2, &project, ft_parse_file_dis))
 			ft_exit(project, 3, NULL);
 		ft_print_memory(
-				project->name, project->end, project->comment, project->program
-				);
+				project->name, project->end,
+				project->comment, project->program);
 		ft_set_color(white + 2);
 		ft_printf(".name \"%s\"\n", project->name);
 		ft_printf(".comment \"%s\"\n\n", project->comment);
@@ -57,13 +65,9 @@ int			main(int argc, char **argv)
 
 	ft_printf(CLR);
 	if (argc == 3)
-	{
 		ft_dis_asm_route(project, argv[1], argv[2]);
-	}
 	else if (argc == 2)
-	{
 		ft_dis_asm_route(project, "-asm", argv[1]);
-	}
 	else
 		ft_usage();
 	return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_project_init.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfahey <mfahey@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/22 19:18:04 by mfahey            #+#    #+#             */
+/*   Updated: 2020/06/22 19:18:05 by mfahey           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include <fcntl.h>
 #include <unistd.h>
@@ -6,156 +18,6 @@
 #include "corewar.h"
 #include "corewar_op.h"
 #include <ft_printf.h>
-
-static void	ft_free_mem(t_mem *data)
-{
-	if (data)
-	{
-		data->current = NULL;
-		data->end = NULL;
-		data->endl = NULL;
-		if (data->head)
-			ft_strdel(&(data->head));
-		ft_memdel((void **)&(data));
-	}
-}
-
-static void	ft_free_prog_list(t_project *project)
-{
-	project->current_list->line_ptr = NULL;
-	project->current_list->endl_ptr = NULL;
-	if (project->current_list->new_line)
-		ft_strdel(&(project->current_list->new_line));
-	if (project->current_list->label)
-		ft_strdel(&(project->current_list->label));
-	if (project->current_list->command)
-		ft_strdel(&(project->current_list->command));
-	if (project->current_list->args[0])
-		ft_strdel(&(project->current_list->args[0]));
-	if (project->current_list->args[1])
-		ft_strdel(&(project->current_list->args[1]));
-	if (project->current_list->args[2])
-		ft_strdel(&(project->current_list->args[2]));
-	if (project->current_list->code_line)
-		ft_strdel(&(project->current_list->code_line));
-	project->current_list->arg_label_list_ptr[0] = NULL;
-	project->current_list->arg_label_list_ptr[1] = NULL;
-	project->current_list->arg_label_list_ptr[2] = NULL;
-}
-
-static void	ft_free_prog_lists(t_project *project)
-{
-	if (project->prog_list)
-	{
-		project->current_list = project->prog_list;
-		while (project->current_list)
-		{
-			ft_free_prog_list(project);
-			project->prog_list = project->current_list;
-			project->current_list = project->current_list->next_list;
-			if (project->prog_list)
-			{
-				project->prog_list->prev_list = NULL;
-				project->prog_list->next_list = NULL;
-				ft_memdel((void **)&(project->prog_list));
-			}
-		}
-	}
-}
-
-static void	ft_free_project(t_project *project)
-{
-	if (project->name)
-		ft_strdel(&(project->name));
-	if (project->comment)
-		ft_strdel(&(project->comment));
-	project->prog_size = NULL;
-	if (project->program)
-		ft_strdel(&(project->program));
-	project->current = NULL;
-	project->end = NULL;
-}
-
-static void	ft_free(t_project *project)
-{
-	if (project)
-	{
-		ft_free_mem(project->data);
-		ft_free_prog_lists(project);
-		ft_free_project(project);
-	}
-}
-
-static void		ft_print_current_error_line(t_project *project)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	while (i < 50)
-	{
-		ft_printf("-");
-		i++;
-	}
-	i = 0;
-	j = 0;
-	while ((project->data->head)[i] != '\0')
-	{
-		if (j + 2 >= project->num_error_line - 1 && j < project->num_error_line + 2)
-		{
-			ft_printf("\n%03zi\t", j + 1);
-			while ((project->data->head)[i] != '\0' && (project->data->head)[i] != '\n')
-			{
-				ft_printf("%c", (project->data->head)[i++]);
-			}
-		}
-		if ((project->data->head)[i] == '\n')
-			j++;
-		i++;
-	}
-	ft_printf("\n");
-	i = 0;
-	while (i < 25)
-	{
-		ft_printf("__");
-		i++;
-	}
-	ft_printf("\n");
-}
-
-static void		ft_get_error_message(t_project *project, int exit_code, char *error_message)
-{
-	if (exit_code == 1)
-	{
-		ft_printf("Ошибка открытия файла\n");
-	}
-	else if (exit_code == 2)
-	{
-		ft_printf("Ошибка памяти\n");
-	}
-	else if (exit_code == 3)
-	{
-		ft_printf("Не определенная ошибка\n");
-	}
-	else if (exit_code == 4)
-	{
-		ft_printf("Отсутствует ожидаемый токен \"%s\" в строке %zi:\n", error_message, project->num_error_line);
-		ft_print_current_error_line(project);
-	}
-	else if (exit_code == 5)
-	{
-		ft_printf("Не допустимая длина токена \"%s\"\n", error_message);
-	}
-	else if (exit_code == 6)
-	{
-		ft_printf("Отсутствуют ожидаемые токены \"%s\" и \"%s\"\n", NAME_CMD_STRING, COMMENT_CMD_STRING);
-	}
-	else if (exit_code == 7)
-	{
-		ft_printf("Лексическая ошибка в строке %zi:\n", project->num_error_line);
-		ft_print_current_error_line(project);
-	}
-}
 
 void	ft_exit(t_project *project, int exit_code, char *error_message)
 {

@@ -3,7 +3,6 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 99)
 set(COREWAR_SRC
-
         src/corewar/ft_usage.c
         src/corewar/ft_print_error.c
         src/corewar/ft_init_game.c
@@ -29,17 +28,26 @@ set(COREWAR_SRC
         src/corewar/op/op_sub.c
         src/corewar/op/op_and.c
         src/corewar/op/op_or.c
-        src/corewar/op/op_xor.c src/corewar/op/op_ldi.c src/corewar/op/op_lld.c src/corewar/op/op_lldi.c src/corewar/op/op_lfork.c src/corewar/op/op_aff.c src/corewar/ft_options.c)
+        src/corewar/op/op_xor.c
+        src/corewar/op/op_ldi.c
+        src/corewar/op/op_lld.c
+        src/corewar/op/op_lldi.c
+        src/corewar/op/op_lfork.c
+        src/corewar/op/op_aff.c
+        src/corewar/ft_options.c)
 
 set(LOGER_SRC
         src/logger/logger.c)
 set(ASM_SRC
         src/asm/asm.c
+        src/asm/ft_usage.c
+        src/asm/ft_disassemble.c
+        src/asm/ft_project_init.c
+        src/asm/ft_free_mem.c
+        src/asm/ft_print_error.c
         src/corewar/ft_atoin.c
         src/corewar/ft_new_cursor.c
-        src/asm/ft_usage.c src/asm/ft_project_init.c
         src/corewar/ft_print_arena.c
-        src/asm/ft_disassemble.c
         src/corewar/op/op_live.c
         src/corewar/op/op_add.c
         src/corewar/op/op_ld.c
@@ -51,7 +59,12 @@ set(ASM_SRC
         src/corewar/op/op_sub.c
         src/corewar/op/op_and.c
         src/corewar/op/op_or.c
-        src/corewar/op/op_xor.c src/corewar/op/op_ldi.c src/corewar/op/op_lld.c src/corewar/op/op_lldi.c src/corewar/op/op_lfork.c src/corewar/op/op_aff.c)
+        src/corewar/op/op_xor.c
+        src/corewar/op/op_ldi.c
+        src/corewar/op/op_lld.c
+        src/corewar/op/op_lldi.c
+        src/corewar/op/op_lfork.c
+        src/corewar/op/op_aff.c)
 
 add_executable(corewar ${COREWAR_SRC} ${LOGER_SRC} includes/corewar.h includes/op.h src/corewar/corewar.c includes/corewar_op.h)
 add_executable(asm ${ASM_SRC} includes/corewar.h includes/asm.h)
