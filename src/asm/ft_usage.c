@@ -6,12 +6,11 @@
 /*   By: mfahey <mfahey@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 20:17:15 by mfahey            #+#    #+#             */
-/*   Updated: 2020/06/22 20:17:17 by mfahey           ###   ########.fr       */
+/*   Updated: 2020/06/30 13:37:04 by mfahey           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "corewar.h"
+#include "asm.h"
 
 void	ft_logo(void)
 {

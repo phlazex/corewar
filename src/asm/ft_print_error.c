@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "asm.h"
-#include <ft_printf.h>
-#include "corewar_op.h"
 
 static void	ft_print_current_error_line(t_project *project)
 {

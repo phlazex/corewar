@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
 #include "asm.h"
-#include "corewar.h"
 
 static int	ft_check_file_name_asm(char *opt, char *file)
 {

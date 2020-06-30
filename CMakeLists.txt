@@ -45,6 +45,15 @@ set(ASM_SRC
         src/asm/ft_project_init.c
         src/asm/ft_free_mem.c
         src/asm/ft_print_error.c
+        src/asm/ft_write_to_file.c
+        src/asm/ft_exit.c
+        src/asm/ft_parse_file.c
+        src/asm/ft_parse_current_line.c
+        src/asm/ft_libc_functions.c
+        src/asm/ft_parse_functions.c
+        src/asm/ft_parse_current_line_getters.c
+        src/asm/ft_init_prog_list.c
+        src/asm/ft_parse_new_line.c
         src/corewar/ft_atoin.c
         src/corewar/ft_new_cursor.c
         src/corewar/ft_print_arena.c
