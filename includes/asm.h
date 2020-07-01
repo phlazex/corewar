@@ -69,5 +69,17 @@ int			ft_get_name_comment(t_project *project, char *data_cmd, char *comment, cha
 int			ft_is_zero_line(t_project *project, char *comment);
 t_prog_list	*ft_init_prog_list(t_project *project, char *comment);
 int			ft_parse_new_line(t_prog_list *prog_list);
+int			ft_check_prog_list(t_project *project);
+int			ft_get_program_line(t_project *project);
+int			ft_check_args(t_project *project);
+int			ft_is_reg(t_project *project, size_t arg_num);
+int			ft_is_dir(t_project *project, size_t arg_num);
+int			ft_is_ind(t_project *project, size_t arg_num);
+int			ft_check_count_args(t_project *project);
+void		ft_get_args(t_project *project, size_t *i);
+void		ft_get_two_bytes(char *str, size_t *i, int num);
+void		ft_get_four_bytes(char *str, size_t *i, int num);
+int			ft_get_prev_num_label(t_project *project, size_t arg_num);
+int			ft_get_next_num_label(t_project *project, size_t arg_num);
 
 #endif

@@ -54,6 +54,12 @@ set(ASM_SRC
         src/asm/ft_parse_current_line_getters.c
         src/asm/ft_init_prog_list.c
         src/asm/ft_parse_new_line.c
+        src/asm/ft_check_prog_list.c
+        src/asm/ft_prog_list_getters.c
+        src/asm/ft_check_prog_list_args.c
+        src/asm/ft_check_prog_list_args_type.c
+        src/asm/ft_prog_list_getters_args.c
+        src/asm/ft_prog_list_getters_line_data.c
         src/corewar/ft_atoin.c
         src/corewar/ft_new_cursor.c
         src/corewar/ft_print_arena.c
