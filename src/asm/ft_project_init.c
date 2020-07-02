@@ -12,21 +12,22 @@
 
 #include "asm.h"
 
-int ft_parse_file_dis(t_mem *mem, t_project *project, char *file)
+int		ft_parse_file_dis(t_mem *mem, t_project *project, char *file)
 {
 	project->data = mem;
 	project->name = mem->head + 4;
-	project->prog_size =  project->name + PROG_NAME_LENGTH + 4;
+	project->prog_size = project->name + PROG_NAME_LENGTH + 4;
 	project->comment = project->prog_size + 4;
 	project->program = project->comment + COMMENT_LENGTH + 4;
 	project->end = mem->end;
 	return (0);
 }
 
-int ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *))
+int		ft_project_init(char *file_name, t_project **project,
+		int (*ft_parse)(t_mem *, t_project *, char *))
 {
-	int fd;
-	t_mem *data;
+	int		fd;
+	t_mem	*data;
 
 	fd = open(file_name, O_RDONLY);
 	if (!(*project = (t_project*)malloc(sizeof(**project))))

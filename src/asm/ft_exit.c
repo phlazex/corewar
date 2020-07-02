@@ -15,9 +15,7 @@
 void	ft_exit(t_project *project, int exit_code, char *error_message)
 {
 	if (exit_code)
-	{
 		ft_get_error_message(project, exit_code, error_message);
-	}
 	ft_free(project);
 	exit(exit_code);
 }

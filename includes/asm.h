@@ -81,5 +81,9 @@ void		ft_get_two_bytes(char *str, size_t *i, int num);
 void		ft_get_four_bytes(char *str, size_t *i, int num);
 int			ft_get_prev_num_label(t_project *project, size_t arg_num);
 int			ft_get_next_num_label(t_project *project, size_t arg_num);
+int			ft_is_valid_label(t_project *project, char *label, size_t arg_num);
+int			ft_is_arg_func(t_project *project, size_t arg_num, size_t command_size, size_t arg_code);
+int			ft_is_ind_dir_func(t_project *project, size_t arg_num, size_t i);
+int			ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j);
 
 #endif

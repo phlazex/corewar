@@ -76,7 +76,7 @@ int			ft_check_args(t_project *project)
 
 int			ft_check_count_args(t_project *project)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	if (project->current_list->args[0])
