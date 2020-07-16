@@ -34,37 +34,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkers/asm_test/champs/42.s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello.s/42.s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/vis.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args_type.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args_type_functions.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_exit.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_free_mem.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_init_prog_list.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_libc_functions.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_current_line.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_current_line_getters.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_file.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_functions.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_new_line.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_new_line_functions.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_print_error.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters_args.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters_line_data.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asm/ft_write_to_file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/check_inputs_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/check_inputs_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/asm.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/asm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/op.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/op.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/asm.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/asm.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_disassemble.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_disassemble.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_project_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_project_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_usage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_usage.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/corewar" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/corewar/ft_get_heroes_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/corewar/ft_get_heroes_file.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,13 +76,13 @@
       <recent name="$PROJECT_DIR$/src/asm" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.asm">
+  <component name="RunManager" selected="CMake Application.corewar">
     <configuration name="asm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../champs/42.s " REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="asm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="corewar" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-vis ../champs/Gagnant.cor ../checkers/valid_champs/jumper.cor" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="corewar" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="corewar">
+    <configuration name="corewar" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-vis" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="corewar" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="corewar">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -145,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594906939831</updated>
-      <workItem from="1594906941198" duration="6964000" />
+      <workItem from="1594906941198" duration="7628000" />
     </task>
     <task id="LOCAL-00001" summary="">
       <created>1594907266983</created>
@@ -176,50 +151,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594911299602">
+    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594914610581">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594911299602" />
+    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594914610581" />
     <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594910759206">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1594910759206" />
-    <state width="2518" height="470" key="GridCell.Tab.0.bottom" timestamp="1594913452463">
+    <state width="2518" height="382" key="GridCell.Tab.0.bottom" timestamp="1594914564590">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
-    <state width="2518" height="470" key="GridCell.Tab.0.center" timestamp="1594913452462">
+    <state width="2518" height="382" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564590" />
+    <state width="2518" height="382" key="GridCell.Tab.0.center" timestamp="1594914564589">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452462" />
-    <state width="2518" height="470" key="GridCell.Tab.0.left" timestamp="1594913452461">
+    <state width="2518" height="382" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
+    <state width="2518" height="382" key="GridCell.Tab.0.left" timestamp="1594914564588">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452461" />
-    <state width="2518" height="470" key="GridCell.Tab.0.right" timestamp="1594913452462">
+    <state width="2518" height="382" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564588" />
+    <state width="2518" height="382" key="GridCell.Tab.0.right" timestamp="1594914564589">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452462" />
-    <state width="2518" height="470" key="GridCell.Tab.1.bottom" timestamp="1594913452463">
+    <state width="2518" height="382" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
+    <state width="2518" height="470" key="GridCell.Tab.1.bottom" timestamp="1594914562440">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
-    <state width="2518" height="470" key="GridCell.Tab.1.center" timestamp="1594913452463">
+    <state width="2518" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
+    <state width="2518" height="470" key="GridCell.Tab.1.center" timestamp="1594914562440">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
-    <state width="2518" height="470" key="GridCell.Tab.1.left" timestamp="1594913452463">
+    <state width="2518" height="470" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
+    <state width="2518" height="470" key="GridCell.Tab.1.left" timestamp="1594914562439">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
-    <state width="2518" height="470" key="GridCell.Tab.1.right" timestamp="1594913452463">
+    <state width="2518" height="470" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562439" />
+    <state width="2518" height="470" key="GridCell.Tab.1.right" timestamp="1594914562440">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state width="2518" height="470" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state width="2518" height="470" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
     <state x="880" y="431" key="Vcs.Push.Dialog.v2" timestamp="1594907281691">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="880" y="431" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1594907281691" />
+    <state x="1010" y="600" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1594913999600">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1010" y="600" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594913999600" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

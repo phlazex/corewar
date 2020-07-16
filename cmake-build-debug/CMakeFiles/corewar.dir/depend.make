@@ -3,9 +3,11 @@
 
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../includes/corewar.h
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../includes/op.h
+CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../includes/vis.h
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../lib/ft_printf/includes/ft_printf.h
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../lib/libft/includes/libft.h
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../lib/libft/includes/libft_structs.h
+CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../minilibx/mlx.h
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o: ../src/corewar/corewar.c
 
 CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.o: ../includes/corewar.h
@@ -17,6 +19,7 @@ CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.o: ../src/corewar/ft_atoin.c
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../includes/corewar.h
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../includes/corewar_op.h
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../includes/op.h
+CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../includes/vis.h
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../lib/ft_printf/includes/ft_printf.h
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../lib/libft/includes/libft.h
 CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o: ../lib/libft/includes/libft_structs.h
@@ -64,10 +67,6 @@ CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.o: ../lib/libft/includes
 CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.o: ../lib/libft/includes/libft_structs.h
 CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.o: ../src/corewar/ft_get_heroes_file.c
 
-CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o: ../includes/corewar.h
-CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o: ../includes/op.h
-CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o: ../lib/libft/includes/libft.h
-CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o: ../lib/libft/includes/libft_structs.h
 CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o: ../src/corewar/ft_get_op.c
 
 CMakeFiles/corewar.dir/src/corewar/ft_init_cursors.c.o: ../includes/corewar.h

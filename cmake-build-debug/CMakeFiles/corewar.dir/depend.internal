@@ -4,9 +4,11 @@
 CMakeFiles/corewar.dir/src/corewar/corewar.c.o
  ../includes/corewar.h
  ../includes/op.h
+ ../includes/vis.h
  ../lib/ft_printf/includes/ft_printf.h
  ../lib/libft/includes/libft.h
  ../lib/libft/includes/libft_structs.h
+ ../minilibx/mlx.h
  /Users/hwolf/projects/corewar/src/corewar/corewar.c
 CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.o
  ../includes/corewar.h
@@ -18,6 +20,7 @@ CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o
  ../includes/corewar.h
  ../includes/corewar_op.h
  ../includes/op.h
+ ../includes/vis.h
  ../lib/ft_printf/includes/ft_printf.h
  ../lib/libft/includes/libft.h
  ../lib/libft/includes/libft_structs.h
@@ -65,10 +68,6 @@ CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.o
  ../lib/libft/includes/libft_structs.h
  /Users/hwolf/projects/corewar/src/corewar/ft_get_heroes_file.c
 CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o
- ../includes/corewar.h
- ../includes/op.h
- ../lib/libft/includes/libft.h
- ../lib/libft/includes/libft_structs.h
  /Users/hwolf/projects/corewar/src/corewar/ft_get_op.c
 CMakeFiles/corewar.dir/src/corewar/ft_init_cursors.c.o
  ../includes/corewar.h

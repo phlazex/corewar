@@ -29,15 +29,18 @@ t_err		ft_check_file_name(char *file_name)
 		return (success);
 	return (w_format);
 }
+
 t_err       ft_fill_hero_list(int argc, char **argv, t_data *data) {
     int i;
     int j;
+	t_err  err;
 
+	err = success;
     i = 0;
     while (++i < argc) {
         if (!ft_strcmp(argv[i], "-n"))
             i += 2;
-        else if (!ft_check_file_name(argv[i])) {
+        else if ((err = ft_check_file_name(argv[i]))) {
             j = -1;
             while (++j < MAX_PLAYERS)
                 if (data->hero_list[j].id == 0) {
@@ -49,7 +52,7 @@ t_err       ft_fill_hero_list(int argc, char **argv, t_data *data) {
                 return (w_player_number);
         }
     }
-    return (success);
+    return (err);
 }
 
 t_err		ft_get_heroes_files(int argc, char **argv, t_data *data)
