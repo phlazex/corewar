@@ -1,10 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_hero.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hwolf <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/17 13:34:18 by hwolf             #+#    #+#             */
+/*   Updated: 2020/03/17 13:34:19 by hwolf            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "corewar.h"
-
 #include "ft_printf.h"
-#include <stdio.h>
-#include <unistd.h>
 
-t_err ft_parse_hero(t_hero *hero, t_mem *mem)
+t_err	ft_parse_hero(t_hero *hero, t_mem *mem)
 {
 	if (mem->end - mem->head < PROG_NAME_LENGTH + COMMENT_LENGTH + 4 + 8)
 		return (w_file_size);
@@ -24,7 +33,5 @@ t_err ft_parse_hero(t_hero *hero, t_mem *mem)
 	ft_memcpy(hero->header.comment, mem->current, COMMENT_LENGTH);
 	mem->current += COMMENT_LENGTH + 4;
 	ft_memcpy(hero->program, mem->current, hero->header.prog_size);
-//	ft_print_memory(hero->program, hero->program + CHAMP_MAX_SIZE, hero->program, hero->program + CHAMP_MAX_SIZE);
-//	ft_print_memory(mem->head, mem->end, mem->cursor, mem->end);
 	return (success);
 }

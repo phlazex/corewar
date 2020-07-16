@@ -45,17 +45,17 @@ int ft_disassemble(t_project *project)
 	if (g_op_tab[op].arg_type)
 	{
 		type.value = ft_atoi_vm(project->current, &current, TYPE_LEN).v_1;
-		type.arg1 == REG_CODE ? ft_printf("r") : ft_printf("%%");
-		ft_printf("%d", ft_get_code(project->current, &current, op, type.arg1));
+		type.args.arg1 == REG_CODE ? ft_printf("r") : ft_printf("%%");
+		ft_printf("%d", ft_get_code(project->current, &current, op, type.args.arg1));
 		if (g_op_tab[op].arg_count > 1)
 		{
-			type.arg2 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf("%d", ft_get_code(project->current, &current, op, type.arg2));
+			type.args.arg2 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
+			ft_printf("%d", ft_get_code(project->current, &current, op, type.args.arg2));
 		}
 		if (g_op_tab[op].arg_count > 2)
 		{
-			type.arg3 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf(", %d", ft_get_code(project->current, &current, op, type.arg3));
+			type.args.arg3 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
+			ft_printf(", %d", ft_get_code(project->current, &current, op, type.args.arg3));
 		}
 		ft_printf("\n");
 	} else

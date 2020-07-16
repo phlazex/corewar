@@ -1,39 +1,50 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_arena.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hwolf <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/17 13:34:18 by hwolf             #+#    #+#             */
+/*   Updated: 2020/03/17 13:34:19 by hwolf            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include "ft_printf.h"
 #include "corewar.h"
 
-int ft_set_color(t_color color)
+int			ft_set_color(t_color color)
 {
 	ft_printf(RESET);
 	if (color == white)
-		return ft_printf(RESET);
+		return (ft_printf(RESET));
 	if (color == grey)
-		return ft_printf(GRAY);
+		return (ft_printf(GRAY));
 	if (color == green)
-		return ft_printf(GREEN);
+		return (ft_printf(GREEN));
 	if (color == red)
-		return ft_printf(RED);
+		return (ft_printf(RED));
 	if (color == blue)
-		return ft_printf(BLUE);
+		return (ft_printf(BLUE));
 	if (color == purple)
-		return ft_printf(MAGENTA);
+		return (ft_printf(MAGENTA));
 	if (color == i_green)
-		return ft_printf(IGREEN);
+		return (ft_printf(IGREEN));
 	if (color == i_red)
-		return ft_printf(IRED);
+		return (ft_printf(IRED));
 	if (color == i_blue)
-		return ft_printf(IBLUE);
+		return (ft_printf(IBLUE));
 	if (color == i_purple)
-		return ft_printf(IMAGENTA);
-
+		return (ft_printf(IMAGENTA));
 	return (0);
 }
 
-void ft_print_arena(t_game *game)
+void		ft_print_arena(t_game *game)
 {
-	size_t i;
-	void *temp;
-	t_color old_color;
+	size_t	i;
+	void	*temp;
+	t_color	old_color;
 
 	temp = game->arena;
 	i = 0;
@@ -57,163 +68,31 @@ void ft_print_arena(t_game *game)
 	ft_printf(RESET);
 }
 
-void ft_print_regs(t_game *game)
+static void	ft_print_hex_fd(int fd, void *data, void *end)
 {
-	int i;
-
-	i = 0;
-	while (i < REG_NUMBER)
-	{
-//		ft_printf("r%d: %x ",i + 1, fd_game->regs[i]);
-		i++;
-	}
-	ft_printf("\n\n");
-}
-
-static void ft_print_hex(void *data, void *end, void *mark, void *tail)
-{
-	int i;
+	int	i;
 
 	i = 16;
 	while (i--)
 	{
-		if (data < end )
-			ft_printf("%02x", *(unsigned char *) data);
+		if (data < end)
+			ft_printf_fd(fd, "%02x", *(unsigned char *)data);
 		else
-			ft_printf("  ");
-		data ++;
-		if (data == mark)
-			ft_printf(RESET);
-		if (data == tail)
-			ft_printf(GRAY);
-
+			ft_printf_fd(fd, "  ");
+		data++;
 		if (i % 2 == 0)
-			ft_printf(" ");
-	}
-	ft_printf(RESET);
-}
-
-static void ft_print_str(void *data, void *end, void *mark, void *tail)
-{
-	int i;
-
-	i = 16;
-	ft_printf("%4s", " ");
-	while (i--)
-	{
-		if (data < end)
-		{
-			if (ft_isprint(*(unsigned char *) data))
-				ft_printf("%c", *(unsigned char *) data);
-			else
-				ft_printf(".");
-			data++;
-			if (data == mark)
-				ft_printf(RESET);
-			if (data == tail)
-				ft_printf(GRAY);
-		}
-		else
-			ft_printf(" ");
-
-	}
-	ft_printf("\n");
-}
-
-void ft_print_memory(void *start, void *end, void *mark, void *tail)
-{
-	int i;
-
-	i = 0;
-
-	while (start <= end)
-	{
-//		ft_printf(BLUE"%04x0: "RESET,i);
-		if (start < mark)
-			ft_printf(GREEN);
-		if (start > tail)
-			ft_printf(GRAY);
-		ft_print_hex(start, end, mark, tail);
-		if (start < mark)
-			ft_printf(GREEN);
-		if (start > tail)
-			ft_printf(GRAY);
-		ft_print_str(start, end, mark, tail);
-		start += 16;
-		i++;
-	}
-	ft_printf("\n");
-}
-
-static void ft_print_str_fd(int fd, void *data, void *end, void *mark, void *tail)
-{
-	int i;
-
-	i = 16;
-	ft_printf("%4s", " ");
-	while (i--)
-	{
-		if (data < end)
-		{
-			if (ft_isprint(*(unsigned char *) data))
-				ft_printf_fd(fd, "%c", *(unsigned char *) data);
-			else
-				ft_printf_fd(fd, ".");
-			data++;
-//			if (data == mark)
-//				ft_printf(RESET);
-//			if (data == tail)
-//				ft_printf(GRAY);
-		}
-		else
 			ft_printf_fd(fd, " ");
-
 	}
-	ft_printf("\n");
 }
 
-static void ft_print_hex_fd(int fd, void *data, void *end, void *mark, void *tail)
+void		ft_print_memory_fd(int fd, void *start, void *end)
 {
-	int i;
-
-	i = 16;
-	while (i--)
-	{
-		if (data < end )
-			ft_printf_fd(fd, "%02x", *(unsigned char *) data);
-		else
-			ft_printf_fd(fd,"  ");
-		data ++;
-//		if (data == mark)
-//			ft_printf(RESET);
-//		if (data == tail)
-//			ft_printf(GRAY);
-
-		if (i % 2 == 0)
-			ft_printf_fd(fd," ");
-	}
-//	ft_printf(RESET);
-}
-
-void ft_print_memory_fd(int fd, void *start, void *end, void *mark, void *tail)
-{
-	int i;
+	int	i;
 
 	i = 0;
-
 	while (start < end)
 	{
-//		ft_printf(BLUE"%04x0: "RESET,i);
-//		if (start < mark)
-//			ft_printf(GREEN);
-//		if (start > tail)
-//			ft_printf(GRAY);
-		ft_print_hex_fd(fd, start, end, mark, tail);
-//		if (start < mark)
-//			ft_printf(GREEN);
-//		if (start > tail)
-//			ft_printf(GRAY);
-//		ft_print_str(start, end, mark, tail);
+		ft_print_hex_fd(fd, start, end);
 		start += 16;
 		i++;
 	}
