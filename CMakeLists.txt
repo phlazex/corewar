@@ -43,11 +43,31 @@ set(LOGER_SRC
         src/logger/logger.c)
 set(ASM_SRC
         src/asm/asm.c
+        src/asm/ft_usage.c
+        src/asm/ft_disassemble.c
+        src/asm/ft_project_init.c
+        src/asm/ft_free_mem.c
+        src/asm/ft_print_error.c
+        src/asm/ft_write_to_file.c
+        src/asm/ft_exit.c
+        src/asm/ft_parse_file.c
+        src/asm/ft_parse_current_line.c
+        src/asm/ft_libc_functions.c
+        src/asm/ft_parse_functions.c
+        src/asm/ft_parse_current_line_getters.c
+        src/asm/ft_init_prog_list.c
+        src/asm/ft_parse_new_line.c
+        src/asm/ft_check_prog_list.c
+        src/asm/ft_prog_list_getters.c
+        src/asm/ft_check_prog_list_args.c
+        src/asm/ft_check_prog_list_args_type.c
+        src/asm/ft_prog_list_getters_args.c
+        src/asm/ft_prog_list_getters_line_data.c
+        src/asm/ft_check_prog_list_args_type_functions.c
+        src/asm/ft_parse_new_line_functions.c
         src/corewar/ft_atoin.c
         src/corewar/ft_new_cursor.c
-        src/asm/ft_usage.c src/asm/ft_project_init.c
         src/corewar/ft_print_arena.c
-        src/asm/ft_disassemble.c
         src/corewar/op/op_live.c
         src/corewar/op/op_add.c
         src/corewar/op/op_ld.c
@@ -59,7 +79,14 @@ set(ASM_SRC
         src/corewar/op/op_sub.c
         src/corewar/op/op_and.c
         src/corewar/op/op_or.c
-        src/corewar/op/op_xor.c src/corewar/op/op_ldi.c src/corewar/op/op_lld.c src/corewar/op/op_lldi.c src/corewar/op/op_lfork.c src/corewar/op/op_aff.c)
+        src/corewar/op/op_xor.c
+        src/corewar/op/op_ldi.c
+        src/corewar/op/op_lld.c
+        src/corewar/op/op_lldi.c
+        src/corewar/op/op_lfork.c
+        src/corewar/op/op_aff.c
+        src/corewar/ft_past_reg.c
+        src/corewar/ft_print_arena_utils.c)
 
 set (VIS_SRC
         src/vis/ft_delete_window.c

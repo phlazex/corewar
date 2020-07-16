@@ -1,7 +1,16 @@
-#include "corewar_op.h"
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_disassemble.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfahey <mfahey@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/22 19:17:56 by mfahey            #+#    #+#             */
+/*   Updated: 2020/06/30 13:36:28 by mfahey           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
-#include "corewar.h"
 
 int32_t ft_get_code(char *head, size_t *address, int op, int arg_type)
 {
@@ -55,7 +64,7 @@ int ft_disassemble(t_project *project)
 		if (g_op_tab[op].arg_count > 2)
 		{
 			type.args.arg3 == REG_CODE ? ft_printf(", r") : ft_printf(", %%");
-			ft_printf(", %d", ft_get_code(project->current, &current, op, type.args.arg3));
+			ft_printf("%d", ft_get_code(project->current, &current, op, type.args.arg3));
 		}
 		ft_printf("\n");
 	} else

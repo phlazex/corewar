@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="corewar" targetName="corewar" />
+      <config projectName="corewar" targetName="libft" />
+      <config projectName="corewar" targetName="libftprintf" />
+      <config projectName="corewar" targetName="sandbox" />
+      <config projectName="corewar" targetName="asm" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkers/asm_test/champs/42.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello.s/42.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/vis.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args_type.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_check_prog_list_args_type_functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_exit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_free_mem.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_init_prog_list.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_libc_functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_current_line.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_current_line_getters.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_file.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_new_line.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_parse_new_line_functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_print_error.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters_args.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_prog_list_getters_line_data.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asm/ft_write_to_file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/check_inputs_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/check_inputs_report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/asm.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/asm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/op.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/op.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/asm.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/asm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/ft_disassemble.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_disassemble.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/ft_project_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_project_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/ft_usage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_usage.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1elrIOgvoMNroWQH948dU4m5fuc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hello.s" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hello.s" />
+      <recent name="$PROJECT_DIR$/checkers/asm_test/champs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/includes" />
+      <recent name="$PROJECT_DIR$/src/asm" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.asm">
+    <configuration name="asm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../champs/42.s " REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="asm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="corewar" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-vis ../champs/Gagnant.cor ../checkers/valid_champs/jumper.cor" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="corewar" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="corewar">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libft" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="libft" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libftprintf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="libftprintf" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sandbox" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="sandbox" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="sandbox">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.asm" />
+      <item itemvalue="CMake Application.corewar" />
+      <item itemvalue="CMake Application.sandbox" />
+      <item itemvalue="CMake Application.libftprintf" />
+      <item itemvalue="CMake Application.libft" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="" />
+      <created>1594906939831</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594906939831</updated>
+      <workItem from="1594906941198" duration="6964000" />
+    </task>
+    <task id="LOCAL-00001" summary="">
+      <created>1594907266983</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594907266983</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594911299602">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594911299602" />
+    <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594910759206">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1594910759206" />
+    <state width="2518" height="470" key="GridCell.Tab.0.bottom" timestamp="1594913452463">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state width="2518" height="470" key="GridCell.Tab.0.center" timestamp="1594913452462">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452462" />
+    <state width="2518" height="470" key="GridCell.Tab.0.left" timestamp="1594913452461">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452461" />
+    <state width="2518" height="470" key="GridCell.Tab.0.right" timestamp="1594913452462">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452462" />
+    <state width="2518" height="470" key="GridCell.Tab.1.bottom" timestamp="1594913452463">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state width="2518" height="470" key="GridCell.Tab.1.center" timestamp="1594913452463">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state width="2518" height="470" key="GridCell.Tab.1.left" timestamp="1594913452463">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state width="2518" height="470" key="GridCell.Tab.1.right" timestamp="1594913452463">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state width="2518" height="470" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594913452463" />
+    <state x="880" y="431" key="Vcs.Push.Dialog.v2" timestamp="1594907281691">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="880" y="431" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1594907281691" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/asm/asm.c</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
