@@ -1,0 +1,35 @@
+"CoreWar" log at Thu Jul 16 21:34:04 2020
+    0: cycle:    0 cursors:    3 checks:    1 check live:    0 winner: 0() cycles to die: 1536
+ 1536: cycle: 1536 cursors:    6 checks:    2 check live:    9 winner: 0() cycles to die: 1536
+ 3072: cycle: 1536 cursors:   24 checks:    1 check live:  108 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 1486
+ 4558: cycle: 1486 cursors:   45 checks:    1 check live:  519 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 1436
+ 5994: cycle: 1436 cursors:   60 checks:    1 check live: 1274 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1386
+ 7380: cycle: 1386 cursors:   77 checks:    1 check live: 2125 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1336
+ 8716: cycle: 1336 cursors:   77 checks:    1 check live: 2186 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1286
+10002: cycle: 1286 cursors:   79 checks:    1 check live: 2003 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1236
+11238: cycle: 1236 cursors:  100 checks:    1 check live: 1981 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1186
+12424: cycle: 1186 cursors:  122 checks:    1 check live: 1774 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1136
+13560: cycle: 1136 cursors:  128 checks:    1 check live: 1929 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1086
+14646: cycle: 1086 cursors:  135 checks:    1 check live: 2011 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 1036
+15682: cycle: 1036 cursors:  147 checks:    1 check live: 2099 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 986
+16668: cycle:  986 cursors:  144 checks:    1 check live: 2058 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 936
+17604: cycle:  936 cursors:  138 checks:    1 check live: 1896 winner: 2(Celebration Funebre v0.99pl42) cycles to die: 886
+18490: cycle:  886 cursors:  146 checks:    1 check live: 1691 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 836
+19326: cycle:  836 cursors:  149 checks:    1 check live: 1528 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 786
+20112: cycle:  786 cursors:  158 checks:    1 check live: 1601 winner: 2(Celebration Funebre v0.99pl42) cycles to die: 736
+20848: cycle:  736 cursors:  139 checks:    1 check live: 1214 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 686
+21534: cycle:  686 cursors:  115 checks:    1 check live: 1164 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 636
+22170: cycle:  636 cursors:   67 checks:    1 check live:  945 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 586
+22756: cycle:  586 cursors:   65 checks:    1 check live:  910 winner: 2(Celebration Funebre v0.99pl42) cycles to die: 536
+23292: cycle:  536 cursors:   62 checks:    1 check live:  803 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 486
+23778: cycle:  486 cursors:   61 checks:    1 check live:  717 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 436
+24214: cycle:  436 cursors:   60 checks:    1 check live:  606 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 386
+24600: cycle:  386 cursors:   60 checks:    1 check live:  583 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 336
+24936: cycle:  336 cursors:   57 checks:    1 check live:  441 winner: 2(Celebration Funebre v0.99pl42) cycles to die: 286
+25222: cycle:  286 cursors:   57 checks:    1 check live:  421 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 236
+25458: cycle:  236 cursors:   57 checks:    1 check live:  292 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 186
+25644: cycle:  186 cursors:   55 checks:    1 check live:  258 winner: 1(Celebration Funebre v0.99pl42) cycles to die: 136
+25780: cycle:  136 cursors:   55 checks:    1 check live:  209 winner: 2(Celebration Funebre v0.99pl42) cycles to die: 86
+25866: cycle:   86 cursors:   55 checks:    1 check live:  137 winner: 3(Celebration Funebre v0.99pl42) cycles to die: 36
+25902: cycle:   36 cursors:   35 checks:    1 check live:   52 winner: 3(Celebration Funebre v0.99pl42) cycles to die: -14
+25903: cycle:    1 cursors:    0 checks:    2 check live:    1 winner: 3(Celebration Funebre v0.99pl42) cycles to die: -14
