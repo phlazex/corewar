@@ -16,6 +16,7 @@
 #include "corewar_op.h"
 #include <time.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 
 static int	ft_log_add(char *name)
 {
@@ -23,12 +24,12 @@ static int	ft_log_add(char *name)
 
 	if (name)
 	{
-		if ((fd = open(name, O_CREAT | O_TRUNC | O_RDWR)) <= 0)
+		if ((fd = open(name, O_CREAT | O_TRUNC | O_RDWR,  S_IREAD|S_IWRITE)) <= 0)
 			ft_printf("Can't create file!\n");
 	}
 	else
 	{
-		if ((fd = open("func.log", O_CREAT | O_TRUNC | O_RDWR)) <= 0)
+		if ((fd = open("func.log", O_CREAT | O_TRUNC | O_RDWR,  S_IREAD|S_IWRITE)) <= 0)
 			ft_printf("Can't create file!\n");
 	}
 	return (fd);
