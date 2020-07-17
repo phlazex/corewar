@@ -11,6 +11,7 @@ Args in "";"-n 123 checkers/valid_champs/jumper.cor"
 Empty flag with file's name;- 123 test.car
 Empty file's name with flag;-n 3 ""
 Empty flag;-
+Only flag;-vis
 Wrong flag declaration;test.cor -n ""
 Invalid number of flag -n;checkers/valid_champs/jumper.cor -n 0
 Invalid number of flag -n;checkers/valid_champs/jumper.cor -n 123

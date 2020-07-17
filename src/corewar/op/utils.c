@@ -60,6 +60,7 @@ t_err ft_clone_cursor(t_game *game, size_t address)
 	new_cursor->current = 0;
 	new_cursor->pc = address;
 	new_cursor->next = game->head;
+    new_cursor->color = cursor->color;
 	game->head = new_cursor;
 	game->cursors_count++;
 	return (success);

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_usage.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hwolf <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/17 13:34:18 by hwolf             #+#    #+#             */
+/*   Updated: 2020/03/17 13:34:19 by hwolf            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "corewar.h"
 
-void ft_logo()
+void	ft_logo(void)
 {
 	ft_printf("\n\t"E"93m █"E"57m█████"E"12m╗ ███"E"27m█"E"27m██"E"33m╗ "
 	E"45m███"E"50m██"E"49m█"E"48m╗ "E"47m███"E"46m███"E"82m█╗█"E"118m█╗ "
@@ -22,10 +34,10 @@ void ft_logo()
 	E"57m═══╝ "E"12m╚═╝  "E"27m╚═╝"E"33m╚"E"39m═"E"45m═══"E"50m══"E"49m╝ "
 	E"48m╚"E"47m══╝"E"46m╚══"E"82m╝ ╚"E"118m═╝ "E"190m ╚"E"11m═╝"E"220m╚═╝"
 	E"214m  ╚"E"208m═╝\n\t"
-			"%38s"E"118mVIRTUAL MACHINE v1.4\n\n"RESET,"");
+			"%33s"E"118mVIRTUAL MACHINE v1.4\n\n"RESET, "");
 }
 
-void ft_usage()
+void	ft_usage(void)
 {
 	int i;
 
@@ -36,8 +48,7 @@ void ft_usage()
 	ft_printf("[FILE] extension must match <file name>.cor\n");
 	ft_printf("[OPTIONS] mandatory arguments\n\n");
 	while (++i < MAX_OPT)
-		if(opt_tab[i].id)
+		if (opt_tab[i].id)
 			ft_printf("%6s %-12s %s\n\n", opt_tab[i].name,
 					opt_tab[i].arg_format, opt_tab[i].comment);
-
 }

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/corewar.h
+op.h
+../includes/op.h
+libft.h
+../includes/libft.h
+
+../includes/op.h
+
+../lib/libft/includes/libft.h
+string.h
+-
+stdint.h
+-
+stdlib.h
+-
+libft_structs.h
+../lib/libft/includes/libft_structs.h
+
+../lib/libft/includes/libft_structs.h
+string.h
+-
+
+/Users/hwolf/projects/corewar/src/corewar/ft_get_heroes_file.c
+corewar.h
+/Users/hwolf/projects/corewar/src/corewar/corewar.h
+fcntl.h
+-
+libft.h
+/Users/hwolf/projects/corewar/src/corewar/libft.h
+
