@@ -8,955 +8,945 @@
 		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\libft\;CMake Files\lib\ft_printf\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sandbox">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/sandbox" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 sandbox"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sandbox/fast">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/sandbox" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 sandbox/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="asm">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="asm/fast">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="corewar">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="corewar/fast">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm">
+				<Option output="/home/mfahey/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="asm/fast">
+				<Option output="/home/mfahey/corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sandbox">
+				<Option output="/home/mfahey/corewar/cmake-build-debug/sandbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 sandbox"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sandbox/fast">
+				<Option output="/home/mfahey/corewar/cmake-build-debug/sandbox" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 sandbox/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libft">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/lib/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug/lib/libft"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 libft"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 libft"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libft/fast">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/lib/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug/lib/libft"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 libft/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 libft/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/libft/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libftprintf">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug/lib/ft_printf"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/../libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/../libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libftprintf/fast">
-				<Option output="/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf"/>
+				<Option output="/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/liblibftprintf.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mfahey/corewar/cmake-build-debug/lib/ft_printf"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hwolf/projects/corewar/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/includes"/>
-					<Add directory="/Users/hwolf/projects/corewar/minilibx"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf/../libft"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/ft_printf"/>
-					<Add directory="/Users/hwolf/projects/corewar/lib/libft"/>
+					<Add directory="/home/mfahey/corewar/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/libft/includes"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/includes"/>
+					<Add directory="/home/mfahey/corewar/minilibx"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf/../libft"/>
+					<Add directory="/home/mfahey/corewar/lib/ft_printf"/>
+					<Add directory="/home/mfahey/corewar/lib/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/llvm-10/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hwolf/projects/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 libftprintf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mfahey/corewar/cmake-build-debug/lib/ft_printf/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/hwolf/projects/corewar/includes/asm.h">
+		<Unit filename="/home/mfahey/corewar/includes/asm.h">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/includes/corewar.h">
-			<Option target="sandbox"/>
+		<Unit filename="/home/mfahey/corewar/includes/corewar.h">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/includes/corewar_op.h">
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/includes/op.h">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/includes/corewar_op.h">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/includes/ft_printf.h">
+		<Unit filename="/home/mfahey/corewar/includes/op.h">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/includes/ft_printf.h">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/apply_flags.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/apply_flags.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/data.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/data.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/e_double.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/e_double.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/e_double_tool.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/e_double_tool.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/f_double.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/f_double.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/ft_printf.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/ft_printf.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/int_funcions.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/int_funcions.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/parse.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/parse.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/parse_tool.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/parse_tool.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/print_tool.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/print_tool.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/string_tool.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/string_tool.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/src/tools.c">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/src/tools.c">
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/includes/libft.h">
+		<Unit filename="/home/mfahey/corewar/lib/libft/includes/libft.h">
 			<Option target="libft"/>
 			<Option target="libftprintf"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/fast_get_next_line.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/fast_get_next_line.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_abs.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_abs.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_atoi.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_atoi.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_atoi_base.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_atoi_base.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_bzero.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_bzero.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_ceil.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_ceil.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_hash.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_hash.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_hash_del.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_hash_del.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_hash_tab.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_hash_tab.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_heap_add.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_heap_add.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_heap_extract_min.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_heap_extract_min.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_heap_merge.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_heap_merge.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_init_memory.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_init_memory.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_isalnum.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_isalnum.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_isalpha.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_isalpha.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_isascii.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_isascii.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_isdigit.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_isdigit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_isprint.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_isprint.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_itoa.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_itoa.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_itoa_base.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_itoa_base.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstadd.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstadd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstappend.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstappend.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstd_collapse.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstd_collapse.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstd_del.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstd_del.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstd_pop_front.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstd_pop_front.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstd_push_back.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstd_push_back.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstd_push_front.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstd_push_front.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstdel.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstdelone.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstdelone.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstiter.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstiter.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstlen.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstlen.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstmap.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstmap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_lstnew.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_lstnew.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_max.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_max.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memalloc.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memalloc.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memccpy.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memccpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memchr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memcmp.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memcmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memcpy.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memcpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memdel.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memjoin.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memjoin.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memmove.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memmove.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_memset.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_memset.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_merge_sort.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_merge_sort.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_min.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_min.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_mod.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_mod.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_nbrlen.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_nbrlen.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_new_heap.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_new_heap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_pop_min_heap.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_pop_min_heap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putchar.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putchar.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putchar_fd.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putchar_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putendl.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putendl.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putendl_fd.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putendl_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putnbr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putnbr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putnbr_fd.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putnbr_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putstr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_putstr_fd.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_putstr_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_quick_sort.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_quick_sort.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_set.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_set.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_set_2.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_set_2.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_sort_str_table.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_sort_str_table.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strcapitalize.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strcapitalize.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strcat.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strcat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strchr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strclr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strclr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strcmp.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strcmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strcpy.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strcpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strdel.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strdup.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strdup.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strequ.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strequ.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_striter.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_striter.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_striteri.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_striteri.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strjoin.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strjoin.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strlcat.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strlcat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strlen.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strlen.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strmap.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strmap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strmapi.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strmapi.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strncat.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strncat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strncmp.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strncmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strncpy.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strncpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strnequ.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strnequ.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strnew.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strnew.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strnstr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strnstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strrchr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strrchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strsplit.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strsplit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strstr.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strsub.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strsub.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_strtrim.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_strtrim.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_swap.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_swap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_tolower.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_tolower.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_toupper.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_toupper.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/ft_tree_new.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/ft_tree_new.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/src/get_next_line.c">
+		<Unit filename="/home/mfahey/corewar/lib/libft/src/get_next_line.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/asm.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/asm.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_check_prog_list.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_check_prog_list.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_check_prog_list_args.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_check_prog_list_args.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_check_prog_list_args_type.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_check_prog_list_args_type.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_check_prog_list_args_type_functions.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_check_prog_list_args_type_functions.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_disassemble.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_disassemble.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_exit.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_exit.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_free_mem.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_free_mem.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_init_prog_list.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_init_prog_list.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_libc_functions.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_libc_functions.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_current_line.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_current_line.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_current_line_getters.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_current_line_getters.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_file.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_file.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_functions.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_functions.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_new_line.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_new_line.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_parse_new_line_functions.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_parse_new_line_functions.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_print_error.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_print_error.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_prog_list_getters.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_prog_list_getters.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_prog_list_getters_args.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_prog_list_getters_args.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_prog_list_getters_line_data.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_prog_list_getters_line_data.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_project_init.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_project_init.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_usage.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_usage.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/asm/ft_write_to_file.c">
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_write_to_file.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/corewar.c">
+		<Unit filename="/home/mfahey/corewar/src/corewar/corewar.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_atoin.c">
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_atoin.c">
+			<Option target="corewar"/>
+			<Option target="asm"/>
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_battle.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_check_opt.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_doomsday.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_execute.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_game_orver.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_get_heroes.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_get_heroes_file.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_get_op.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_init_cursors.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_init_game.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_new_cursor.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_battle.c">
 			<Option target="sandbox"/>
-			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_check_opt.c">
-			<Option target="sandbox"/>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_options.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_doomsday.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_options_2.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_execute.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_parse_hero.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_game_orver.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_parse_input.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_get_heroes.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_past_heroes.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_get_heroes_file.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_past_reg.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_get_op.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_init_cursors.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_init_game.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_new_cursor.c">
-			<Option target="sandbox"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_options.c">
 			<Option target="sandbox"/>
-			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_options_2.c">
-			<Option target="sandbox"/>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_print_arena.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_parse_hero.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_parse_input.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_past_heroes.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_past_reg.c">
-			<Option target="sandbox"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_print_arena.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_print_arena_utils.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_print_arena_utils.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_print_error.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_print_resualt.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/ft_usage.c">
+			<Option target="corewar"/>
+			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_add.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_print_error.c">
 			<Option target="sandbox"/>
-			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_print_resualt.c">
-			<Option target="sandbox"/>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_aff.c">
 			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/ft_usage.c">
-			<Option target="sandbox"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_add.c">
-			<Option target="sandbox"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_aff.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_and.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_and.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_fork.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_fork.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_ld.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_ld.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_ldi.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_ldi.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_lfork.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_lfork.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_live.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_live.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_lld.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_lld.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_lldi.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_lldi.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_or.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_or.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_st.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_st.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_sti.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_sti.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_sub.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_sub.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_xor.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_xor.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/op_zjmp.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/op_zjmp.c">
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/corewar/op/utils.c">
+			<Option target="corewar"/>
 			<Option target="asm"/>
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/corewar/op/utils.c">
 			<Option target="sandbox"/>
-			<Option target="asm"/>
-			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/logger/logger.c">
+		<Unit filename="/home/mfahey/corewar/src/logger/logger.c">
+			<Option target="corewar"/>
 			<Option target="sandbox"/>
+		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_check_color.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_check_color.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_check_lives.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_check_lives.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_close_window.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_close_window.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_delete_window.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_delete_window.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_champions.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_champions.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_circle.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_circle.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_game_field.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_game_field.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_grid.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_grid.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_heart.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_heart.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_line.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_line.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_rectangle.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_rectangle.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_draw_start_field.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_draw_start_field.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_get_color.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_get_color.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_init_window.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_init_window.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_key_press.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_key_press.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_put_info.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_put_info.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_put_logo.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_put_logo.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_redraw_game_filed.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_redraw_game_filed.c">
+		<Unit filename="/home/mfahey/corewar/src/vis/ft_rewrite_point.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/src/vis/ft_rewrite_point.c">
-			<Option target="corewar"/>
-		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/CMakeLists.txt">
+		<Unit filename="/home/mfahey/corewar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/libft/CMakeLists.txt">
+		<Unit filename="/home/mfahey/corewar/lib/libft/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\libft\"/>
 		</Unit>
-		<Unit filename="/Users/hwolf/projects/corewar/lib/ft_printf/CMakeLists.txt">
+		<Unit filename="/home/mfahey/corewar/lib/ft_printf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\ft_printf\"/>
 		</Unit>
 	</Project>

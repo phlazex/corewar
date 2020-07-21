@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hwolf/projects/corewar
+CMAKE_SOURCE_DIR = /home/mfahey/corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hwolf/projects/corewar/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mfahey/corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/hwolf/projects/corewar/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/114/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/114/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hwolf/projects/corewar/cmake-build-debug/CMakeFiles /Users/hwolf/projects/corewar/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfahey/corewar/cmake-build-debug/CMakeFiles /home/mfahey/corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hwolf/projects/corewar/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfahey/corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sandbox
+# Target rules for targets named corewar
 
 # Build rule for target.
-sandbox: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sandbox
-.PHONY : sandbox
+corewar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 corewar
+.PHONY : corewar
 
 # fast build rule for target.
-sandbox/fast:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/build
-.PHONY : sandbox/fast
+corewar/fast:
+	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/build
+.PHONY : corewar/fast
 
 #=============================================================================
 # Target rules for targets named asm
@@ -137,17 +137,17 @@ asm/fast:
 .PHONY : asm/fast
 
 #=============================================================================
-# Target rules for targets named corewar
+# Target rules for targets named sandbox
 
 # Build rule for target.
-corewar: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 corewar
-.PHONY : corewar
+sandbox: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sandbox
+.PHONY : sandbox
 
 # fast build rule for target.
-corewar/fast:
-	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/build
-.PHONY : corewar/fast
+sandbox/fast:
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/build
+.PHONY : sandbox/fast
 
 #=============================================================================
 # Target rules for targets named libft
@@ -829,9 +829,9 @@ src/corewar/ft_atoin.o: src/corewar/ft_atoin.c.o
 
 # target to build an object file
 src/corewar/ft_atoin.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.o
 .PHONY : src/corewar/ft_atoin.c.o
 
 src/corewar/ft_atoin.i: src/corewar/ft_atoin.c.i
@@ -840,9 +840,9 @@ src/corewar/ft_atoin.i: src/corewar/ft_atoin.c.i
 
 # target to preprocess a source file
 src/corewar/ft_atoin.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.i
 .PHONY : src/corewar/ft_atoin.c.i
 
 src/corewar/ft_atoin.s: src/corewar/ft_atoin.c.s
@@ -851,9 +851,9 @@ src/corewar/ft_atoin.s: src/corewar/ft_atoin.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_atoin.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_atoin.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_atoin.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_atoin.c.s
 .PHONY : src/corewar/ft_atoin.c.s
 
 src/corewar/ft_battle.o: src/corewar/ft_battle.c.o
@@ -862,8 +862,8 @@ src/corewar/ft_battle.o: src/corewar/ft_battle.c.o
 
 # target to build an object file
 src/corewar/ft_battle.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_battle.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.o
 .PHONY : src/corewar/ft_battle.c.o
 
 src/corewar/ft_battle.i: src/corewar/ft_battle.c.i
@@ -872,8 +872,8 @@ src/corewar/ft_battle.i: src/corewar/ft_battle.c.i
 
 # target to preprocess a source file
 src/corewar/ft_battle.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_battle.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.i
 .PHONY : src/corewar/ft_battle.c.i
 
 src/corewar/ft_battle.s: src/corewar/ft_battle.c.s
@@ -882,8 +882,8 @@ src/corewar/ft_battle.s: src/corewar/ft_battle.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_battle.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_battle.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_battle.c.s
 .PHONY : src/corewar/ft_battle.c.s
 
 src/corewar/ft_check_opt.o: src/corewar/ft_check_opt.c.o
@@ -892,8 +892,8 @@ src/corewar/ft_check_opt.o: src/corewar/ft_check_opt.c.o
 
 # target to build an object file
 src/corewar/ft_check_opt.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_check_opt.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.o
 .PHONY : src/corewar/ft_check_opt.c.o
 
 src/corewar/ft_check_opt.i: src/corewar/ft_check_opt.c.i
@@ -902,8 +902,8 @@ src/corewar/ft_check_opt.i: src/corewar/ft_check_opt.c.i
 
 # target to preprocess a source file
 src/corewar/ft_check_opt.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_check_opt.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.i
 .PHONY : src/corewar/ft_check_opt.c.i
 
 src/corewar/ft_check_opt.s: src/corewar/ft_check_opt.c.s
@@ -912,8 +912,8 @@ src/corewar/ft_check_opt.s: src/corewar/ft_check_opt.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_check_opt.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_check_opt.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_check_opt.c.s
 .PHONY : src/corewar/ft_check_opt.c.s
 
 src/corewar/ft_doomsday.o: src/corewar/ft_doomsday.c.o
@@ -922,8 +922,8 @@ src/corewar/ft_doomsday.o: src/corewar/ft_doomsday.c.o
 
 # target to build an object file
 src/corewar/ft_doomsday.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_doomsday.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.o
 .PHONY : src/corewar/ft_doomsday.c.o
 
 src/corewar/ft_doomsday.i: src/corewar/ft_doomsday.c.i
@@ -932,8 +932,8 @@ src/corewar/ft_doomsday.i: src/corewar/ft_doomsday.c.i
 
 # target to preprocess a source file
 src/corewar/ft_doomsday.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_doomsday.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.i
 .PHONY : src/corewar/ft_doomsday.c.i
 
 src/corewar/ft_doomsday.s: src/corewar/ft_doomsday.c.s
@@ -942,8 +942,8 @@ src/corewar/ft_doomsday.s: src/corewar/ft_doomsday.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_doomsday.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_doomsday.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_doomsday.c.s
 .PHONY : src/corewar/ft_doomsday.c.s
 
 src/corewar/ft_execute.o: src/corewar/ft_execute.c.o
@@ -952,8 +952,8 @@ src/corewar/ft_execute.o: src/corewar/ft_execute.c.o
 
 # target to build an object file
 src/corewar/ft_execute.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_execute.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.o
 .PHONY : src/corewar/ft_execute.c.o
 
 src/corewar/ft_execute.i: src/corewar/ft_execute.c.i
@@ -962,8 +962,8 @@ src/corewar/ft_execute.i: src/corewar/ft_execute.c.i
 
 # target to preprocess a source file
 src/corewar/ft_execute.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_execute.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.i
 .PHONY : src/corewar/ft_execute.c.i
 
 src/corewar/ft_execute.s: src/corewar/ft_execute.c.s
@@ -972,8 +972,8 @@ src/corewar/ft_execute.s: src/corewar/ft_execute.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_execute.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_execute.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_execute.c.s
 .PHONY : src/corewar/ft_execute.c.s
 
 src/corewar/ft_game_orver.o: src/corewar/ft_game_orver.c.o
@@ -982,8 +982,8 @@ src/corewar/ft_game_orver.o: src/corewar/ft_game_orver.c.o
 
 # target to build an object file
 src/corewar/ft_game_orver.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_game_orver.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.o
 .PHONY : src/corewar/ft_game_orver.c.o
 
 src/corewar/ft_game_orver.i: src/corewar/ft_game_orver.c.i
@@ -992,8 +992,8 @@ src/corewar/ft_game_orver.i: src/corewar/ft_game_orver.c.i
 
 # target to preprocess a source file
 src/corewar/ft_game_orver.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_game_orver.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.i
 .PHONY : src/corewar/ft_game_orver.c.i
 
 src/corewar/ft_game_orver.s: src/corewar/ft_game_orver.c.s
@@ -1002,8 +1002,8 @@ src/corewar/ft_game_orver.s: src/corewar/ft_game_orver.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_game_orver.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_game_orver.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_game_orver.c.s
 .PHONY : src/corewar/ft_game_orver.c.s
 
 src/corewar/ft_get_heroes.o: src/corewar/ft_get_heroes.c.o
@@ -1012,8 +1012,8 @@ src/corewar/ft_get_heroes.o: src/corewar/ft_get_heroes.c.o
 
 # target to build an object file
 src/corewar/ft_get_heroes.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.o
 .PHONY : src/corewar/ft_get_heroes.c.o
 
 src/corewar/ft_get_heroes.i: src/corewar/ft_get_heroes.c.i
@@ -1022,8 +1022,8 @@ src/corewar/ft_get_heroes.i: src/corewar/ft_get_heroes.c.i
 
 # target to preprocess a source file
 src/corewar/ft_get_heroes.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.i
 .PHONY : src/corewar/ft_get_heroes.c.i
 
 src/corewar/ft_get_heroes.s: src/corewar/ft_get_heroes.c.s
@@ -1032,8 +1032,8 @@ src/corewar/ft_get_heroes.s: src/corewar/ft_get_heroes.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_get_heroes.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes.c.s
 .PHONY : src/corewar/ft_get_heroes.c.s
 
 src/corewar/ft_get_heroes_file.o: src/corewar/ft_get_heroes_file.c.o
@@ -1042,8 +1042,8 @@ src/corewar/ft_get_heroes_file.o: src/corewar/ft_get_heroes_file.c.o
 
 # target to build an object file
 src/corewar/ft_get_heroes_file.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.o
 .PHONY : src/corewar/ft_get_heroes_file.c.o
 
 src/corewar/ft_get_heroes_file.i: src/corewar/ft_get_heroes_file.c.i
@@ -1052,8 +1052,8 @@ src/corewar/ft_get_heroes_file.i: src/corewar/ft_get_heroes_file.c.i
 
 # target to preprocess a source file
 src/corewar/ft_get_heroes_file.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.i
 .PHONY : src/corewar/ft_get_heroes_file.c.i
 
 src/corewar/ft_get_heroes_file.s: src/corewar/ft_get_heroes_file.c.s
@@ -1062,8 +1062,8 @@ src/corewar/ft_get_heroes_file.s: src/corewar/ft_get_heroes_file.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_get_heroes_file.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_heroes_file.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_heroes_file.c.s
 .PHONY : src/corewar/ft_get_heroes_file.c.s
 
 src/corewar/ft_get_op.o: src/corewar/ft_get_op.c.o
@@ -1072,8 +1072,8 @@ src/corewar/ft_get_op.o: src/corewar/ft_get_op.c.o
 
 # target to build an object file
 src/corewar/ft_get_op.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.o
 .PHONY : src/corewar/ft_get_op.c.o
 
 src/corewar/ft_get_op.i: src/corewar/ft_get_op.c.i
@@ -1082,8 +1082,8 @@ src/corewar/ft_get_op.i: src/corewar/ft_get_op.c.i
 
 # target to preprocess a source file
 src/corewar/ft_get_op.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.i
 .PHONY : src/corewar/ft_get_op.c.i
 
 src/corewar/ft_get_op.s: src/corewar/ft_get_op.c.s
@@ -1092,8 +1092,8 @@ src/corewar/ft_get_op.s: src/corewar/ft_get_op.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_get_op.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_get_op.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_get_op.c.s
 .PHONY : src/corewar/ft_get_op.c.s
 
 src/corewar/ft_init_cursors.o: src/corewar/ft_init_cursors.c.o
@@ -1102,8 +1102,8 @@ src/corewar/ft_init_cursors.o: src/corewar/ft_init_cursors.c.o
 
 # target to build an object file
 src/corewar/ft_init_cursors.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_cursors.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.o
 .PHONY : src/corewar/ft_init_cursors.c.o
 
 src/corewar/ft_init_cursors.i: src/corewar/ft_init_cursors.c.i
@@ -1112,8 +1112,8 @@ src/corewar/ft_init_cursors.i: src/corewar/ft_init_cursors.c.i
 
 # target to preprocess a source file
 src/corewar/ft_init_cursors.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_cursors.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.i
 .PHONY : src/corewar/ft_init_cursors.c.i
 
 src/corewar/ft_init_cursors.s: src/corewar/ft_init_cursors.c.s
@@ -1122,8 +1122,8 @@ src/corewar/ft_init_cursors.s: src/corewar/ft_init_cursors.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_init_cursors.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_cursors.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_cursors.c.s
 .PHONY : src/corewar/ft_init_cursors.c.s
 
 src/corewar/ft_init_game.o: src/corewar/ft_init_game.c.o
@@ -1132,8 +1132,8 @@ src/corewar/ft_init_game.o: src/corewar/ft_init_game.c.o
 
 # target to build an object file
 src/corewar/ft_init_game.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_game.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.o
 .PHONY : src/corewar/ft_init_game.c.o
 
 src/corewar/ft_init_game.i: src/corewar/ft_init_game.c.i
@@ -1142,8 +1142,8 @@ src/corewar/ft_init_game.i: src/corewar/ft_init_game.c.i
 
 # target to preprocess a source file
 src/corewar/ft_init_game.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_game.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.i
 .PHONY : src/corewar/ft_init_game.c.i
 
 src/corewar/ft_init_game.s: src/corewar/ft_init_game.c.s
@@ -1152,8 +1152,8 @@ src/corewar/ft_init_game.s: src/corewar/ft_init_game.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_init_game.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_init_game.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_init_game.c.s
 .PHONY : src/corewar/ft_init_game.c.s
 
 src/corewar/ft_new_cursor.o: src/corewar/ft_new_cursor.c.o
@@ -1162,9 +1162,9 @@ src/corewar/ft_new_cursor.o: src/corewar/ft_new_cursor.c.o
 
 # target to build an object file
 src/corewar/ft_new_cursor.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_new_cursor.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.o
 .PHONY : src/corewar/ft_new_cursor.c.o
 
 src/corewar/ft_new_cursor.i: src/corewar/ft_new_cursor.c.i
@@ -1173,9 +1173,9 @@ src/corewar/ft_new_cursor.i: src/corewar/ft_new_cursor.c.i
 
 # target to preprocess a source file
 src/corewar/ft_new_cursor.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_new_cursor.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.i
 .PHONY : src/corewar/ft_new_cursor.c.i
 
 src/corewar/ft_new_cursor.s: src/corewar/ft_new_cursor.c.s
@@ -1184,9 +1184,9 @@ src/corewar/ft_new_cursor.s: src/corewar/ft_new_cursor.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_new_cursor.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_new_cursor.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_new_cursor.c.s
 .PHONY : src/corewar/ft_new_cursor.c.s
 
 src/corewar/ft_options.o: src/corewar/ft_options.c.o
@@ -1195,8 +1195,8 @@ src/corewar/ft_options.o: src/corewar/ft_options.c.o
 
 # target to build an object file
 src/corewar/ft_options.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.o
 .PHONY : src/corewar/ft_options.c.o
 
 src/corewar/ft_options.i: src/corewar/ft_options.c.i
@@ -1205,8 +1205,8 @@ src/corewar/ft_options.i: src/corewar/ft_options.c.i
 
 # target to preprocess a source file
 src/corewar/ft_options.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.i
 .PHONY : src/corewar/ft_options.c.i
 
 src/corewar/ft_options.s: src/corewar/ft_options.c.s
@@ -1215,8 +1215,8 @@ src/corewar/ft_options.s: src/corewar/ft_options.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_options.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options.c.s
 .PHONY : src/corewar/ft_options.c.s
 
 src/corewar/ft_options_2.o: src/corewar/ft_options_2.c.o
@@ -1225,8 +1225,8 @@ src/corewar/ft_options_2.o: src/corewar/ft_options_2.c.o
 
 # target to build an object file
 src/corewar/ft_options_2.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options_2.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.o
 .PHONY : src/corewar/ft_options_2.c.o
 
 src/corewar/ft_options_2.i: src/corewar/ft_options_2.c.i
@@ -1235,8 +1235,8 @@ src/corewar/ft_options_2.i: src/corewar/ft_options_2.c.i
 
 # target to preprocess a source file
 src/corewar/ft_options_2.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options_2.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.i
 .PHONY : src/corewar/ft_options_2.c.i
 
 src/corewar/ft_options_2.s: src/corewar/ft_options_2.c.s
@@ -1245,8 +1245,8 @@ src/corewar/ft_options_2.s: src/corewar/ft_options_2.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_options_2.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_options_2.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_options_2.c.s
 .PHONY : src/corewar/ft_options_2.c.s
 
 src/corewar/ft_parse_hero.o: src/corewar/ft_parse_hero.c.o
@@ -1255,8 +1255,8 @@ src/corewar/ft_parse_hero.o: src/corewar/ft_parse_hero.c.o
 
 # target to build an object file
 src/corewar/ft_parse_hero.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_hero.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.o
 .PHONY : src/corewar/ft_parse_hero.c.o
 
 src/corewar/ft_parse_hero.i: src/corewar/ft_parse_hero.c.i
@@ -1265,8 +1265,8 @@ src/corewar/ft_parse_hero.i: src/corewar/ft_parse_hero.c.i
 
 # target to preprocess a source file
 src/corewar/ft_parse_hero.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_hero.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.i
 .PHONY : src/corewar/ft_parse_hero.c.i
 
 src/corewar/ft_parse_hero.s: src/corewar/ft_parse_hero.c.s
@@ -1275,8 +1275,8 @@ src/corewar/ft_parse_hero.s: src/corewar/ft_parse_hero.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_parse_hero.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_hero.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_hero.c.s
 .PHONY : src/corewar/ft_parse_hero.c.s
 
 src/corewar/ft_parse_input.o: src/corewar/ft_parse_input.c.o
@@ -1285,8 +1285,8 @@ src/corewar/ft_parse_input.o: src/corewar/ft_parse_input.c.o
 
 # target to build an object file
 src/corewar/ft_parse_input.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_input.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.o
 .PHONY : src/corewar/ft_parse_input.c.o
 
 src/corewar/ft_parse_input.i: src/corewar/ft_parse_input.c.i
@@ -1295,8 +1295,8 @@ src/corewar/ft_parse_input.i: src/corewar/ft_parse_input.c.i
 
 # target to preprocess a source file
 src/corewar/ft_parse_input.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_input.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.i
 .PHONY : src/corewar/ft_parse_input.c.i
 
 src/corewar/ft_parse_input.s: src/corewar/ft_parse_input.c.s
@@ -1305,8 +1305,8 @@ src/corewar/ft_parse_input.s: src/corewar/ft_parse_input.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_parse_input.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_parse_input.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_parse_input.c.s
 .PHONY : src/corewar/ft_parse_input.c.s
 
 src/corewar/ft_past_heroes.o: src/corewar/ft_past_heroes.c.o
@@ -1315,8 +1315,8 @@ src/corewar/ft_past_heroes.o: src/corewar/ft_past_heroes.c.o
 
 # target to build an object file
 src/corewar/ft_past_heroes.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_heroes.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.o
 .PHONY : src/corewar/ft_past_heroes.c.o
 
 src/corewar/ft_past_heroes.i: src/corewar/ft_past_heroes.c.i
@@ -1325,8 +1325,8 @@ src/corewar/ft_past_heroes.i: src/corewar/ft_past_heroes.c.i
 
 # target to preprocess a source file
 src/corewar/ft_past_heroes.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_heroes.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.i
 .PHONY : src/corewar/ft_past_heroes.c.i
 
 src/corewar/ft_past_heroes.s: src/corewar/ft_past_heroes.c.s
@@ -1335,8 +1335,8 @@ src/corewar/ft_past_heroes.s: src/corewar/ft_past_heroes.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_past_heroes.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_heroes.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_heroes.c.s
 .PHONY : src/corewar/ft_past_heroes.c.s
 
 src/corewar/ft_past_reg.o: src/corewar/ft_past_reg.c.o
@@ -1345,9 +1345,9 @@ src/corewar/ft_past_reg.o: src/corewar/ft_past_reg.c.o
 
 # target to build an object file
 src/corewar/ft_past_reg.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_reg.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.o
 .PHONY : src/corewar/ft_past_reg.c.o
 
 src/corewar/ft_past_reg.i: src/corewar/ft_past_reg.c.i
@@ -1356,9 +1356,9 @@ src/corewar/ft_past_reg.i: src/corewar/ft_past_reg.c.i
 
 # target to preprocess a source file
 src/corewar/ft_past_reg.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_reg.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.i
 .PHONY : src/corewar/ft_past_reg.c.i
 
 src/corewar/ft_past_reg.s: src/corewar/ft_past_reg.c.s
@@ -1367,9 +1367,9 @@ src/corewar/ft_past_reg.s: src/corewar/ft_past_reg.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_past_reg.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_past_reg.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_past_reg.c.s
 .PHONY : src/corewar/ft_past_reg.c.s
 
 src/corewar/ft_print_arena.o: src/corewar/ft_print_arena.c.o
@@ -1378,9 +1378,9 @@ src/corewar/ft_print_arena.o: src/corewar/ft_print_arena.c.o
 
 # target to build an object file
 src/corewar/ft_print_arena.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.o
 .PHONY : src/corewar/ft_print_arena.c.o
 
 src/corewar/ft_print_arena.i: src/corewar/ft_print_arena.c.i
@@ -1389,9 +1389,9 @@ src/corewar/ft_print_arena.i: src/corewar/ft_print_arena.c.i
 
 # target to preprocess a source file
 src/corewar/ft_print_arena.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.i
 .PHONY : src/corewar/ft_print_arena.c.i
 
 src/corewar/ft_print_arena.s: src/corewar/ft_print_arena.c.s
@@ -1400,9 +1400,9 @@ src/corewar/ft_print_arena.s: src/corewar/ft_print_arena.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_print_arena.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena.c.s
 .PHONY : src/corewar/ft_print_arena.c.s
 
 src/corewar/ft_print_arena_utils.o: src/corewar/ft_print_arena_utils.c.o
@@ -1411,9 +1411,9 @@ src/corewar/ft_print_arena_utils.o: src/corewar/ft_print_arena_utils.c.o
 
 # target to build an object file
 src/corewar/ft_print_arena_utils.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena_utils.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.o
 .PHONY : src/corewar/ft_print_arena_utils.c.o
 
 src/corewar/ft_print_arena_utils.i: src/corewar/ft_print_arena_utils.c.i
@@ -1422,9 +1422,9 @@ src/corewar/ft_print_arena_utils.i: src/corewar/ft_print_arena_utils.c.i
 
 # target to preprocess a source file
 src/corewar/ft_print_arena_utils.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena_utils.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.i
 .PHONY : src/corewar/ft_print_arena_utils.c.i
 
 src/corewar/ft_print_arena_utils.s: src/corewar/ft_print_arena_utils.c.s
@@ -1433,9 +1433,9 @@ src/corewar/ft_print_arena_utils.s: src/corewar/ft_print_arena_utils.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_print_arena_utils.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_arena_utils.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_arena_utils.c.s
 .PHONY : src/corewar/ft_print_arena_utils.c.s
 
 src/corewar/ft_print_error.o: src/corewar/ft_print_error.c.o
@@ -1444,8 +1444,8 @@ src/corewar/ft_print_error.o: src/corewar/ft_print_error.c.o
 
 # target to build an object file
 src/corewar/ft_print_error.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_error.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.o
 .PHONY : src/corewar/ft_print_error.c.o
 
 src/corewar/ft_print_error.i: src/corewar/ft_print_error.c.i
@@ -1454,8 +1454,8 @@ src/corewar/ft_print_error.i: src/corewar/ft_print_error.c.i
 
 # target to preprocess a source file
 src/corewar/ft_print_error.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_error.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.i
 .PHONY : src/corewar/ft_print_error.c.i
 
 src/corewar/ft_print_error.s: src/corewar/ft_print_error.c.s
@@ -1464,8 +1464,8 @@ src/corewar/ft_print_error.s: src/corewar/ft_print_error.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_print_error.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_error.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_error.c.s
 .PHONY : src/corewar/ft_print_error.c.s
 
 src/corewar/ft_print_resualt.o: src/corewar/ft_print_resualt.c.o
@@ -1474,8 +1474,8 @@ src/corewar/ft_print_resualt.o: src/corewar/ft_print_resualt.c.o
 
 # target to build an object file
 src/corewar/ft_print_resualt.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_resualt.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.o
 .PHONY : src/corewar/ft_print_resualt.c.o
 
 src/corewar/ft_print_resualt.i: src/corewar/ft_print_resualt.c.i
@@ -1484,8 +1484,8 @@ src/corewar/ft_print_resualt.i: src/corewar/ft_print_resualt.c.i
 
 # target to preprocess a source file
 src/corewar/ft_print_resualt.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_resualt.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.i
 .PHONY : src/corewar/ft_print_resualt.c.i
 
 src/corewar/ft_print_resualt.s: src/corewar/ft_print_resualt.c.s
@@ -1494,8 +1494,8 @@ src/corewar/ft_print_resualt.s: src/corewar/ft_print_resualt.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_print_resualt.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_print_resualt.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_print_resualt.c.s
 .PHONY : src/corewar/ft_print_resualt.c.s
 
 src/corewar/ft_usage.o: src/corewar/ft_usage.c.o
@@ -1504,8 +1504,8 @@ src/corewar/ft_usage.o: src/corewar/ft_usage.c.o
 
 # target to build an object file
 src/corewar/ft_usage.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_usage.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.o
 .PHONY : src/corewar/ft_usage.c.o
 
 src/corewar/ft_usage.i: src/corewar/ft_usage.c.i
@@ -1514,8 +1514,8 @@ src/corewar/ft_usage.i: src/corewar/ft_usage.c.i
 
 # target to preprocess a source file
 src/corewar/ft_usage.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_usage.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.i
 .PHONY : src/corewar/ft_usage.c.i
 
 src/corewar/ft_usage.s: src/corewar/ft_usage.c.s
@@ -1524,8 +1524,8 @@ src/corewar/ft_usage.s: src/corewar/ft_usage.c.s
 
 # target to generate assembly for a file
 src/corewar/ft_usage.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/ft_usage.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/ft_usage.c.s
 .PHONY : src/corewar/ft_usage.c.s
 
 src/corewar/op/op_add.o: src/corewar/op/op_add.c.o
@@ -1534,9 +1534,9 @@ src/corewar/op/op_add.o: src/corewar/op/op_add.c.o
 
 # target to build an object file
 src/corewar/op/op_add.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_add.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.o
 .PHONY : src/corewar/op/op_add.c.o
 
 src/corewar/op/op_add.i: src/corewar/op/op_add.c.i
@@ -1545,9 +1545,9 @@ src/corewar/op/op_add.i: src/corewar/op/op_add.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_add.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_add.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.i
 .PHONY : src/corewar/op/op_add.c.i
 
 src/corewar/op/op_add.s: src/corewar/op/op_add.c.s
@@ -1556,9 +1556,9 @@ src/corewar/op/op_add.s: src/corewar/op/op_add.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_add.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_add.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_add.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_add.c.s
 .PHONY : src/corewar/op/op_add.c.s
 
 src/corewar/op/op_aff.o: src/corewar/op/op_aff.c.o
@@ -1567,9 +1567,9 @@ src/corewar/op/op_aff.o: src/corewar/op/op_aff.c.o
 
 # target to build an object file
 src/corewar/op/op_aff.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_aff.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.o
 .PHONY : src/corewar/op/op_aff.c.o
 
 src/corewar/op/op_aff.i: src/corewar/op/op_aff.c.i
@@ -1578,9 +1578,9 @@ src/corewar/op/op_aff.i: src/corewar/op/op_aff.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_aff.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_aff.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.i
 .PHONY : src/corewar/op/op_aff.c.i
 
 src/corewar/op/op_aff.s: src/corewar/op/op_aff.c.s
@@ -1589,9 +1589,9 @@ src/corewar/op/op_aff.s: src/corewar/op/op_aff.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_aff.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_aff.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_aff.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_aff.c.s
 .PHONY : src/corewar/op/op_aff.c.s
 
 src/corewar/op/op_and.o: src/corewar/op/op_and.c.o
@@ -1600,9 +1600,9 @@ src/corewar/op/op_and.o: src/corewar/op/op_and.c.o
 
 # target to build an object file
 src/corewar/op/op_and.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_and.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.o
 .PHONY : src/corewar/op/op_and.c.o
 
 src/corewar/op/op_and.i: src/corewar/op/op_and.c.i
@@ -1611,9 +1611,9 @@ src/corewar/op/op_and.i: src/corewar/op/op_and.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_and.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_and.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.i
 .PHONY : src/corewar/op/op_and.c.i
 
 src/corewar/op/op_and.s: src/corewar/op/op_and.c.s
@@ -1622,9 +1622,9 @@ src/corewar/op/op_and.s: src/corewar/op/op_and.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_and.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_and.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_and.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_and.c.s
 .PHONY : src/corewar/op/op_and.c.s
 
 src/corewar/op/op_fork.o: src/corewar/op/op_fork.c.o
@@ -1633,9 +1633,9 @@ src/corewar/op/op_fork.o: src/corewar/op/op_fork.c.o
 
 # target to build an object file
 src/corewar/op/op_fork.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_fork.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.o
 .PHONY : src/corewar/op/op_fork.c.o
 
 src/corewar/op/op_fork.i: src/corewar/op/op_fork.c.i
@@ -1644,9 +1644,9 @@ src/corewar/op/op_fork.i: src/corewar/op/op_fork.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_fork.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_fork.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.i
 .PHONY : src/corewar/op/op_fork.c.i
 
 src/corewar/op/op_fork.s: src/corewar/op/op_fork.c.s
@@ -1655,9 +1655,9 @@ src/corewar/op/op_fork.s: src/corewar/op/op_fork.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_fork.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_fork.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_fork.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_fork.c.s
 .PHONY : src/corewar/op/op_fork.c.s
 
 src/corewar/op/op_ld.o: src/corewar/op/op_ld.c.o
@@ -1666,9 +1666,9 @@ src/corewar/op/op_ld.o: src/corewar/op/op_ld.c.o
 
 # target to build an object file
 src/corewar/op/op_ld.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ld.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.o
 .PHONY : src/corewar/op/op_ld.c.o
 
 src/corewar/op/op_ld.i: src/corewar/op/op_ld.c.i
@@ -1677,9 +1677,9 @@ src/corewar/op/op_ld.i: src/corewar/op/op_ld.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_ld.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ld.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.i
 .PHONY : src/corewar/op/op_ld.c.i
 
 src/corewar/op/op_ld.s: src/corewar/op/op_ld.c.s
@@ -1688,9 +1688,9 @@ src/corewar/op/op_ld.s: src/corewar/op/op_ld.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_ld.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ld.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ld.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ld.c.s
 .PHONY : src/corewar/op/op_ld.c.s
 
 src/corewar/op/op_ldi.o: src/corewar/op/op_ldi.c.o
@@ -1699,9 +1699,9 @@ src/corewar/op/op_ldi.o: src/corewar/op/op_ldi.c.o
 
 # target to build an object file
 src/corewar/op/op_ldi.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ldi.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.o
 .PHONY : src/corewar/op/op_ldi.c.o
 
 src/corewar/op/op_ldi.i: src/corewar/op/op_ldi.c.i
@@ -1710,9 +1710,9 @@ src/corewar/op/op_ldi.i: src/corewar/op/op_ldi.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_ldi.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ldi.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.i
 .PHONY : src/corewar/op/op_ldi.c.i
 
 src/corewar/op/op_ldi.s: src/corewar/op/op_ldi.c.s
@@ -1721,9 +1721,9 @@ src/corewar/op/op_ldi.s: src/corewar/op/op_ldi.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_ldi.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_ldi.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_ldi.c.s
 .PHONY : src/corewar/op/op_ldi.c.s
 
 src/corewar/op/op_lfork.o: src/corewar/op/op_lfork.c.o
@@ -1732,9 +1732,9 @@ src/corewar/op/op_lfork.o: src/corewar/op/op_lfork.c.o
 
 # target to build an object file
 src/corewar/op/op_lfork.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lfork.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.o
 .PHONY : src/corewar/op/op_lfork.c.o
 
 src/corewar/op/op_lfork.i: src/corewar/op/op_lfork.c.i
@@ -1743,9 +1743,9 @@ src/corewar/op/op_lfork.i: src/corewar/op/op_lfork.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_lfork.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lfork.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.i
 .PHONY : src/corewar/op/op_lfork.c.i
 
 src/corewar/op/op_lfork.s: src/corewar/op/op_lfork.c.s
@@ -1754,9 +1754,9 @@ src/corewar/op/op_lfork.s: src/corewar/op/op_lfork.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_lfork.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lfork.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lfork.c.s
 .PHONY : src/corewar/op/op_lfork.c.s
 
 src/corewar/op/op_live.o: src/corewar/op/op_live.c.o
@@ -1765,9 +1765,9 @@ src/corewar/op/op_live.o: src/corewar/op/op_live.c.o
 
 # target to build an object file
 src/corewar/op/op_live.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_live.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.o
 .PHONY : src/corewar/op/op_live.c.o
 
 src/corewar/op/op_live.i: src/corewar/op/op_live.c.i
@@ -1776,9 +1776,9 @@ src/corewar/op/op_live.i: src/corewar/op/op_live.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_live.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_live.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.i
 .PHONY : src/corewar/op/op_live.c.i
 
 src/corewar/op/op_live.s: src/corewar/op/op_live.c.s
@@ -1787,9 +1787,9 @@ src/corewar/op/op_live.s: src/corewar/op/op_live.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_live.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_live.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_live.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_live.c.s
 .PHONY : src/corewar/op/op_live.c.s
 
 src/corewar/op/op_lld.o: src/corewar/op/op_lld.c.o
@@ -1798,9 +1798,9 @@ src/corewar/op/op_lld.o: src/corewar/op/op_lld.c.o
 
 # target to build an object file
 src/corewar/op/op_lld.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lld.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.o
 .PHONY : src/corewar/op/op_lld.c.o
 
 src/corewar/op/op_lld.i: src/corewar/op/op_lld.c.i
@@ -1809,9 +1809,9 @@ src/corewar/op/op_lld.i: src/corewar/op/op_lld.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_lld.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lld.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.i
 .PHONY : src/corewar/op/op_lld.c.i
 
 src/corewar/op/op_lld.s: src/corewar/op/op_lld.c.s
@@ -1820,9 +1820,9 @@ src/corewar/op/op_lld.s: src/corewar/op/op_lld.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_lld.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lld.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lld.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lld.c.s
 .PHONY : src/corewar/op/op_lld.c.s
 
 src/corewar/op/op_lldi.o: src/corewar/op/op_lldi.c.o
@@ -1831,9 +1831,9 @@ src/corewar/op/op_lldi.o: src/corewar/op/op_lldi.c.o
 
 # target to build an object file
 src/corewar/op/op_lldi.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lldi.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.o
 .PHONY : src/corewar/op/op_lldi.c.o
 
 src/corewar/op/op_lldi.i: src/corewar/op/op_lldi.c.i
@@ -1842,9 +1842,9 @@ src/corewar/op/op_lldi.i: src/corewar/op/op_lldi.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_lldi.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lldi.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.i
 .PHONY : src/corewar/op/op_lldi.c.i
 
 src/corewar/op/op_lldi.s: src/corewar/op/op_lldi.c.s
@@ -1853,9 +1853,9 @@ src/corewar/op/op_lldi.s: src/corewar/op/op_lldi.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_lldi.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_lldi.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_lldi.c.s
 .PHONY : src/corewar/op/op_lldi.c.s
 
 src/corewar/op/op_or.o: src/corewar/op/op_or.c.o
@@ -1864,9 +1864,9 @@ src/corewar/op/op_or.o: src/corewar/op/op_or.c.o
 
 # target to build an object file
 src/corewar/op/op_or.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_or.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.o
 .PHONY : src/corewar/op/op_or.c.o
 
 src/corewar/op/op_or.i: src/corewar/op/op_or.c.i
@@ -1875,9 +1875,9 @@ src/corewar/op/op_or.i: src/corewar/op/op_or.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_or.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_or.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.i
 .PHONY : src/corewar/op/op_or.c.i
 
 src/corewar/op/op_or.s: src/corewar/op/op_or.c.s
@@ -1886,9 +1886,9 @@ src/corewar/op/op_or.s: src/corewar/op/op_or.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_or.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_or.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_or.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_or.c.s
 .PHONY : src/corewar/op/op_or.c.s
 
 src/corewar/op/op_st.o: src/corewar/op/op_st.c.o
@@ -1897,9 +1897,9 @@ src/corewar/op/op_st.o: src/corewar/op/op_st.c.o
 
 # target to build an object file
 src/corewar/op/op_st.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_st.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.o
 .PHONY : src/corewar/op/op_st.c.o
 
 src/corewar/op/op_st.i: src/corewar/op/op_st.c.i
@@ -1908,9 +1908,9 @@ src/corewar/op/op_st.i: src/corewar/op/op_st.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_st.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_st.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.i
 .PHONY : src/corewar/op/op_st.c.i
 
 src/corewar/op/op_st.s: src/corewar/op/op_st.c.s
@@ -1919,9 +1919,9 @@ src/corewar/op/op_st.s: src/corewar/op/op_st.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_st.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_st.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_st.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_st.c.s
 .PHONY : src/corewar/op/op_st.c.s
 
 src/corewar/op/op_sti.o: src/corewar/op/op_sti.c.o
@@ -1930,9 +1930,9 @@ src/corewar/op/op_sti.o: src/corewar/op/op_sti.c.o
 
 # target to build an object file
 src/corewar/op/op_sti.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sti.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.o
 .PHONY : src/corewar/op/op_sti.c.o
 
 src/corewar/op/op_sti.i: src/corewar/op/op_sti.c.i
@@ -1941,9 +1941,9 @@ src/corewar/op/op_sti.i: src/corewar/op/op_sti.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_sti.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sti.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.i
 .PHONY : src/corewar/op/op_sti.c.i
 
 src/corewar/op/op_sti.s: src/corewar/op/op_sti.c.s
@@ -1952,9 +1952,9 @@ src/corewar/op/op_sti.s: src/corewar/op/op_sti.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_sti.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sti.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sti.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sti.c.s
 .PHONY : src/corewar/op/op_sti.c.s
 
 src/corewar/op/op_sub.o: src/corewar/op/op_sub.c.o
@@ -1963,9 +1963,9 @@ src/corewar/op/op_sub.o: src/corewar/op/op_sub.c.o
 
 # target to build an object file
 src/corewar/op/op_sub.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sub.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.o
 .PHONY : src/corewar/op/op_sub.c.o
 
 src/corewar/op/op_sub.i: src/corewar/op/op_sub.c.i
@@ -1974,9 +1974,9 @@ src/corewar/op/op_sub.i: src/corewar/op/op_sub.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_sub.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sub.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.i
 .PHONY : src/corewar/op/op_sub.c.i
 
 src/corewar/op/op_sub.s: src/corewar/op/op_sub.c.s
@@ -1985,9 +1985,9 @@ src/corewar/op/op_sub.s: src/corewar/op/op_sub.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_sub.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_sub.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_sub.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_sub.c.s
 .PHONY : src/corewar/op/op_sub.c.s
 
 src/corewar/op/op_xor.o: src/corewar/op/op_xor.c.o
@@ -1996,9 +1996,9 @@ src/corewar/op/op_xor.o: src/corewar/op/op_xor.c.o
 
 # target to build an object file
 src/corewar/op/op_xor.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_xor.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.o
 .PHONY : src/corewar/op/op_xor.c.o
 
 src/corewar/op/op_xor.i: src/corewar/op/op_xor.c.i
@@ -2007,9 +2007,9 @@ src/corewar/op/op_xor.i: src/corewar/op/op_xor.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_xor.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_xor.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.i
 .PHONY : src/corewar/op/op_xor.c.i
 
 src/corewar/op/op_xor.s: src/corewar/op/op_xor.c.s
@@ -2018,9 +2018,9 @@ src/corewar/op/op_xor.s: src/corewar/op/op_xor.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_xor.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_xor.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_xor.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_xor.c.s
 .PHONY : src/corewar/op/op_xor.c.s
 
 src/corewar/op/op_zjmp.o: src/corewar/op/op_zjmp.c.o
@@ -2029,9 +2029,9 @@ src/corewar/op/op_zjmp.o: src/corewar/op/op_zjmp.c.o
 
 # target to build an object file
 src/corewar/op/op_zjmp.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_zjmp.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.o
 .PHONY : src/corewar/op/op_zjmp.c.o
 
 src/corewar/op/op_zjmp.i: src/corewar/op/op_zjmp.c.i
@@ -2040,9 +2040,9 @@ src/corewar/op/op_zjmp.i: src/corewar/op/op_zjmp.c.i
 
 # target to preprocess a source file
 src/corewar/op/op_zjmp.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_zjmp.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.i
 .PHONY : src/corewar/op/op_zjmp.c.i
 
 src/corewar/op/op_zjmp.s: src/corewar/op/op_zjmp.c.s
@@ -2051,9 +2051,9 @@ src/corewar/op/op_zjmp.s: src/corewar/op/op_zjmp.c.s
 
 # target to generate assembly for a file
 src/corewar/op/op_zjmp.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/op_zjmp.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/op_zjmp.c.s
 .PHONY : src/corewar/op/op_zjmp.c.s
 
 src/corewar/op/utils.o: src/corewar/op/utils.c.o
@@ -2062,9 +2062,9 @@ src/corewar/op/utils.o: src/corewar/op/utils.c.o
 
 # target to build an object file
 src/corewar/op/utils.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.o
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/utils.c.o
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.o
 .PHONY : src/corewar/op/utils.c.o
 
 src/corewar/op/utils.i: src/corewar/op/utils.c.i
@@ -2073,9 +2073,9 @@ src/corewar/op/utils.i: src/corewar/op/utils.c.i
 
 # target to preprocess a source file
 src/corewar/op/utils.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.i
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/utils.c.i
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.i
 .PHONY : src/corewar/op/utils.c.i
 
 src/corewar/op/utils.s: src/corewar/op/utils.c.s
@@ -2084,9 +2084,9 @@ src/corewar/op/utils.s: src/corewar/op/utils.c.s
 
 # target to generate assembly for a file
 src/corewar/op/utils.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.s
-	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/corewar/op/utils.c.s
+	$(MAKE) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/corewar/op/utils.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/corewar/op/utils.c.s
 .PHONY : src/corewar/op/utils.c.s
 
 src/logger/logger.o: src/logger/logger.c.o
@@ -2095,8 +2095,8 @@ src/logger/logger.o: src/logger/logger.c.o
 
 # target to build an object file
 src/logger/logger.c.o:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.o
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/logger/logger.c.o
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.o
 .PHONY : src/logger/logger.c.o
 
 src/logger/logger.i: src/logger/logger.c.i
@@ -2105,8 +2105,8 @@ src/logger/logger.i: src/logger/logger.c.i
 
 # target to preprocess a source file
 src/logger/logger.c.i:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.i
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/logger/logger.c.i
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.i
 .PHONY : src/logger/logger.c.i
 
 src/logger/logger.s: src/logger/logger.c.s
@@ -2115,8 +2115,8 @@ src/logger/logger.s: src/logger/logger.c.s
 
 # target to generate assembly for a file
 src/logger/logger.c.s:
-	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.s
 	$(MAKE) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/src/logger/logger.c.s
+	$(MAKE) -f CMakeFiles/sandbox.dir/build.make CMakeFiles/sandbox.dir/src/logger/logger.c.s
 .PHONY : src/logger/logger.c.s
 
 src/vis/ft_check_color.o: src/vis/ft_check_color.c.o
@@ -2639,10 +2639,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... sandbox"
-	@echo "... asm"
 	@echo "... corewar"
+	@echo "... asm"
+	@echo "... sandbox"
+	@echo "... edit_cache"
 	@echo "... libft"
 	@echo "... libftprintf"
 	@echo "... src/asm/asm.o"
