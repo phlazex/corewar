@@ -6,13 +6,16 @@ YELLOW="\x1b[33m"
 RESET="\x1b[0m"
 
 ASM_EXEC=$1
-#DEMO_COREWAR_EXEC=./checkers/demo_corewar
+DEMO_ASM_EXEC=./checkers/asm
 
 CHAMPS_DIR=checkers/asm_test/champs
-DIFF_DIR=checkers/asm_test/out
+DIFF_DIR=checkers/asm_test/out_diff
 
-TEST_TMP=test_temp_my
-#DEMO_OUTPUT=test_temp_demo
+ASM_OUTPUT=test_temp_asm
+DEMO_OUTPUT=test_temp_demo
+
+ASM_OUT_FILE=checkers/asm_test/out
+DEMO_OUT_FILE=checkers/asm_test/out_demo
 
 ERRORS_REPORT=checkers/check_inputs_report.txt
 
@@ -35,23 +38,29 @@ run_all_tests()
 {
   for file in `find ${CHAMPS_DIR} -type f -name "*.s"`
   do
-    local name=`echo ${file%%.*} | cut -d'/' -f4`
-    ${ASM_EXEC} ${file} > ${TEST_TMP}
-   # ${DEMO_COREWAR_EXEC} ${file} > /dev/null 2> ${DEMO_OUTPUT}
-   # ${DEMO_COREWAR_EXEC} ${file} > checkers/diff_files/${name}.txt
-    local output=`diff -ibB ${TEST_TMP} ${DIFF_DIR}/${name}.txt`
-    local diff_files=`diff -ibB ${CHAMPS_DIR}/${name}.cor ${CHAMPS_DIR}/${name}.cor_new`
+    local name=`echo ${file%%.s} | cut -d'/' -f4`
+    ${ASM_EXEC} ${file} > ${ASM_OUTPUT}
+    local asm_out=`sed '1s/^..........//' ${ASM_OUTPUT}`
+    echo ${asm_out} > ${ASM_OUTPUT}
+    mkdir -p ${ASM_OUT_FILE}
+    mv -f ${CHAMPS_DIR}/${name}.cor ${ASM_OUT_FILE}/${name}.cor
+    ${DEMO_ASM_EXEC} ${file} > ${DEMO_OUTPUT}
+    mkdir -p ${DEMO_OUT_FILE}
+    mv -f ${CHAMPS_DIR}/${name}.cor ${DEMO_OUT_FILE}/${name}.cor
+    local output=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
+    local diff_files=`diff -ibB ${ASM_OUT_FILE}/${name}.cor ${DEMO_OUT_FILE}/${name}.cor`
     printf "%-65s" "$file"
-    printf ": "
+    printf "diff for output files "
     if [ "$diff_files" = "" ]; then
-      print_ok "Out OK! : "
+      print_ok "OK "
     else
-      print_error "WTF man!!"
+      print_error "KO "
     fi
+    printf ": diff for output "
     if [ "$output" = "" ]; then
-      print_ok "Good!"
+      print_ok "OK"
     else
-      print_error "Booo!"
+      print_error "KO"
       echo  "$file" >>  ${ERRORS_REPORT}
       echo  "\n" >>  ${ERRORS_REPORT}
       echo  "$output" >>  ${ERRORS_REPORT}
@@ -83,5 +92,5 @@ echo "" > ${ERRORS_REPORT}
 
 run_all_tests
 
-rm $TEST_TMP
-#rm $DEMO_OUTPUT
+rm $ASM_OUTPUT
+rm $DEMO_OUTPUT
