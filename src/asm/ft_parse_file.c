@@ -54,6 +54,7 @@ static void	ft_parse_file_project_init(t_mem *mem, t_project *project)
 
 int			ft_parse_file(t_mem *mem, t_project *project, char *file)
 {
+	project->file_name = file;
 	ft_parse_file_project_init(mem, project);
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{

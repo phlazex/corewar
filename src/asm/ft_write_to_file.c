@@ -20,7 +20,8 @@ static char	*ft_get_file_name(char *file)
 	if ((ptr = ft_strstr(file, ".s")))
 	{
 		new_file = ft_strsub(file, 0, ptr - file);
-		new_file = ft_strjoin_free_first(&new_file, ".cor_new");
+//		new_file = ft_strjoin_free_first(&new_file, ".cor_new");
+		new_file = ft_strjoin_free_first(&new_file, ".cor");
 		return (new_file);
 	}
 	return (NULL);

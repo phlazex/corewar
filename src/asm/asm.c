@@ -12,20 +12,31 @@
 
 #include "asm.h"
 
+static char	*ft_get_opt(char *file)
+{
+	size_t		length;
+
+	if (file)
+	{
+		length = ft_strlen(file);
+		if (file[length - 1] == 's' && file[length - 2] == '.' && length > 3)
+			return ("-asm");
+		else if (file[length - 1] == 'r' && file[length - 2] == 'o' &&
+				 file[length - 3] == 'c' && file[length - 4] == '.' &&
+				 length > 5)
+			return ("-dis");
+	}
+	return (NULL);
+}
+
 static int	ft_check_file_name_asm(char *opt, char *file)
 {
-	char		*ptr;
-
-	if (!ft_strcmp(opt, "-dis") && (ptr = ft_strstr(file, ".cor")))
-	{
-		if (*(ptr + 4) == 0)
-			return (-1);
-	}
-	else if (!ft_strcmp(opt, "-asm") && (ptr = ft_strstr(file, ".s")))
-	{
-		if (*(ptr + 2) == 0)
-			return (1);
-	}
+	if (!opt)
+		opt = ft_get_opt(file);
+	if (!ft_strcmp(opt, "-dis") && !ft_strcmp(ft_get_opt(file), "-dis"))
+		return (-1);
+	else if (!ft_strcmp(opt, "-asm") && !ft_strcmp(ft_get_opt(file), "-asm"))
+		return (1);
 	return (0);
 }
 
@@ -62,10 +73,10 @@ int			main(int argc, char **argv)
 	t_project	*project;
 
 	ft_printf(CLR);
-	if (argc == 3)
+	if (argc == 2)
+		ft_dis_asm_route(project, NULL, argv[1]);
+	else if (argc == 3)
 		ft_dis_asm_route(project, argv[1], argv[2]);
-	else if (argc == 2)
-		ft_dis_asm_route(project, "-asm", argv[1]);
 	else
 		ft_usage();
 	return (0);
