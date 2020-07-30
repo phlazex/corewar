@@ -70,13 +70,16 @@ static void	ft_free_prog_lists(t_project *project)
 
 static void	ft_free_project(t_project *project)
 {
-	if (project->name)
-		ft_strdel(&(project->name));
-	if (project->comment)
-		ft_strdel(&(project->comment));
+	if (project->route > 0)
+	{
+		if (project->name)
+			ft_strdel(&(project->name));
+		if (project->comment)
+			ft_strdel(&(project->comment));
+		if (project->program)
+			ft_strdel(&(project->program));
+	}
 	project->prog_size = NULL;
-	if (project->program)
-		ft_strdel(&(project->program));
 	project->current = NULL;
 	project->end = NULL;
 	ft_memdel((void **)&(project));

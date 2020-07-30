@@ -43,21 +43,17 @@ static int			ft_get_opt(char *opt)
 
 static void			ft_dis_asm_route(t_project *project, char *arg1, char *arg2)
 {
-	int			opt;
-	int			route;
-
 	if (arg1 && !ft_get_opt(arg1))
 		ft_usage();
-	opt = ft_get_opt(arg1);
-	route = ft_file_asm_or_dis(arg2);
-	project->option = arg1;
+	project->option = ft_get_opt(arg1);
+	project->route = ft_file_asm_or_dis(arg2);
 	project->file_name = arg2;
-	if (opt >= 0 && route > 0)
+	if (project->option >= 0 && project->route > 0)
 	{
 		if (ft_project_init(project, ft_parse_file))
 			ft_exit(project, 3, NULL);
 	}
-	else if (opt <= 0 && route < 0)
+	else if (project->option <= 0 && project->route < 0)
 	{
 		if (ft_project_init(project, ft_parse_file_dis))
 			ft_exit(project, 3, NULL);

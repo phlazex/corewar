@@ -46,7 +46,8 @@ typedef struct s_project
 	size_t					num_error;
 	size_t					num_error_line;
 	char					*file_name;
-	char					*option;
+	int						option;
+	int						route;
 }				t_project;
 
 int			ft_project_init(t_project *project, int (*ft_parse)(t_mem *, t_project *));

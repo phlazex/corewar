@@ -1,4 +1,4 @@
-/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang -G "CodeBlocks - Unix Makefiles" /home/mfahey/corewar
+/snap/clion/123/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang -G "CodeBlocks - Unix Makefiles" /home/mfahey/corewar
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/mfahey/corewar/cmake-build-debug

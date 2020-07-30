@@ -12,19 +12,24 @@
 
 #include "asm.h"
 
-static char	*ft_get_file_name(char *file)
+static char	*ft_get_file_name(t_project *project)
 {
-	char	*ptr;
 	char	*new_file;
+	size_t	length;
 
-	if ((ptr = ft_strstr(file, ".s")))
-	{
-		new_file = ft_strsub(file, 0, ptr - file);
-//		new_file = ft_strjoin_free_first(&new_file, ".cor_new");
-		new_file = ft_strjoin_free_first(&new_file, ".cor");
-		return (new_file);
-	}
-	return (NULL);
+	length = ft_strlen(project->file_name);
+	if (project->route == 0)
+		return (NULL);
+	else if (project->route > 0)
+		length -= 1;
+	else if (project->route < 0)
+		length -= 3;
+	new_file = ft_strsub(project->file_name, 0, length);
+	if (project->route > 0)
+		new_file = ft_strjoin_free_first(&new_file, "cor");
+	else if (project->route < 0)
+		new_file = ft_strjoin_free_first(&new_file, "s");
+	return (new_file);
 }
 
 int			ft_write_to_file(t_project *project)
@@ -34,7 +39,7 @@ int			ft_write_to_file(t_project *project)
 	char	*new_file;
 
 	new_file = NULL;
-	if ((new_file = ft_get_file_name(project->file_name)))
+	if ((new_file = ft_get_file_name(project)))
 	{
 		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
 			return (1);
