@@ -22,8 +22,8 @@ static int			ft_file_asm_or_dis(char *file)
 		if (file[length - 1] == 's' && file[length - 2] == '.' && length > 3)
 			return (1);
 		else if (file[length - 1] == 'r' && file[length - 2] == 'o' &&
-				 file[length - 3] == 'c' && file[length - 4] == '.' &&
-				 length > 5)
+				file[length - 3] == 'c' && file[length - 4] == '.' &&
+				length > 5)
 			return (-1);
 	}
 	return (0);
@@ -35,8 +35,12 @@ static int			ft_get_opt(char *opt)
 	{
 		if (!ft_strcmp(opt, "-asm"))
 			return (1);
+//		else if (!ft_strcmp(opt, "-aout"))
+//			return (2);
 		else if (!ft_strcmp(opt, "-dis"))
 			return (-1);
+		else if (!ft_strcmp(opt, "-dout"))
+			return (-2);
 	}
 	return (0);
 }
@@ -57,15 +61,26 @@ static void			ft_dis_asm_route(t_project *project, char *arg1, char *arg2)
 	{
 		if (ft_project_init(project, ft_parse_file_dis))
 			ft_exit(project, 3, NULL);
-		ft_print_memory(
-				project->name, project->end,
-				project->comment, project->program);
-		ft_set_color(white + 2);
-		ft_printf(".name \"%s\"\n", project->name);
-		ft_printf(".comment \"%s\"\n\n", project->comment);
-		project->current = project->program;
-		while (project->current < project->end)
-			ft_disassemble(project);
+		if (project->option >= -1)
+		{
+			ft_printf(".name \"%s\"\n", project->name);
+			ft_printf(".comment \"%s\"\n\n", project->comment);
+			project->current = project->program;
+			while (project->current < project->end)
+				ft_disassemble(project);
+		}
+		else if (project->option == -2)
+		{
+			ft_print_memory(
+					project->name, project->end,
+					project->comment, project->program);
+			ft_set_color(white + 2);
+			ft_printf(".name \"%s\"\n", project->name);
+			ft_printf(".comment \"%s\"\n\n", project->comment);
+			project->current = project->program;
+			while (project->current < project->end)
+				ft_disassemble(project);
+		}
 	}
 	else
 		ft_usage();

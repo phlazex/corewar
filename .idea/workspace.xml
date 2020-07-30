@@ -20,10 +20,10 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="corewar" targetName="asm" />
       <config projectName="corewar" targetName="sandbox" />
-      <config projectName="corewar" targetName="libft" />
+      <config projectName="corewar" targetName="asm" />
       <config projectName="corewar" targetName="libftprintf" />
+      <config projectName="corewar" targetName="libft" />
       <config projectName="corewar" targetName="corewar" />
     </generated>
   </component>
@@ -34,34 +34,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/champs/42.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/champs/42.cor_new" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/champs/Gagnant.cor" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/check_asm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/champs/42.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/champs/42.cor_new" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/asm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/arobion/kamelkaze.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/arobion/katchup.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/arobion/tchupka.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/bee_gees.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/bigzork.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/ex.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/fluttershy.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/helltrain.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/jinx.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/mortel.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/turtle.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/linux/zork.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/vm_champs/champs/42.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/vm_champs/champs/Car.cor_new" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/vm_champs/champs/Gagnant.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.s/42.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/libftprintf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/libftprintf.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/libft.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/libft.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/asm.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/asm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asm/ft_disassemble.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_disassemble.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +124,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -94,6 +136,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -153,6 +196,8 @@
       <workItem from="1595602154195" duration="11051000" />
       <workItem from="1595676639792" duration="2837000" />
       <workItem from="1595699980684" duration="13093000" />
+      <workItem from="1596116407464" duration="621000" />
+      <workItem from="1596117421191" duration="6215000" />
     </task>
     <task id="LOCAL-00001" summary="">
       <created>1594907266983</created>
@@ -184,9 +229,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="196" y="586" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595338009041">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state x="490" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596118916983">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state x="490" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3200.1800@0.0.3200.1800" timestamp="1596118916983" />
     <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594914610581" />
     <state x="196" y="586" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595338009041" />
     <state x="512" y="621" width="635" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595702858520">
@@ -194,42 +240,54 @@
     </state>
     <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1594910759206" />
     <state x="512" y="621" width="635" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595702858520" />
-    <state width="1234" height="62" key="GridCell.Tab.0.bottom" timestamp="1595620616695">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="3158" height="436" key="GridCell.Tab.0.bottom" timestamp="1596118920616">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.0.bottom/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="382" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564590" />
     <state width="1234" height="62" key="GridCell.Tab.0.bottom/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595620616695" />
-    <state width="1234" height="62" key="GridCell.Tab.0.center" timestamp="1595620616695">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="3158" height="436" key="GridCell.Tab.0.center" timestamp="1596118920615">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.0.center/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920615" />
     <state width="2518" height="382" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
     <state width="1234" height="62" key="GridCell.Tab.0.center/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595620616695" />
-    <state width="1234" height="62" key="GridCell.Tab.0.left" timestamp="1595620616695">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="3158" height="436" key="GridCell.Tab.0.left" timestamp="1596118920614">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.0.left/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920614" />
     <state width="2518" height="382" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564588" />
     <state width="1234" height="62" key="GridCell.Tab.0.left/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595620616695" />
-    <state width="1234" height="62" key="GridCell.Tab.0.right" timestamp="1595620616695">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="3158" height="436" key="GridCell.Tab.0.right" timestamp="1596118920616">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.0.right/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="382" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
     <state width="1234" height="62" key="GridCell.Tab.0.right/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1595620616695" />
-    <state width="2518" height="470" key="GridCell.Tab.1.bottom" timestamp="1594914562440">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="3158" height="436" key="GridCell.Tab.1.bottom" timestamp="1596118920617">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.1.bottom/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
-    <state width="2518" height="470" key="GridCell.Tab.1.center" timestamp="1594914562440">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="3158" height="436" key="GridCell.Tab.1.center" timestamp="1596118920617">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.1.center/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
-    <state width="2518" height="470" key="GridCell.Tab.1.left" timestamp="1594914562439">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="3158" height="436" key="GridCell.Tab.1.left" timestamp="1596118920616">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.1.left/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="470" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562439" />
-    <state width="2518" height="470" key="GridCell.Tab.1.right" timestamp="1594914562440">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state width="3158" height="436" key="GridCell.Tab.1.right" timestamp="1596118920617">
+      <screen x="0" y="0" width="3200" height="1800" />
     </state>
+    <state width="3158" height="436" key="GridCell.Tab.1.right/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
+    <state x="1109" y="539" width="1480" height="1170" key="SettingsEditor" timestamp="1596117412333">
+      <screen x="0" y="0" width="3200" height="1800" />
+    </state>
+    <state x="1109" y="539" width="1480" height="1170" key="SettingsEditor/0.0.3200.1800@0.0.3200.1800" timestamp="1596117412333" />
     <state x="880" y="431" key="Vcs.Push.Dialog.v2" timestamp="1594907281691">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>

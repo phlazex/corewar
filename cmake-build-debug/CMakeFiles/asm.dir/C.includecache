@@ -62,7 +62,7 @@ libft_structs.h
 string.h
 -
 
-/home/mfahey/corewar/src/asm/ft_write_to_file.c
+/Users/mfahey/corewar/src/asm/ft_disassemble.c
 asm.h
-/home/mfahey/corewar/src/asm/asm.h
+/Users/mfahey/corewar/src/asm/asm.h
 

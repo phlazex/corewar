@@ -6,7 +6,8 @@ YELLOW="\x1b[33m"
 RESET="\x1b[0m"
 
 ASM_EXEC=$1
-DEMO_ASM_EXEC=./checkers/asm
+#DEMO_ASM_EXEC=./demo/linux/asm
+DEMO_ASM_EXEC=./demo/vm_champs/asm
 
 CHAMPS_DIR=checkers/asm_test/champs
 DIFF_DIR=checkers/asm_test/out_diff
