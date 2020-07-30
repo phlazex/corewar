@@ -79,6 +79,7 @@ static void	ft_free_project(t_project *project)
 		ft_strdel(&(project->program));
 	project->current = NULL;
 	project->end = NULL;
+	ft_memdel((void **)&(project));
 }
 
 void		ft_free(t_project *project)

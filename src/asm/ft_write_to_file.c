@@ -27,14 +27,14 @@ static char	*ft_get_file_name(char *file)
 	return (NULL);
 }
 
-int			ft_write_to_file(t_project *project, char *file)
+int			ft_write_to_file(t_project *project)
 {
 	int		fd;
 	size_t	length;
 	char	*new_file;
 
 	new_file = NULL;
-	if ((new_file = ft_get_file_name(file)))
+	if ((new_file = ft_get_file_name(project->file_name)))
 	{
 		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
 			return (1);
@@ -47,6 +47,6 @@ int			ft_write_to_file(t_project *project, char *file)
 	close(fd);
 	ft_printf("Writing output program to %s\n", new_file);
 	ft_strdel(&new_file);
-	ft_free(project);
+	ft_exit(project, 0, NULL);
 	return (0);
 }

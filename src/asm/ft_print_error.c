@@ -60,25 +60,25 @@ void		ft_get_error_message(
 		t_project *project, int exit_code, char *error_message)
 {
 	if (exit_code == 1)
-		ft_printf("Ошибка открытия файла\n");
+		ft_printf("Error: Could not open file\n");
 	else if (exit_code == 2)
-		ft_printf("Ошибка памяти\n");
+		ft_printf("Error: Failed to allocate memory\n");
 	else if (exit_code == 3)
-		ft_printf("Не определенная ошибка\n");
+		ft_printf("Error: Unknown error\n");
 	else if (exit_code == 4)
 	{
-		ft_printf("Отсутствует ожидаемый токен \"%s\" в строке %zi:\n",
+		ft_printf("Error: Expected token \"%s\" on line %zi not found\n",
 				error_message, project->num_error_line);
 		ft_print_current_error_line(project);
 	}
 	else if (exit_code == 5)
-		ft_printf("Не допустимая длина токена \"%s\"\n", error_message);
+		ft_printf("Error: Invalid token length \"%s\"\n", error_message);
 	else if (exit_code == 6)
-		ft_printf("Отсутствуют ожидаемые токены \"%s\" и \"%s\"\n",
+		ft_printf("Error: The expected tokens \"%s\" and \"%s\" are missing\n",
 				NAME_CMD_STRING, COMMENT_CMD_STRING);
 	else if (exit_code == 7)
 	{
-		ft_printf("Лексическая ошибка в строке %zi:\n",
+		ft_printf("Error: Invalid line %zi:\n",
 				project->num_error_line);
 		ft_print_current_error_line(project);
 	}

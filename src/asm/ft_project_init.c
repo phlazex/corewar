@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-int		ft_parse_file_dis(t_mem *mem, t_project *project, char *file)
+int		ft_parse_file_dis(t_mem *mem, t_project *project)
 {
 	project->data = mem;
 	project->name = mem->head + 4;
@@ -20,30 +20,27 @@ int		ft_parse_file_dis(t_mem *mem, t_project *project, char *file)
 	project->comment = project->prog_size + 4;
 	project->program = project->comment + COMMENT_LENGTH + 4;
 	project->end = mem->end;
-	project->file_name = file;
 	return (0);
 }
 
-int		ft_project_init(char *file_name, t_project **project,
-		int (*ft_parse)(t_mem *, t_project *, char *))
+int		ft_project_init(t_project *project,
+		int (*ft_parse)(t_mem *, t_project *))
 {
 	int		fd;
 	t_mem	*data;
 
-	fd = open(file_name, O_RDONLY);
-	if (!(*project = (t_project*)malloc(sizeof(**project))))
+	fd = open(project->file_name, O_RDONLY);
+	if (!(data = ft_init_memory()))
 	{
 		close(fd);
-		ft_exit(NULL, 2, NULL);
+		ft_exit(project, 2, NULL);
 	}
-	data = ft_init_memory();
 	if (fast_read_in_memory(fd, data))
 	{
 		close(fd);
 		ft_free_mem(data);
-		ft_exit(NULL, 1, NULL);
+		ft_exit(project, 1, NULL);
 	}
 	close(fd);
-	ft_bzero(*project, sizeof(**project));
-	return (((*ft_parse)(data, *project, file_name)));
+	return (((*ft_parse)(data, project)));
 }

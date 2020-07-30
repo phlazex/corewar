@@ -42,19 +42,10 @@ static void	ft_parse_file_project_init(t_mem *mem, t_project *project)
 	project->data = mem;
 	project->current = mem->head;
 	project->end = mem->end;
-	project->size_program = 0;
-	project->name = NULL;
-	project->comment = NULL;
-	project->program = NULL;
-	project->prog_list = NULL;
-	project->num_current_line = 0;
-	project->num_error = 0;
-	project->num_error_line = 0;
 }
 
-int			ft_parse_file(t_mem *mem, t_project *project, char *file)
+int			ft_parse_file(t_mem *mem, t_project *project)
 {
-	project->file_name = file;
 	ft_parse_file_project_init(mem, project);
 	if ((mem->endl = ft_strchr(mem->head, '\n')))
 	{
@@ -75,6 +66,6 @@ int			ft_parse_file(t_mem *mem, t_project *project, char *file)
 		}
 	}
 	ft_parse_file_check(project);
-	ft_write_to_file(project, file);
+	ft_write_to_file(project);
 	return (0);
 }

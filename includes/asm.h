@@ -46,18 +46,19 @@ typedef struct s_project
 	size_t					num_error;
 	size_t					num_error_line;
 	char					*file_name;
+	char					*option;
 }				t_project;
 
-int			ft_project_init(char *file_name, t_project **project, int (*ft_parse)(t_mem *, t_project *, char *));
+int			ft_project_init(t_project *project, int (*ft_parse)(t_mem *, t_project *));
 void		ft_usage();
 int			ft_disassemble(t_project *project);
-int			ft_parse_file_dis(t_mem *mem, t_project *project, char *file);
-int			ft_parse_file(t_mem *mem, t_project *project, char *file);
+int			ft_parse_file_dis(t_mem *mem, t_project *project);
+int			ft_parse_file(t_mem *mem, t_project *project);
 void		ft_exit(t_project *project, int exit_code, char *error_message);
 void		ft_free(t_project *project);
 void		ft_free_mem(t_mem *data);
 void		ft_get_error_message(t_project *project, int exit_code, char *error_message);
-int			ft_write_to_file(t_project *project, char *file);
+int			ft_write_to_file(t_project *project);
 void		ft_parse_current(t_project *project);
 int			ft_isspace(int chr);
 int			ft_is_label_command(char *str, size_t length);
