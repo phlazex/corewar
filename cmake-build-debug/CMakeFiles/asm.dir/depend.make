@@ -190,6 +190,15 @@ CMakeFiles/asm.dir/src/asm/ft_project_init.c.o: ../lib/libft/includes/libft.h
 CMakeFiles/asm.dir/src/asm/ft_project_init.c.o: ../lib/libft/includes/libft_structs.h
 CMakeFiles/asm.dir/src/asm/ft_project_init.c.o: ../src/asm/ft_project_init.c
 
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../includes/corewar.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../includes/corewar_op.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../includes/op.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../lib/ft_printf/includes/ft_printf.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../lib/libft/includes/libft.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../lib/libft/includes/libft_structs.h
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../src/asm/ft_route.c
+
 CMakeFiles/asm.dir/src/asm/ft_usage.c.o: ../includes/asm.h
 CMakeFiles/asm.dir/src/asm/ft_usage.c.o: ../includes/corewar.h
 CMakeFiles/asm.dir/src/asm/ft_usage.c.o: ../includes/corewar_op.h

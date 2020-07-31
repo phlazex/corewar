@@ -762,6 +762,33 @@ src/asm/ft_project_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/ft_project_init.c.s
 .PHONY : src/asm/ft_project_init.c.s
 
+src/asm/ft_route.o: src/asm/ft_route.c.o
+
+.PHONY : src/asm/ft_route.o
+
+# target to build an object file
+src/asm/ft_route.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/ft_route.c.o
+.PHONY : src/asm/ft_route.c.o
+
+src/asm/ft_route.i: src/asm/ft_route.c.i
+
+.PHONY : src/asm/ft_route.i
+
+# target to preprocess a source file
+src/asm/ft_route.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/ft_route.c.i
+.PHONY : src/asm/ft_route.c.i
+
+src/asm/ft_route.s: src/asm/ft_route.c.s
+
+.PHONY : src/asm/ft_route.s
+
+# target to generate assembly for a file
+src/asm/ft_route.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/src/asm/ft_route.c.s
+.PHONY : src/asm/ft_route.c.s
+
 src/asm/ft_usage.o: src/asm/ft_usage.c.o
 
 .PHONY : src/asm/ft_usage.o
@@ -2728,6 +2755,9 @@ help:
 	@echo "... src/asm/ft_project_init.o"
 	@echo "... src/asm/ft_project_init.i"
 	@echo "... src/asm/ft_project_init.s"
+	@echo "... src/asm/ft_route.o"
+	@echo "... src/asm/ft_route.i"
+	@echo "... src/asm/ft_route.s"
 	@echo "... src/asm/ft_usage.o"
 	@echo "... src/asm/ft_usage.i"
 	@echo "... src/asm/ft_usage.s"

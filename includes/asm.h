@@ -96,5 +96,6 @@ int			ft_is_arg_func(t_project *project, size_t arg_num, size_t command_size, si
 int			ft_is_ind_dir_func(t_project *project, size_t arg_num, size_t i);
 int			ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j);
 int			ft_open_file_for_write(t_project *project);
+void		ft_dis_asm_route(t_project *project, char *arg1, char *arg2);
 
 #endif

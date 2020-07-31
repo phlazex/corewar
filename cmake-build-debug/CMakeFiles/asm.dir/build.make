@@ -376,9 +376,22 @@ CMakeFiles/asm.dir/src/asm/ft_parse_new_line_functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/src/asm/ft_parse_new_line_functions.c.s"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mfahey/corewar/src/asm/ft_parse_new_line_functions.c -o CMakeFiles/asm.dir/src/asm/ft_parse_new_line_functions.c.s
 
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/src/asm/ft_route.c.o: ../src/asm/ft_route.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/asm.dir/src/asm/ft_route.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/asm/ft_route.c.o   -c /home/mfahey/corewar/src/asm/ft_route.c
+
+CMakeFiles/asm.dir/src/asm/ft_route.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/src/asm/ft_route.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mfahey/corewar/src/asm/ft_route.c > CMakeFiles/asm.dir/src/asm/ft_route.c.i
+
+CMakeFiles/asm.dir/src/asm/ft_route.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/src/asm/ft_route.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mfahey/corewar/src/asm/ft_route.c -o CMakeFiles/asm.dir/src/asm/ft_route.c.s
+
 CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o: ../src/corewar/ft_atoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o   -c /home/mfahey/corewar/src/corewar/ft_atoin.c
 
 CMakeFiles/asm.dir/src/corewar/ft_atoin.c.i: cmake_force
@@ -391,7 +404,7 @@ CMakeFiles/asm.dir/src/corewar/ft_atoin.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o: ../src/corewar/ft_new_cursor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o   -c /home/mfahey/corewar/src/corewar/ft_new_cursor.c
 
 CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.i: cmake_force
@@ -404,7 +417,7 @@ CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o: ../src/corewar/ft_print_arena.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o   -c /home/mfahey/corewar/src/corewar/ft_print_arena.c
 
 CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.i: cmake_force
@@ -417,7 +430,7 @@ CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_live.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_live.c.o: ../src/corewar/op/op_live.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_live.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_live.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_live.c.o   -c /home/mfahey/corewar/src/corewar/op/op_live.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_live.c.i: cmake_force
@@ -430,7 +443,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_live.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_add.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_add.c.o: ../src/corewar/op/op_add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_add.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_add.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_add.c.o   -c /home/mfahey/corewar/src/corewar/op/op_add.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_add.c.i: cmake_force
@@ -443,7 +456,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_add.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o: ../src/corewar/op/op_ld.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_ld.c.o   -c /home/mfahey/corewar/src/corewar/op/op_ld.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_ld.c.i: cmake_force
@@ -456,7 +469,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_ld.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/utils.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/utils.c.o: ../src/corewar/op/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/asm.dir/src/corewar/op/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/asm.dir/src/corewar/op/utils.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/utils.c.o   -c /home/mfahey/corewar/src/corewar/op/utils.c
 
 CMakeFiles/asm.dir/src/corewar/op/utils.c.i: cmake_force
@@ -469,7 +482,7 @@ CMakeFiles/asm.dir/src/corewar/op/utils.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_st.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_st.c.o: ../src/corewar/op/op_st.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_st.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_st.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_st.c.o   -c /home/mfahey/corewar/src/corewar/op/op_st.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_st.c.i: cmake_force
@@ -482,7 +495,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_st.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o: ../src/corewar/op/op_zjmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.o   -c /home/mfahey/corewar/src/corewar/op/op_zjmp.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.i: cmake_force
@@ -495,7 +508,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_zjmp.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o: ../src/corewar/op/op_sti.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_sti.c.o   -c /home/mfahey/corewar/src/corewar/op/op_sti.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_sti.c.i: cmake_force
@@ -508,7 +521,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_sti.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o: ../src/corewar/op/op_fork.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_fork.c.o   -c /home/mfahey/corewar/src/corewar/op/op_fork.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_fork.c.i: cmake_force
@@ -521,7 +534,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_fork.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o: ../src/corewar/op/op_sub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_sub.c.o   -c /home/mfahey/corewar/src/corewar/op/op_sub.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_sub.c.i: cmake_force
@@ -534,7 +547,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_sub.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_and.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_and.c.o: ../src/corewar/op/op_and.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_and.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_and.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_and.c.o   -c /home/mfahey/corewar/src/corewar/op/op_and.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_and.c.i: cmake_force
@@ -547,7 +560,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_and.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_or.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_or.c.o: ../src/corewar/op/op_or.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_or.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_or.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_or.c.o   -c /home/mfahey/corewar/src/corewar/op/op_or.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_or.c.i: cmake_force
@@ -560,7 +573,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_or.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o: ../src/corewar/op/op_xor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_xor.c.o   -c /home/mfahey/corewar/src/corewar/op/op_xor.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_xor.c.i: cmake_force
@@ -573,7 +586,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_xor.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o: ../src/corewar/op/op_ldi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.o   -c /home/mfahey/corewar/src/corewar/op/op_ldi.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.i: cmake_force
@@ -586,7 +599,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_ldi.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o: ../src/corewar/op/op_lld.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_lld.c.o   -c /home/mfahey/corewar/src/corewar/op/op_lld.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_lld.c.i: cmake_force
@@ -599,7 +612,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_lld.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o: ../src/corewar/op/op_lldi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.o   -c /home/mfahey/corewar/src/corewar/op/op_lldi.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.i: cmake_force
@@ -612,7 +625,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_lldi.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o: ../src/corewar/op/op_lfork.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.o   -c /home/mfahey/corewar/src/corewar/op/op_lfork.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.i: cmake_force
@@ -625,7 +638,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_lfork.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o: ../src/corewar/op/op_aff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/op/op_aff.c.o   -c /home/mfahey/corewar/src/corewar/op/op_aff.c
 
 CMakeFiles/asm.dir/src/corewar/op/op_aff.c.i: cmake_force
@@ -638,7 +651,7 @@ CMakeFiles/asm.dir/src/corewar/op/op_aff.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o: ../src/corewar/ft_past_reg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.o   -c /home/mfahey/corewar/src/corewar/ft_past_reg.c
 
 CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.i: cmake_force
@@ -651,7 +664,7 @@ CMakeFiles/asm.dir/src/corewar/ft_past_reg.c.s: cmake_force
 
 CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o: ../src/corewar/ft_print_arena_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.o   -c /home/mfahey/corewar/src/corewar/ft_print_arena_utils.c
 
 CMakeFiles/asm.dir/src/corewar/ft_print_arena_utils.c.i: cmake_force
@@ -687,6 +700,7 @@ asm_OBJECTS = \
 "CMakeFiles/asm.dir/src/asm/ft_prog_list_getters_line_data.c.o" \
 "CMakeFiles/asm.dir/src/asm/ft_check_prog_list_args_type_functions.c.o" \
 "CMakeFiles/asm.dir/src/asm/ft_parse_new_line_functions.c.o" \
+"CMakeFiles/asm.dir/src/asm/ft_route.c.o" \
 "CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o" \
 "CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o" \
 "CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o" \
@@ -736,6 +750,7 @@ asm: CMakeFiles/asm.dir/src/asm/ft_prog_list_getters_args.c.o
 asm: CMakeFiles/asm.dir/src/asm/ft_prog_list_getters_line_data.c.o
 asm: CMakeFiles/asm.dir/src/asm/ft_check_prog_list_args_type_functions.c.o
 asm: CMakeFiles/asm.dir/src/asm/ft_parse_new_line_functions.c.o
+asm: CMakeFiles/asm.dir/src/asm/ft_route.c.o
 asm: CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o
 asm: CMakeFiles/asm.dir/src/corewar/ft_new_cursor.c.o
 asm: CMakeFiles/asm.dir/src/corewar/ft_print_arena.c.o
@@ -763,7 +778,7 @@ asm: lib/libft/liblibft.a
 asm: lib/ft_printf/liblibftprintf.a
 asm: lib/libft/liblibft.a
 asm: CMakeFiles/asm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking C executable asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mfahey/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable asm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

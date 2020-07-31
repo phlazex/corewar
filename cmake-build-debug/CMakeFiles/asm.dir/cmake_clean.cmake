@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/asm.dir/src/asm/ft_prog_list_getters_args.c.o"
   "CMakeFiles/asm.dir/src/asm/ft_prog_list_getters_line_data.c.o"
   "CMakeFiles/asm.dir/src/asm/ft_project_init.c.o"
+  "CMakeFiles/asm.dir/src/asm/ft_route.c.o"
   "CMakeFiles/asm.dir/src/asm/ft_usage.c.o"
   "CMakeFiles/asm.dir/src/asm/ft_write_to_file.c.o"
   "CMakeFiles/asm.dir/src/corewar/ft_atoin.c.o"

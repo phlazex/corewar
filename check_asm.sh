@@ -81,6 +81,28 @@ run_all_tests()
       echo "__________________________________________" >> ${ERRORS_REPORT}
     fi
     printf "\n"
+    ${ASM_EXEC} ${ASM_OUT_FILE}/${name}.cor > ${ASM_OUTPUT}
+    local asm_out=`sed '1s/^..........//' ${ASM_OUTPUT}`
+    echo ${asm_out} > ${ASM_OUTPUT}
+    ${DEMO_ASM_EXEC} ${DEMO_OUT_FILE}/${name}.cor > ${DEMO_OUTPUT}
+    local output=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
+    local diff_files=`diff -ibB ${ASM_OUT_FILE}/${name}.s ${DEMO_OUT_FILE}/${name}.s`
+    printf "%-106s" "diff ${ASM_OUT_FILE}/${name}.cor ${DEMO_OUT_FILE}/${name}.cor"
+    if [ "$output" = "" ]; then
+      echo "------------------------------------------" >> ${ERRORS_REPORT}
+      echo "$file" >> ${ERRORS_REPORT}
+      echo >> ${ERRORS_REPORT}
+      echo "$output" >> ${ERRORS_REPORT}
+      echo >> ${ERRORS_REPORT}
+      echo "__________________________________________" >> ${ERRORS_REPORT}
+    fi
+    printf " output files: "
+    if [ "$diff_files" = "" ]; then
+      print_ok "OK"
+    else
+      print_error "KO"
+    fi
+    printf "\n\n"
   done
 }
 

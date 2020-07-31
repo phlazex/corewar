@@ -688,6 +688,9 @@
 		<Unit filename="/home/mfahey/corewar/src/asm/ft_project_init.c">
 			<Option target="asm"/>
 		</Unit>
+		<Unit filename="/home/mfahey/corewar/src/asm/ft_route.c">
+			<Option target="asm"/>
+		</Unit>
 		<Unit filename="/home/mfahey/corewar/src/asm/ft_usage.c">
 			<Option target="asm"/>
 		</Unit>
