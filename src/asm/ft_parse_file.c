@@ -66,6 +66,5 @@ int			ft_parse_file(t_mem *mem, t_project *project)
 		}
 	}
 	ft_parse_file_check(project);
-	ft_write_to_file(project);
-	return (0);
+	return (ft_write_to_file(project));
 }

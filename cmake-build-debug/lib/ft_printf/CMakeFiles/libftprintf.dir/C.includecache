@@ -32,55 +32,55 @@ libft_structs.h
 string.h
 -
 
-/Users/mfahey/corewar/lib/ft_printf/src/apply_flags.c
+/home/mfahey/corewar/lib/ft_printf/src/apply_flags.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/data.c
+/home/mfahey/corewar/lib/ft_printf/src/data.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/e_double.c
+/home/mfahey/corewar/lib/ft_printf/src/e_double.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/e_double_tool.c
+/home/mfahey/corewar/lib/ft_printf/src/e_double_tool.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/f_double.c
+/home/mfahey/corewar/lib/ft_printf/src/f_double.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.c
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.c
 unistd.h
 -
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/int_funcions.c
+/home/mfahey/corewar/lib/ft_printf/src/int_funcions.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/parse.c
+/home/mfahey/corewar/lib/ft_printf/src/parse.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/parse_tool.c
+/home/mfahey/corewar/lib/ft_printf/src/parse_tool.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/print_tool.c
+/home/mfahey/corewar/lib/ft_printf/src/print_tool.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 
-/Users/mfahey/corewar/lib/ft_printf/src/string_tool.c
+/home/mfahey/corewar/lib/ft_printf/src/string_tool.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 unistd.h
 -
 
-/Users/mfahey/corewar/lib/ft_printf/src/tools.c
+/home/mfahey/corewar/lib/ft_printf/src/tools.c
 ft_printf.h
-/Users/mfahey/corewar/lib/ft_printf/src/ft_printf.h
+/home/mfahey/corewar/lib/ft_printf/src/ft_printf.h
 

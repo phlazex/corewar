@@ -82,6 +82,9 @@ static void	ft_free_project(t_project *project)
 	project->prog_size = NULL;
 	project->current = NULL;
 	project->end = NULL;
+	project->file_name = NULL;
+	if (project->new_file)
+		ft_strdel(&(project->new_file));
 	ft_memdel((void **)&(project));
 }
 

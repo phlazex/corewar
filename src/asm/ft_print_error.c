@@ -24,7 +24,9 @@ static void	ft_print_current_error_line_first(t_project *project)
 		if (j + 2 >= project->num_error_line - 1 &&
 				j < project->num_error_line + 2)
 		{
-			ft_printf("\n%03zi\t", j + 1);
+			ft_printf("\n%s%03zi%s\t", GRAY, j + 1, RESET);
+			if (j == project->num_error_line - 1)
+				ft_printf(RED);
 			while ((project->data->head)[i] != '\0' &&
 					(project->data->head)[i] != '\n')
 				ft_printf("%c", (project->data->head)[i++]);
@@ -40,19 +42,13 @@ static void	ft_print_current_error_line(t_project *project)
 	size_t	i;
 
 	i = 0;
-	while (i < 50)
-	{
-		ft_printf("-");
-		i++;
-	}
+	while (i < 42)
+		ft_printf("%s-", CYAN, i++);
 	ft_print_current_error_line_first(project);
 	ft_printf("\n");
 	i = 0;
-	while (i < 25)
-	{
-		ft_printf("__");
-		i++;
-	}
+	while (i < 42)
+		ft_printf("%s_", CYAN, i++);
 	ft_printf("\n");
 }
 
@@ -60,7 +56,7 @@ void		ft_get_error_message(
 		t_project *project, int exit_code, char *error_message)
 {
 	if (exit_code == 1)
-		ft_printf("Error: Could not open file\n");
+		ft_printf("Error: Could not open file %s\n", project->file_name);
 	else if (exit_code == 2)
 		ft_printf("Error: Failed to allocate memory\n");
 	else if (exit_code == 3)
@@ -81,5 +77,9 @@ void		ft_get_error_message(
 		ft_printf("Error: Invalid line %zi:\n",
 				project->num_error_line);
 		ft_print_current_error_line(project);
+		if (project->code_error)
+		{
+			ft_printf("%s%s\n", YELLOW, project->code_error);
+		}
 	}
 }

@@ -58,6 +58,7 @@ int			ft_is_valid_line(t_project *project, char *comment)
 		(project->current)++;
 	if (project->current == end_line)
 		return (1);
+	project->code_error = WRONG_CHARACTER;
 	return (0);
 }
 

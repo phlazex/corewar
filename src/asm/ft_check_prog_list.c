@@ -23,6 +23,7 @@ static int	ft_check_command_name(t_project *project)
 			return (i);
 		i++;
 	}
+	project->code_error = UNKNOWN_INSTRUCTION;
 	return (-1);
 }
 

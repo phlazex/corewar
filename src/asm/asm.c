@@ -19,11 +19,12 @@ static int			ft_file_asm_or_dis(char *file)
 	if (file)
 	{
 		length = ft_strlen(file);
-		if (file[length - 1] == 's' && file[length - 2] == '.' && length > 3)
+		if (file[length - 1] == 's' && file[length - 2] == '.' &&
+				file[length - 3] != '/' && length > 3)
 			return (1);
 		else if (file[length - 1] == 'r' && file[length - 2] == 'o' &&
 				file[length - 3] == 'c' && file[length - 4] == '.' &&
-				length > 5)
+				file[length - 5] != '/' && length > 5)
 			return (-1);
 	}
 	return (0);
@@ -63,23 +64,27 @@ static void			ft_dis_asm_route(t_project *project, char *arg1, char *arg2)
 			ft_exit(project, 3, NULL);
 		if (project->option >= -1)
 		{
-			ft_printf(".name \"%s\"\n", project->name);
-			ft_printf(".comment \"%s\"\n\n", project->comment);
-			project->current = project->program;
-			while (project->current < project->end)
-				ft_disassemble(project);
+			if (ft_open_file_for_write(project))
+				ft_exit(project, 3, NULL);
 		}
 		else if (project->option == -2)
 		{
+			project->fd = STDOUT_FILENO;
 			ft_print_memory(
 					project->name, project->end,
 					project->comment, project->program);
 			ft_set_color(white + 2);
-			ft_printf(".name \"%s\"\n", project->name);
-			ft_printf(".comment \"%s\"\n\n", project->comment);
-			project->current = project->program;
-			while (project->current < project->end)
-				ft_disassemble(project);
+		}
+		ft_printf_fd(project->fd, ".name \"%s\"\n", project->name);
+		ft_printf_fd(project->fd, ".comment \"%s\"\n\n", project->comment);
+		project->current = project->program;
+		while (project->current < project->end)
+			ft_disassemble(project);
+		if (project->option >= -1)
+		{
+			close(project->fd);
+			ft_printf("Writing output program to %s\n", project->new_file);
+			ft_exit(project, 0, NULL);
 		}
 	}
 	else

@@ -3,14 +3,19 @@
 //
 
 #ifndef ASM_H
-#define ASM_H
+# define ASM_H
 
-#include <fcntl.h>
-#include <unistd.h>
-#include "libft.h"
-#include "corewar.h"
-#include "corewar_op.h"
-#include <ft_printf.h>
+# define UNKNOWN_INSTRUCTION "Unknown instruction"
+# define WRONG_ARGUMENT_NUMBER "Wrong argument number for an instruction"
+# define WRONG_ARGUMENT_TYPE "Wrong argument type or value for an instruction"
+# define WRONG_CHARACTER "Wrong string"
+
+# include <fcntl.h>
+# include <unistd.h>
+# include "libft.h"
+# include "corewar.h"
+# include "corewar_op.h"
+# include <ft_printf.h>
 
 typedef struct	s_prog_list
 {
@@ -43,11 +48,13 @@ typedef struct s_project
 	char					*current;
 	char					*end;
 	size_t 					num_current_line;
-	size_t					num_error;
+	char					*code_error;
 	size_t					num_error_line;
 	char					*file_name;
 	int						option;
 	int						route;
+	int						fd;
+	char					*new_file;
 }				t_project;
 
 int			ft_project_init(t_project *project, int (*ft_parse)(t_mem *, t_project *));
@@ -88,5 +95,6 @@ int			ft_is_valid_label(t_project *project, char *label, size_t arg_num);
 int			ft_is_arg_func(t_project *project, size_t arg_num, size_t command_size, size_t arg_code);
 int			ft_is_ind_dir_func(t_project *project, size_t arg_num, size_t i);
 int			ft_get_new_word(t_prog_list *prog_list, size_t i, size_t j);
+int			ft_open_file_for_write(t_project *project);
 
 #endif

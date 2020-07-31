@@ -32,26 +32,29 @@ static char	*ft_get_file_name(t_project *project)
 	return (new_file);
 }
 
-int			ft_write_to_file(t_project *project)
+int			ft_open_file_for_write(t_project *project)
 {
-	int		fd;
-	size_t	length;
-	char	*new_file;
-
-	new_file = NULL;
-	if ((new_file = ft_get_file_name(project)))
+	if ((project->new_file = ft_get_file_name(project)))
 	{
-		if ((fd = open(new_file, O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
+		if ((project->fd = open(project->new_file, O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
 			return (1);
 	}
 	else
 		return (1);
+	return (0);
+}
+
+int			ft_write_to_file(t_project *project)
+{
+	size_t	length;
+
+	if (ft_open_file_for_write(project))
+		return (1);
 	length = (size_t)(sizeof(int) * 4 + COMMENT_LENGTH +
 			PROG_NAME_LENGTH + project->size_program);
-	write(fd, project->program, length);
-	close(fd);
-	ft_printf("Writing output program to %s\n", new_file);
-	ft_strdel(&new_file);
+	write(project->fd, project->program, length);
+	close(project->fd);
+	ft_printf("Writing output program to %s\n", project->new_file);
 	ft_exit(project, 0, NULL);
 	return (0);
 }

@@ -87,5 +87,6 @@ int			ft_check_count_args(t_project *project)
 		i++;
 	if (i == g_op_tab[project->current_list->command_num].arg_count)
 		return (1);
+	project->code_error = WRONG_ARGUMENT_NUMBER;
 	return (0);
 }

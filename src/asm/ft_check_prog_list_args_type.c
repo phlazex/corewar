@@ -31,6 +31,7 @@ int		ft_is_ind(t_project *project, size_t arg_num)
 			return (0);
 		return (ft_is_arg_func(project, arg_num, IND_SIZE, IND_CODE));
 	}
+	project->code_error = WRONG_ARGUMENT_TYPE;
 	return (0);
 }
 
@@ -59,6 +60,7 @@ int		ft_is_dir(t_project *project, size_t arg_num)
 					DIR_CODE));
 		}
 	}
+	project->code_error = WRONG_ARGUMENT_TYPE;
 	return (0);
 }
 
@@ -77,5 +79,6 @@ int		ft_is_reg(t_project *project, size_t arg_num)
 		if (ft_atoi(project->current_list->args[arg_num] + 1) > 0)
 			return (ft_is_arg_func(project, arg_num, 1, REG_CODE));
 	}
+	project->code_error = WRONG_ARGUMENT_TYPE;
 	return (0);
 }
