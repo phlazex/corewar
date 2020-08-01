@@ -26,21 +26,20 @@ int		ft_parse_file_dis(t_mem *mem, t_project *project)
 int		ft_project_init(t_project *project,
 		int (*ft_parse)(t_mem *, t_project *))
 {
-	int		fd;
 	t_mem	*data;
 
-	fd = open(project->file_name, O_RDONLY);
+	project->fd = open(project->file_name, O_RDONLY);
 	if (!(data = ft_init_memory()))
 	{
-		close(fd);
+		close(project->fd);
 		ft_exit(project, 2, NULL);
 	}
-	if (fast_read_in_memory(fd, data))
+	if (fast_read_in_memory(project->fd, data))
 	{
-		close(fd);
+		close(project->fd);
 		ft_free_mem(data);
 		ft_exit(project, 1, NULL);
 	}
-	close(fd);
+	close(project->fd);
 	return (((*ft_parse)(data, project)));
 }
