@@ -1,6 +1,6 @@
 
 ------------------------------------------
-checkers/asm_test/champs/slider2.s
+checkers/asm_test/out/slider2.cor, checkers/asm_test/out_demo/slider2.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/slider2.s
@@ -9,7 +9,7 @@ checkers/asm_test/champs/slider2.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Explosive_Kitty.s
+checkers/asm_test/out/Explosive_Kitty.cor, checkers/asm_test/out_demo/Explosive_Kitty.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Explosive_Kitty.s
@@ -18,7 +18,7 @@ checkers/asm_test/champs/Explosive_Kitty.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/TheHarvester.s
+checkers/asm_test/out/TheHarvester.cor, checkers/asm_test/out_demo/TheHarvester.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/TheHarvester.s
@@ -27,7 +27,7 @@ checkers/asm_test/champs/TheHarvester.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Izi_Miaou.s
+checkers/asm_test/out/Izi_Miaou.cor, checkers/asm_test/out_demo/Izi_Miaou.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Izi_Miaou.s
@@ -36,7 +36,7 @@ checkers/asm_test/champs/Izi_Miaou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/master_of_puppets.s
+checkers/asm_test/out/master_of_puppets.cor, checkers/asm_test/out_demo/master_of_puppets.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/master_of_puppets.s
@@ -45,7 +45,7 @@ checkers/asm_test/champs/master_of_puppets.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/ultimate-surrender.s
+checkers/asm_test/out/ultimate-surrender.cor, checkers/asm_test/out_demo/ultimate-surrender.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/ultimate-surrender.s
@@ -54,7 +54,7 @@ checkers/asm_test/champs/ultimate-surrender.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/O-Maley_Miaou.s
+checkers/asm_test/out/O-Maley_Miaou.cor, checkers/asm_test/out_demo/O-Maley_Miaou.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/O-Maley_Miaou.s
@@ -63,7 +63,7 @@ checkers/asm_test/champs/O-Maley_Miaou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/mise_a_jour_windows95.s
+checkers/asm_test/out/mise_a_jour_windows95.cor, checkers/asm_test/out_demo/mise_a_jour_windows95.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/mise_a_jour_windows95.s
@@ -72,7 +72,7 @@ checkers/asm_test/champs/mise_a_jour_windows95.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Wall.s
+checkers/asm_test/out/Wall.cor, checkers/asm_test/out_demo/Wall.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Wall.s
@@ -81,7 +81,7 @@ checkers/asm_test/champs/Wall.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/THUNDER.s
+checkers/asm_test/out/THUNDER.cor, checkers/asm_test/out_demo/THUNDER.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/THUNDER.s
@@ -90,7 +90,7 @@ checkers/asm_test/champs/THUNDER.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Gagnant.s
+checkers/asm_test/out/Gagnant.cor, checkers/asm_test/out_demo/Gagnant.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Gagnant.s
@@ -99,7 +99,7 @@ checkers/asm_test/champs/Gagnant.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/meowluigi.s
+checkers/asm_test/out/meowluigi.cor, checkers/asm_test/out_demo/meowluigi.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/meowluigi.s
@@ -108,7 +108,7 @@ checkers/asm_test/champs/meowluigi.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/le_pet_de_nonne.s
+checkers/asm_test/out/le_pet_de_nonne.cor, checkers/asm_test/out_demo/le_pet_de_nonne.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/le_pet_de_nonne.s
@@ -117,7 +117,7 @@ checkers/asm_test/champs/le_pet_de_nonne.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/turtle.s
+checkers/asm_test/out/turtle.cor, checkers/asm_test/out_demo/turtle.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/turtle.s
@@ -126,7 +126,7 @@ checkers/asm_test/champs/turtle.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/gedeon.s
+checkers/asm_test/out/gedeon.cor, checkers/asm_test/out_demo/gedeon.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/gedeon.s
@@ -135,7 +135,7 @@ checkers/asm_test/champs/gedeon.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/toto.s
+checkers/asm_test/out/toto.cor, checkers/asm_test/out_demo/toto.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/toto.s
@@ -144,7 +144,7 @@ checkers/asm_test/champs/toto.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/doge.s
+checkers/asm_test/out/doge.cor, checkers/asm_test/out_demo/doge.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/doge.s
@@ -153,7 +153,7 @@ checkers/asm_test/champs/doge.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/_honeybadger.s
+checkers/asm_test/out/_honeybadger.cor, checkers/asm_test/out_demo/_honeybadger.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/_honeybadger.s
@@ -162,7 +162,7 @@ checkers/asm_test/champs/_honeybadger.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/sencha.s
+checkers/asm_test/out/sencha.cor, checkers/asm_test/out_demo/sencha.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/sencha.s
@@ -171,7 +171,7 @@ checkers/asm_test/champs/sencha.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Stargate0_1.s
+checkers/asm_test/out/Stargate0_1.cor, checkers/asm_test/out_demo/Stargate0_1.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Stargate0_1.s
@@ -180,7 +180,7 @@ checkers/asm_test/champs/Stargate0_1.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Car.s
+checkers/asm_test/out/Car.cor, checkers/asm_test/out_demo/Car.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Car.s
@@ -189,7 +189,7 @@ checkers/asm_test/champs/Car.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Octobre_Rouge_V4.2.s
+checkers/asm_test/out/Octobre_Rouge_V4.2.cor, checkers/asm_test/out_demo/Octobre_Rouge_V4.2.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Octobre_Rouge_V4.2.s
@@ -198,7 +198,7 @@ checkers/asm_test/champs/Octobre_Rouge_V4.2.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/mortel.s
+checkers/asm_test/out/mortel.cor, checkers/asm_test/out_demo/mortel.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/mortel.s
@@ -207,7 +207,7 @@ checkers/asm_test/champs/mortel.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/42.s
+checkers/asm_test/out/42.cor, checkers/asm_test/out_demo/42.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/42.s
@@ -216,7 +216,7 @@ checkers/asm_test/champs/42.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Rainbow_dash.s
+checkers/asm_test/out/Rainbow_dash.cor, checkers/asm_test/out_demo/Rainbow_dash.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Rainbow_dash.s
@@ -225,7 +225,7 @@ checkers/asm_test/champs/Rainbow_dash.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/loose.s
+checkers/asm_test/out/loose.cor, checkers/asm_test/out_demo/loose.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/loose.s
@@ -234,7 +234,7 @@ checkers/asm_test/champs/loose.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/big_feet.s
+checkers/asm_test/out/big_feet.cor, checkers/asm_test/out_demo/big_feet.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/big_feet.s
@@ -243,7 +243,7 @@ checkers/asm_test/champs/big_feet.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/bee_gees.s
+checkers/asm_test/out/bee_gees.cor, checkers/asm_test/out_demo/bee_gees.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/bee_gees.s
@@ -252,7 +252,7 @@ checkers/asm_test/champs/bee_gees.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/justin_bee.s
+checkers/asm_test/out/justin_bee.cor, checkers/asm_test/out_demo/justin_bee.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/justin_bee.s
@@ -261,7 +261,7 @@ checkers/asm_test/champs/justin_bee.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/ForgottenOne.s
+checkers/asm_test/out/ForgottenOne.cor, checkers/asm_test/out_demo/ForgottenOne.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/ForgottenOne.s
@@ -270,7 +270,7 @@ checkers/asm_test/champs/ForgottenOne.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/sam_2.0.s
+checkers/asm_test/out/sam_2.0.cor, checkers/asm_test/out_demo/sam_2.0.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/sam_2.0.s
@@ -279,7 +279,7 @@ checkers/asm_test/champs/sam_2.0.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/ultima.s
+checkers/asm_test/out/ultima.cor, checkers/asm_test/out_demo/ultima.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/ultima.s
@@ -288,7 +288,7 @@ checkers/asm_test/champs/ultima.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/corelol.s
+checkers/asm_test/out/corelol.cor, checkers/asm_test/out_demo/corelol.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/corelol.s
@@ -297,7 +297,7 @@ checkers/asm_test/champs/corelol.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/tchupka.s
+checkers/asm_test/out/tchupka.cor, checkers/asm_test/out_demo/tchupka.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/tchupka.s
@@ -306,7 +306,7 @@ checkers/asm_test/champs/tchupka.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Kitty_Miaou.s
+checkers/asm_test/out/Kitty_Miaou.cor, checkers/asm_test/out_demo/Kitty_Miaou.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Kitty_Miaou.s
@@ -315,7 +315,7 @@ checkers/asm_test/champs/Kitty_Miaou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/youforkmytralala.s
+checkers/asm_test/out/youforkmytralala.cor, checkers/asm_test/out_demo/youforkmytralala.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/youforkmytralala.s
@@ -324,7 +324,7 @@ checkers/asm_test/champs/youforkmytralala.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/maxidef.s
+checkers/asm_test/out/maxidef.cor, checkers/asm_test/out_demo/maxidef.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/maxidef.s
@@ -333,7 +333,7 @@ checkers/asm_test/champs/maxidef.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/overwatch.s
+checkers/asm_test/out/overwatch.cor, checkers/asm_test/out_demo/overwatch.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/overwatch.s
@@ -342,7 +342,7 @@ checkers/asm_test/champs/overwatch.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Hidden.s
+checkers/asm_test/out/Hidden.cor, checkers/asm_test/out_demo/Hidden.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Hidden.s
@@ -351,7 +351,7 @@ checkers/asm_test/champs/Hidden.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/casimir.s
+checkers/asm_test/out/casimir.cor, checkers/asm_test/out_demo/casimir.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/casimir.s
@@ -360,7 +360,7 @@ checkers/asm_test/champs/casimir.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/gateau.s
+checkers/asm_test/out/gateau.cor, checkers/asm_test/out_demo/gateau.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/gateau.s
@@ -369,7 +369,7 @@ checkers/asm_test/champs/gateau.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Machine-gun.s
+checkers/asm_test/out/Machine-gun.cor, checkers/asm_test/out_demo/Machine-gun.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Machine-gun.s
@@ -378,7 +378,7 @@ checkers/asm_test/champs/Machine-gun.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/run_Kitty_RUN.s
+checkers/asm_test/out/run_Kitty_RUN.cor, checkers/asm_test/out_demo/run_Kitty_RUN.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/run_Kitty_RUN.s
@@ -387,7 +387,7 @@ checkers/asm_test/champs/run_Kitty_RUN.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/pai_mu_tan.s
+checkers/asm_test/out/pai_mu_tan.cor, checkers/asm_test/out_demo/pai_mu_tan.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/pai_mu_tan.s
@@ -396,7 +396,7 @@ checkers/asm_test/champs/pai_mu_tan.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/fast.s
+checkers/asm_test/out/fast.cor, checkers/asm_test/out_demo/fast.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/fast.s
@@ -405,7 +405,7 @@ checkers/asm_test/champs/fast.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/champ.s
+checkers/asm_test/out/champ.cor, checkers/asm_test/out_demo/champ.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/champ.s
@@ -414,7 +414,7 @@ checkers/asm_test/champs/champ.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/katchup.s
+checkers/asm_test/out/katchup.cor, checkers/asm_test/out_demo/katchup.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/katchup.s
@@ -423,7 +423,7 @@ checkers/asm_test/champs/katchup.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/littlepuppy.s
+checkers/asm_test/out/littlepuppy.cor, checkers/asm_test/out_demo/littlepuppy.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/littlepuppy.s
@@ -432,7 +432,7 @@ checkers/asm_test/champs/littlepuppy.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/terminator.s
+checkers/asm_test/out/terminator.cor, checkers/asm_test/out_demo/terminator.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/terminator.s
@@ -441,7 +441,7 @@ checkers/asm_test/champs/terminator.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Kittystrophic.s
+checkers/asm_test/out/Kittystrophic.cor, checkers/asm_test/out_demo/Kittystrophic.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Kittystrophic.s
@@ -450,7 +450,7 @@ checkers/asm_test/champs/Kittystrophic.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/bigzork.s
+checkers/asm_test/out/bigzork.cor, checkers/asm_test/out_demo/bigzork.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/bigzork.s
@@ -459,7 +459,7 @@ checkers/asm_test/champs/bigzork.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/zork.s
+checkers/asm_test/out/zork.cor, checkers/asm_test/out_demo/zork.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/zork.s
@@ -468,7 +468,7 @@ checkers/asm_test/champs/zork.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/_.s
+checkers/asm_test/out/_.cor, checkers/asm_test/out_demo/_.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/_.s
@@ -477,7 +477,7 @@ checkers/asm_test/champs/_.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Eraser.s
+checkers/asm_test/out/Eraser.cor, checkers/asm_test/out_demo/Eraser.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Eraser.s
@@ -486,7 +486,7 @@ checkers/asm_test/champs/Eraser.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/kamelkaze.s
+checkers/asm_test/out/kamelkaze.cor, checkers/asm_test/out_demo/kamelkaze.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/kamelkaze.s
@@ -495,7 +495,7 @@ checkers/asm_test/champs/kamelkaze.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/fluttershy.s
+checkers/asm_test/out/fluttershy.cor, checkers/asm_test/out_demo/fluttershy.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/fluttershy.s
@@ -504,7 +504,7 @@ checkers/asm_test/champs/fluttershy.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Asombra.s
+checkers/asm_test/out/Asombra.cor, checkers/asm_test/out_demo/Asombra.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Asombra.s
@@ -513,7 +513,7 @@ checkers/asm_test/champs/Asombra.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/helltrain.s
+checkers/asm_test/out/helltrain.cor, checkers/asm_test/out_demo/helltrain.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/helltrain.s
@@ -522,7 +522,7 @@ checkers/asm_test/champs/helltrain.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Varimathras.s
+checkers/asm_test/out/Varimathras.cor, checkers/asm_test/out_demo/Varimathras.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Varimathras.s
@@ -531,7 +531,7 @@ checkers/asm_test/champs/Varimathras.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/ex.s
+checkers/asm_test/out/ex.cor, checkers/asm_test/out_demo/ex.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/ex.s
@@ -540,7 +540,7 @@ checkers/asm_test/champs/ex.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/skynet.s
+checkers/asm_test/out/skynet.cor, checkers/asm_test/out_demo/skynet.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/skynet.s
@@ -549,7 +549,7 @@ checkers/asm_test/champs/skynet.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/barriere.s
+checkers/asm_test/out/barriere.cor, checkers/asm_test/out_demo/barriere.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/barriere.s
@@ -558,7 +558,7 @@ checkers/asm_test/champs/barriere.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/lapsang.s
+checkers/asm_test/out/lapsang.cor, checkers/asm_test/out_demo/lapsang.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/lapsang.s
@@ -567,7 +567,7 @@ checkers/asm_test/champs/lapsang.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Douceur_power.s
+checkers/asm_test/out/Douceur_power.cor, checkers/asm_test/out_demo/Douceur_power.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Douceur_power.s
@@ -576,7 +576,7 @@ checkers/asm_test/champs/Douceur_power.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Kappa.s
+checkers/asm_test/out/Kappa.cor, checkers/asm_test/out_demo/Kappa.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Kappa.s
@@ -585,7 +585,7 @@ checkers/asm_test/champs/Kappa.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/dubo.s
+checkers/asm_test/out/dubo.cor, checkers/asm_test/out_demo/dubo.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/dubo.s
@@ -594,7 +594,7 @@ checkers/asm_test/champs/dubo.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/jumper.s
+checkers/asm_test/out/jumper.cor, checkers/asm_test/out_demo/jumper.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/jumper.s
@@ -603,7 +603,7 @@ checkers/asm_test/champs/jumper.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Code_eater.s
+checkers/asm_test/out/Code_eater.cor, checkers/asm_test/out_demo/Code_eater.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Code_eater.s
@@ -612,7 +612,7 @@ checkers/asm_test/champs/Code_eater.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/wave.s
+checkers/asm_test/out/wave.cor, checkers/asm_test/out_demo/wave.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/wave.s
@@ -621,7 +621,7 @@ checkers/asm_test/champs/wave.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Horace.s
+checkers/asm_test/out/Horace.cor, checkers/asm_test/out_demo/Horace.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Horace.s
@@ -630,7 +630,7 @@ checkers/asm_test/champs/Horace.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/darksasuke.s
+checkers/asm_test/out/darksasuke.cor, checkers/asm_test/out_demo/darksasuke.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/darksasuke.s
@@ -639,7 +639,7 @@ checkers/asm_test/champs/darksasuke.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/salamahenagalabadoun.s
+checkers/asm_test/out/salamahenagalabadoun.cor, checkers/asm_test/out_demo/salamahenagalabadoun.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/salamahenagalabadoun.s
@@ -648,7 +648,7 @@ checkers/asm_test/champs/salamahenagalabadoun.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/echo.s
+checkers/asm_test/out/echo.cor, checkers/asm_test/out_demo/echo.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/echo.s
@@ -657,7 +657,7 @@ checkers/asm_test/champs/echo.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/NoIdea.s
+checkers/asm_test/out/NoIdea.cor, checkers/asm_test/out_demo/NoIdea.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/NoIdea.s
@@ -666,7 +666,7 @@ checkers/asm_test/champs/NoIdea.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/jinx.s
+checkers/asm_test/out/jinx.cor, checkers/asm_test/out_demo/jinx.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/jinx.s
@@ -675,7 +675,7 @@ checkers/asm_test/champs/jinx.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/live.s
+checkers/asm_test/out/live.cor, checkers/asm_test/out_demo/live.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/live.s
@@ -684,7 +684,7 @@ checkers/asm_test/champs/live.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Bazou.s
+checkers/asm_test/out/Bazou.cor, checkers/asm_test/out_demo/Bazou.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Bazou.s
@@ -693,7 +693,7 @@ checkers/asm_test/champs/Bazou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/lou_forktologue.s
+checkers/asm_test/out/lou_forktologue.cor, checkers/asm_test/out_demo/lou_forktologue.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/lou_forktologue.s
@@ -702,7 +702,7 @@ checkers/asm_test/champs/lou_forktologue.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/mandragore.s
+checkers/asm_test/out/mandragore.cor, checkers/asm_test/out_demo/mandragore.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/mandragore.s
@@ -711,7 +711,7 @@ checkers/asm_test/champs/mandragore.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/Misaka_Mikoto.s
+checkers/asm_test/out/Misaka_Mikoto.cor, checkers/asm_test/out_demo/Misaka_Mikoto.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/Misaka_Mikoto.s
@@ -720,7 +720,7 @@ checkers/asm_test/champs/Misaka_Mikoto.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/champs/MarineKing.s
+checkers/asm_test/out/MarineKing.cor, checkers/asm_test/out_demo/MarineKing.cor
 
 1c1
 < Writing output program to checkers/asm_test/out/MarineKing.s

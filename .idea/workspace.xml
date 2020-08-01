@@ -36,96 +36,7 @@
     <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check_asm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/error_champs/.cor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/42.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/42.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Asombra.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Asombra.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Bazou.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Bazou.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Car.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Car.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Code_eater.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Code_eater.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Douceur_power.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Douceur_power.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Eraser.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Eraser.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Explosive_Kitty.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Explosive_Kitty.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ForgottenOne.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/ForgottenOne.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Gagnant.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Gagnant.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Hidden.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Hidden.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Horace.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Horace.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Izi_Miaou.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Izi_Miaou.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kappa.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Kappa.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kitty_Miaou.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Kitty_Miaou.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kittystrophic.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Kittystrophic.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Machine-gun.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Machine-gun.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/MarineKing.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/MarineKing.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Misaka_Mikoto.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Misaka_Mikoto.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/NoIdea.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/NoIdea.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/O-Maley_Miaou.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/O-Maley_Miaou.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Octobre_Rouge_V4.2.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Octobre_Rouge_V4.2.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Rainbow_dash.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Rainbow_dash.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Stargate0_1.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Stargate0_1.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/THUNDER.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/THUNDER.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/TheHarvester.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/TheHarvester.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Varimathras.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Varimathras.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Wall.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/Wall.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/_.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_honeybadger.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/_honeybadger.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/barriere.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/barriere.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bee_gees.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/bee_gees.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/big_feet.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/big_feet.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bigzork.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/bigzork.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/casimir.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/casimir.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/champ.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/champ.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/corelol.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/corelol.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/darksasuke.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/darksasuke.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/doge.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/doge.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/echo.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/echo.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ex.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/ex.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fast.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/fast.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fluttershy.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/fluttershy.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gateau.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/gateau.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gedeon.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/gedeon.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/helltrain.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/helltrain.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jinx.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/jinx.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jumper.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/jumper.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/justin_bee.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/justin_bee.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/kamelkaze.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/kamelkaze.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/katchup.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/katchup.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lapsang.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/lapsang.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/le_pet_de_nonne.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/le_pet_de_nonne.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/littlepuppy.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/littlepuppy.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/live.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/live.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/loose.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/loose.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lou_forktologue.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/lou_forktologue.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mandragore.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/mandragore.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/master_of_puppets.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/master_of_puppets.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/maxidef.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/maxidef.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/meowluigi.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/meowluigi.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mise_a_jour_windows95.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/mise_a_jour_windows95.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mortel.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/mortel.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/overwatch.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/overwatch.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/pai_mu_tan.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/pai_mu_tan.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/run_Kitty_RUN.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/run_Kitty_RUN.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/salamahenagalabadoun.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/salamahenagalabadoun.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sam_2.0.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/sam_2.0.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sencha.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/sencha.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/skynet.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/skynet.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/slider2.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/slider2.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/tchupka.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/tchupka.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/terminator.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/terminator.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/toto.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/toto.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/turtle.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/turtle.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultima.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/ultima.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultimate-surrender.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/ultimate-surrender.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/wave.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/wave.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/youforkmytralala.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/youforkmytralala.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/zork.s" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/asm_test/out/zork.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/checkers/check_asm_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/check_asm_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/asm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_disassemble.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_disassemble.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_parse_current_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_parse_current_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_parse_new_line_functions.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_parse_new_line_functions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_print_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_print_error.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_route.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_route.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_write_to_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_write_to_file.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +141,7 @@
       <workItem from="1596117421191" duration="6215000" />
       <workItem from="1596176402216" duration="39371000" />
       <workItem from="1596287018844" duration="934000" />
-      <workItem from="1596298120007" duration="3319000" />
+      <workItem from="1596298120007" duration="10755000" />
     </task>
     <task id="LOCAL-00001" summary="">
       <created>1594907266983</created>
@@ -329,6 +240,10 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="880" y="431" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1594907281691" />
+    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596302912468">
+      <screen x="0" y="586" width="1280" height="438" />
+    </state>
+    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596302912468" />
     <state x="166" y="293" width="938" height="445" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596210242384">
       <screen x="0" y="586" width="1280" height="438" />
     </state>

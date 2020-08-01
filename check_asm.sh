@@ -4,6 +4,7 @@ RED="\x1b[31m"
 GREEN="\x1b[32m"
 YELLOW="\x1b[33m"
 RESET="\x1b[0m"
+BLUE="\e[0;34m"
 
 ASM_EXEC=$1
 DEMO_ASM_EXEC=./demo/linux/asm
@@ -53,32 +54,31 @@ run_all_tests()
     hexdump -vC ${ASM_OUT_FILE}/${name}.cor > ${ASM_OUTPUT}
     hexdump -vC ${DEMO_OUT_FILE}/${name}.cor > ${DEMO_OUTPUT}
     local diff_hexdump=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
-    printf "%-65s" "$file"
-    printf "diff for output: "
+    printf "Launching ${BLUE}./asm${RESET} and ${BLUE}./demo_asm${RESET} with flag ${BLUE}-asm${RESET} for file ${BLUE}$file${RESET}\n"
+    printf "Output files: ${BLUE}${ASM_OUT_FILE}/${name}.cor${RESET} and ${BLUE}${DEMO_OUT_FILE}/${name}.cor${RESET}\n"
+    printf "%-21sDiff for output: "
     if [ "$output" = "" ]; then
       print_ok "OK"
     else
       print_error "KO"
-    fi
-    printf " / output files: "
-    if [ "$diff_files" = "" ]; then
-      print_ok "OK"
-    else
-      print_error "KO"
-    fi
-    printf " / hexdump files: "
-    if [ "$diff_hexdump" = "" ]; then
-      print_ok "OK"
-    else
-      print_error "KO"
-    fi
-    if [[ "$output" != "" || "$diff_files" != "" ]]; then
       echo "------------------------------------------" >> ${ERRORS_REPORT}
       echo "$file" >> ${ERRORS_REPORT}
       echo >> ${ERRORS_REPORT}
       echo "$output" >> ${ERRORS_REPORT}
       echo >> ${ERRORS_REPORT}
       echo "__________________________________________" >> ${ERRORS_REPORT}
+    fi
+    printf " / Diff for output files: "
+    if [ "$diff_files" = "" ]; then
+      print_ok "OK"
+    else
+      print_error "KO"
+    fi
+    printf " / Diff for hexdump files: "
+    if [ "$diff_hexdump" = "" ]; then
+      print_ok "OK"
+    else
+      print_error "KO"
     fi
     printf "\n"
     ${ASM_EXEC} ${ASM_OUT_FILE}/${name}.cor > ${ASM_OUTPUT}
@@ -87,28 +87,39 @@ run_all_tests()
     ${DEMO_ASM_EXEC} ${DEMO_OUT_FILE}/${name}.cor > ${DEMO_OUTPUT}
     local output=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
     local diff_files=`diff -ibB ${ASM_OUT_FILE}/${name}.s ${DEMO_OUT_FILE}/${name}.s`
-    printf "%-102s" "${ASM_OUT_FILE}/${name}.cor ${DEMO_OUT_FILE}/${name}.cor"
-    if [ "$output" != "" ]; then
-      echo "------------------------------------------" >> ${ERRORS_REPORT}
-      echo "$file" >> ${ERRORS_REPORT}
-      echo >> ${ERRORS_REPORT}
-      echo "$output" >> ${ERRORS_REPORT}
-      echo >> ${ERRORS_REPORT}
-      echo "__________________________________________" >> ${ERRORS_REPORT}
-    fi
-    printf "diff output files: "
+    hexdump -vC ${ASM_OUT_FILE}/${name}.s > ${ASM_OUTPUT}
+    hexdump -vC ${DEMO_OUT_FILE}/${name}.s > ${DEMO_OUTPUT}
+    local diff_hexdump=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
+    printf "Launching ${BLUE}./asm${RESET} and ${BLUE}./demo_asm${RESET} with flag ${BLUE}-dis${RESET} for output files\n"
+    printf "New output files: ${BLUE}${ASM_OUT_FILE}/${name}.s${RESET} and ${BLUE}${DEMO_OUT_FILE}/${name}.s${RESET}\n"
+    echo "------------------------------------------" >> ${ERRORS_REPORT}
+    echo "${ASM_OUT_FILE}/${name}.cor, ${DEMO_OUT_FILE}/${name}.cor" >> ${ERRORS_REPORT}
+    echo >> ${ERRORS_REPORT}
+    echo "$output" >> ${ERRORS_REPORT}
+    echo >> ${ERRORS_REPORT}
+    echo "__________________________________________" >> ${ERRORS_REPORT}
+    printf "%-43sDiff for output files: "
     if [ "$diff_files" = "" ]; then
+      print_ok "OK"
+    else
+      print_error "KO"
+    fi
+    printf " / Diff for hexdump files: "
+    if [ "$diff_hexdump" = "" ]; then
       print_ok "OK"
     else
       print_error "KO"
     fi
     printf "\n\n"
   done
+  printf "${BLUE}./asm${RESET} = ${YELLOW}${ASM_EXEC}${RESET}, ${BLUE}./demo_asm = ${YELLOW}${DEMO_ASM_EXEC}${RESET}\n"
+  printf "\t${BLUE}-asm${RESET}\tTo convert assembler file to byte code\n"
+  printf "\t${BLUE}-dis${RESET}\tTo convert byte code to assembler file\n"
 }
 
 print_usage_and_exit()
 {
-	printf "%s\n" "Usage: ./check_errors.sh exec"
+	printf "%s\n" "Usage: ./check_asm.sh exec"
 	printf "%s\n" "  -exec   Path to executable"
 	exit
 }
