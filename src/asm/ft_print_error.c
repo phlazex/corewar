@@ -78,8 +78,6 @@ void		ft_get_error_message(
 				project->num_error_line);
 		ft_print_current_error_line(project);
 		if (project->code_error)
-		{
 			ft_printf("%s%s\n", YELLOW, project->code_error);
-		}
 	}
 }

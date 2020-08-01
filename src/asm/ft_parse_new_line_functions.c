@@ -73,10 +73,7 @@ static int	ft_get_new_word_else(t_prog_list *prog_list, size_t i, size_t j)
 	char	*word;
 
 	if ((word = ft_strsub(prog_list->new_line, i - j, j)))
-	{
-//			ft_printf("|%s|", ft_strsub(prog_list->new_line, i - j, j));
 		;
-	}
 	if (!prog_list->args[0])
 		prog_list->args[0] = ft_word_without_space(word);
 	else if (!prog_list->args[1])
@@ -84,10 +81,7 @@ static int	ft_get_new_word_else(t_prog_list *prog_list, size_t i, size_t j)
 	else if (!prog_list->args[2])
 		prog_list->args[2] = ft_word_without_space(word);
 	else if (prog_list->args[0] && prog_list->args[1] && prog_list->args[2])
-	{
-		ft_printf("ERROR4|"); //Не верное количество аргуметов команды
 		return (1);
-	}
 	return (0);
 }
 

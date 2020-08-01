@@ -25,14 +25,14 @@ static void	ft_parse_current_else(t_project *project, char *comment)
 		else if (!project->prog_list)
 		{
 			if (!(project->prog_list = ft_init_prog_list(project, comment)))
-				ft_printf("ERROR7|"); //Ошибка памяти
+				ft_exit(project, 2, NULL);
 			project->current_list = project->prog_list;
 		}
 		else if (project->prog_list)
 		{
 			if (!(project->current_list->next_list =
 					ft_init_prog_list(project, comment)))
-				ft_printf("ERROR8|"); //Ошибка
+				ft_exit(project, 2, NULL);
 			project->current_list = project->current_list->next_list;
 		}
 	}
@@ -62,14 +62,14 @@ static void	ft_parse_current_if(
 			(!comment || data_cmd < comment))
 	{
 		if (!ft_get_name_comment(project, data_cmd, comment, NAME_CMD_STRING))
-			ft_printf("ERROR11|"); //Не конец проверяемой строки
+			ft_exit(project, 3, NULL);
 	}
 	else if ((data_cmd = ft_get_str(project, COMMENT_CMD_STRING)) &&
 			(!comment || data_cmd < comment))
 	{
 		if (!ft_get_name_comment(
 				project, data_cmd, comment, COMMENT_CMD_STRING))
-			ft_printf("ERROR12|"); //Не конец проверяемой строки
+			ft_exit(project, 3, NULL);
 	}
 	else
 		ft_parse_current_if_else(project, comment);

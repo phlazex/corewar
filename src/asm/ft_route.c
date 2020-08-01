@@ -23,8 +23,8 @@ static int	ft_file_asm_or_dis(char *file)
 			file[length - 3] != '/' && length > 3)
 			return (1);
 		else if (file[length - 1] == 'r' && file[length - 2] == 'o' &&
-				 file[length - 3] == 'c' && file[length - 4] == '.' &&
-				 file[length - 5] != '/' && length > 5)
+				file[length - 3] == 'c' && file[length - 4] == '.' &&
+				file[length - 5] != '/' && length > 5)
 			return (-1);
 	}
 	return (0);

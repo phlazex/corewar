@@ -36,7 +36,8 @@ int			ft_open_file_for_write(t_project *project)
 {
 	if ((project->new_file = ft_get_file_name(project)))
 	{
-		if ((project->fd = open(project->new_file, O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
+		if ((project->fd = open(project->new_file,
+				O_WRONLY | O_TRUNC | O_CREAT, 0666)) <= 0)
 			return (1);
 	}
 	else

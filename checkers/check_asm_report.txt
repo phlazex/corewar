@@ -1,1 +1,730 @@
 
+------------------------------------------
+checkers/asm_test/champs/slider2.s
+
+1c1
+< Writing output program to checkers/asm_test/out/slider2.s
+---
+> Writing output program to checkers/asm_test/out_demo/slider2.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Explosive_Kitty.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Explosive_Kitty.s
+---
+> Writing output program to checkers/asm_test/out_demo/Explosive_Kitty.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/TheHarvester.s
+
+1c1
+< Writing output program to checkers/asm_test/out/TheHarvester.s
+---
+> Writing output program to checkers/asm_test/out_demo/TheHarvester.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Izi_Miaou.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Izi_Miaou.s
+---
+> Writing output program to checkers/asm_test/out_demo/Izi_Miaou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/master_of_puppets.s
+
+1c1
+< Writing output program to checkers/asm_test/out/master_of_puppets.s
+---
+> Writing output program to checkers/asm_test/out_demo/master_of_puppets.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/ultimate-surrender.s
+
+1c1
+< Writing output program to checkers/asm_test/out/ultimate-surrender.s
+---
+> Writing output program to checkers/asm_test/out_demo/ultimate-surrender.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/O-Maley_Miaou.s
+
+1c1
+< Writing output program to checkers/asm_test/out/O-Maley_Miaou.s
+---
+> Writing output program to checkers/asm_test/out_demo/O-Maley_Miaou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/mise_a_jour_windows95.s
+
+1c1
+< Writing output program to checkers/asm_test/out/mise_a_jour_windows95.s
+---
+> Writing output program to checkers/asm_test/out_demo/mise_a_jour_windows95.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Wall.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Wall.s
+---
+> Writing output program to checkers/asm_test/out_demo/Wall.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/THUNDER.s
+
+1c1
+< Writing output program to checkers/asm_test/out/THUNDER.s
+---
+> Writing output program to checkers/asm_test/out_demo/THUNDER.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Gagnant.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Gagnant.s
+---
+> Writing output program to checkers/asm_test/out_demo/Gagnant.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/meowluigi.s
+
+1c1
+< Writing output program to checkers/asm_test/out/meowluigi.s
+---
+> Writing output program to checkers/asm_test/out_demo/meowluigi.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/le_pet_de_nonne.s
+
+1c1
+< Writing output program to checkers/asm_test/out/le_pet_de_nonne.s
+---
+> Writing output program to checkers/asm_test/out_demo/le_pet_de_nonne.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/turtle.s
+
+1c1
+< Writing output program to checkers/asm_test/out/turtle.s
+---
+> Writing output program to checkers/asm_test/out_demo/turtle.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/gedeon.s
+
+1c1
+< Writing output program to checkers/asm_test/out/gedeon.s
+---
+> Writing output program to checkers/asm_test/out_demo/gedeon.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/toto.s
+
+1c1
+< Writing output program to checkers/asm_test/out/toto.s
+---
+> Writing output program to checkers/asm_test/out_demo/toto.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/doge.s
+
+1c1
+< Writing output program to checkers/asm_test/out/doge.s
+---
+> Writing output program to checkers/asm_test/out_demo/doge.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/_honeybadger.s
+
+1c1
+< Writing output program to checkers/asm_test/out/_honeybadger.s
+---
+> Writing output program to checkers/asm_test/out_demo/_honeybadger.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/sencha.s
+
+1c1
+< Writing output program to checkers/asm_test/out/sencha.s
+---
+> Writing output program to checkers/asm_test/out_demo/sencha.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Stargate0_1.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Stargate0_1.s
+---
+> Writing output program to checkers/asm_test/out_demo/Stargate0_1.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Car.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Car.s
+---
+> Writing output program to checkers/asm_test/out_demo/Car.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Octobre_Rouge_V4.2.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Octobre_Rouge_V4.2.s
+---
+> Writing output program to checkers/asm_test/out_demo/Octobre_Rouge_V4.2.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/mortel.s
+
+1c1
+< Writing output program to checkers/asm_test/out/mortel.s
+---
+> Writing output program to checkers/asm_test/out_demo/mortel.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/42.s
+
+1c1
+< Writing output program to checkers/asm_test/out/42.s
+---
+> Writing output program to checkers/asm_test/out_demo/42.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Rainbow_dash.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Rainbow_dash.s
+---
+> Writing output program to checkers/asm_test/out_demo/Rainbow_dash.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/loose.s
+
+1c1
+< Writing output program to checkers/asm_test/out/loose.s
+---
+> Writing output program to checkers/asm_test/out_demo/loose.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/big_feet.s
+
+1c1
+< Writing output program to checkers/asm_test/out/big_feet.s
+---
+> Writing output program to checkers/asm_test/out_demo/big_feet.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/bee_gees.s
+
+1c1
+< Writing output program to checkers/asm_test/out/bee_gees.s
+---
+> Writing output program to checkers/asm_test/out_demo/bee_gees.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/justin_bee.s
+
+1c1
+< Writing output program to checkers/asm_test/out/justin_bee.s
+---
+> Writing output program to checkers/asm_test/out_demo/justin_bee.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/ForgottenOne.s
+
+1c1
+< Writing output program to checkers/asm_test/out/ForgottenOne.s
+---
+> Writing output program to checkers/asm_test/out_demo/ForgottenOne.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/sam_2.0.s
+
+1c1
+< Writing output program to checkers/asm_test/out/sam_2.0.s
+---
+> Writing output program to checkers/asm_test/out_demo/sam_2.0.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/ultima.s
+
+1c1
+< Writing output program to checkers/asm_test/out/ultima.s
+---
+> Writing output program to checkers/asm_test/out_demo/ultima.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/corelol.s
+
+1c1
+< Writing output program to checkers/asm_test/out/corelol.s
+---
+> Writing output program to checkers/asm_test/out_demo/corelol.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/tchupka.s
+
+1c1
+< Writing output program to checkers/asm_test/out/tchupka.s
+---
+> Writing output program to checkers/asm_test/out_demo/tchupka.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Kitty_Miaou.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Kitty_Miaou.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kitty_Miaou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/youforkmytralala.s
+
+1c1
+< Writing output program to checkers/asm_test/out/youforkmytralala.s
+---
+> Writing output program to checkers/asm_test/out_demo/youforkmytralala.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/maxidef.s
+
+1c1
+< Writing output program to checkers/asm_test/out/maxidef.s
+---
+> Writing output program to checkers/asm_test/out_demo/maxidef.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/overwatch.s
+
+1c1
+< Writing output program to checkers/asm_test/out/overwatch.s
+---
+> Writing output program to checkers/asm_test/out_demo/overwatch.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Hidden.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Hidden.s
+---
+> Writing output program to checkers/asm_test/out_demo/Hidden.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/casimir.s
+
+1c1
+< Writing output program to checkers/asm_test/out/casimir.s
+---
+> Writing output program to checkers/asm_test/out_demo/casimir.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/gateau.s
+
+1c1
+< Writing output program to checkers/asm_test/out/gateau.s
+---
+> Writing output program to checkers/asm_test/out_demo/gateau.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Machine-gun.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Machine-gun.s
+---
+> Writing output program to checkers/asm_test/out_demo/Machine-gun.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/run_Kitty_RUN.s
+
+1c1
+< Writing output program to checkers/asm_test/out/run_Kitty_RUN.s
+---
+> Writing output program to checkers/asm_test/out_demo/run_Kitty_RUN.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/pai_mu_tan.s
+
+1c1
+< Writing output program to checkers/asm_test/out/pai_mu_tan.s
+---
+> Writing output program to checkers/asm_test/out_demo/pai_mu_tan.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/fast.s
+
+1c1
+< Writing output program to checkers/asm_test/out/fast.s
+---
+> Writing output program to checkers/asm_test/out_demo/fast.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/champ.s
+
+1c1
+< Writing output program to checkers/asm_test/out/champ.s
+---
+> Writing output program to checkers/asm_test/out_demo/champ.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/katchup.s
+
+1c1
+< Writing output program to checkers/asm_test/out/katchup.s
+---
+> Writing output program to checkers/asm_test/out_demo/katchup.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/littlepuppy.s
+
+1c1
+< Writing output program to checkers/asm_test/out/littlepuppy.s
+---
+> Writing output program to checkers/asm_test/out_demo/littlepuppy.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/terminator.s
+
+1c1
+< Writing output program to checkers/asm_test/out/terminator.s
+---
+> Writing output program to checkers/asm_test/out_demo/terminator.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Kittystrophic.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Kittystrophic.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kittystrophic.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/bigzork.s
+
+1c1
+< Writing output program to checkers/asm_test/out/bigzork.s
+---
+> Writing output program to checkers/asm_test/out_demo/bigzork.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/zork.s
+
+1c1
+< Writing output program to checkers/asm_test/out/zork.s
+---
+> Writing output program to checkers/asm_test/out_demo/zork.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/_.s
+
+1c1
+< Writing output program to checkers/asm_test/out/_.s
+---
+> Writing output program to checkers/asm_test/out_demo/_.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Eraser.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Eraser.s
+---
+> Writing output program to checkers/asm_test/out_demo/Eraser.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/kamelkaze.s
+
+1c1
+< Writing output program to checkers/asm_test/out/kamelkaze.s
+---
+> Writing output program to checkers/asm_test/out_demo/kamelkaze.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/fluttershy.s
+
+1c1
+< Writing output program to checkers/asm_test/out/fluttershy.s
+---
+> Writing output program to checkers/asm_test/out_demo/fluttershy.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Asombra.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Asombra.s
+---
+> Writing output program to checkers/asm_test/out_demo/Asombra.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/helltrain.s
+
+1c1
+< Writing output program to checkers/asm_test/out/helltrain.s
+---
+> Writing output program to checkers/asm_test/out_demo/helltrain.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Varimathras.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Varimathras.s
+---
+> Writing output program to checkers/asm_test/out_demo/Varimathras.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/ex.s
+
+1c1
+< Writing output program to checkers/asm_test/out/ex.s
+---
+> Writing output program to checkers/asm_test/out_demo/ex.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/skynet.s
+
+1c1
+< Writing output program to checkers/asm_test/out/skynet.s
+---
+> Writing output program to checkers/asm_test/out_demo/skynet.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/barriere.s
+
+1c1
+< Writing output program to checkers/asm_test/out/barriere.s
+---
+> Writing output program to checkers/asm_test/out_demo/barriere.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/lapsang.s
+
+1c1
+< Writing output program to checkers/asm_test/out/lapsang.s
+---
+> Writing output program to checkers/asm_test/out_demo/lapsang.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Douceur_power.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Douceur_power.s
+---
+> Writing output program to checkers/asm_test/out_demo/Douceur_power.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Kappa.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Kappa.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kappa.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/dubo.s
+
+1c1
+< Writing output program to checkers/asm_test/out/dubo.s
+---
+> Writing output program to checkers/asm_test/out_demo/dubo.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/jumper.s
+
+1c1
+< Writing output program to checkers/asm_test/out/jumper.s
+---
+> Writing output program to checkers/asm_test/out_demo/jumper.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Code_eater.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Code_eater.s
+---
+> Writing output program to checkers/asm_test/out_demo/Code_eater.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/wave.s
+
+1c1
+< Writing output program to checkers/asm_test/out/wave.s
+---
+> Writing output program to checkers/asm_test/out_demo/wave.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Horace.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Horace.s
+---
+> Writing output program to checkers/asm_test/out_demo/Horace.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/darksasuke.s
+
+1c1
+< Writing output program to checkers/asm_test/out/darksasuke.s
+---
+> Writing output program to checkers/asm_test/out_demo/darksasuke.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/salamahenagalabadoun.s
+
+1c1
+< Writing output program to checkers/asm_test/out/salamahenagalabadoun.s
+---
+> Writing output program to checkers/asm_test/out_demo/salamahenagalabadoun.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/echo.s
+
+1c1
+< Writing output program to checkers/asm_test/out/echo.s
+---
+> Writing output program to checkers/asm_test/out_demo/echo.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/NoIdea.s
+
+1c1
+< Writing output program to checkers/asm_test/out/NoIdea.s
+---
+> Writing output program to checkers/asm_test/out_demo/NoIdea.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/jinx.s
+
+1c1
+< Writing output program to checkers/asm_test/out/jinx.s
+---
+> Writing output program to checkers/asm_test/out_demo/jinx.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/live.s
+
+1c1
+< Writing output program to checkers/asm_test/out/live.s
+---
+> Writing output program to checkers/asm_test/out_demo/live.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Bazou.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Bazou.s
+---
+> Writing output program to checkers/asm_test/out_demo/Bazou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/lou_forktologue.s
+
+1c1
+< Writing output program to checkers/asm_test/out/lou_forktologue.s
+---
+> Writing output program to checkers/asm_test/out_demo/lou_forktologue.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/mandragore.s
+
+1c1
+< Writing output program to checkers/asm_test/out/mandragore.s
+---
+> Writing output program to checkers/asm_test/out_demo/mandragore.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/Misaka_Mikoto.s
+
+1c1
+< Writing output program to checkers/asm_test/out/Misaka_Mikoto.s
+---
+> Writing output program to checkers/asm_test/out_demo/Misaka_Mikoto.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/champs/MarineKing.s
+
+1c1
+< Writing output program to checkers/asm_test/out/MarineKing.s
+---
+> Writing output program to checkers/asm_test/out_demo/MarineKing.s
+
+__________________________________________
