@@ -36,8 +36,6 @@ static int	ft_get_opt(char *opt)
 	{
 		if (!ft_strcmp(opt, "-asm"))
 			return (1);
-//		else if (!ft_strcmp(opt, "-aout"))
-//			return (2);
 		else if (!ft_strcmp(opt, "-dis"))
 			return (-1);
 		else if (!ft_strcmp(opt, "-dout"))
