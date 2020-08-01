@@ -41,9 +41,17 @@ void	ft_usage(void)
 {
 	ft_logo();
 	ft_printf(E"99mUsage:");
-	ft_printf(" $>./asm [OPTIONS]... [FILE]...\n\n");
-	ft_printf("[FILE] extension must match <file name>.s or <file name>.cor\n");
-	ft_printf("[OPTIONS] mandatory arguments\n\n");
-	ft_printf("-asm - from assembler to bytecode\n");
-	ft_printf("-dis - from bytecode to assembler\n");
+	ft_printf(" $>./asm [OPTION]... [FILE]...\n\n");
+	ft_printf("A program for translating champion code"
+			" written in assembly language into bytecode\n\n");
+	ft_printf("[FILE] extension must match <file name>.s"
+			" or <file name>.cor\n\n");
+	ft_printf("[OPTION] mandatory arguments\n\n");
+	ft_printf("    -asm  - to translate assembler files <filename>.s"
+			" into bytecode\n\t    (file <filename>.cor will be created)\n\n");
+	ft_printf("    -dis  - to convert the <filename>.cor bytecode back to an"
+			" assembler file\n\t    (file <filename>.s will be created)\n\n");
+	ft_printf("    -dout - to convert the <filename>.cor bytecode back to an"
+			" assembler file\n\t    (detailed information will be displayed on"
+			" the screen,\n\t    file <file name> .s will not be created)\n\n");
 }

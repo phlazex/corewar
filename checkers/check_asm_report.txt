@@ -1,372 +1,730 @@
 
 ------------------------------------------
-checkers/asm_test/error_champs/sebc.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name    "sebc"
-< [38;5;243m002[0m	.comment "sebc"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m	
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Unexpected token ".extend" COMMAND at [003:001]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/with_null.s
+checkers/asm_test/out/slider2.cor, checkers/asm_test/out_demo/slider2.cor
 
 1c1
-< [1;1H[2JError: Unknown error
+< Writing output program to checkers/asm_test/out/slider2.s
 ---
-> Unexpected token "(null)" NEW_LINE at [001:006]
+> Writing output program to checkers/asm_test/out_demo/slider2.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/tdc3.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name 		"dtonc v1.0pl3"
-< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m		ld	%0x80000000, r6	# moins
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Unexpected token ".extend" COMMAND at [003:001]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/Death.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name "Death"
-< [38;5;243m002[0m	.comment "Fork"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m		st	r1, :l1+1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Lexical error at [005:012]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/wrong_argument_number.s
-
-1,8c1
-< [1;1H[2JError: Invalid line 6:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	[38;5;196mlive:	live	%1, %1
-< [38;5;243m007[0m		zjmp	%:live
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong argument number for an instruction
----
-> Unexpected token "(null)" SEPARATOR at [006:014]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/Survivor.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 10:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m008[0m		zjmp	%:run
-< [38;5;243m009[0m	j1:	
-< [38;5;243m010[0m	[38;5;196mrun:	xor	r0, r0, r0
-< [38;5;243m011[0m	l1:	st	r2, 1
-< [38;5;243m012[0m		live	%1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong argument type or value for an instruction
----
-> Unexpected token "r0" OPERATOR at [010:010]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/with_null_cmd.s
-
-1,8c1
-< [1;1H[2JError: Invalid line 6:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	[38;5;196mlive:	live
-< [38;5;243m007[0m		zjmp	%:live
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong argument number for an instruction
----
-> Unexpected token "(null)" NEW_LINE at [006:011]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/Backward.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name    "sebc"
-< [38;5;243m002[0m	.comment "sebc"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m		st	r1, :l1+1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Lexical error at [005:012]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/no_comment.s
-
-1,8c1
-< [1;1H[2JError: Expected token ".comment" on line 3 not found
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name "zork"
-< [38;5;243m002[0m	
-< [38;5;243m003[0m	[38;5;196ml2:	sti	r1,%:live,%0
-< [38;5;243m004[0m		and	r1,%0,r1
-< [38;5;243m005[0m	live:	live	%1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
----
-> Unexpected token "l2:" LABEL at [003:001]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/tdc2.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name 		"dtonc v1.0pl2"
-< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m		
-< [38;5;243m005[0m	begin:
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Unexpected token ".extend" COMMAND at [003:001]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/no_name.s
-
-1,8c1
-< [1;1H[2JError: Expected token ".name" on line 3 not found
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.comment "just a basic living prog"
-< [38;5;243m002[0m	
-< [38;5;243m003[0m	[38;5;196ml2:	sti	r1,%:live,%0
-< [38;5;243m004[0m		and	r1,%0,r1
-< [38;5;243m005[0m	live:	live	%1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
----
-> Unexpected token "l2:" LABEL at [003:001]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/wrong_character_label.s
-
-1,8c1
-< [1;1H[2JError: Invalid line 6:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	[38;5;196mlIve:	live	%1
-< [38;5;243m007[0m		zjmp	%:live
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Lexical error at [006:002]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/leeloo.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 31:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m029[0m		zjmp %-510
-< [38;5;243m030[0m	deb:	
-< [38;5;243m031[0m	[38;5;196mst1:	st r1,:lastlive1 +1
-< [38;5;243m032[0m	st2:	st r1,:lastlive2 +1
-< [38;5;243m033[0m	st3:	st r1,:lastlive3 +1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Lexical error at [031:023]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/new.s
-
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name	"Leeloo"
-< [38;5;243m002[0m	.comment "Multipass"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m		
-< [38;5;243m005[0m	begin:	ld %0,r6
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
----
-> Lexical error at [032:023]
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/error_champs/no_name_comment.s
+checkers/asm_test/out/Explosive_Kitty.cor, checkers/asm_test/out_demo/Explosive_Kitty.cor
 
 1c1
-< [1;1H[2JError: The expected tokens ".name" and ".comment" are missing
+< Writing output program to checkers/asm_test/out/Explosive_Kitty.s
 ---
-> Unexpected token "l2:" LABEL at [001:001]
+> Writing output program to checkers/asm_test/out_demo/Explosive_Kitty.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/Torpille.s
+checkers/asm_test/out/TheHarvester.cor, checkers/asm_test/out_demo/TheHarvester.cor
 
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name "Torpille"
-< [38;5;243m002[0m	.comment "by sebc"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m		xor	r4,r4,r4
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
+1c1
+< Writing output program to checkers/asm_test/out/TheHarvester.s
 ---
-> Lexical error at [008:013]
+> Writing output program to checkers/asm_test/out_demo/TheHarvester.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/wrong_type_argument.s
+checkers/asm_test/out/Izi_Miaou.cor, checkers/asm_test/out_demo/Izi_Miaou.cor
 
-1,8c1
-< [1;1H[2JError: Invalid line 6:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	[38;5;196mlive:	live	r1
-< [38;5;243m007[0m		zjmp	%:live
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong argument type or value for an instruction
+1c1
+< Writing output program to checkers/asm_test/out/Izi_Miaou.s
 ---
-> Invalid type of parameter #1 for instruction "live" at [006:012]
+> Writing output program to checkers/asm_test/out_demo/Izi_Miaou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/tdc4.s
+checkers/asm_test/out/master_of_puppets.cor, checkers/asm_test/out_demo/master_of_puppets.cor
 
-1,9c1
-< [1;1H[2JError: Invalid line 3:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name 		"dtonc v1.0pl4"
-< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
-< [38;5;243m003[0m	[38;5;196m.extend
-< [38;5;243m004[0m	
-< [38;5;243m005[0m	
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
+1c1
+< Writing output program to checkers/asm_test/out/master_of_puppets.s
 ---
-> Lexical error at [007:013]
+> Writing output program to checkers/asm_test/out_demo/master_of_puppets.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/unexisting_label.s
+checkers/asm_test/out/ultimate-surrender.cor, checkers/asm_test/out_demo/ultimate-surrender.cor
 
-1,7c1,2
-< [1;1H[2JError: Invalid line 7:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	live:	live	%1
-< [38;5;243m007[0m	[38;5;196m	zjmp	%:livz
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong argument type or value for an instruction
+1c1
+< Writing output program to checkers/asm_test/out/ultimate-surrender.s
 ---
-> Undeclared label "livz" is mentioned at:
-> 	— [007:007]
+> Writing output program to checkers/asm_test/out_demo/ultimate-surrender.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/unknown_instruction.s
+checkers/asm_test/out/O-Maley_Miaou.cor, checkers/asm_test/out_demo/O-Maley_Miaou.cor
 
-1,9c1
-< [1;1H[2JError: Invalid line 4:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m002[0m	.comment "just a basic living prog"
-< [38;5;243m003[0m	
-< [38;5;243m004[0m	[38;5;196ml2:	ste	r1,%:live,%0
-< [38;5;243m005[0m		and	r1,%0,r1
-< [38;5;243m006[0m	live:	live	%1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mUnknown instruction
+1c1
+< Writing output program to checkers/asm_test/out/O-Maley_Miaou.s
 ---
-> Unknown operator "ste"at [004:005]
+> Writing output program to checkers/asm_test/out_demo/O-Maley_Miaou.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/lde.s
+checkers/asm_test/out/mise_a_jour_windows95.cor, checkers/asm_test/out_demo/mise_a_jour_windows95.cor
 
-1,7c1
-< [1;1H[2JError: Expected token ".comment" on line 2 not found
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m001[0m	.name	"LDE LDE LDE"
-< [38;5;243m002[0m	[38;5;196m	ld %0,r6
-< [38;5;243m003[0m		sti r1,%:suitb,%1
-< [38;5;243m004[0m		sti r1,%:suitb,%6
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+1c1
+< Writing output program to checkers/asm_test/out/mise_a_jour_windows95.s
 ---
-> Unexpected token "ld" OPERATOR at [002:002]
+> Writing output program to checkers/asm_test/out_demo/mise_a_jour_windows95.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/.s
+checkers/asm_test/out/Wall.cor, checkers/asm_test/out_demo/Wall.cor
 
-1,16d0
-< [1;1H[2J
-< 	[38;5;93m █[38;5;57m█████[38;5;12m╗ ███[38;5;27m█[38;5;27m██[38;5;33m╗ [38;5;45m███[38;5;50m██[38;5;49m█[38;5;48m╗ [38;5;47m███[38;5;46m███[38;5;82m█╗█[38;5;118m█╗ [38;5;190m  [38;5;11m █[38;5;220m█╗ [38;5;214m███[38;5;208m██[38;5;202m╗ ████[38;5;196m██╗ 
-< 	[38;5;128m█[38;5;92m█[38;5;93m╔═[38;5;57m═══╝█[38;5;12m█╔═══[38;5;27m██╗[38;5;33m█[38;5;39m█[38;5;45m╔══[38;5;50m██[38;5;49m╗[38;5;48m██[38;5;47m╔══[38;5;46m══╝[38;5;82m██║   [38;5;190m █[38;5;11m█║[38;5;220m██╔[38;5;214m══█[38;5;208m█╗[38;5;202m██╔══█[38;5;196m█╗
-< 	[38;5;126m█[38;5;127m█[38;5;128m║   [38;5;57m  ██║[38;5;12m   ██[38;5;27m║██[38;5;33m█[38;5;39m█[38;5;45m██╔[38;5;50m╝█[38;5;49m█[38;5;48m██[38;5;47m█╗ [38;5;46m ██[38;5;82m║ █[38;5;118m╗ [38;5;154m█[38;5;190m█║[38;5;11m██[38;5;220m███[38;5;214m██║[38;5;208m██[38;5;202m████╔╝
-< 	[38;5;161m██[38;5;126m║     [38;5;57m██║  [38;5;12m ██║█[38;5;27m█╔═[38;5;33m═[38;5;39m█[38;5;45m█╗█[38;5;50m█╔[38;5;49m═[38;5;48m═╝[38;5;47m  █[38;5;46m█║█[38;5;82m██╗[38;5;118m██[38;5;154m║[38;5;190m██[38;5;11m╔═[38;5;220m═██[38;5;214m║██[38;5;208m╔═[38;5;202m═██╗
-< 	[38;5;196m╚[38;5;161m███[38;5;126m█[38;5;127m█[38;5;128m█[38;5;92m╗[38;5;93m╚█[38;5;57m█████[38;5;12m╔╝██║[38;5;27m  █[38;5;33m█[38;5;39m║[38;5;45m███[38;5;50m██[38;5;49m█[38;5;48m█╗[38;5;47m╚██[38;5;46m█╔█[38;5;82m██╔[38;5;118m╝█[38;5;154m█[38;5;190m║ [38;5;11m █[38;5;220m█║█[38;5;214m█║ [38;5;208m █[38;5;202m█║
-< 	[38;5;196m ╚═[38;5;161m═══[38;5;126m═[38;5;127m╝ [38;5;92m╚[38;5;93m══[38;5;57m═══╝ [38;5;12m╚═╝  [38;5;27m╚═╝[38;5;33m╚[38;5;39m═[38;5;45m═══[38;5;50m══[38;5;49m╝ [38;5;48m╚[38;5;47m══╝[38;5;46m╚══[38;5;82m╝ ╚[38;5;118m═╝ [38;5;190m ╚[38;5;11m═╝[38;5;220m╚═╝[38;5;214m  ╚[38;5;208m═╝
-< 	                             [38;5;118mASSEMBLER TRANSLATOR v 1.0
-< 
-< [0m[38;5;99mUsage: $>./asm [OPTIONS]... [FILE]...
-< 
-< [FILE] extension must match <file name>.s or <file name>.cor
-< [OPTIONS] mandatory arguments
-< 
-< -asm - from assembler to bytecode
-< -dis - from bytecode to assembler
+1c1
+< Writing output program to checkers/asm_test/out/Wall.s
+---
+> Writing output program to checkers/asm_test/out_demo/Wall.s
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/error_champs/mat.s
+checkers/asm_test/out/THUNDER.cor, checkers/asm_test/out_demo/THUNDER.cor
 
-1,9c1
-< [1;1H[2JError: Invalid line 182:
-< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
-< [38;5;243m180[0m	deb:	fork %12
-< [38;5;243m181[0m		ld %0x70000004,r0
-< [38;5;243m182[0m	[38;5;196m.code 03 FF FF
-< [38;5;243m183[0m		ld %0x08030003,r0
-< [38;5;243m184[0m		live %1
-< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
-< [38;5;226mWrong string
+1c1
+< Writing output program to checkers/asm_test/out/THUNDER.s
 ---
-> Lexical error at [182:010]
+> Writing output program to checkers/asm_test/out_demo/THUNDER.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Gagnant.cor, checkers/asm_test/out_demo/Gagnant.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Gagnant.s
+---
+> Writing output program to checkers/asm_test/out_demo/Gagnant.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/meowluigi.cor, checkers/asm_test/out_demo/meowluigi.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/meowluigi.s
+---
+> Writing output program to checkers/asm_test/out_demo/meowluigi.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/le_pet_de_nonne.cor, checkers/asm_test/out_demo/le_pet_de_nonne.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/le_pet_de_nonne.s
+---
+> Writing output program to checkers/asm_test/out_demo/le_pet_de_nonne.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/turtle.cor, checkers/asm_test/out_demo/turtle.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/turtle.s
+---
+> Writing output program to checkers/asm_test/out_demo/turtle.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/gedeon.cor, checkers/asm_test/out_demo/gedeon.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/gedeon.s
+---
+> Writing output program to checkers/asm_test/out_demo/gedeon.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/toto.cor, checkers/asm_test/out_demo/toto.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/toto.s
+---
+> Writing output program to checkers/asm_test/out_demo/toto.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/doge.cor, checkers/asm_test/out_demo/doge.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/doge.s
+---
+> Writing output program to checkers/asm_test/out_demo/doge.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/_honeybadger.cor, checkers/asm_test/out_demo/_honeybadger.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/_honeybadger.s
+---
+> Writing output program to checkers/asm_test/out_demo/_honeybadger.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/sencha.cor, checkers/asm_test/out_demo/sencha.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/sencha.s
+---
+> Writing output program to checkers/asm_test/out_demo/sencha.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Stargate0_1.cor, checkers/asm_test/out_demo/Stargate0_1.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Stargate0_1.s
+---
+> Writing output program to checkers/asm_test/out_demo/Stargate0_1.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Car.cor, checkers/asm_test/out_demo/Car.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Car.s
+---
+> Writing output program to checkers/asm_test/out_demo/Car.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Octobre_Rouge_V4.2.cor, checkers/asm_test/out_demo/Octobre_Rouge_V4.2.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Octobre_Rouge_V4.2.s
+---
+> Writing output program to checkers/asm_test/out_demo/Octobre_Rouge_V4.2.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/mortel.cor, checkers/asm_test/out_demo/mortel.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/mortel.s
+---
+> Writing output program to checkers/asm_test/out_demo/mortel.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/42.cor, checkers/asm_test/out_demo/42.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/42.s
+---
+> Writing output program to checkers/asm_test/out_demo/42.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Rainbow_dash.cor, checkers/asm_test/out_demo/Rainbow_dash.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Rainbow_dash.s
+---
+> Writing output program to checkers/asm_test/out_demo/Rainbow_dash.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/loose.cor, checkers/asm_test/out_demo/loose.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/loose.s
+---
+> Writing output program to checkers/asm_test/out_demo/loose.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/big_feet.cor, checkers/asm_test/out_demo/big_feet.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/big_feet.s
+---
+> Writing output program to checkers/asm_test/out_demo/big_feet.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/bee_gees.cor, checkers/asm_test/out_demo/bee_gees.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/bee_gees.s
+---
+> Writing output program to checkers/asm_test/out_demo/bee_gees.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/justin_bee.cor, checkers/asm_test/out_demo/justin_bee.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/justin_bee.s
+---
+> Writing output program to checkers/asm_test/out_demo/justin_bee.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/ForgottenOne.cor, checkers/asm_test/out_demo/ForgottenOne.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/ForgottenOne.s
+---
+> Writing output program to checkers/asm_test/out_demo/ForgottenOne.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/sam_2.0.cor, checkers/asm_test/out_demo/sam_2.0.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/sam_2.0.s
+---
+> Writing output program to checkers/asm_test/out_demo/sam_2.0.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/ultima.cor, checkers/asm_test/out_demo/ultima.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/ultima.s
+---
+> Writing output program to checkers/asm_test/out_demo/ultima.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/corelol.cor, checkers/asm_test/out_demo/corelol.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/corelol.s
+---
+> Writing output program to checkers/asm_test/out_demo/corelol.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/tchupka.cor, checkers/asm_test/out_demo/tchupka.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/tchupka.s
+---
+> Writing output program to checkers/asm_test/out_demo/tchupka.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Kitty_Miaou.cor, checkers/asm_test/out_demo/Kitty_Miaou.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Kitty_Miaou.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kitty_Miaou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/youforkmytralala.cor, checkers/asm_test/out_demo/youforkmytralala.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/youforkmytralala.s
+---
+> Writing output program to checkers/asm_test/out_demo/youforkmytralala.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/maxidef.cor, checkers/asm_test/out_demo/maxidef.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/maxidef.s
+---
+> Writing output program to checkers/asm_test/out_demo/maxidef.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/overwatch.cor, checkers/asm_test/out_demo/overwatch.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/overwatch.s
+---
+> Writing output program to checkers/asm_test/out_demo/overwatch.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Hidden.cor, checkers/asm_test/out_demo/Hidden.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Hidden.s
+---
+> Writing output program to checkers/asm_test/out_demo/Hidden.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/casimir.cor, checkers/asm_test/out_demo/casimir.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/casimir.s
+---
+> Writing output program to checkers/asm_test/out_demo/casimir.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/gateau.cor, checkers/asm_test/out_demo/gateau.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/gateau.s
+---
+> Writing output program to checkers/asm_test/out_demo/gateau.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Machine-gun.cor, checkers/asm_test/out_demo/Machine-gun.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Machine-gun.s
+---
+> Writing output program to checkers/asm_test/out_demo/Machine-gun.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/run_Kitty_RUN.cor, checkers/asm_test/out_demo/run_Kitty_RUN.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/run_Kitty_RUN.s
+---
+> Writing output program to checkers/asm_test/out_demo/run_Kitty_RUN.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/pai_mu_tan.cor, checkers/asm_test/out_demo/pai_mu_tan.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/pai_mu_tan.s
+---
+> Writing output program to checkers/asm_test/out_demo/pai_mu_tan.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/fast.cor, checkers/asm_test/out_demo/fast.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/fast.s
+---
+> Writing output program to checkers/asm_test/out_demo/fast.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/champ.cor, checkers/asm_test/out_demo/champ.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/champ.s
+---
+> Writing output program to checkers/asm_test/out_demo/champ.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/katchup.cor, checkers/asm_test/out_demo/katchup.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/katchup.s
+---
+> Writing output program to checkers/asm_test/out_demo/katchup.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/littlepuppy.cor, checkers/asm_test/out_demo/littlepuppy.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/littlepuppy.s
+---
+> Writing output program to checkers/asm_test/out_demo/littlepuppy.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/terminator.cor, checkers/asm_test/out_demo/terminator.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/terminator.s
+---
+> Writing output program to checkers/asm_test/out_demo/terminator.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Kittystrophic.cor, checkers/asm_test/out_demo/Kittystrophic.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Kittystrophic.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kittystrophic.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/bigzork.cor, checkers/asm_test/out_demo/bigzork.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/bigzork.s
+---
+> Writing output program to checkers/asm_test/out_demo/bigzork.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/zork.cor, checkers/asm_test/out_demo/zork.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/zork.s
+---
+> Writing output program to checkers/asm_test/out_demo/zork.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/_.cor, checkers/asm_test/out_demo/_.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/_.s
+---
+> Writing output program to checkers/asm_test/out_demo/_.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Eraser.cor, checkers/asm_test/out_demo/Eraser.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Eraser.s
+---
+> Writing output program to checkers/asm_test/out_demo/Eraser.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/kamelkaze.cor, checkers/asm_test/out_demo/kamelkaze.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/kamelkaze.s
+---
+> Writing output program to checkers/asm_test/out_demo/kamelkaze.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/fluttershy.cor, checkers/asm_test/out_demo/fluttershy.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/fluttershy.s
+---
+> Writing output program to checkers/asm_test/out_demo/fluttershy.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Asombra.cor, checkers/asm_test/out_demo/Asombra.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Asombra.s
+---
+> Writing output program to checkers/asm_test/out_demo/Asombra.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/helltrain.cor, checkers/asm_test/out_demo/helltrain.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/helltrain.s
+---
+> Writing output program to checkers/asm_test/out_demo/helltrain.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Varimathras.cor, checkers/asm_test/out_demo/Varimathras.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Varimathras.s
+---
+> Writing output program to checkers/asm_test/out_demo/Varimathras.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/ex.cor, checkers/asm_test/out_demo/ex.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/ex.s
+---
+> Writing output program to checkers/asm_test/out_demo/ex.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/skynet.cor, checkers/asm_test/out_demo/skynet.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/skynet.s
+---
+> Writing output program to checkers/asm_test/out_demo/skynet.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/barriere.cor, checkers/asm_test/out_demo/barriere.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/barriere.s
+---
+> Writing output program to checkers/asm_test/out_demo/barriere.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/lapsang.cor, checkers/asm_test/out_demo/lapsang.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/lapsang.s
+---
+> Writing output program to checkers/asm_test/out_demo/lapsang.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Douceur_power.cor, checkers/asm_test/out_demo/Douceur_power.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Douceur_power.s
+---
+> Writing output program to checkers/asm_test/out_demo/Douceur_power.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Kappa.cor, checkers/asm_test/out_demo/Kappa.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Kappa.s
+---
+> Writing output program to checkers/asm_test/out_demo/Kappa.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/dubo.cor, checkers/asm_test/out_demo/dubo.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/dubo.s
+---
+> Writing output program to checkers/asm_test/out_demo/dubo.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/jumper.cor, checkers/asm_test/out_demo/jumper.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/jumper.s
+---
+> Writing output program to checkers/asm_test/out_demo/jumper.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Code_eater.cor, checkers/asm_test/out_demo/Code_eater.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Code_eater.s
+---
+> Writing output program to checkers/asm_test/out_demo/Code_eater.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/wave.cor, checkers/asm_test/out_demo/wave.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/wave.s
+---
+> Writing output program to checkers/asm_test/out_demo/wave.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Horace.cor, checkers/asm_test/out_demo/Horace.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Horace.s
+---
+> Writing output program to checkers/asm_test/out_demo/Horace.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/darksasuke.cor, checkers/asm_test/out_demo/darksasuke.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/darksasuke.s
+---
+> Writing output program to checkers/asm_test/out_demo/darksasuke.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/salamahenagalabadoun.cor, checkers/asm_test/out_demo/salamahenagalabadoun.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/salamahenagalabadoun.s
+---
+> Writing output program to checkers/asm_test/out_demo/salamahenagalabadoun.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/echo.cor, checkers/asm_test/out_demo/echo.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/echo.s
+---
+> Writing output program to checkers/asm_test/out_demo/echo.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/NoIdea.cor, checkers/asm_test/out_demo/NoIdea.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/NoIdea.s
+---
+> Writing output program to checkers/asm_test/out_demo/NoIdea.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/jinx.cor, checkers/asm_test/out_demo/jinx.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/jinx.s
+---
+> Writing output program to checkers/asm_test/out_demo/jinx.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/live.cor, checkers/asm_test/out_demo/live.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/live.s
+---
+> Writing output program to checkers/asm_test/out_demo/live.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Bazou.cor, checkers/asm_test/out_demo/Bazou.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Bazou.s
+---
+> Writing output program to checkers/asm_test/out_demo/Bazou.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/lou_forktologue.cor, checkers/asm_test/out_demo/lou_forktologue.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/lou_forktologue.s
+---
+> Writing output program to checkers/asm_test/out_demo/lou_forktologue.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/mandragore.cor, checkers/asm_test/out_demo/mandragore.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/mandragore.s
+---
+> Writing output program to checkers/asm_test/out_demo/mandragore.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/Misaka_Mikoto.cor, checkers/asm_test/out_demo/Misaka_Mikoto.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/Misaka_Mikoto.s
+---
+> Writing output program to checkers/asm_test/out_demo/Misaka_Mikoto.s
+
+__________________________________________
+------------------------------------------
+checkers/asm_test/out/MarineKing.cor, checkers/asm_test/out_demo/MarineKing.cor
+
+1c1
+< Writing output program to checkers/asm_test/out/MarineKing.s
+---
+> Writing output program to checkers/asm_test/out_demo/MarineKing.s
 
 __________________________________________
