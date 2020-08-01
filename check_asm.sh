@@ -54,7 +54,7 @@ run_all_tests()
     hexdump -vC ${ASM_OUT_FILE}/${name}.cor > ${ASM_OUTPUT}
     hexdump -vC ${DEMO_OUT_FILE}/${name}.cor > ${DEMO_OUTPUT}
     local diff_hexdump=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
-    printf "Launching ${BLUE}./asm${RESET} and ${BLUE}./demo_asm${RESET} with flag ${BLUE}-asm${RESET} for file ${BLUE}$file${RESET}\n"
+    printf "Launching ${BLUE}./asm${RESET} with flag ${BLUE}-asm${RESET} and ${BLUE}./demo_asm${RESET} for file ${BLUE}$file${RESET}\n"
     printf "Output files: ${BLUE}${ASM_OUT_FILE}/${name}.cor${RESET} and ${BLUE}${DEMO_OUT_FILE}/${name}.cor${RESET}\n"
     printf "%-21sDiff for output: "
     if [ "$output" = "" ]; then
@@ -90,7 +90,7 @@ run_all_tests()
     hexdump -vC ${ASM_OUT_FILE}/${name}.s > ${ASM_OUTPUT}
     hexdump -vC ${DEMO_OUT_FILE}/${name}.s > ${DEMO_OUTPUT}
     local diff_hexdump=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
-    printf "Launching ${BLUE}./asm${RESET} and ${BLUE}./demo_asm${RESET} with flag ${BLUE}-dis${RESET} for output files\n"
+    printf "Launching ${BLUE}./asm${RESET} with flag ${BLUE}-dis${RESET} and ${BLUE}./demo_asm${RESET} for output files\n"
     printf "New output files: ${BLUE}${ASM_OUT_FILE}/${name}.s${RESET} and ${BLUE}${DEMO_OUT_FILE}/${name}.s${RESET}\n"
     echo "------------------------------------------" >> ${ERRORS_REPORT}
     echo "${ASM_OUT_FILE}/${name}.cor, ${DEMO_OUT_FILE}/${name}.cor" >> ${ERRORS_REPORT}

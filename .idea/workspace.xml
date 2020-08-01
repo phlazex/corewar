@@ -34,10 +34,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/checkers/asm_test/error_champs/with_null.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkers/asm_test/error_champs/with_null_cmd.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/asm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_project_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_project_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_asm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/check_asm_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/check_asm_report.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,7 @@
       <workItem from="1596117421191" duration="6215000" />
       <workItem from="1596176402216" duration="39371000" />
       <workItem from="1596287018844" duration="934000" />
-      <workItem from="1596298120007" duration="11740000" />
+      <workItem from="1596298120007" duration="19885000" />
     </task>
     <task id="LOCAL-00001" summary="">
       <created>1594907266983</created>
@@ -180,11 +181,11 @@
     <state x="490" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3200.1800@0.0.3200.1800" timestamp="1596118916983" />
     <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594914610581" />
     <state x="196" y="586" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596226314980" />
-    <state x="512" y="621" width="635" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596229817463">
+    <state x="512" y="621" width="704" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596319098565">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
     <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1594910759206" />
-    <state x="512" y="621" width="635" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596229817463" />
+    <state x="512" y="621" width="704" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596319098565" />
     <state width="1234" height="429" key="GridCell.Tab.0.bottom" timestamp="1596233602642">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
@@ -237,14 +238,18 @@
       <screen x="0" y="0" width="3200" height="1800" />
     </state>
     <state x="1109" y="539" width="1480" height="1170" key="SettingsEditor/0.0.3200.1800@0.0.3200.1800" timestamp="1596117412333" />
+    <state x="369" y="586" width="542" height="436" key="StructurePopup" timestamp="1596320578500">
+      <screen x="0" y="586" width="1280" height="438" />
+    </state>
+    <state x="369" y="586" width="542" height="436" key="StructurePopup/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596320578500" />
     <state x="880" y="431" key="Vcs.Push.Dialog.v2" timestamp="1594907281691">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="880" y="431" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1594907281691" />
-    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596302912468">
+    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596319012545">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
-    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596302912468" />
+    <state x="250" y="293" width="770" height="445" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596319012545" />
     <state x="166" y="293" width="938" height="445" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596210242384">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
@@ -253,10 +258,10 @@
       <screen x="0" y="586" width="1280" height="438" />
     </state>
     <state x="331" y="251" width="618" height="522" key="find.popup/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596215874745" />
-    <state x="304" y="231" key="run.anything.popup" timestamp="1596300386282">
+    <state x="304" y="231" key="run.anything.popup" timestamp="1596316626375">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
-    <state x="304" y="231" key="run.anything.popup/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596300386282" />
+    <state x="304" y="231" key="run.anything.popup/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596316626375" />
     <state x="303" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595696980270">
       <screen x="0" y="586" width="1280" height="438" />
     </state>
