@@ -20,11 +20,11 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="corewar" targetName="sandbox" />
-      <config projectName="corewar" targetName="asm" />
-      <config projectName="corewar" targetName="libftprintf" />
       <config projectName="corewar" targetName="libft" />
       <config projectName="corewar" targetName="corewar" />
+      <config projectName="corewar" targetName="libftprintf" />
+      <config projectName="corewar" targetName="sandbox" />
+      <config projectName="corewar" targetName="asm" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -35,10 +35,306 @@
   <component name="ChangeListManager">
     <list default="true" id="05fabd1e-eef8-402c-bb8a-e78c4b4bc0e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_asm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/check_asm.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/42.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/42.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Asombra.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Asombra.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Bazou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Bazou.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Car.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Car.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Code_eater.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Code_eater.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Douceur_power.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Douceur_power.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Eraser.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Eraser.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Explosive_Kitty.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Explosive_Kitty.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ForgottenOne.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ForgottenOne.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Gagnant.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Gagnant.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Hidden.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Hidden.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Horace.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Horace.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Izi_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Izi_Miaou.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kappa.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kappa.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kitty_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kitty_Miaou.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kittystrophic.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Kittystrophic.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Machine-gun.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Machine-gun.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/MarineKing.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/MarineKing.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Misaka_Mikoto.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Misaka_Mikoto.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/NoIdea.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/NoIdea.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/O-Maley_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/O-Maley_Miaou.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Octobre_Rouge_V4.2.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Octobre_Rouge_V4.2.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Rainbow_dash.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Rainbow_dash.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Stargate0_1.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Stargate0_1.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/THUNDER.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/THUNDER.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/TheHarvester.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/TheHarvester.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Varimathras.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Varimathras.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Wall.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/Wall.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_honeybadger.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/_honeybadger.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/barriere.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/barriere.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bee_gees.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bee_gees.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/big_feet.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/big_feet.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bigzork.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/bigzork.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/casimir.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/casimir.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/champ.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/champ.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/corelol.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/corelol.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/darksasuke.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/darksasuke.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/doge.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/doge.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/dubo.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/dubo.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/echo.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/echo.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ex.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ex.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fast.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fast.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fluttershy.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/fluttershy.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gateau.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gateau.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gedeon.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/gedeon.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/helltrain.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/helltrain.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jinx.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jinx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jumper.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/jumper.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/justin_bee.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/justin_bee.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/kamelkaze.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/kamelkaze.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/katchup.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/katchup.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lapsang.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lapsang.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/le_pet_de_nonne.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/le_pet_de_nonne.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/littlepuppy.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/littlepuppy.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/live.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/live.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/loose.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/loose.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lou_forktologue.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/lou_forktologue.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mandragore.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mandragore.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/master_of_puppets.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/master_of_puppets.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/maxidef.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/maxidef.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/meowluigi.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/meowluigi.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mise_a_jour_windows95.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mise_a_jour_windows95.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mortel.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/mortel.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/overwatch.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/overwatch.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/pai_mu_tan.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/pai_mu_tan.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/run_Kitty_RUN.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/run_Kitty_RUN.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/salamahenagalabadoun.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/salamahenagalabadoun.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sam_2.0.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sam_2.0.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sencha.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/sencha.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/skynet.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/skynet.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/slider2.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/slider2.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/tchupka.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/tchupka.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/terminator.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/terminator.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/toto.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/toto.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/turtle.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/turtle.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultima.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultima.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultimate-surrender.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/ultimate-surrender.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/wave.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/wave.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/youforkmytralala.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/youforkmytralala.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/zork.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out/zork.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/42.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Asombra.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Bazou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Car.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Code_eater.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Douceur_power.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Eraser.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Explosive_Kitty.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/ForgottenOne.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Gagnant.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Hidden.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Horace.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Izi_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Kappa.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Kitty_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Kittystrophic.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Machine-gun.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/MarineKing.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Misaka_Mikoto.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/NoIdea.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/O-Maley_Miaou.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Octobre_Rouge_V4.2.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Rainbow_dash.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Stargate0_1.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/THUNDER.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/TheHarvester.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Varimathras.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/Wall.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/_.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/_honeybadger.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/barriere.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/bee_gees.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/big_feet.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/bigzork.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/casimir.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/champ.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/corelol.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/darksasuke.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/doge.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/dubo.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/echo.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/ex.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/fast.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/fluttershy.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/gateau.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/gedeon.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/helltrain.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/jinx.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/jumper.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/justin_bee.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/kamelkaze.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/katchup.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/lapsang.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/le_pet_de_nonne.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/littlepuppy.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/live.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/loose.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/lou_forktologue.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/mandragore.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/master_of_puppets.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/maxidef.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/meowluigi.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/mise_a_jour_windows95.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/mortel.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/overwatch.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/pai_mu_tan.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/run_Kitty_RUN.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/salamahenagalabadoun.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/sam_2.0.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/sencha.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/skynet.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/slider2.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/tchupka.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/terminator.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/toto.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/turtle.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/ultima.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/ultimate-surrender.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/wave.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/youforkmytralala.cor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkers/asm_test/out_demo/zork.cor" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/checkers/check_asm_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkers/check_asm_report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/asm.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sandbox.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/asm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asm/ft_usage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/asm/ft_usage.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/CMakeFiles/libftprintf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/libftprintf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/ft_printf/libftprintf.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/CMakeFiles/libft.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libft/libft.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/libft/libft.cbp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +381,7 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.asm">
-    <configuration name="asm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="asm">
+    <configuration name="asm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../42.s/ex.cor" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar" TARGET_NAME="asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar" RUN_TARGET_NAME="asm">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -110,11 +406,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.asm" />
       <item itemvalue="CMake Application.corewar" />
@@ -123,7 +414,7 @@
       <item itemvalue="CMake Application.libft" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -158,6 +449,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -175,9 +476,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="196" y="586" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596322652044">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state x="392" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596371799700">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state x="392" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596371799700" />
     <state x="490" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3200.1800@0.0.3200.1800" timestamp="1596118916983" />
     <state x="744" y="353" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1594914610581" />
     <state x="196" y="586" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596322652044" />
@@ -186,51 +488,59 @@
     </state>
     <state x="1024" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1594910759206" />
     <state x="512" y="621" width="704" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596319098565" />
-    <state width="1234" height="429" key="GridCell.Tab.0.bottom" timestamp="1596233602642">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.0.bottom" timestamp="1596372656963">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656963" />
     <state width="3158" height="436" key="GridCell.Tab.0.bottom/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="382" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564590" />
     <state width="1234" height="429" key="GridCell.Tab.0.bottom/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602642" />
-    <state width="1234" height="429" key="GridCell.Tab.0.center" timestamp="1596233602642">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.0.center" timestamp="1596372656962">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656962" />
     <state width="3158" height="436" key="GridCell.Tab.0.center/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920615" />
     <state width="2518" height="382" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
     <state width="1234" height="429" key="GridCell.Tab.0.center/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602642" />
-    <state width="1234" height="429" key="GridCell.Tab.0.left" timestamp="1596233602642">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.0.left" timestamp="1596372656961">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656961" />
     <state width="3158" height="436" key="GridCell.Tab.0.left/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920614" />
     <state width="2518" height="382" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564588" />
     <state width="1234" height="429" key="GridCell.Tab.0.left/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602642" />
-    <state width="1234" height="429" key="GridCell.Tab.0.right" timestamp="1596233602642">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.0.right" timestamp="1596372656963">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656963" />
     <state width="3158" height="436" key="GridCell.Tab.0.right/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="382" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914564589" />
     <state width="1234" height="429" key="GridCell.Tab.0.right/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602642" />
-    <state width="1234" height="429" key="GridCell.Tab.1.bottom" timestamp="1596233602643">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.1.bottom" timestamp="1596372656964">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656964" />
     <state width="3158" height="436" key="GridCell.Tab.1.bottom/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
     <state width="1234" height="429" key="GridCell.Tab.1.bottom/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602643" />
-    <state width="1234" height="429" key="GridCell.Tab.1.center" timestamp="1596233602643">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.1.center" timestamp="1596372656964">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656964" />
     <state width="3158" height="436" key="GridCell.Tab.1.center/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
     <state width="1234" height="429" key="GridCell.Tab.1.center/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602643" />
-    <state width="1234" height="429" key="GridCell.Tab.1.left" timestamp="1596233602642">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.1.left" timestamp="1596372656963">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656963" />
     <state width="3158" height="436" key="GridCell.Tab.1.left/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920616" />
     <state width="2518" height="470" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562439" />
     <state width="1234" height="429" key="GridCell.Tab.1.left/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602642" />
-    <state width="1234" height="429" key="GridCell.Tab.1.right" timestamp="1596233602643">
-      <screen x="0" y="586" width="1280" height="438" />
+    <state width="2518" height="369" key="GridCell.Tab.1.right" timestamp="1596372656964">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="2518" height="369" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1596372656964" />
     <state width="3158" height="436" key="GridCell.Tab.1.right/0.0.3200.1800@0.0.3200.1800" timestamp="1596118920617" />
     <state width="2518" height="470" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1594914562440" />
     <state width="1234" height="429" key="GridCell.Tab.1.right/1280.559.1366.768/0.586.1280.438@0.586.1280.438" timestamp="1596233602643" />

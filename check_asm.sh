@@ -7,8 +7,8 @@ RESET="\x1b[0m"
 BLUE="\e[0;34m"
 
 ASM_EXEC=$1
-DEMO_ASM_EXEC=./demo/linux/asm
-#DEMO_ASM_EXEC=./demo/vm_champs/asm
+#DEMO_ASM_EXEC=./demo/linux/asm
+DEMO_ASM_EXEC=./demo/vm_champs/asm
 
 CHAMPS_DIR=checkers/asm_test/champs
 DIFF_DIR=checkers/asm_test/out_diff
@@ -56,7 +56,7 @@ run_all_tests()
     local diff_hexdump=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
     printf "Launching ${BLUE}./asm${RESET} with flag ${BLUE}-asm${RESET} and ${BLUE}./demo_asm${RESET} for file ${BLUE}$file${RESET}\n"
     printf "Output files: ${BLUE}${ASM_OUT_FILE}/${name}.cor${RESET} and ${BLUE}${DEMO_OUT_FILE}/${name}.cor${RESET}\n"
-    printf "%-21sDiff for output: "
+    printf "${file}%-21sDiff for output: "
     if [ "$output" = "" ]; then
       print_ok "OK"
     else
@@ -98,7 +98,7 @@ run_all_tests()
     echo "$output" >> ${ERRORS_REPORT}
     echo >> ${ERRORS_REPORT}
     echo "__________________________________________" >> ${ERRORS_REPORT}
-    printf "%-43sDiff for output files: "
+    printf "${file}%-43sDiff for output files: "
     if [ "$diff_files" = "" ]; then
       print_ok "OK"
     else
