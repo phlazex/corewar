@@ -7,8 +7,8 @@ RESET="\x1b[0m"
 BLUE="\e[0;34m"
 
 ASM_EXEC=$1
-DEMO_ASM_EXEC=./demo/linux/asm
-#DEMO_ASM_EXEC=./demo/vm_champs/asm
+#DEMO_ASM_EXEC=./demo/linux/asm
+DEMO_ASM_EXEC=./demo/vm_champs/asm
 
 CHAMPS_DIR=checkers/asm_test/error_champs
 
@@ -48,7 +48,8 @@ run_all_tests()
     printf "\n"
     local error=`sed '1s/^..........//' ${ASM_OUTPUT} | grep '^Error: .'`
     local logo=`sed '1s/^..........//' ${ASM_OUTPUT} | grep 'ASSEMBLER TRANSLATOR v 1.0$'`
-    ${DEMO_ASM_EXEC} ${file} 2> ${DEMO_OUTPUT}
+#    ${DEMO_ASM_EXEC} ${file} 2> ${DEMO_OUTPUT}
+    ${DEMO_ASM_EXEC} ${file} > ${DEMO_OUTPUT}
     local output=`diff -ibB ${ASM_OUTPUT} ${DEMO_OUTPUT}`
     printf "%-80sError found: "
     if [ "$error" != "" -o "$logo" != "" ]; then
