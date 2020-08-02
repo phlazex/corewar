@@ -16,9 +16,8 @@ static int	ft_get_num_label(t_project *project, size_t arg_num)
 {
 	int	num;
 
-	num = 0;
-	if (project->current_list->arg_label_list_ptr[arg_num] <
-			project->current_list)
+	if (project->current_list->arg_label_list_arr[arg_num] <
+			project->current_list->num_line)
 		num = ft_get_prev_num_label(project, arg_num);
 	else
 		num = ft_get_next_num_label(project, arg_num);

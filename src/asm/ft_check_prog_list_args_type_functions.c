@@ -23,7 +23,11 @@ int		ft_is_valid_label(t_project *project, char *label, size_t arg_num)
 		{
 			if (!ft_strcmp(prog_list->label, label) &&
 					!project->current_list->arg_label_list_ptr[arg_num])
+			{
+				project->current_list->arg_label_list_arr[arg_num] =
+						prog_list->num_line;
 				project->current_list->arg_label_list_ptr[arg_num] = prog_list;
+			}
 			else if (!ft_strcmp(prog_list->label, label) &&
 					project->current_list->arg_label_list_ptr[arg_num])
 				return (0);

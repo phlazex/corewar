@@ -1,226 +1,384 @@
 
 ------------------------------------------
-checkers/asm_test/out/42.cor, checkers/asm_test/out_demo/42.cor
+checkers/asm_test/error_champs/.s
 
-1c1
-< Writing output program to checkers/asm_test/out/42.s
+1,27c1
+< [1;1H[2J
+< 	[38;5;93m █[38;5;57m█████[38;5;12m╗ ███[38;5;27m█[38;5;27m██[38;5;33m╗ [38;5;45m███[38;5;50m██[38;5;49m█[38;5;48m╗ [38;5;47m███[38;5;46m███[38;5;82m█╗█[38;5;118m█╗ [38;5;190m  [38;5;11m █[38;5;220m█╗ [38;5;214m███[38;5;208m██[38;5;202m╗ ████[38;5;196m██╗ 
+< 	[38;5;128m█[38;5;92m█[38;5;93m╔═[38;5;57m═══╝█[38;5;12m█╔═══[38;5;27m██╗[38;5;33m█[38;5;39m█[38;5;45m╔══[38;5;50m██[38;5;49m╗[38;5;48m██[38;5;47m╔══[38;5;46m══╝[38;5;82m██║   [38;5;190m █[38;5;11m█║[38;5;220m██╔[38;5;214m══█[38;5;208m█╗[38;5;202m██╔══█[38;5;196m█╗
+< 	[38;5;126m█[38;5;127m█[38;5;128m║   [38;5;57m  ██║[38;5;12m   ██[38;5;27m║██[38;5;33m█[38;5;39m█[38;5;45m██╔[38;5;50m╝█[38;5;49m█[38;5;48m██[38;5;47m█╗ [38;5;46m ██[38;5;82m║ █[38;5;118m╗ [38;5;154m█[38;5;190m█║[38;5;11m██[38;5;220m███[38;5;214m██║[38;5;208m██[38;5;202m████╔╝
+< 	[38;5;161m██[38;5;126m║     [38;5;57m██║  [38;5;12m ██║█[38;5;27m█╔═[38;5;33m═[38;5;39m█[38;5;45m█╗█[38;5;50m█╔[38;5;49m═[38;5;48m═╝[38;5;47m  █[38;5;46m█║█[38;5;82m██╗[38;5;118m██[38;5;154m║[38;5;190m██[38;5;11m╔═[38;5;220m═██[38;5;214m║██[38;5;208m╔═[38;5;202m═██╗
+< 	[38;5;196m╚[38;5;161m███[38;5;126m█[38;5;127m█[38;5;128m█[38;5;92m╗[38;5;93m╚█[38;5;57m█████[38;5;12m╔╝██║[38;5;27m  █[38;5;33m█[38;5;39m║[38;5;45m███[38;5;50m██[38;5;49m█[38;5;48m█╗[38;5;47m╚██[38;5;46m█╔█[38;5;82m██╔[38;5;118m╝█[38;5;154m█[38;5;190m║ [38;5;11m █[38;5;220m█║█[38;5;214m█║ [38;5;208m █[38;5;202m█║
+< 	[38;5;196m ╚═[38;5;161m═══[38;5;126m═[38;5;127m╝ [38;5;92m╚[38;5;93m══[38;5;57m═══╝ [38;5;12m╚═╝  [38;5;27m╚═╝[38;5;33m╚[38;5;39m═[38;5;45m═══[38;5;50m══[38;5;49m╝ [38;5;48m╚[38;5;47m══╝[38;5;46m╚══[38;5;82m╝ ╚[38;5;118m═╝ [38;5;190m ╚[38;5;11m═╝[38;5;220m╚═╝[38;5;214m  ╚[38;5;208m═╝
+< 	                             [38;5;118mASSEMBLER TRANSLATOR v 1.0
+< 
+< [0m[38;5;99mUsage: $>./asm [OPTION]... [FILE]...
+< 
+< A program for translating champion code written in assembly language into bytecode
+< 
+< [FILE] extension must match <file name>.s or <file name>.cor
+< 
+< [OPTION] mandatory arguments
+< 
+<     -asm  - to translate assembler files <filename>.s into bytecode
+< 	    (file <filename>.cor will be created)
+< 
+<     -dis  - to convert the <filename>.cor bytecode back to an assembler file
+< 	    (file <filename>.s will be created)
+< 
+<     -dout - to convert the <filename>.cor bytecode back to an assembler file
+< 	    (detailed information will be displayed on the screen,
+< 	    file <file name> .s will not be created)
+< 
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/_.cor, checkers/asm_test/out_demo/_.cor
+checkers/asm_test/error_champs/Backward.s
 
-1c1
-< Writing output program to checkers/asm_test/out/_.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name    "sebc"
+< [38;5;243m002[0m	.comment "sebc"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m		st	r1, :l1+1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/_honeybadger.cor, checkers/asm_test/out_demo/_honeybadger.cor
+checkers/asm_test/error_champs/Death.s
 
-1c1
-< Writing output program to checkers/asm_test/out/_honeybadger.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name "Death"
+< [38;5;243m002[0m	.comment "Fork"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m		st	r1, :l1+1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Asombra.cor, checkers/asm_test/out_demo/Asombra.cor
+checkers/asm_test/error_champs/lde.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Asombra.s
+1,7c1
+< [1;1H[2JError: Expected token ".comment" on line 2 not found
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name	"LDE LDE LDE"
+< [38;5;243m002[0m	[38;5;196m	ld %0,r6
+< [38;5;243m003[0m		sti r1,%:suitb,%1
+< [38;5;243m004[0m		sti r1,%:suitb,%6
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/barriere.cor, checkers/asm_test/out_demo/barriere.cor
+checkers/asm_test/error_champs/leeloo.s
 
-1c1
-< Writing output program to checkers/asm_test/out/barriere.s
+1,9c1
+< [1;1H[2JError: Invalid line 31:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m029[0m		zjmp %-510
+< [38;5;243m030[0m	deb:	
+< [38;5;243m031[0m	[38;5;196mst1:	st r1,:lastlive1 +1
+< [38;5;243m032[0m	st2:	st r1,:lastlive2 +1
+< [38;5;243m033[0m	st3:	st r1,:lastlive3 +1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Bazou.cor, checkers/asm_test/out_demo/Bazou.cor
+checkers/asm_test/error_champs/mat.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Bazou.s
+1,9c1
+< [1;1H[2JError: Invalid line 182:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m180[0m	deb:	fork %12
+< [38;5;243m181[0m		ld %0x70000004,r0
+< [38;5;243m182[0m	[38;5;196m.code 03 FF FF
+< [38;5;243m183[0m		ld %0x08030003,r0
+< [38;5;243m184[0m		live %1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/bee_gees.cor, checkers/asm_test/out_demo/bee_gees.cor
+checkers/asm_test/error_champs/new.s
 
-1c1
-< Writing output program to checkers/asm_test/out/bee_gees.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name	"Leeloo"
+< [38;5;243m002[0m	.comment "Multipass"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m		
+< [38;5;243m005[0m	begin:	ld %0,r6
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/big_feet.cor, checkers/asm_test/out_demo/big_feet.cor
+checkers/asm_test/error_champs/no_comment.s
 
-1c1
-< Writing output program to checkers/asm_test/out/big_feet.s
+1,8c1
+< [1;1H[2JError: Expected token ".comment" on line 3 not found
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name "zork"
+< [38;5;243m002[0m	
+< [38;5;243m003[0m	[38;5;196ml2:	sti	r1,%:live,%0
+< [38;5;243m004[0m		and	r1,%0,r1
+< [38;5;243m005[0m	live:	live	%1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/bigzork.cor, checkers/asm_test/out_demo/bigzork.cor
+checkers/asm_test/error_champs/no_name.s
 
-1c1
-< Writing output program to checkers/asm_test/out/bigzork.s
+1,8c1
+< [1;1H[2JError: Expected token ".name" on line 3 not found
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.comment "just a basic living prog"
+< [38;5;243m002[0m	
+< [38;5;243m003[0m	[38;5;196ml2:	sti	r1,%:live,%0
+< [38;5;243m004[0m		and	r1,%0,r1
+< [38;5;243m005[0m	live:	live	%1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Car.cor, checkers/asm_test/out_demo/Car.cor
+checkers/asm_test/error_champs/no_name_comment.s
 
 1c1
-< Writing output program to checkers/asm_test/out/Car.s
+< [1;1H[2JError: The expected tokens ".name" and ".comment" are missing
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/casimir.cor, checkers/asm_test/out_demo/casimir.cor
+checkers/asm_test/error_champs/sebc.s
 
-1c1
-< Writing output program to checkers/asm_test/out/casimir.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name    "sebc"
+< [38;5;243m002[0m	.comment "sebc"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m	
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/champ.cor, checkers/asm_test/out_demo/champ.cor
+checkers/asm_test/error_champs/Survivor.s
 
-1c1
-< Writing output program to checkers/asm_test/out/champ.s
+1,9c1
+< [1;1H[2JError: Invalid line 10:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m008[0m		zjmp	%:run
+< [38;5;243m009[0m	j1:	
+< [38;5;243m010[0m	[38;5;196mrun:	xor	r0, r0, r0
+< [38;5;243m011[0m	l1:	st	r2, 1
+< [38;5;243m012[0m		live	%1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong argument type or value for an instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Code_eater.cor, checkers/asm_test/out_demo/Code_eater.cor
+checkers/asm_test/error_champs/tdc2.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Code_eater.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name 		"dtonc v1.0pl2"
+< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m		
+< [38;5;243m005[0m	begin:
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/corelol.cor, checkers/asm_test/out_demo/corelol.cor
+checkers/asm_test/error_champs/tdc3.s
 
-1c1
-< Writing output program to checkers/asm_test/out/corelol.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name 		"dtonc v1.0pl3"
+< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m		ld	%0x80000000, r6	# moins
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/darksasuke.cor, checkers/asm_test/out_demo/darksasuke.cor
+checkers/asm_test/error_champs/tdc4.s
 
-1c1
-< Writing output program to checkers/asm_test/out/darksasuke.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name 		"dtonc v1.0pl4"
+< [38;5;243m002[0m	.comment	"ta mere elle fait du rodeo sur les kfar"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m	
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/doge.cor, checkers/asm_test/out_demo/doge.cor
+checkers/asm_test/error_champs/Torpille.s
 
-1c1
-< Writing output program to checkers/asm_test/out/doge.s
+1,9c1
+< [1;1H[2JError: Invalid line 3:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m001[0m	.name "Torpille"
+< [38;5;243m002[0m	.comment "by sebc"
+< [38;5;243m003[0m	[38;5;196m.extend
+< [38;5;243m004[0m	
+< [38;5;243m005[0m		xor	r4,r4,r4
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Douceur_power.cor, checkers/asm_test/out_demo/Douceur_power.cor
+checkers/asm_test/error_champs/unexisting_label.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Douceur_power.s
+1,7c1
+< [1;1H[2JError: Invalid line 7:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	live:	live	%1
+< [38;5;243m007[0m	[38;5;196m	zjmp	%:livz
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong argument type or value for an instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/dubo.cor, checkers/asm_test/out_demo/dubo.cor
+checkers/asm_test/error_champs/unknown_instruction.s
 
-1c1
-< Writing output program to checkers/asm_test/out/dubo.s
+1,9c1
+< [1;1H[2JError: Invalid line 4:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m002[0m	.comment "just a basic living prog"
+< [38;5;243m003[0m	
+< [38;5;243m004[0m	[38;5;196ml2:	ste	r1,%:live,%0
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	live:	live	%1
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mUnknown instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/echo.cor, checkers/asm_test/out_demo/echo.cor
+checkers/asm_test/error_champs/with_null.s
 
 1c1
-< Writing output program to checkers/asm_test/out/echo.s
+< [1;1H[2JError: Unknown error
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Eraser.cor, checkers/asm_test/out_demo/Eraser.cor
+checkers/asm_test/error_champs/with_null_cmd.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Eraser.s
+1,8c1
+< [1;1H[2JError: Invalid line 6:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	[38;5;196mlive:	live
+< [38;5;243m007[0m		zjmp	%:live
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong argument number for an instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/ex.cor, checkers/asm_test/out_demo/ex.cor
+checkers/asm_test/error_champs/wrong_argument_number.s
 
-1c1
-< Writing output program to checkers/asm_test/out/ex.s
+1,8c1
+< [1;1H[2JError: Invalid line 6:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	[38;5;196mlive:	live	%1, %1
+< [38;5;243m007[0m		zjmp	%:live
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong argument number for an instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/Explosive_Kitty.cor, checkers/asm_test/out_demo/Explosive_Kitty.cor
+checkers/asm_test/error_champs/wrong_character_label.s
 
-1c1
-< Writing output program to checkers/asm_test/out/Explosive_Kitty.s
+1,8c1
+< [1;1H[2JError: Invalid line 6:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	[38;5;196mlIve:	live	%1
+< [38;5;243m007[0m		zjmp	%:live
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong string
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
 ------------------------------------------
-checkers/asm_test/out/fast.cor, checkers/asm_test/out_demo/fast.cor
+checkers/asm_test/error_champs/wrong_type_argument.s
 
-1c1
-< Writing output program to checkers/asm_test/out/fast.s
+1,8c1
+< [1;1H[2JError: Invalid line 6:
+< [36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-[36m-
+< [38;5;243m004[0m	l2:	sti	r1,%:live,%0
+< [38;5;243m005[0m		and	r1,%0,r1
+< [38;5;243m006[0m	[38;5;196mlive:	live	r1
+< [38;5;243m007[0m		zjmp	%:live
+< [36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_[36m_
+< [38;5;226mWrong argument type or value for an instruction
 ---
-> Syntax error at token [TOKEN][001:001] END "(null)"
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/out/fluttershy.cor, checkers/asm_test/out_demo/fluttershy.cor
-
-1c1
-< Writing output program to checkers/asm_test/out/fluttershy.s
----
-> Syntax error at token [TOKEN][001:001] END "(null)"
-
-__________________________________________
-------------------------------------------
-checkers/asm_test/out/ForgottenOne.cor, checkers/asm_test/out_demo/ForgottenOne.cor
-
-1c1
-< Writing output program to checkers/asm_test/out/ForgottenOne.s
----
-> Syntax error at token [TOKEN][001:001] END "(null)"
+> ./check_asm_error.sh: line 51: ./demo/linux/asm: cannot execute binary file
 
 __________________________________________
